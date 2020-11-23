@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* code */
+  pre > code {
+    font-family: 'Roboto Mono', monospace; }
+
 /* =Base *//*************************************************************/
   body {
     font-family: 'Noto Sans KR', sans-serif;  
@@ -238,13 +242,6 @@
       width: 100%; }
 
   }
-
-/* Code block font setting */
-  .code {
-    font-family: 'Roboto Mono', monospace; }
-  .highlight {
-    font-family: 'Roboto Mono', monospace; }
-
 
 /* =Glitch effect, Source: http://codepen.io/bulby97/pen/fcvay *//*************************************************************/
   .glitch {
