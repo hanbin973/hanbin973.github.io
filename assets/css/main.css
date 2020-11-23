@@ -68,9 +68,8 @@
     margin-top: 6px;
     padding: 0px;
     list-style-type: none; }
-	.menu a {
-	text-decoration: none;
-	}
+    .menu a {
+      text-decoration: none; }
 
   .menu__entry {
     display: inline-block;
