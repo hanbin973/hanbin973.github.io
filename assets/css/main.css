@@ -77,8 +77,7 @@
       margin-right: 0px; }
 
   .menu__entry a {
-    font-weight: 400; 
-	color: #828282; }
+    font-weight: 400; }
 	.menu__entry a:hover {
       color: #000000; }
 
@@ -91,6 +90,12 @@
   .social-links__entry {
     display: inline-block;
     margin-left: 10px; }
+
+  .social-links__entry a {
+    }
+	.social-links__entry a:hover {
+		color: #000000;
+	}
 
 /* =Titles *//*************************************************************/
   .page-title {
