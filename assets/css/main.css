@@ -92,11 +92,11 @@
     display: inline-block;
     margin-left: 10px; }
 
-  .social-links__entry a {
+  .social-links__entry i {
     color: #828282;
     text-decoration: none;
 	}
-	.social-links__entry a:hover {
+	.social-links__entry i:hover {
       color: #000000; }
 
 /* =Titles *//*************************************************************/
