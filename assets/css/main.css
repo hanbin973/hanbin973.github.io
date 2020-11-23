@@ -2,8 +2,8 @@
 /* code */
   pre > code {
     font-family: 'Roboto Mono', monospace; }
-  p code {
-	display: inline;
+  p code pre {
+    display: inline;
     font-family: 'Roboto Mono', monospace; 
     background-color: #ABABAB;
     border-radius: 3px; }
