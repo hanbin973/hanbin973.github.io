@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Reserach
-subtitle: publicatons.posters.talks
+subtitle: publications.posters.talks
 ---
 
 
