@@ -70,11 +70,12 @@
     list-style-type: none; }
 
   .menu__entry {
-	color: #828282;
     display: inline-block;
     margin-right: 35px; }
     .menu__entry:last-child {
       margin-right: 0px; }
+	.menu__entry:hover {
+	  color: #000000; }
 
   .menu__entry a {
     font-weight: 400; }
