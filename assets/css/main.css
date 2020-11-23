@@ -68,13 +68,6 @@
     margin-top: 6px;
     padding: 0px;
     list-style-type: none; }
- 	.menu a {
-		color: #828282;
-		text-decoration: none;
-	}
-	.menu a:hover {
-		color: #000000;
-	}
 
   .menu__entry {
     display: inline-block;
@@ -83,7 +76,11 @@
       margin-right: 0px; }
 
   .menu__entry a {
+	color: #000000;
+	text-decoration: none;
     font-weight: 400; }
+	.menu__entry a:hover {
+	  color: #000000; }
 
   .social-links {
     float: right;
