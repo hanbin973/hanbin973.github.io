@@ -101,7 +101,8 @@
 	font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 75%;
-    color: #828282; }
+    color: #828282;
+	word-break: break-all; }
 
 /* =Post teasers *//*************************************************************/
   .list-posts {
