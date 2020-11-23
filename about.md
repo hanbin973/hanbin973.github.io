@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About 
-subtitle: Curriculum Vitae
+subtitle: curriculum.vitae
 ---
 
 <span style="float: right; "><a href="{{ '/assets/resume.pdf' | prepend: site.baseurl }}"><strong>> Download as PDF</strong></a> </span>
