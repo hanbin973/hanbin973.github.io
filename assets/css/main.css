@@ -67,10 +67,10 @@
     margin: 0px;
     margin-top: 6px;
     padding: 0px;
-    list-style-type: none;
-	text-decoration: none; }
-	.menu:hover {
-	  color: #000000; }
+	list-style-type: none;
+    text-decoration: none; }
+    .menu:hover {
+      color: #000000; }
 
   .menu__entry {
     display: inline-block;
