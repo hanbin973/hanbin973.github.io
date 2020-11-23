@@ -1,7 +1,7 @@
 # Site settings
-title: Pudhina
+title: Menu
 description: >
-  A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability
+    A site of Hanbin Lee
 
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://hanbin973.github.io" # the base hostname & protocol for your site
