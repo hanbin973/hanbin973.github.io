@@ -10,4 +10,4 @@ subtitle: publications.posters.talks
 
 ## Talks
 
-## Youtube, SNS etc.
+## ETC
