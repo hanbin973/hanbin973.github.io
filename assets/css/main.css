@@ -1,7 +1,11 @@
+/* google font import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap')
+
+/*original code*/
 @charset "UTF-8";
 /* =Base *//*************************************************************/
   body {
-    font-family: 'Quicksand', sans-serif;  
+    font-family: 'Noto Sans KR', sans-serif;  
     font-size: 100%;
     color: #012;
     background-color: #FFF; }
@@ -54,7 +58,7 @@
 
   .navigation {
     float: left; }
-
+/* the green color*/
   .logo {
     font-size: 300%;
     font-weight: 700;
