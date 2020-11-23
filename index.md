@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hanbin Lee
-subtitle: Biostatician and Physician in Training
+subtitle: biostatician.and.physician.in.training
 sitemap:
   priority: 0.9
 ---
