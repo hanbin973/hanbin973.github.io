@@ -68,6 +68,7 @@
     margin-top: 6px;
     padding: 0px;
 	list-style-type: none;
+	text-decoration: none;
    }
 
   .menu__entry {
@@ -93,7 +94,7 @@
     margin-left: 10px; }
 
   .social-links__entry a {
-		text-decoration: none; } 
+		 } 
     .social-links__entry a:hover {
 		color: #000000; }
 
