@@ -5,7 +5,12 @@
   p > code {
     display: inline;
     font-family: 'Roboto Mono', monospace;
-    background-color: #000000; }
+    background-color: #F8F8F8;
+    border-radius: 3px;
+    margin: 0 0.15em; 
+    padding: 0 0.3em;
+    white-space: nowrap;
+    }
 
 /* =Base *//*************************************************************/
   body {
