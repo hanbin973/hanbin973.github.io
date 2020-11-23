@@ -78,8 +78,8 @@
 
   .menu__entry a {
     font-weight: 400; 
-	text-decoration: none; }
-	.menu__entry a:hover {
+    text-decoration: none; }
+    .menu__entry a:hover {
       color: #000000; }
 
   .social-links {
@@ -95,7 +95,7 @@
   .social-links__entry a {
     text-decoration: none; } 
     .social-links__entry a:hover {
-		color: #000000; }
+      color: #000000; }
 
 /* =Titles *//*************************************************************/
   .page-title {
