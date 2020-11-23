@@ -7,7 +7,7 @@
     background-color: #FFF; }
 
   a {
-    color: #57A;
+    color: #828282;
     font-weight: bold;
     text-decoration: none; }
 
@@ -68,16 +68,13 @@
     margin-top: 6px;
     padding: 0px;
     list-style-type: none; }
-   
  	.menu a {
 		color: #828282;
 		text-decoration: none;
 	}
-	
 	.menu a:hover {
 		color: #000000;
 	}
-
 
   .menu__entry {
     display: inline-block;
@@ -97,11 +94,6 @@
   .social-links__entry {
     display: inline-block;
     margin-left: 10px; }
-
-  .social-links__entry a {
-    text-decoration: none; } 
-    .social-links__entry a:hover {
-      color: #000000; }
 
 /* =Titles *//*************************************************************/
   .page-title {
