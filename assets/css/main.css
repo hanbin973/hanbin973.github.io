@@ -2,6 +2,8 @@
 /* code */
   pre > code {
     font-family: 'Roboto Mono', monospace; }
+  code {
+    font-family: 'Roboto Mono', monospace; }
 
 /* =Base *//*************************************************************/
   body {
