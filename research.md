@@ -4,4 +4,10 @@ title: Research
 subtitle: publications.posters.talks
 ---
 
+## Publications
 
+## Posters
+
+## Talks
+
+## Youtube, SNS etc.
