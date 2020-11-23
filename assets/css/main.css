@@ -67,15 +67,17 @@
     margin: 0px;
     margin-top: 6px;
     padding: 0px;
-    list-style-type: none; }
+    list-style-type: none;
+	text-decoration: none; }
+	.menu:hover {
+	  color: #000000; }
 
   .menu__entry {
     display: inline-block;
     margin-right: 35px; }
     .menu__entry:last-child {
       margin-right: 0px; }
-	.menu__entry:hover {
-	  color: #000000; }
+	
 
   .menu__entry a {
     font-weight: 400; }
