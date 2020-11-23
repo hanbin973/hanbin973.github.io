@@ -98,7 +98,7 @@
     font-size: 150%; }
 
   .page-title__subtitle {
-	font-family: 'Roboto Mono', sans-serif;
+	font-family: 'Roboto Mono', monospace;
     font-weight: 400;
     font-size: 75%;
     color: #828282; }
