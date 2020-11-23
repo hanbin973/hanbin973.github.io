@@ -77,7 +77,8 @@
       margin-right: 0px; }
 
   .menu__entry a {
-    font-weight: 400; }
+    font-weight: 400; 
+	text-decoration: none; }
 	.menu__entry a:hover {
       color: #000000; }
 
@@ -92,10 +93,9 @@
     margin-left: 10px; }
 
   .social-links__entry a {
-    }
-	.social-links__entry a:hover {
-		color: #000000;
-	}
+		text-decoration: none; } 
+    .social-links__entry a:hover {
+		color: #000000; }
 
 /* =Titles *//*************************************************************/
   .page-title {
