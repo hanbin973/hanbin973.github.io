@@ -54,7 +54,7 @@
 
   .navigation {
     float: left; }
-/* the green color*/
+
   .logo {
     font-size: 300%;
     font-weight: 700;
@@ -70,6 +70,7 @@
     list-style-type: none; }
 
   .menu__entry {
+	color: #828282;
     display: inline-block;
     margin-right: 35px; }
     .menu__entry:last-child {
