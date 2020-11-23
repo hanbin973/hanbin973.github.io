@@ -240,8 +240,11 @@
   }
 
 /* Code block font setting */
+  .code {
+    font-family: 'Roboto Mono', monospace; }
   .highlight {
     font-family: 'Roboto Mono', monospace; }
+
 
 /* =Glitch effect, Source: http://codepen.io/bulby97/pen/fcvay *//*************************************************************/
   .glitch {
