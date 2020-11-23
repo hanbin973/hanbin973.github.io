@@ -68,8 +68,15 @@
     margin-top: 6px;
     padding: 0px;
     list-style-type: none; }
-    .menu a {
-      text-decoration: none; }
+   
+ 	.menu a {
+		text-decoration: none;
+	}
+	
+	.menu a:hover {
+		color: #000000;
+	}
+
 
   .menu__entry {
     display: inline-block;
@@ -79,9 +86,6 @@
 
   .menu__entry a {
     font-weight: 400; }
-
-  .menu__entry a:hover {
-    color: #000000; }
 
   .social-links {
     float: right;
