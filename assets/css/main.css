@@ -2,7 +2,7 @@
 /* code */
   pre > code {
     font-family: 'Roboto Mono', monospace; }
-  p > code.hljs {
+  p > code {
     display: inline;
     font-family: 'Roboto Mono', monospace; }
 
