@@ -3,8 +3,8 @@
   pre > code {
     font-family: 'Roboto Mono', monospace; }
   p code {
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
     font-family: 'Roboto Mono', monospace; }
 
 /* =Base *//*************************************************************/
