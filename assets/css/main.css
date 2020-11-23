@@ -92,6 +92,13 @@
     display: inline-block;
     margin-left: 10px; }
 
+  .social-links__entry a {
+    color: #828282;
+    text-decoration: none;
+	}
+	.social-links__entry a:hover {
+      color: #000000; }
+
 /* =Titles *//*************************************************************/
   .page-title {
     margin: 30px auto;
