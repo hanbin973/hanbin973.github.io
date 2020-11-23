@@ -3,9 +3,7 @@
   pre > code {
     font-family: 'Roboto Mono', monospace; }
   p code {
-    font-family: 'Roboto Mono', monospace; 
-    background-color: #ABABAB;
-    border-radius: 3px; }
+    font-family: 'Roboto Mono', monospace; }
 
 /* =Base *//*************************************************************/
   body {
