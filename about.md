@@ -4,7 +4,7 @@ title: About
 subtitle: curriculum.vitae
 ---
 
-<span style="float: right; "><a href="{{ '/assets/cv.pdf' | prepend: site.baseurl }}"><strong> CV as PDF </strong></a> </span>
+<span style="float: right; "><a href="{{ '/assets/cv.pdf' | prepend: site.baseurl }}"><strong> CV [PDF] </strong></a> </span>
 <br>
 
 ### SKILLS
