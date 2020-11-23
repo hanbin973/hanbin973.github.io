@@ -5,6 +5,7 @@
   p > code {
     display: inline;
     font-family: 'Roboto Mono', monospace;
+    color: #FFF;
     background-color: #828282;
     border-radius: 3px;
     margin: 0 0.15em; 
