@@ -2,7 +2,7 @@
 /* code */
   pre > code {
     font-family: 'Roboto Mono', monospace; }
-  p pre > code {
+  p pre code {
     display: inline;
     font-family: 'Roboto Mono', monospace; 
     background-color: #ABABAB;
