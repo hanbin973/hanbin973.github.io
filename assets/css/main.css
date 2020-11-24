@@ -94,6 +94,8 @@
     font-weight: 400; }
     .menu__entry a:hover {
       color: #000000; }
+    .menu__entry a:active {
+      color: #000000; }
 
   .social-links {
     float: right;
