@@ -9,11 +9,11 @@ subtitle: curriculum.vitae
 
 
 <h2> Education </h2>
-<ul>
+<ul style="line-height: 200%">
 	{% for institution in site.data.edu %}
-		<li style="line-height: 110%;">
+		<li style="line-height: 150%; text-align: right;">
 			{{ institution.department }}, {{ institution.name }} <br>
-			{{ institution.degree }} in {{ institution.major }}, {{ institution.term }}
+			<i> {{ institution.degree }} in {{ institution.major }}, {{ institution.term }} </i>
 		</li>
 	{% endfor %}
 </ul>
