@@ -13,7 +13,7 @@ subtitle: curriculum.vitae
 		<ul style="line-height: 200%; list-style: none; padding: 0px;">
 			{% for institution in site.data.edu %}
 				<li> 
-					<span style='font-weight: bold;'> {{ institution.name }} </span>
+					<span style='font-weight: bold; font-size: 110%;'> {{ institution.name }} </span>
 					<span style='text-align: right; font-size: 80%;'> {{ institution.place }} </span>
 				</li>
 				{% for department in institution.departments %}
