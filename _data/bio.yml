@@ -1,0 +1,28 @@
+- name: Education
+  institutions: 
+    - name: Seoul National University
+      department: Department of Mathamatical Sciences 
+      term: 2016-
+      degree: BA
+
+    - name: Seoul National University
+      department: College of Medicine
+      term: 2016-
+      degree: MD
+    
+- name: Languages
+    - name: Korean
+
+    - name: English
+
+- name: Programming Languages
+    - name: Python
+      specs: matplotlib, numpy, scipy, torch
+
+    - name: R
+      specs: ggplot2, Bioconducter
+
+    - name: C/C++
+
+
+
