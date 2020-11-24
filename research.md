@@ -4,7 +4,7 @@ title: Research
 subtitle: publications.posters.talks
 ---
 
-<ul style='text-align: center;'>
+<ul style='text-align: center; list-style: nome;'>
 	{% for format in site.data.research %}
 		<li>
 			<h2> {{ format.name }} </h2>
@@ -12,9 +12,4 @@ subtitle: publications.posters.talks
 	{% endfor %}
 </ul>
 
-<!--
-<h2 style='text-align: center;'>Publications</h2>
-<h2 style='text-align: center;'>Posters</h2>
-<h2 style='text-align: center;'>Talks</h2>
-<h2 style='text-align: center;'>ETC</h2>
->
+
