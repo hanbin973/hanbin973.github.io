@@ -1,0 +1,11 @@
+- name: Python
+    libs:
+        - name: numpy
+        - name: scipy
+        - name: torch
+        - name: matplotlib
+ 
+- name: R
+    libs:
+        - name: tidyverse
+        - name: Bioconducter

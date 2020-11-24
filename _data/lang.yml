@@ -1,0 +1,12 @@
+- name: Seoul National University
+  place: Seoul, Republic of Korea
+  departments:
+    - name: Department of Mathematical Sciences
+      major: Mathematics
+      term: 2016 -
+      degree: BA
+
+    - name: College of Medicine
+      major: Medicine
+      term: 2016 -
+      degree: MD
