@@ -10,7 +10,7 @@ subtitle: curriculum.vitae
 <h2> Education </h2>
 <div class='aboutbox-out'>
 	<div class='aboutbox-in'>
-		<ul style="line-height: 200%; list-style: none; padding: none;">
+		<ul style="line-height: 200%; list-style: none; padding: 0px;">
 			{% for institution in site.data.edu %}
 				<li> 
 					<span style='font-weight: bold;'> {{ institution.name }} </span>
