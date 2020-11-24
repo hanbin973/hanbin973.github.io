@@ -11,7 +11,7 @@ sitemap:
 <div id="describe-text">
 	<h2> Welcome! </h2>
 	<p>
-	I'm an undergraduate in the College of medicine and the Department of Mathematical Sciences at Seoul National University.
+	I'm an undergraduate in the College of Medicine and the Department of Mathematical Sciences at Seoul National University.
 	Currently, I work in <a href='http://hanlab.snu.ac.kr'>Prof. Buhm Han's Laboratory</a> developing statistical methods for biological systems.
 	</p>
 </div>
