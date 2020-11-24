@@ -46,4 +46,15 @@ subtitle: curriculum.vitae
 </div>
 
 <h2> Language </h2> 
+<div class='aboutbox-out'>
+	<div class='aboutbox-in'>
+		<ul style="line-height: 200%; list-style:none; padding: 0px;">
+			{% for lang in site.data.lang %}
+				<li>
+					<span style='font-weight: bold; font-size: 110%;'> {{ lang.name }} </span>
+				</li>
+			{% endfor %}	
+		</ul>
+	</div>
+</div>
 
