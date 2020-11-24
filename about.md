@@ -8,20 +8,24 @@ subtitle: curriculum.vitae
 <br>
 
 <h2> Education </h2>
-<ul style="line-height: 200%; list-style: none;">
-	{% for institution in site.data.edu %}
-		<li> 
-			<b> {{ institution.name }} </b> <br> 
-			{{ institution.place }}
-		</li>
-		{% for department in institution.departments %}
-			<li style="line-height: 150%; text-align: right;">
-				{{ department.name }} <br>
-				<i> {{ department.degree }} in {{ department.major }}, {{ department.term }} </i>
-			</li>
-		{% endfor %}
-	{% endfor %}
-</ul>
+<div class='aboutbox-out'>
+	<div class='aboutbox-in'>
+		<ul style="line-height: 200%; list-style: none;">
+			{% for institution in site.data.edu %}
+				<li> 
+					<span style='font-weight: bold;'> {{ institution.name }} </span>
+					<span style='text-align: right;'> {{ institution.place }} </span>
+				</li>
+				{% for department in institution.departments %}
+					<li style="line-height: 150%; text-align: right;">
+						{{ department.name }} <br>
+						<i> {{ department.degree }} in {{ department.major }}, {{ department.term }} </i>
+					</li>
+				{% endfor %}
+			{% endfor %}
+		</ul>
+	</div>
+</div>
 
 <h2> Programming and Computer Skills </h2>
 
