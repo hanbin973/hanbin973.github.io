@@ -9,20 +9,3 @@
       department: College of Medicine
       term: 2016-
       degree: MD
-    
-- name: Languages
-    - name: Korean
-
-    - name: English
-
-- name: Programming Languages
-    - name: Python
-      specs: matplotlib, numpy, scipy, torch
-
-    - name: R
-      specs: ggplot2, Bioconducter
-
-    - name: C/C++
-
-
-

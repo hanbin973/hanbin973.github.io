@@ -8,10 +8,9 @@ subtitle: curriculum.vitae
 <br>
 
 <ul>
-	{% for section in site.data.bio %}
+	{% for section in site.data.edu %}
 		<li>
 			<h2> {{ section.name }} </h2>
-
 		</li>
 	{% endfor %}
 </ul>
