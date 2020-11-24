@@ -14,7 +14,7 @@ subtitle: curriculum.vitae
 			{% for institution in site.data.edu %}
 				<li> 
 					<span style='font-weight: bold;'> {{ institution.name }} </span>
-					<span style='text-align: right; font-size: 80%;'> {{ institution.place }} </span>
+					<span style='text-align: right; font-size: 80%; position: relative; right: 0px'> {{ institution.place }} </span>
 				</li>
 				{% for department in institution.departments %}
 					<li style="line-height: 150%; text-align: right;">
