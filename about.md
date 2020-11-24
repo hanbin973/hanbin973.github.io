@@ -7,10 +7,18 @@ subtitle: curriculum.vitae
 <span style="float: right; "><a href="{{ '/assets/cv.pdf' | prepend: site.baseurl }}"><strong> CV [PDF] </strong></a> </span>
 <br>
 
-<ul>
-	{% for section in site.data.edu %}
+
+<h2> Education </h2>
+{% for institution in site.data.edu %}
+	<ul style="line-height: 0px;">
 		<li>
-			<h2> {{ section.name }} </h2>
+			{{ institution.department }}, {{ institution.name }}
+			{{ institution.degree }} in {{ institution.major }}, {{ institution.term }}
 		</li>
-	{% endfor %}
-</ul>
+	</ul>
+{% endfor %}
+
+<h2> Programming and Computer Skills </h2>
+
+<h2> Language </h2> 
+

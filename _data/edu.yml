@@ -1,11 +1,11 @@
-- name: Education
-  institutions: 
-    - name: Seoul National University
-      department: Department of Mathamatical Sciences 
-      term: 2016-
-      degree: BA
+- name: Seoul National University
+  department: Department of Mathamatical Sciences 
+  major: Mathematics
+  term: 2016-
+  degree: BA
 
-    - name: Seoul National University
-      department: College of Medicine
-      term: 2016-
-      degree: MD
+- name: Seoul National University
+  department: College of Medicine
+  major: Medicine
+  term: 2016-
+  degree: MD
