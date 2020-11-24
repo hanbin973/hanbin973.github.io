@@ -138,6 +138,13 @@
   .list-posts {
     list-style-type: none;
     padding: 0px; }
+  
+  .list-posts span {
+	color: #828282;
+    text-decoration: none; }
+  
+  .list-posts span:hover {
+    color: #000000; }
 
   .post-teaser {
     margin-bottom: 15px;
