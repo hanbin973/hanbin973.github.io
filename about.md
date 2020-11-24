@@ -37,7 +37,7 @@ subtitle: curriculum.vitae
 				</li>
 				<li>
 				{% for lib in lang.libs %}
-					<code><span style='font-size: 90%;'> {{ lib.name }} </span></code>
+					<code><span style='font-size: 90%;'>{{ lib.name }}</span></code> 
 				{% endfor %}
 				</li>
 			{% endfor %}	
