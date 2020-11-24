@@ -9,5 +9,9 @@ sitemap:
 <img src="{{ '/assets/img/profile.png' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
-	<p>A site run by Hanbin Lee</p>
+	<h2> Welcome </h2>
+	<p>
+	I'm an undergraduate in the College of medicine and the Department of Mathematical Sciences at Seoul National University.
+	Currently, I work in [Prof. Buhm Han's Laboratory](http://hanlab.snu.ac.kr) developing statistical methods for biological systems.
+	</p>
 </div>
