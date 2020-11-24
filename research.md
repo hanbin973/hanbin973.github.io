@@ -4,7 +4,7 @@ title: Research
 subtitle: publications.posters.talks
 ---
 
-<ul style='list-style: none;'>
+<ul style='list-style: none; padding: 0px;'>
 	{% for format in site.data.research %}
 		<li>
 			<h2 class='pub-format'> {{ format.name }} </h2>
