@@ -14,7 +14,7 @@ subtitle: publications.posters.talks
 						{{ paper.author }}
 						<a href="{{ paper.doi }}"> 
 							{{ paper.name }}
-						</a>.
+						</a>
 						<i>{{ paper.doi }}</i>
 						{{ paper.year }}
 					</li>
