@@ -155,6 +155,15 @@
 		flex-basis: 80%;
 	}
 
+/* Pub */
+	.pubbox-out {
+		display: flex;
+		justify-content: center;
+	}
+	.pubbox-in {
+		flex-basis: 90%;
+	}
+
 /* =Post teasers *//*************************************************************/
   .list-posts {
     list-style-type: none;
