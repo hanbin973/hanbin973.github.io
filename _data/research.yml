@@ -1,6 +1,6 @@
 - name: Publications
   papers:
-      - name: MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data
+    - name: MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data
     - journal: bioRxiv
     - author: Chanwoo Kim*, Hanbin Lee*, Juhee Jeong, Keehoon Jung, Buhm Han
     - year: 2020
