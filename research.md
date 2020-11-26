@@ -18,7 +18,7 @@ subtitle: publications.posters.talks
 						<i>{{ paper.doi }}</i>
 						paper.year
 					</li>
-				{% endfor $}
+				{% endfor %}
 			</ul>
 		</li>
 	{% endfor %}
