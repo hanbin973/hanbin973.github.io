@@ -12,7 +12,7 @@ subtitle: publications.posters.talks
 				{% for paper in format.papers %}
 					<li>
 						{{ paper.author }}
-						<a href={{ paper.doi }}> 
+						<a href="{{ paper.doi }}"> 
 							{{ paper.name }}
 						</a>.
 						<i>{{ paper.doi }}</i>
