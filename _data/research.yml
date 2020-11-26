@@ -6,7 +6,7 @@
       year: 2020
       doi: 'https://doi.org/10.1101/2020.11.23.393900'
 
-      name: 'scIntegral: A scalable and accurate cell-type identification method for scRNA-seq data with application to integration of multiple donors'
+    - name: 'scIntegral: A scalable and accurate cell-type identification method for scRNA-seq data with application to integration of multiple donors'
       journal: bioRxiv
       author: Hanbin Lee*, Chanwoo Kim*, Juhee Jeong, Keehoon Jung, Buhm Han 
       year: 2020
