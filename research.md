@@ -9,7 +9,7 @@ subtitle: publications.posters.talks
 		<li>
 			<h2 class='pub-format'> {{ format.name }} </h2>
 			<ul style='list-style: none; padding: 0px;'>
-				{% for paper in site.data.papers %}
+				{% for paper in format.papers %}
 					<li>
 						{{ paper.author }}
 						<a href= "{{ paper.doi }}">> 
