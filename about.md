@@ -35,11 +35,13 @@ subtitle: curriculum.vitae
 				<li>
 					<span style='font-weight: bold;'> {{ lang.name }} </span>
 				</li>
-				<li>
-				{% for lib in lang.libs %}
-					<code><span style='font-size: 90%;'>{{ lib.name }}</span></code> 
-				{% endfor %}
-				</li>
+				{% if lang.libs %}
+					<li>
+						{% for lib in lang.libs %}
+							<code><span style='font-size: 90%;'>{{ lib.name }}</span></code> 
+						{% endfor %}
+					</li>
+				{% endif %}
 			{% endfor %}	
 		</ul>
 	</div>
