@@ -211,8 +211,8 @@
     letter-spacing: 9.09px; }
 
   .about__text {
-	color: #FFFFFF;
-	background-color: #D1D1D1;
+    color: #FFFFFF;
+    background-color: #828282;
     font-size: 70%; }
 
   .center-text {
@@ -271,7 +271,6 @@
       margin: 10px auto; }
 
     .page-title {
-	  background-color: #D1D1D1;
       margin-top: 10px;
       margin-bottom: 30px; }
 
