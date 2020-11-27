@@ -203,7 +203,8 @@
 
 /* =Post page *//*************************************************************/
   .about {
-    color: #828282;
+    color: #FFFFFF;
+	background-color: #828282;
     text-align: center;
     line-height: 24px; }
 
@@ -212,7 +213,7 @@
     letter-spacing: 9.09px; }
 
   .about__text {
-    font-size: 100%; }
+    font-size: 80%; }
 
   .center-text {
     text-align: center;
