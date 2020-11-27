@@ -212,7 +212,7 @@
 
   .about__text {
 	color: #FFFFFF;
-	background-color: #828282;
+	background-color: #D1D1D1;
     font-size: 70%; }
 
   .center-text {
@@ -271,6 +271,7 @@
       margin: 10px auto; }
 
     .page-title {
+	  background-color: #D1D1D1;
       margin-top: 10px;
       margin-bottom: 30px; }
 
