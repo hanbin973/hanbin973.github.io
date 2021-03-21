@@ -1,5 +1,14 @@
 - name: Publications
   papers:
+    - name: 'Physical activity and health outcomes in female adolescents: Comparison of natural experiments'
+      journal: Under Preparation
+      year: 2021
+
+    - name: 'Improving dimension reduction of single-cell RNA-seq by extracting biological signals from cellular read-depth'
+      journal: Under Review
+      author: Hanbin Lee*, Keehoon Jung, Buhm Han
+      year: 2021
+
     - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
       journal: bioRxiv
       author: Chanwoo Kim*, Hanbin Lee*, Juhee Jeong, Keehoon Jung, Buhm Han
