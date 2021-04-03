@@ -50,6 +50,13 @@ $$ \mathbb{E}(\hat{T}) = \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i) = \mathb
 
 이 추정량이 불편추정량임을 알았으면 다음 단계는 추정량의 분산을 계산하는 것입니다.
 이런 추정량에서 분산을 계산하는 가장 좋은 방법은 $\mathrm{Var}(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2$를 이용하는 것입니다.
+$\mathbb{E}(X)$는 이미 위에서 계산했기 때문에 $\mathbb{E}(X^2)$을 계산하면
+
+$$
+\mathbb{E}(X^2) = \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j)
+	= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i\inA)I(j\inA))}{\pi_i \pi_j} y_i y_j
+	= 
+$$
 
 
 
