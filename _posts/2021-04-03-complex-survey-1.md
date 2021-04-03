@@ -37,7 +37,9 @@ $$ \hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i $$
 이 추정량은 불편추정량 (unbiased estimator)입니다.
 기댓값을 계산해보면
 
-$$ \mathbb{E}(\hat{T}) = \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i) = \mathbb{E}(\sum_{i=1}^{N} \frac{I(i \in A)}{\pi_i}y_i = \sum_{i=1}^{N} y_i $$
+$$ \mathbb{E}(\hat{T}) = \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i) = \mathbb{E}(\sum_{i=1}^{N} \frac{I(i \in A)}{\pi_i}y_i) 
+	= \sum_{i=1}^{N} \frac{\mathbb{E}(I(i \in A))}{\pi_i} y_i
+	= \sum_{i=1}^{N} y_i $$
 
 이므로 증명이 되었습니다.
 여기서 $I(i \in A)$는 $i$가 뽑혔으면 1, 뽑히지 않았으면 0을 값으로 갖는 특성함수 (characteristic function) 입니다.
