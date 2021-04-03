@@ -54,8 +54,8 @@ $\mathbb{E}(X)$는 이미 위에서 계산했기 때문에 $\mathbb{E}(X^2)$을 
 
 $$
 \mathbb{E}(X^2) = \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j)
-	= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i\inA)I(j\inA))}{\pi_i \pi_j} y_i y_j
-	= 
+	= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i \in A)I(j \in A))}{\pi_i \pi_j} y_i y_j
+	= \sum_{j=1}^N \sum_{i-1}^N \frac{\pi_{ij}}{\pi_i \pi_j} y_i y_j
 $$
 
 
