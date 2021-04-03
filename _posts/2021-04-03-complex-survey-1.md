@@ -2,16 +2,16 @@
 layout: page
 title:  "Complex survey (1)"
 subtitle: "Population total의 추정"
-date:	2020-11-24
+date:	2021-04-03
 categories: ["tests"]
 ---
 
-한국 연구자들이 많이 이용하는 국민건강영양조사 (이하 국건영)나 지역사회건강조사를 다루면 복합표본설계 (Complex survey)라는 개념을 만나게 됩니다.
+한국 연구자들이 많이 이용하는 국민건강영양조사 (이하 국건영)나 지역사회건강조사를 다루면 복합표본설계 (complex survey)라는 개념을 만나게 됩니다.
 복합표본설계에 대한 개념적인 이해는 [링크](10.37727/jkdas.2017.19.5.2469)를 참고하시면 됩니다.
 이 타래에서는 Fuller의 [Sampling Statistics](https://www.amazon.com/Sampling-Statistics-Wayne-Fuller/dp/0470454601)를 중심으로 하여 복합표본설계의 특이한 분산추정 공식이 어떻게 유도되는지 다룰 것입니다.
 
 국건영을 포함하여 한국 질병청에서 제공하는 대부분의 자료는 같은 방식으로 생성됩니다.
-먼저 전국을 층화 (stratification)하여 층(strata) 별로 대상자를 독립적으로 뽑습니다.
+먼저 전국을 층화 (stratification)하여 층 (strata)별로 대상자를 독립적으로 뽑습니다.
 지역사회건강조사는 전국 250여개 가량의 보건소를 층으로 삼습니다.
 국건영은 어떤지 모르겠습니다. 
 
@@ -30,7 +30,16 @@ categories: ["tests"]
 추정하려는 모수는 $T=\sum_{i=1}^{N} y_i$ 입니다.
 주어진 조사가 각 대상자를 포함할 확률이 $\pi_1, \ldots, \pi_N$일 때 $n$명을 뽑아 $T$를 추정하는 추정량 (estimator) $\hat{T}$으로 가장 많이 쓰이는 것은
 
-$$\hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i$$ 입니다.
+$$
+\begin{align*}
+\hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i
+\end{align*}
+$$ 
+
+입니다.
+
+
+
 
 
 
