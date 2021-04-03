@@ -30,15 +30,12 @@ categories: ["tests"]
 추정하려는 모수는 $T=\sum_{i=1}^{N} y_i$ 입니다.
 주어진 조사가 각 대상자를 포함할 확률이 $\pi_1, \ldots, \pi_N$일 때 $n$명을 뽑아 $T$를 추정하는 추정량 (estimator) $\hat{T}$으로 가장 많이 쓰이는 것은
 
-$$
-\begin{align*}
-\hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i
-\end{align*}
-$$ 
+$$ \hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i $$ 
 
-입니다.
+입니다 ($A$는 $|A|=n$인 뽑인 샘플들의 집합입니다).
 
-
+이 추정량은 불편추정량 (unbiased estimator)입니다.
+기댓값을 계산해보면
 
 
 
