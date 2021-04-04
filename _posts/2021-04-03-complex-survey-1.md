@@ -184,7 +184,7 @@ $$
 과 총 분산의 법칙 (Law of total variance)
 
 $$
-\mathrm{Var}(X) = \mathrm{Var}(\mathbb{E}(X|Y)) + \mathbb{E}(\mathrm{Var}(E|Y))
+\mathrm{Var}(X) = \mathrm{Var}(\mathbb{E}(X|Y)) + \mathbb{E}(\mathrm{Var}(X|Y))
 $$
 
 입니다.
