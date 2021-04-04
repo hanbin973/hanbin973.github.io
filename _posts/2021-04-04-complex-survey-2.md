@@ -9,7 +9,19 @@ categories: ["Statistics"]
 
 ## 평균 추정 (1)
 평균은 총량에서 전체 인구수를 나누면 됩니다.
+나머지 표기법은 [이전 글](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html)을 참고하세요.
+$N$은 모집단의 총 인구수입니다.
+
+$$
+\hat{\bar{Y}} = \frac{1}{N} \hat{T}
+$$
+
 문제는 [국민건강영양조사 원시자료 이용지침서](https://knhanes.cdc.go.kr/knhanes/sub03/sub03_02_05.do)의 평균공식은 실제 인구수가 아니라 가중치의 합으로 인구수를 추정하고 있다는 점입니다.
+
+$$
+\hat{\bar{Y}} = \frac{\hat{T}}{\sum_{i \in A} w_i}
+$$
+
 실제 인구수 대신 실제 인구수의 추정량을 사용하고 있는 것입니다.
 다음 단락에서 테일러 근사 (Taylor approximation)을 소개하고 실제 인구수 대신 그 추정량을 사용해도 됨을 보이겠습니다.
 
@@ -38,8 +50,6 @@ $$
 
 ## 평균 추정 (2)
 테일러 근사를 평균 추정의 경우에 적용하면 $f(x,y) = \frac{x}{y}$, $\mu=T$, $\nu=N$이 됩니다.
-$N$은 집단의 총 인원수를 말합니다.
-나머지 표기법은 [이전 글](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html)을 참고하세요.
 $x$와 $y$에 대한 $f$의 편도함수는 각각 $f_x(x,y) = \frac{1}{y}$ 그리고 $f_y(x,y) = -\frac{x}{y^2}$입니다.
 기댓값을 계산하면
 
