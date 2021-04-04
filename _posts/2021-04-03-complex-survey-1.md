@@ -337,7 +337,7 @@ $$
 $$
 \begin{align}
 \widehat{\mathrm{Var}}(\hat{T}_{2s}) &= \sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
-\sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
+\sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj} \\
 &+
 \sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c}
 \frac{1}{\pi_{ci,cj|c}}
