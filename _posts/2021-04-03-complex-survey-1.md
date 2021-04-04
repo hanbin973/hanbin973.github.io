@@ -321,7 +321,15 @@ $$
 \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
 $$
 
+가 바로 이 성질을 갖추고 있는 추정량입니다.
+이 값에 $\mathbb{E}(\ldots|A_1)$를 걸면 $\mathbb{E}(I(i \in B_c, d \in B_d)) = \pi_{ci,dj|c,d}$로부터 원하는 성질이 성립함을 알 수 있습니다.
+그러면 
 
+<p align='center' width='90%'>
+모수 $\xleftarrow{\mathbb{E}(\ldots)}$ 추정량1 $\xleftarrow{\mathbb{E}(\ldots|A_1)}$ 추정량2
+</p>
+
+의 도식으로부터 이 추정량의 $\mathbb{E}(\ldots)$가 모수와 일치함을 알 수 있습니다.
 
 
 
