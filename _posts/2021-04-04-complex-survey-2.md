@@ -40,7 +40,22 @@ $$
 테일러 근사를 평균 추정의 경우에 적용하면 $f(x,y) = \frac{x}{y}$, $\mu=T$, $\nu=N$이 됩니다.
 $N$은 집단의 총 인원수를 말합니다.
 나머지 표기법은 [이전 글](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html)을 참고하세요.
-$x$와 $y$에 대한 $f$의 편도함수는 각각 $\frac{1}{y}$ 그리고 $-\frac{x}{y^2}$입니다.
+$x$와 $y$에 대한 $f$의 편도함수는 각각 $f_x(x,y) = \frac{1}{y}$ 그리고 $f_y(x,y) = -\frac{x}{y^2}$입니다.
+기댓값을 계산하면
+
+$$
+\mathbb{E}(\frac{\hat{T}}{\hat{N}}) = \frac{T}{N} + \frac{1}{N}\mathbb{E}(\hat{T}-T) - \frac{T}{N^2}(T,N)\mathbb{E}(\hat{N}-N) = \frac{T}{N}
+$$
+
+입니다. 
+$\hat{T}$와 $\hat{N}$이 각각 $T$와 $N$의 불편추정량이기 때문입니다.
+분산은
+
+$$
+\mathrm{Var}(\frac{\hat{T}}{\hat{N}}) = \frac{1}{N^2}\mathrm{Var}(\hat{T}) + \frac{T^2}{N^4}\mathrm{Var}(\hat{N})
+$$
+
+입니다.
 
 
 
