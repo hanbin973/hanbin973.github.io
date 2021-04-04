@@ -62,13 +62,15 @@ $\mathbb{E}(X)$는 이미 위에서 계산했기 때문에 $\mathbb{E}(X^2)$을 
 
 $$
 \begin{align}
-\mathbb{E}(X^2) $= \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j) \\
-	$= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i \in A)I(j \in A))}{\pi_i \pi_j} y_i y_j \\
-	$= \sum_{j=1}^N \sum_{i=1}^N \frac{\pi_{ij}}{\pi_i \pi_j} y_i y_j \\
+\mathbb{E}(X^2) &= \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j) \\
+	&= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i \in A)I(j \in A))}{\pi_i \pi_j} y_i y_j \\
+	&= \sum_{j=1}^N \sum_{i=1}^N \frac{\pi_{ij}}{\pi_i \pi_j} y_i y_j \\
 \end{align}
 $$
 입니다.
 앞서 소개하지 않는 표기법이 있는데 $\pi_{ij}$는 $i$와 $j$ 모두 $A$에 들어갈 확률입니다.
+기억할 것은 $pi_{ij}$ = $pi_{i} pi_{j}$가 아니라는 점입니다.
+먼저, $i=j$ 인 경우 $pi_{ij} = pi_{i}$가 항상 성립하며 비복원 추출의 경우 $i$가 $j$가 뽑히는 사건은 독립이 아니기 때문에 곱의 법칙으로 쪼개지지 않습니다.
 
 이제 분산을 얻었지만 아직 할 일이 남았습니다.
 집단 총량을 추정한 후 그 불확실성을 표시하려면 분산이 아니라 분산의 추정량이 필요합니다.
@@ -83,7 +85,8 @@ $$
 이는 어떤 데이터가 뽑히냐에 의존하기 때문에 일반적으로 고정값이 아니라 뽑을 때마다 바뀌는 값입니다.
 따라서 분산이 0이 아닌 양의 값을 갖는 것입니다.
 
-## 층화표본
+## 층화표본설계
+단순표본설계에서 앞서 살펴본 바에 따르면 분산과 기댓값을 계산할 때 중요한 것은 
 
 
 
