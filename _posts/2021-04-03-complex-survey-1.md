@@ -246,10 +246,35 @@ $X$가 $\mathbb{E}(X)$의 불편추정량인 것은 정의로부터 자명하기
 $$
 \begin{align}
 \mathrm{Var}(\hat{T}_{2s}|A_1) &= \mathrm{Cov}(\hat{T}_{2s}, \hat{T}_{2s}|A_1) \\
-	&= \sum_{c \in A_1} \mathrm{Cov}(\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci},\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci}) \\
+	&= \sum_{c \in A_1} \mathrm{Cov}(\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci},\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci}|A_1) \\
 	&= (\text{타자 치기 귀찮았습니다 열심히 전개를 하면}) \\
 	&= \sum_{c \in A_1} \sum_{i \in A_c} \sum_{j \in A_c}
 	\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
 \end{align}
 $$
+
+여기서 첫째 줄에서 둘째 줄로 넘어갈 때 층화표본설계에서 사용한 것과 같은 기술을 이용했습니다.
+$i$와 $j$가 다른 집락에서 왔을 경우 $A_1$이 고정된 상황에서는 각각이 뽑히는 사건이 독립입니다.
+뽑는 집락이 고정되고 나면 그 다음부터는 층화표본설계와 같은 상황임을 이용한 것입니다.
+이 사실은 굉장히 유용해서 곧바로 다시 이용할 것입니다.
+위에서 얻은 분산의 식을 바로 이용해 표본으로 계산할 수 있는 추정량 (위 도식에서 추정량2에 해당)을 써보면 
+
+$$
+\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c}
+\frac{1}{\pi_{ci,cj|c}}
+\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
+$$
+
+입니다.
+앞서 언급한 '뽑은 집락이 고정된 집락표본설계 = 층화표본설계'의 원리를 이용하면 이 추정량이 추정량1의 불편추정량이며 이어서 모수의 불편추정량이 됨을 알 수 있습니다.
+계산을 해보면
+
+$$
+\begin{aligned}
+\mathbb{E}(\mathrm{Var}(\hat{T}_{2s}|A_1)) &= ddd 
+\end{aligned}
+$$
+
+
+
 
