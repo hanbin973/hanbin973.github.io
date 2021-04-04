@@ -173,7 +173,6 @@ $$\hat{T}_{2s} = \sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in B_c} \frac{1}{\pi_
 
 여기서 $\pi_{(ci)\| c}$는 집락 $c$가 뽑혔을 때 $ci$가 표본에 포함됐을 확률을 말합니다.
 조건부확률의 정의에 따라 $\pi_{(ci)\| c} \pi_c = \pi_{ci}$가 성립합니다.
-
 기댓값과 분산을 계산하기에 앞서 두 가지 정리를 먼저 소개하겠습니다.
 
 총 기댓값의 법칙 (Law of total expectation)
@@ -185,7 +184,7 @@ $$
 과 총 분산의 법칙 (Law of total variance)
 
 $$
-\mathrm{Var}(X) = \mathrm{Var}(E(X|Y)) + \mathbb{E}(\mathrm{Var}(E|Y))
+\mathrm{Var}(X) = \mathrm{Var}(\mathbb{E}(X|Y)) + \mathbb{E}(\mathrm{Var}(E|Y))
 $$
 
 입니다.
