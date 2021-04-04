@@ -194,11 +194,16 @@ $$
 
 이제 $\Omega$를 각 집락마다 모든 대상자가 표본에 포함되는 사건이라고 하겠습니다. 
 표기법을 약간 남용 (abuse)하여 $\mathbb{P}(X|\Omega) := \mathbb{P}(X|I(\Omega))$라고 쓰겠습니다.
-기댓값 $mathbb{E}$와 분산 $\mathrm{Var}$에 대해서도 모두 마찬가지로 표기법을 남용하겠습니다.
+기댓값 $\mathbb{E}$와 분산 $\mathrm{Var}$에 대해서도 모두 마찬가지로 표기법을 남용하겠습니다.
 그러면 기댓값은
 
 $$
 \begin{align}
-\mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|\Omega))
+\mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|\Omega)) \\
+		&= \mathbb{E}(\hat{T}_1s) \\
+		&= T
 \end{align}
 $$
+로 이 추정량이 불편추정량임을 알 수 있습니다.
+여기서 마법은 첫 줄에서 둘쨋 줄로 넘어가는 과정에 있습니다.
+각 집락의 모든 대상자가 포함되는 사건 $\Omega$에 조건부로 보면 
