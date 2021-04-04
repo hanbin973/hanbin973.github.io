@@ -271,9 +271,16 @@ $$
 
 $$
 \begin{aligned}
-\mathbb{E}(\mathrm{Var}(\hat{T}_{2s}|A_1)) &= ddd 
+\mathbb{E}(\mathrm{Var}(\hat{T}_{2s}|A_1)|A_1) &= 
+\sum_{c \in A_1} \sum_{i \in A_c} \sum_{j \in B_c}
+\frac{\mathbb{E}(I(i \in B_c)I(j \in B_c)|A_1)}{\pi_{ci,cj|c}}
+\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj} \\
+		&= \sum_{c \in A_1} \sum_{i \in A_c} \sum_{j \in A_c}
+	\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
 \end{aligned}
 $$
+
+가 되어 추정량2가 추정량1의 불편추정량이 됨을 알 수 있고 추정량1이 모수의 불편추정량이라는 것은 정의로부터 자명하므로 ($X$는 $\mathbb{E}(X)$의 불편추정량) 증명이 끝났습니다.
 
 
 
