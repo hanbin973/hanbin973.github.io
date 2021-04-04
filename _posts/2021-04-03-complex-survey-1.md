@@ -241,7 +241,7 @@ $X$가 $\mathbb{E}(X)$의 불편추정량인 것은 정의로부터 자명하기
 
 
 <p align='center' width='90%'>
-모수 $\xleftarrow{\mathbb{E}(\ldots)}$$ 추정량1 $$\xleftarrow{\mathbb{E}(\ldots|A_1)}$ 추정량2
+모수 $\xleftarrow{\mathbb{E}(\ldots)}$ 추정량1 $\xleftarrow{\mathbb{E}(\ldots|A_1)}$ 추정량2
 </p>
 
 라는 도식을 생각하면 좋습니다.
