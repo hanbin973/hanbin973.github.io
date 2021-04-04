@@ -20,10 +20,21 @@ categories: ["Statistics"]
 
 $$
 f(x,y) = f(x_0, y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)
-	+ \frac{\partial f}{\partial x}(x_0, y_0)(y-y_0)
+	+ \frac{\partial f}{\partial y}(x_0, y_0)(y-y_0)
 $$
 
 입니다.
+
+$(x_0, y_0)$에 모수 $(\mu, \nu)$를 대입하고 $(x,y)$에 그 추정량 $(\hat{\mu}, \hat{\nu})$를 대입하면 
+
+$$
+f(\hat{\mu},\hat{\nu}) = f(\mu, \nu) + \frac{\partial f}{\partial x}(\mu,\nu)(\hat{\mu}-\mu)
+	+ \frac{\partial f}{\partial y}(\mu, \nu)(\hat{\nu}-\nu)
+$$
+
+가 됩니다.
+
+
 
 ## 분산 추정
 [지난 시간](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html) 계산한 Horvitz-Thomspon 추정량의 분산의 불편추정량은 다음과 같습니다.
