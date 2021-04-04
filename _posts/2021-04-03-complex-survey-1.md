@@ -198,5 +198,7 @@ $$
 그러면 기댓값은
 
 $$
+\begin{align}
 \mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|\Omega))
+\end{align}
 $$
