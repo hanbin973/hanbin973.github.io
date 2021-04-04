@@ -322,7 +322,7 @@ $$
 $$
 
 가 바로 이 성질을 갖추고 있는 추정량입니다.
-이 값에 $\mathbb{E}(\ldots|A_1)$를 걸면 $\mathbb{E}(I(i \in B_c, d \in B_d)) = \pi_{ci,dj|c,d}$로부터 원하는 성질이 성립함을 알 수 있습니다.
+이 값에 $\mathbb{E}(\ldots|A_1)$를 걸면 $\mathbb{E}(I(i \in B_c, d \in B_d)) = \pi_{ci,dj|c,d}$로부터 원하는 성질이 성립하기 때문입니다.
 그러면 
 
 <p align='center' width='90%'>
@@ -335,12 +335,14 @@ $$
 앞서 얻은 결과를 종합하면 
 
 $$
-\widehat{\mathrm{Var}}(\hat{T}_{2s}) = \sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
+\begin{align}
+\widehat{\mathrm{Var}}(\hat{T}_{2s}) &= \sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
 \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
-+
+&+
 \sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c}
 \frac{1}{\pi_{ci,cj|c}}
 \frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
+\end{align}
 $$
 가 분산의 추정량입니다.
 
