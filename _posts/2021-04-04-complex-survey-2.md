@@ -7,6 +7,9 @@ comments: true
 categories: ["Statistics"]
 ---
 
+일반적으로 가중치 $w_i$는 뽑힐 확률 $\pi_i$의 역수입니다.
+별 다른 말이 없으면 앞으로 $w_i = \frac{1}{\pi_i}$ 입니다.
+
 ## 평균 추정 (1)
 평균은 총량에서 전체 인구수를 나누면 됩니다.
 나머지 표기법은 [이전 글](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html)을 참고하세요.
