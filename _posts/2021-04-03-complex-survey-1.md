@@ -242,11 +242,12 @@ $X$가 $\mathbb{E}(X)$의 불편추정량인 것은 정의로부터 자명하기
 
 라는 도식을 생각하면 좋습니다.
 먼저, $$\mathrm{Var}(\hat{T}_{2s}|A_1)$$을 계산하겠습니다.
+
 $$
 \begin{align}
 \mathrm{Var}(\hat{T}_{2s}|A_1) &= \mathrm{Cov}(\hat{T}_{2s}, \hat{T}_{2s}|A_1) \\
 	&= \sum_{c \in A_1} \mathrm{Cov}(\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci},\sum_{i \in B_c}\frac{1}{\pi_{(ci)|c}}y_{ci}) \\
-	&= (타자 치기 귀찮았습니다 열심히 전개를 하면) \\
+	&= (\text{타자 치기 귀찮았습니다 열심히 전개를 하면}) \\
 	&= \sum_{c \in A_1} \sum_{i \in A_c} \sum_{j \in A_c}
 	\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
 \end{align}
