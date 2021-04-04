@@ -3,6 +3,7 @@ layout: page
 title:  "Complex survey (1)"
 subtitle: "Population total의 추정"
 date:	2021-04-03
+comments: true
 categories: ["Statistics"]
 ---
 
