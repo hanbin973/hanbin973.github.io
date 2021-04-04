@@ -177,12 +177,16 @@ $$\hat{T}_{2s} = \sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in B_c} \frac{1}{\pi_
 기댓값과 분산을 계산하기에 앞서 두 가지 정리를 먼저 소개하겠습니다.
 
 총 기댓값의 법칙 (Law of total expectation)
+
 $$
 \mathbb{E}(\mathbb{E}(X|Y)) = \mathbb{E}(X)
 $$
+
 과 총 분산의 법칙 (Law of total variance)
+
 $$
 \mathrm{Var}(X) = \mathrm{Var}(E(X|Y)) + \mathbb{E}(\mathrm{Var}(E|Y))
 $$
+
 입니다.
 워낙 유명한 정리들이니 여기서 증명을 따로 하진 않겠습니다 (사실 측도론의 관점에서 보면 정리가 아니라 정의입니다).
