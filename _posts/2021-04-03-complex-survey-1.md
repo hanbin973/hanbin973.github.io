@@ -194,13 +194,14 @@ $$
 
 표기법을 약간 남용 (abuse)하여 $\mathbb{P}(X|A_1) := \mathbb{P}(X|I(A_1))$라고 쓰겠습니다.
 기댓값 $\mathbb{E}$와 분산 $\mathrm{Var}$에 대해서도 모두 마찬가지로 표기법을 남용하겠습니다.
-그러면 기댓값은
+그러면 기댓값은 $A_c$가 집락 $c$에 포함된 모든 대상자라고 할 때 
 
 $$
 \begin{align}
 \mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|A_1)) \\
 		&= \mathbb{E}(\mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci}|A_1)) \\
 		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \mathbb{E}(\sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci}|A_1)) \\
+		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in A_c} \frac{\mathbb{E}(I(i \in B_c)|A_1)}{\pi_{(ci) | c}} y_{ci}) \\
 		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} T_c) \\
 		&= \mathbb{E}(\hat{T}_{1s}) \\
 		&= T
