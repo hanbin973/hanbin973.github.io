@@ -298,7 +298,7 @@ $$
 $\hat{T}_{1s}$의 분산을 계산하는 것은 1단계 집락표본설계의 경우이므로 단순표본설계의 분산공식을 그대로 가져오면
 
 $$
-\mathrm{Var}(\hat{T}_{1s}) &= \sum_{c=1}^C \sum_{d=1}^C 
+\mathrm{Var}(\hat{T}_{1s}) = \sum_{c=1}^C \sum_{d=1}^C 
 \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d} T_c T_d
 $$
 
