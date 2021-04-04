@@ -278,7 +278,8 @@ $$
 \frac{\mathbb{E}(I(i \in B_c)I(j \in B_c)|A_1)}{\pi_{ci,cj|c}}
 \frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj} \\
 		&= \sum_{c \in A_1} \sum_{i \in A_c} \sum_{j \in A_c}
-	\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
+	\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj} \\
+		&= \mathrm{Var}(\hat{T}_{2s}|A_1)
 \end{aligned}
 $$
 
