@@ -16,7 +16,7 @@ categories: ["Statistics"]
 ## 테일러 근사
 테일러 근사는 학부 미적분학에서 배우는 것 중 가장 널리 쓰이는 내용입니다.
 반가운 소식은 최소 이 시리즈에 한해서는 1차 근사보다 더 복잡한 근사를 쓸 일이 아마 없을 거라는 점입니다 (세상의 모든 함수는 선형입니ㄷ).
-2차원 다변수 함수 $f:\mathbb{R}^2 \rightarrow \mathbb{R}$의 $(x_0, y_0)$에서의 1차 테일러 근사는
+2차원 다변수 함수 $f:\mathbb{R}^2 \rightarrow \mathbb{R}$의 $(x_0, y_0)$의 1차 테일러 근사는
 
 $$
 f(x,y) = f(x_0, y_0) + \frac{\partial f}{\partial x}(x_0,y_0)(x-x_0)
@@ -33,6 +33,14 @@ f(\hat{\mu},\hat{\nu}) = f(\mu, \nu) + \frac{\partial f}{\partial x}(\mu,\nu)(\h
 $$
 
 가 됩니다.
+
+이 식에 기댓값 $\mathbb{E}$나 분산 $\mathrm{Var}$을 걸면 복잡한 함수 $f$의 기댓값과 분산을 얻을 수 있습니다.
+
+## 평균 추정 (2)
+테일러 근사를 평균 추정의 경우에 적용하면 $f(x,y) = \frac{x}{y}$, $\mu=T$, $\nu=N$이 됩니다.
+$N$은 집단의 총 인원수를 말합니다.
+나머지 표기법은 [이전 글](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html)을 참고하세요.
+$x$와 $y$에 대한 $f$의 편도함수는 각각 $\frac{1}{y}$ 그리고 $-\frac{x}{y^2}$입니다.
 
 
 
