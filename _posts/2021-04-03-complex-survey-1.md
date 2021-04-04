@@ -307,7 +307,7 @@ $$
 이제 뽑은 집락 $A_1$을 고정했을 때 이를 추정할 방법을 떠올리면
 
 $$
-\sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{ij}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d} T_c T_d
+\sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d} T_c T_d
 $$
 
 가 $$\mathrm{Var}(\hat{T}_{1s})$$의 불편추정량이 됨을 알 수 있습니다. 
