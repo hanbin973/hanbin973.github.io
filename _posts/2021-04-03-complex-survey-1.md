@@ -239,7 +239,7 @@ $X$가 $\mathbb{E}(X)$의 불편추정량인 것은 정의로부터 자명하기
 대신 표본을 이용해 계산할 수 있는 $$\mathrm{Var}(\hat{T}_{2s}|A_1)$$의 추정량이 있다면 어떤 모수의 추정량의 추정량이 다시 모수의 추정량이 된다는 사실을 이용할 수 있습니다. 
 즉,
 
-<center>모수 $\leftarrow$ 추정량1 $\leftarrow$ 추정량2</center>
+<center>모수 $$\xleftarrow{\mathbb{E}(\ldots)}$ 추정량1 $\xleftarrow{\mathbb{E}(\ldots|A_1)}$$ 추정량2</center>
 
 
 라는 도식을 생각하면 좋습니다.
