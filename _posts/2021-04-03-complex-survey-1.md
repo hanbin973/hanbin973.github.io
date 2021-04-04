@@ -344,7 +344,8 @@ $$
 \frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
 \end{align}
 $$
-가 분산의 추정량입니다.
+
+가 Horbitz-Thompson 추정량의 분산의 불편추정량입니다 (모수의 추정량의 분산의 추정량!).
 
 
 
