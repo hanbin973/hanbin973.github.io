@@ -200,7 +200,7 @@ $$
 \begin{align}
 \mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|A_1)) \\
 		&= \mathbb{E}(\mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci}|A_1)) \\
-		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \mathbb{E})
+		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \mathbb{E}(\sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci})) \\
 		&= \mathbb{E}(\hat{T}_{1s}) \\
 		&= T
 \end{align}
