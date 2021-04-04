@@ -202,6 +202,7 @@ $$
 		&= \mathbb{E}(\mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci}|A_1)) \\
 		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \mathbb{E}(\sum_{i \in B_c} \frac{1}{\pi_{(ci) | c}} y_{ci}|A_1)) \\
 		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in A_c} \frac{\mathbb{E}(I(i \in B_c)|A_1)}{\pi_{(ci) | c}} y_{ci}) \\
+		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} \sum_{i \in A_c} \frac{\pi_{(ci) | c}}{\pi_{(ci) | c}} y_{ci}) \\
 		&= \mathbb{E}(\sum_{c \in A_1} \frac{1}{\pi_c} T_c) \\
 		&= \mathbb{E}(\hat{T}_{1s}) \\
 		&= T
