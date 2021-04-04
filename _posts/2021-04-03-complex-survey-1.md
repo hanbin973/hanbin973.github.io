@@ -3,7 +3,7 @@ layout: page
 title:  "Complex survey (1)"
 subtitle: "Population total의 추정"
 date:	2021-04-03
-categories: ["tests"]
+categories: ["Statistics"]
 ---
 
 한국 연구자들이 많이 이용하는 국민건강영양조사 (이하 국건영)나 지역사회건강조사를 다루면 복합표본설계 (complex survey)라는 개념을 만나게 됩니다.
@@ -25,6 +25,8 @@ categories: ["tests"]
 
 복합표본설계를 이해하기 위해서는 집단 총량 (population total)을 계산하는 방법을 알아야 합니다.
 이 부분을 이해하면 나머지 모수에 대한 결과는 약간의 응용만으로 해결할 수 있습니다.
+
+## 단순표본설계
 먼저, 단순표본설계의 경우를 다루겠습니다.
 총 $N$명으로 이루어진 집단에서 대상자들이 $y_1, \ldots, y_N$의 값을 갖습니다.
 추정하려는 모수는 $T=\sum_{i=1}^{N} y_i$ 입니다.
@@ -32,14 +34,20 @@ categories: ["tests"]
 
 $$ \hat{T} = \sum_{i \in A} \frac{1}{\pi_i}y_i $$ 
 
-입니다 ($A$는 $\|A\|=n$인 뽑인 샘플들의 집합입니다).
+입니다 ($A$는 $\|A\|=n$인 뽑힌 샘플들의 집합입니다).
 
 이 추정량은 불편추정량 (unbiased estimator)입니다.
 기댓값을 계산해보면
 
-$$ \mathbb{E}(\hat{T}) = \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i) = \mathbb{E}(\sum_{i=1}^{N} \frac{I(i \in A)}{\pi_i}y_i) 
-	= \sum_{i=1}^{N} \frac{\mathbb{E}(I(i \in A))}{\pi_i} y_i
-	= \sum_{i=1}^{N} y_i $$
+$$ 
+\begin{aligned}
+\mathbb{E}(\hat{T}) &= \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i)  \\
+	&= \mathbb{E}(\sum_{i=1}^{N} \frac{I(i \in A)}{\pi_i}y_i) \\
+	&= \sum_{i=1}^{N} \frac{\mathbb{E}(I(i \in A))}{\pi_i} y_i \\
+	&= \sum_{i=1}^{N} y_i 
+
+\end{aligned}
+$$
 
 이므로 증명이 되었습니다.
 여기서 $I(i \in A)$는 $i$가 뽑혔으면 1, 뽑히지 않았으면 0을 값으로 갖는 특성함수 (characteristic function) 입니다.
@@ -53,10 +61,14 @@ $$ \mathbb{E}(\hat{T}) = \mathbb{E}(\sum_{i \in A} \frac{1}{\pi_i} y_i) = \mathb
 $\mathbb{E}(X)$는 이미 위에서 계산했기 때문에 $\mathbb{E}(X^2)$을 계산하면
 
 $$
-\mathbb{E}(X^2) = \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j)
-	= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i \in A)I(j \in A))}{\pi_i \pi_j} y_i y_j
-	= \sum_{j=1}^N \sum_{i=1}^N \frac{\pi_{ij}}{\pi_i \pi_j} y_i y_j
+\begin{aligned}
+\mathbb{E}(X^2) $= \mathbb{E}(\sum_{j=1}^N \sum_{i=1}^N I(i \in A) I(j \in A) \cdot \frac{1}{\pi_i \pi_j} \cdot y_iy_j) \\
+	$= \sum_{j=1}^N \sum_{i=1}^N  \frac{\mathbb{E}(I(i \in A)I(j \in A))}{\pi_i \pi_j} y_i y_j \\
+	$= \sum_{j=1}^N \sum_{i=1}^N \frac{\pi_{ij}}{\pi_i \pi_j} y_i y_j \\
+\end{aligned}
 $$
+입니다.
+앞서 소개하지 않는 표기법이 있는데 $\pi_{ij}$는 $i$와 $j$ 모두 $A$에 들어갈 확률입니다.
 
 이제 분산을 얻었지만 아직 할 일이 남았습니다.
 집단 총량을 추정한 후 그 불확실성을 표시하려면 분산이 아니라 분산의 추정량이 필요합니다.
@@ -70,6 +82,9 @@ $$
 추정량은 그 모수를 뽑은 데이터만으로 알아보려는 시도입니다.
 이는 어떤 데이터가 뽑히냐에 의존하기 때문에 일반적으로 고정값이 아니라 뽑을 때마다 바뀌는 값입니다.
 따라서 분산이 0이 아닌 양의 값을 갖는 것입니다.
+
+## 층화표본
+
 
 
 
