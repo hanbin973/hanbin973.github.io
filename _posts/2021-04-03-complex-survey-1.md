@@ -194,3 +194,9 @@ $$
 
 이제 $\Omega$를 각 집락마다 모든 대상자가 표본에 포함되는 사건이라고 하겠습니다. 
 표기법을 약간 남용 (abuse)하여 $\mathbb{P}(X|\Omega) := \mathbb{P}(X|I(\Omega))$라고 쓰겠습니다.
+기댓값 $mathbb{E}$와 분산 $\mathrm{Var}$에 대해서도 모두 마찬가지로 표기법을 남용하겠습니다.
+그러면 기댓값은
+
+$$
+\mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|\Omega))
+$$
