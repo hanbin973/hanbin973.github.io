@@ -200,7 +200,7 @@ $$
 $$
 \begin{align}
 \mathbb{E}(\hat{T}_{2s}) &= \mathbb{E}(\mathbb{E}(\hat{T}_{2s}|\Omega)) \\
-		&= \mathbb{E}(\hat{T}_1s) \\
+		&= \mathbb{E}(\hat{T}_{1s}) \\
 		&= T
 \end{align}
 $$
