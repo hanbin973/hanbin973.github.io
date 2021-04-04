@@ -4,22 +4,18 @@
 <!--mathjax-->
 <script>
 		MathJax = {
-			tex: {
-				    packages: ['base'],        // extensions to use
-				    inlineMath: [              // start/end delimiter pairs for in-line math
-						  ['$', '$'],
-					      ['\\(', '\\)']
-					    ],
-				    displayMath: [             // start/end delimiter pairs for display math
-					      ['$$', '$$'],
-					      ['\\[', '\\]']
-					    ],
-			}
-		};
-		window.MathJax = {
 			  loader: {load: ['[tex]/ams']},
-			  tex: {packages: {'[+]': ['ams']}}
-			
+			  tex: {
+				  packages: {'[+]': ['ams', 'base']}
+				  inlineMath: [
+					  ['$', '$'],
+					  ['\\(', '\\)']
+				  ],
+				  displayMath: [
+					  ['$$', '$$'],
+					  ['\\[', '\\]']
+				  ],
+			  }
 		};
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
