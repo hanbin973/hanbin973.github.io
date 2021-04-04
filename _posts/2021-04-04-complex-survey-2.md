@@ -32,7 +32,7 @@ $$
 이고 다른 하나는 둘쨋줄의
 
 $$
-\frac{\pi_{ci,cj|c}-\pi_{ci|c} \pi_{cj|c}}{pi_{ci} pi_{cj}}
+\frac{\pi_{ci,cj|c}-\pi_{ci|c} \pi_{cj|c}}{\pi_{ci} \pi_{cj}}
 $$
 
 입니다.
