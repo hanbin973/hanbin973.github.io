@@ -5,6 +5,9 @@ layout: default
 
 {{ content }}
 
-{% include externals/disqus.html %}
+{% if page.comments %}
+	{% include externals/disqus.html %}
+{% endif %}
+
 {% include page/about.html %}
 
