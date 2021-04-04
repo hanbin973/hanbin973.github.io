@@ -212,3 +212,11 @@ $$
 로 이 추정량이 불편추정량임을 알 수 있습니다.
 이 계산에서 중요한 것은 $A_1$에 조건부로 계산한다는 것은 뽑힌 집락들의 집합 $A_1$를 고정했다는 뜻입니다.
 그래서 둘째 줄에서 셋째 줄로 넘어갈 때 $A_1$이 고정됐을 때 같이 고정된 값들은 조건부 기댓값 $\mathbb{E}(\ldots |A_1)$ 안팎을 마음대로 드나들 수 있는 것입니다.
+
+이제 분산을 계산하겠습니다.
+$$
+\begin{align}
+\mathrm{Var}(\hat{T}_{2s}) &= \mathrm{Var}(\mathbb{E}(\hat{T}_{2s}|A_1)) + \mathbb{E}(\mathrm{Var}(\hat{T}_{2s}|A_1)) \\
+		&= \mathrm{Var}(\hat{T}_{1s}) + \mathbb{E}(\mathrm{Var}(\hat{T}_{2s}|A_1))
+\end{align}
+$$
