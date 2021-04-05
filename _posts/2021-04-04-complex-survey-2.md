@@ -122,9 +122,9 @@ $$
 
 $$ 
 \begin{align}
-&= \sum_{c \neq d \in A_1} (\frac{N}{n}-1) \sum_{i \in B_c} \sum_{j \in B_d}
+&= \sum_{c \neq d \in A_1} (\frac{n-N}{n(N-1)}-1) \sum_{i \in B_c} \sum_{j \in B_d}
 \frac{1}{\pi_{ci} \pi_{dj}} y_{ci} y_{dj} \\
-&+ \sum_{c \in A_1} 
+&+ \sum_{c \in A_1} (\frac{N-n}{n}) \sum_{i,j \in B_c} \frac{1}{\pi_{ci,dj}}
 \end{align}
 $$
 
