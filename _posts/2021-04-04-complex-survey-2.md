@@ -106,14 +106,22 @@ $$
 이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 안쪽부터 정리하겠습니다.
 
 $$
-\frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj} =
+\frac{1}{\pi_{ci,dj|c,d}} =
 \begin{cases}
-	\frac{1}{\pi_{ci|c} \pi_{dj|d}} & (c \neq d) \\
-	\frac{1}{\pi_{ci|c}} & (c=d, i=j) \\
-	\frac{1}{\pi_{ci,ci|c}} & (c=d, i \neq j)
+	\frac{1}{\pi_{ci|c} \pi_{dj|d}} = \frac{M_cM_d}{m_cm_d} & (c \neq d) \\
+	\frac{1}{\pi_{ci|c}} = \frac{M_c}{m_c} & (c=d, i=j) \\
+	\frac{1}{\pi_{ci,cj|c}} = \frac{M_c(M_c-1)}{m_c(m_c-1)} & (c=d, i \neq j)
 \end{cases}
 $$
-		
+
+$$
+\frac{1}{\pi_{ci,cj|c}}
+\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} =
+\begin{cases}
+	\frac{1}{\pi_{ci|c}} \frac{\pi_{ci|c} - \pi_{ci|c}^2}{\pi_{ci|c}^2 \pi_c^2} & (i=j) \\
+	\frac{1}{1} & (i \neq j)
+\end{cases}
+$$
 
 
 
