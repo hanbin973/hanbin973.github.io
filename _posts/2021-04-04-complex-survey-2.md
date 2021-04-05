@@ -94,7 +94,7 @@ $$
 
 $$
 \frac{n}{n-1} \sum_{c=1}^n (
-		e_c - \bar{e_c}
+		e_c - \bar{e}_c
 		)^2
 $$
 
