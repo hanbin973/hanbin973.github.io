@@ -103,8 +103,16 @@ $$
 \end{align}
 $$
 
-이를 분산 식에 대입하면
+이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 안쪽부터 정리하겠습니다.
 
+$$
+\frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj} =
+\begin{cases}
+	\frac{1}{\pi_{ci|c} \pi_{dj|d}} & \text{if}\ c \neq d \\
+	\frac{1}{\pi_{ci|c}} & \text{if} c=d, i=j
+\end{cases}
+$$
+		
 
 
 
