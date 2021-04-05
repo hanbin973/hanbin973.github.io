@@ -103,7 +103,15 @@ $$
 \end{align}
 $$
 
-이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 안쪽부터 정리하겠습니다.
+이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 $\pi$ 들어간 식부터 정리합시다. 
+
+$$
+\frac{1}{\pi_{cd}} \frac{\pi_{cd} - \pi_c \pi_d}{\pi_c \pi_d} =
+\begin{cases}
+\frac{1-n_c/C}{n_c^2/C^2} & (c=d) \\
+- \frac{1-n_c/C}{n_c^2/C^2} \frac{1}{n_c-1}
+\end{cases}
+$$
 
 $$
 \frac{1}{\pi_{ci,dj|c,d}} =
