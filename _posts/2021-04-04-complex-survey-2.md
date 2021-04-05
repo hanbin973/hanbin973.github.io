@@ -140,8 +140,9 @@ $$
 \sum_{i} y_{ci}^2 - \frac{1}{m_c-1} \sum_{i \neq j} y_{ci} y_{cj} &=
 \frac{m_c}{m_c-1} \sum_{i} y_{ci}^2 - \frac{1}{m_c-1} \sum_{i,j} y_{ci} y_{cj} \\
 &= \frac{1}{m_c-1} \sum_i \sum_j (y_{ci}^2 - y_{ci}y_{cj}) \\
-&= \frac{1}{m_c-1} \sum_i y_{ci} (\sum_j (y_{ci} - y_{cj})) \\
-&= \frac{1}{m_c-1} \sum_i y_{ci} m_c (y_{ci} - \bar{y}_c)
+&= \frac{1}{m_c-1} \sum_i y_{ci} [\sum_j (y_{ci} - y_{cj})] \\
+&= \frac{1}{m_c-1} \sum_i y_{ci} \cdot m_c \cdot (y_{ci} - \bar{y}_c) \\
+&= \frac{m_c}{m_c-1} \sum_i [(y_{ci} - \bar{y}_c)^2 + \bar{y}_c(y_{ci}-\bar{y}_c)]
 \end{align}
 $$
 
