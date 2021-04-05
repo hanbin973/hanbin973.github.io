@@ -113,8 +113,8 @@ $$
 
 $$
 \begin{align}
-\pi_c &= \frac{n_h}{N_h} \\
-\pi_{cd} &= \frac{n_h(n_h-1)}{N_h(N_h-1)}
+\pi_c &= \frac{n}{N} \\
+\pi_{cd} &= \frac{n(n-1)}{N(N-1)}
 \end{align}
 $$
 
