@@ -104,7 +104,7 @@ $$
 \end{align}
 $$
 
-이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 $\pi$ 들어간 식부터 정리합니다. 
+이를 분산 식에 대입할 것인데 한 번에 다 넣고 계산하면 복잡하니 $\pi$가 들어간 식부터 정리합니다. 
 
 $$
 \frac{1}{\pi_{cd}} \frac{\pi_{cd} - \pi_c \pi_d}{\pi_c \pi_d} =
@@ -134,8 +134,12 @@ $$
 $$
 
 이를 바탕으로 안쪽 합들을 정리합니다.
+
 $$
-\sum_{i=j} y_i^2 + \frac{1}{m_c-1} \sum_{i \neq j} y_i y_j
+\begin{align}
+\sum_{i} y_{ci}^2 - \frac{1}{m_c-1} \sum_{i \neq j} y_{ci} y_{cj} &=
+\frac{m_c}{m_c-1} \sum_{i} y_{ci}^2 - \frac{1}{m_c-1} \sum_{i,j} y_i y_j
+\end{align}
 $$
 
 
