@@ -98,7 +98,7 @@ $$
 \begin{align}
 \pi_c &= \frac{n_c}{C} \\
 \pi_{cd} &= \frac{n_c(n_c-1)}{C(C-1)} \quad (c \neq d) \\
-\pi_{ci|c} &= m_c/M_c \\
+\pi_{ci|c} &= \frac{m_c}{M_c} \\
 \pi_{ci,cj|c} &= \frac{m_c(m_c-1)}{M_c(M_c-1)} \quad (i \neq j)
 \end{align}
 $$
