@@ -103,7 +103,7 @@ e_c = \frac{1}{\hat{N}} \sum_{i \in B_c} \frac{1}{\pi_{ci}}(y_{ci} - \hat{\overl
 $$
 
 $$
-\bar{e}_c = frac{1}{n} \sum_{c \in A} e_c
+\bar{e}_c = \frac{1}{n} \sum_{c \in A} e_c
 $$
 
 으로 쓸 수 있습니다 ($ |A|=n $).
