@@ -109,7 +109,8 @@ $$
 \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj} =
 \begin{cases}
 	\frac{1}{\pi_{ci|c} \pi_{dj|d}} & \text{if}\ c \neq d \\
-	\frac{1}{\pi_{ci|c}} & \text{if} c=d, i=j
+	\frac{1}{\pi_{ci|c}} & \text{if}\ c=d, i=j \\
+	\frac{1}{\pi_{ci,ci|c}} & \text{if}\ c=d, i \neq j
 \end{cases}
 $$
 		
