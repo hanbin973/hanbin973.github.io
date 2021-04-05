@@ -16,13 +16,13 @@ categories: ["Statistics"]
 $N$은 모집단의 총 인구수입니다.
 
 $$
-\hat{\bar{Y}} = \frac{1}{N} \hat{T}
+\hat{\overline{Y}} = \frac{1}{N} \hat{T}
 $$
 
 문제는 [국민건강영양조사 원시자료 이용지침서](https://knhanes.cdc.go.kr/knhanes/sub03/sub03_02_05.do)의 평균공식은 실제 인구수가 아니라 가중치의 합으로 인구수를 추정하고 있다는 점입니다.
 
 $$
-\hat{\bar{Y}} = \frac{\hat{T}}{\sum_{i \in A} w_i}
+\hat{\overline{Y}} = \frac{\hat{T}}{\sum_{i \in A} w_i}
 $$
 
 실제 인구수 대신 실제 인구수의 추정량 ($\hat{N} = \sum_{i \in A} w_i$)을 사용하고 있는 것입니다.
@@ -94,12 +94,12 @@ $$
 
 $$
 \frac{n}{n-1} \sum_{c \in A_1} (
-		e_c - \bar{e}_c
+		e_c - \overline{e}_c
 		)^2
 $$
 
 $$
-e_c = \frac{1}{\hat{N}} \sum_{i \in B_c} \frac{1}{\pi_{ci}}(y_{ci} - \hat{\bar{Y}})
+e_c = \frac{1}{\hat{N}} \sum_{i \in B_c} \frac{1}{\pi_{ci}}(y_{ci} - \hat{\overline{Y}})
 $$
 
 으로 쓸 수 있습니다 ($ |A|=n $).
