@@ -99,7 +99,7 @@ $$
 $$
 
 $$
-e_c = \frac{1}{\hat{N}} \sum_{i \in B_c} w_{ci}(y_{ci} - \hat{\bar{Y}})
+e_c = \frac{1}{\hat{N}} \sum_{i \in B_c} \frac{1}{\pi_{ci}}(y_{ci} - \hat{\bar{Y}})
 $$
 
 으로 쓸 수 있습니다.
