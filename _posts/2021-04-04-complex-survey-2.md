@@ -112,8 +112,10 @@ $$
 국건영의 경우 각 집락은 한 층 안에서 동등한 확률로 무작위로 뽑힙니다.
 
 $$
-\pi_c = \frac{n_h}{N_h}
-\pi_{cd} = \frac{n_h(n_h-1)}{N_h(N_h-1)}
+\begin{align}
+\pi_c &= \frac{n_h}{N_h} \\
+\pi_{cd} &= \frac{n_h(n_h-1)}{N_h(N_h-1)}
+\end{align}
 $$
 
 
