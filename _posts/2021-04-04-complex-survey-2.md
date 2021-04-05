@@ -118,7 +118,8 @@ $$
 \frac{1}{\pi_{ci,cj|c}}
 \frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} =
 \begin{cases}
-	\frac{1}{\pi_{ci|c}} \frac{\pi_{ci|c} - \pi_{ci|c}^2}{\pi_{ci|c}^2 \pi_c^2} & (i=j) \\
+	\frac{1}{\pi_{ci|c}} \frac{\pi_{ci|c} - \pi_{ci|c}^2}{\pi_{ci|c}^2 \pi_c^2} 
+	= \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} & (i=j) \\
 	\frac{1}{1} & (i \neq j)
 \end{cases}
 $$
