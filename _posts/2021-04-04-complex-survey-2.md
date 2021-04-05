@@ -118,6 +118,15 @@ $$
 \end{align}
 $$
 
+이를 우리의 분산추정량에 대입하면
+
+$$ 
+\begin{align}
+&= \sum_{c \neq d \in A_1} (\frac{N}{n}-1) \sum_{i \in B_c} \sum_{j \in B_d}
+\frac{1}{\pi_{ci} \pi_{dj}} y_{ci} y_{dj} \\
+&+ \sum_{c \in A_1} 
+$$
+
 
 
 
