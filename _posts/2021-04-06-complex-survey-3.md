@@ -112,7 +112,7 @@ $$
 \begin{align}
 y_1 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_1 + \epsilon_1 \\
 y_2 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_2 + \epsilon_2 \\
-& \quad \vdots \\
+\vdots \\
 y_N &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_N + \epsilon_N \\
 \end{align}
 $$
@@ -120,6 +120,29 @@ $$
 가 되고 행렬을 이용하면 
 
 $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
+
+가 됩니다.
+
+처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
+표기법을 좀 더 명확하게 설명하겠습니다.
+저는 벡터를 쓸 때 특별한 말이 없을 경우 열벡터를 씁니다. 
+즉, 
+
+$$
+\begin{align}
+\mathbf{x} &= \begin{bmatrix}
+x_{1} \\
+x_{2} \\
+\vdots \\
+x_{N}
+\end{bmatrix}
+\end{align}
+$$
+
+
+
+$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \ in \mathbb{R}^{N \times p}$ 입니다.
+$ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
 
 
 
