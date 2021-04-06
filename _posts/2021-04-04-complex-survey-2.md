@@ -243,7 +243,9 @@ $$
 &\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} \\
 
 =&
-\sum_{c \in A_1} \frac{M_c}{m_c} \frac{M_c-m_c}{m_c(m_c-1)} y_{ci}y_{cj}
+\frac{M_c}{m_c}
+\frac{M_c-m_c}{m_c(m_c-1)}
+\sum_{c \in A_1}   \sum_{i \in B_c} \sum_{j \in B_c} y_{ci}y_{cj}
 \end{align}
 $$
 
