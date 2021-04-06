@@ -154,7 +154,7 @@ $$
 \begin{align}
 &\frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
 [\sum_{i \in B_c} y_{ci}^2 - \frac{1}{m_c-1}\sum_{i \neq j \in B_c} y_{ci}y_{cj} ] \\
-&= \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
+=& \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
 \frac{m_c}{m_c-1}
 \sum_{i \in B_c} (y_{ci}-\bar{y}_c)^2
 \end{align}
@@ -194,6 +194,9 @@ $$
 &+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj} 
 \end{align}
 $$ 
+
+앞쪽은 의도한 대로 분리가 됐고 뒷항도 $c=d$인 경우만 제외하면 괄호 안의 값이 0이 되어 사라집니다.
+잠시 뒷항을 무시한 채로 계산을 진행하면 
 
 
 
