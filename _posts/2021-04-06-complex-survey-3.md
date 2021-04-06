@@ -78,6 +78,14 @@ $$
 \hat{\mu} = \mathrm{argmin}_{\mu \in \mathbb{R}} \sum_{i=1}^N w_i (y_i - \mu)^2
 $$
 
+$$
+\begin{align}
+\frac{\partial}{\partial \mu} \sum_{i=1}^N w_i (y_i - \mu)^2
+&= \sum_{i=1}^N - 2 w_i (y_i - \mu)
+&= \sum_{i=1}^N - 2 w_i y_i + \mu \sum_{i=1}^N w_i
+\end{align}
+$$
+
 ## 선형회귀분석
 
 
