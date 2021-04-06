@@ -188,7 +188,7 @@ $$
 
 이제부터 벡터와 행렬의 미적분을 할 것인데 벡터의 표기법에 따라 전체적인 표기법이 크게 달리집니다.
 오해를 막기 위해 다시 한번 열벡터 표기법을 사용함을 밝히며 미적분 공식은 [별도의 글](https://hanbin973.github.io/math/2021/04/06/vector-calc.html)을 참고하십시오.
-위 식의 도함수가 0이 되는 $\beta$를 찾으면 
+위 식의 도함수가 0이 되는 $\boldsymbol{\beta}$를 찾으면 
 
 $$
 0= 2 \cdot (\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T (-\mathbf{X}) = -2 \mathbf{y}^T \mathbf{X} + 2\boldsymbol{\beta}^T \mathbf{X}^T \mathbf{X}
