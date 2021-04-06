@@ -145,11 +145,42 @@ $$
 열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{T}$를 얻고 
 
 $$\begin{align}
-\mathbf{x}^T = \begin{bmatrix} x_1 & x_2 & \ldots & x_N \end{bmatrix}
+\mathbf{x}^{T} = \begin{bmatrix} x_1 & x_2 & \ldots & x_N \end{bmatrix}
 \end{align}$$
 
 가 됩니다.
 행렬을 이용한 단일 표현은 이 표기법을 바탕으로 식의 목록을 열방향 (수직한 방향)으로 쌓은 것입니다.
+즉,
+
+$$ \mathbf{y} 
+= \begin{bmatrix}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{N}
+\end{bmatrix}
+
+=\begin{bmatrix}
+\mathbf{x}^T_{1} \\
+\mathbf{x}^T_{2} \\
+\vdots \\
+\mathbf{x}^T_{N}
+\end{bmatrix} 
+
++\begin{bmatrix}
+\epsilon_{1} \\
+\epsilon_{2} \\
+\vdots \\
+\epsilon_{N}
+\end{bmatrix}
+
+=
+\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
+
+
+
+
+
 
 
 
