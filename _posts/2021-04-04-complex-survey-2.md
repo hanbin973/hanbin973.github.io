@@ -237,6 +237,7 @@ $$
 가 됩니다.
 이 식 역시 다소 친숙한 형태를 갖는데 분산추정량의 둘째항을 정리했을 때 표본분산의 형태를 가졌던 것처럼 이 경우에는 각 집락의 총량에 대한 표본분산의 형태를 가집니다.
 남은 뒤쪽을 정리하는 건 훨씬 쉽습니다.
+$\pi$에 대한 공식들을 대입하면
 
 $$
 \begin{align}
@@ -244,8 +245,8 @@ $$
 
 =&
 \frac{M_c}{m_c}
-\frac{M_c-m_c}{m_c(m_c-1)}
-\sum_{c \in A_1}   [\sum_{i \neq j \in B_c} y_{ci}y_{cj} + \sum_{i \in B_c} \frac{1}{1} y_{ci}^2]
+\frac{M_c-m_c}{m_c} 
+\sum_{c \in A_1}   [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} \frac{1}{1} y_{ci}^2] 
 \end{align}
 $$
 
