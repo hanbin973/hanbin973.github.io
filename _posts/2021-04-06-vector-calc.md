@@ -3,6 +3,7 @@ layout: page
 title:  "Vector Calculus"
 subtitle: "A cheat sheat"
 date: 2021-04-06
+comments: True
 categories: ["Math"]
 ---
 
