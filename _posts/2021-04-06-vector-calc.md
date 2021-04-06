@@ -10,12 +10,10 @@ categories: ["Math"]
 All notations are numerator layouts.
 Irregularly updated.
 
+<center>
 | Function | Derivative |
 | --------------- | --------------- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
+</center>
 
-| Command | Description |
-| --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
