@@ -98,6 +98,8 @@ $$
 
 이제부터 벡터 미적분학의 표기법을 사용할 것입니다.
 벡터는 볼드체로 표기하겠습니다.
+행렬은 알파벳 대문자의 볼드체로 표기하겠습니다.
+단, 경우에 따라 규칙을 어길 수도 있습니다.
 본격적으로 시작하기에 앞서 OLS 복습을 하고 가겠습니다.
 다음의 모델을 생각합시다.
 
@@ -110,7 +112,7 @@ $$
 \begin{align}
 y_1 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_1 + \epsilon_1 \\
 y_2 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_2 + \epsilon_2 \\
-&\vdots
+&\vdots \\
 y_N &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_N + \epsilon_N \\
 \end{align}
 $$
