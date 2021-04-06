@@ -84,7 +84,7 @@ $$
 \begin{align}
 0=\frac{\partial}{\partial \mu} \sum_{i=1}^N w_i (y_i - \mu)^2
 &= \sum_{i=1}^N - 2 w_i (y_i - \mu) \\
-&= -2 \cdot [\sum_{i=1}^N w_i y_i + \mu \sum_{i=1}^N w_i ]
+&= -2 \cdot [\sum_{i=1}^N w_i y_i - \mu \sum_{i=1}^N w_i ]
 \end{align}
 $$
 
