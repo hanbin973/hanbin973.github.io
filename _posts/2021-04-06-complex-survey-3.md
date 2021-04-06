@@ -78,13 +78,22 @@ $$
 \hat{\mu} = \mathrm{argmin}_{\mu \in \mathbb{R}} \sum_{i=1}^N w_i (y_i - \mu)^2
 $$
 
+실제로 같은지 확인해보면
+
 $$
 \begin{align}
 \frac{\partial}{\partial \mu} \sum_{i=1}^N w_i (y_i - \mu)^2
-&= \sum_{i=1}^N - 2 w_i (y_i - \mu)
-&= \sum_{i=1}^N - 2 w_i y_i + \mu \sum_{i=1}^N w_i
+&= \sum_{i=1}^N - 2 w_i (y_i - \mu) \\
+&= -2 \cdot [\sum_{i=1}^N w_i y_i + \mu \sum_{i=1}^N w_i ]
 \end{align}
 $$
+
+로부터 같음을 확인할 수 있습니다.
+
+$$
+\hat{\mu} = \frac{\sum_{i=1}^N w_i y_i}{\sum_{i=1}^N w_i}
+$$
+
 
 ## 선형회귀분석
 
