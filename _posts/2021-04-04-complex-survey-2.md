@@ -243,17 +243,20 @@ $$
 \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} \\
 
 =&
+\sum_{c \in A_1}  
 \frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c} 
 \frac{1-m_c/M_c}{n_c^2/C^2}
-\sum_{c \in A_1}   [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} y_{ci}^2] \\
+ [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} y_{ci}^2] \\
 
 =&
--\frac{M_c}{m_c}
+-
+\sum_{c \in A_1} 
+\frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c} 
 \frac{1-m_c/M_c}{n_c^2/C^2}
 \frac{m_c}{m_c-1}
-\sum_{c \in A_1} \sum_{i \in B_c}(y_{ci}- \bar{y}_c)^2
+\sum_{i \in B_c}(y_{ci}- \bar{y}_c)^2
 \end{align}
 $$
 
