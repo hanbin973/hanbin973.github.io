@@ -72,7 +72,7 @@ $$
 
 위 모델의 모수인 $\mu$의 Ordinary Least Squre (OLS) 추정량 $\hat{\mu}$은 표본평균과 완전히 같습니다.
 나아가 OLS에 가중치를 반영한 Weighted Least Square (WLS)를 쓰면 국건영에서 쓰는 가중치 평균과 완전히 같은 식을 얻습니다.
-WLS란 다음을 최적화하여 얻은 추정량을 말합니다.
+WLS 추정량이란 다음을 최적화하여 얻은 추정량을 말합니다.
 
 $$
 \hat{\mu} = \mathrm{argmin}_{\mu \in \mathbb{R}} \sum_{i=1}^N w_i (y_i - \mu)^2
@@ -88,7 +88,7 @@ $$
 \end{align}
 $$
 
-로부터 같음을 확인할 수 있습니다.
+로부터 같음을 알 수 있습니다.
 
 $$
 \hat{\mu} = \frac{\sum_{i=1}^N w_i y_i}{\sum_{i=1}^N w_i}
