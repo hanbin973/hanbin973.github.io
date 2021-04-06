@@ -133,7 +133,8 @@ $$
 \end{cases}
 $$
 
-이를 바탕으로 안쪽 합들을 정리합니다.
+참고로 다음 공식을 기억하세요.
+비슷한 꼴의 변형을 자주 사용할 예정입니다.
 
 $$
 \begin{align}
@@ -145,6 +146,12 @@ $$
 &= \frac{m_c}{m_c-1} \sum_i [(y_{ci} - \bar{y}_c)^2 + \bar{y}_c(y_{ci}-\bar{y}_c)] \\
 &= \frac{m_c}{m_c-1} \sum_i (y_{ci} - \bar{y}_c)^2
 \end{align}
+$$
+
+분산추정량의 두번째 항을 정리하면
+
+$$ \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
+[\sum_{i \in B_c} y_{ci}^2 - \frac{1}{m_c-1}\sum_{i \neq j \in B_c} y_{ci}y_{cj} ]
 $$
 
 
