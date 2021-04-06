@@ -212,6 +212,7 @@ $$
 $$
 
 그런데 $\mathrm{Var}(\mathbf{y}|\mathbf{X}) = \mathrm{Var}(\boldsymbol{\epsilon}|\mathbf{X})$ 이므로 ($\mathbf{X}\boldsymbol{\beta}$가 조건부 $\mathbf{X}$하에서 상수) 잔차 $\boldsymbol{\epsilon}$의 분산만 알면 다 알게 됩니다.
+참고로 위 계산에서 $\mathrm{Var}(\mathbf{AX}) = \mathbf{A}\mathrm{Var}(\mathbf{X})\mathbf{A}^T$를 썼습니다.
 우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.  
 그럼 첫번째 단락에서 얻은 결과가 이 공식에서 똑같이 나오는지 확인하겠습니다.
 
