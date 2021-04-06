@@ -243,7 +243,7 @@ $$
 로부터 
 
 $$
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \frac{1}{N^2} \sum_i \sum_j \mathbb{E} (\epsilon_i \epsilon_j)
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \mathbb{E} (\frac{1}{N^2} \sum_i \sum_j  \epsilon_i \epsilon_j)
 $$
 
 가 됨을 알 수 있습니다.
