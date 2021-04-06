@@ -215,7 +215,9 @@ $$
 
 &= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} \\
 
-&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\boldsymbol{\epsilon}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} 
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\boldsymbol{\epsilon}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} \\
+
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}
 
 \end{align}
 $$
