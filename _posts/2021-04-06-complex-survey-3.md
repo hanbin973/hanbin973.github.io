@@ -124,6 +124,7 @@ $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 가 됩니다.
 $ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \in \mathbb{R}^{N \times p}$ 입니다.
 $ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
+여기서 중요한 가정으로 $\boldsymbol{\epsilon} \perp \mathbf{X}$가 포함됩니다.
 
 처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
 표기법을 좀 더 명확하게 설명하겠습니다.
@@ -208,7 +209,13 @@ $$
 \begin{align}
 \mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T] \mathrm{Var}(\mathbf{y}|\mathbf{X}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T\\
 
-&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{y}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} 
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{y}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
+
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
+
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} 
+
+
 \end{align}
 $$
 
@@ -217,8 +224,18 @@ $$
 우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.
 
 그럼 첫번째 단락에서 얻은 결과가 이 공식에서 똑같이 나오는지 확인하겠습니다.
-상수항만 포함하는 모델은 $\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{N \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix}$로 두면 얻을 수 있습니다. 
-이를 상단의 분산공식에 대입하면
+$\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{N \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix} \mathbb{R}^{1}$로 두면 위 모델은 상수항만 포함하는 모델로 환원됩니다.
+상단의 분산공식에 이 값을 대입하면
+
+$$
+
+\mathbf{X}^T \mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T = N
+
+$$
+
+과
+
+
 
 
 
