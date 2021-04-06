@@ -340,8 +340,18 @@ $$
 즉, 
 
 $$
-\sum_{c \in A_1} \frac{1}{\pi_c} \frac{\pi_c - \pi_c^2}{\pi_c^2} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj}
+\begin{align}
+&\sum_{c \in A_1} \frac{1}{\pi_c} \frac{\pi_c - \pi_c^2}{\pi_c^2} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj}
+
+=&
+\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c} 
+\frac{1}{\pi_c} \frac{\pi_c - \pi_c^2}{\pi_c^2} 
+\frac{1}{\pi_{ci,cj|c}}
+\frac{\pi_{ci|c} \pi_{cj|c} - \pi_{ci,cj|c}}{\pi_{ci|c} \pi_{cj|c}} 
+y_{ci}y_{cj}
+\end{align}
 $$
+
 
 과
 
