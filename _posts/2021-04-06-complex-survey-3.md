@@ -231,11 +231,22 @@ $\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^
 상단의 분산공식에 이 값을 대입하면
 
 $$
-
 \mathbf{X}^T \mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T = N
-
 $$
 
+그리고 
+
+$$
+\mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} =\sum_i \sum_j \mathbb{E}(\epsilon_i \epsilon_j)
+$$
+
+로부터 
+
+$$
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \frac{1}{N^2} \sum_i \sum_j \mathbb{E} (\epsilon_i \epsilon_j)
+$$
+
+가 됨을 알 수 있습니다.
 
 
 
