@@ -241,11 +241,14 @@ $\pi$에 대한 공식들을 대입하면
 
 $$
 \begin{align}
-&\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} \\
+&\sum_{c \in A_1} 
+\frac{1}{\pi_c} \frac{\pi_c - \pi_c^2}{\pi_c^2}
+\sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} \\
 
 =&
 \frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c} 
+\frac{C^2}{n_c^2} (1-\frac{m_c}{M_c})
 \sum_{c \in A_1}   [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} y_{ci}^2] 
 \end{align}
 $$
