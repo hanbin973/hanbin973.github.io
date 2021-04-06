@@ -1,7 +1,7 @@
 ---
 layout: page
 title:  "Complex survey (2)"
-subtitle: "Complex survey에서 평균과 OLS"
+subtitle: "KNHANES의 평균 및 분산 추정"
 date:	2021-04-04
 comments: true
 categories: ["Statistics"]
@@ -330,6 +330,28 @@ $$
 \end{align}
 $$
 
+원시자료 이용지침서의 공식에는 $y_{ci}$ 대신 $y_{ci} - \hat{\overline{Y}}$가 들어있는데 똑같은 식입니다.
+왜냐하면 $\sum_{c \in A_1}$안에 있는 앞 항과 뒷 항에서 똑같은 양만큼 $\hat{\overline{Y}}$가 빠졌기 때문에 전개해보면 사라지는 값이기 때문입니다. 
+즉, 항등식입니다.
+
+이제 결론을 봤으니 다시 본론으로 돌아갑시다. 
+국민건강영양조사의 경우 1단계 집락 추출은 단순표본 추출입니다.
+따라서 1단계에 대한 계산은 위에서 그대로 가져오면 되고 분산공식의 첫 항을 쪼갰을 때 나오는 음수 항과 분산공식의 둘째 항이 마찬가지로 사라지는지만 확인하면 됩니다.
+즉, 
+
+$$
+\sum_{c \in A_1} \frac{1}{\pi_c} \frac{\pi_c - \pi_c^2}{\pi_c^2} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj}
+$$
+
+과
+
+$$
+\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c}
+\frac{1}{\pi_{ci,cj|c}}
+\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
+$$
+
+를 비교하면 됩니다.
 
 
 
