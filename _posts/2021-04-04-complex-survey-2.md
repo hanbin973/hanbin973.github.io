@@ -373,6 +373,12 @@ $$
 를 비교하면 됩니다.
 둘을 더하면 $\pi_c$만 남고 $\pi_c$가 작으면 이 값은 무시할 수 있어 근사를 할 수 있습니다.
 
+$$
+\pi_c \sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c}
+\frac{1}{\pi_{ci,cj|c}}
+\frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
+$$
+
 
 
 
