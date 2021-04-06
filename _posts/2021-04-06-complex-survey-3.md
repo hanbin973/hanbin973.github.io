@@ -103,17 +103,17 @@ $$
 본격적으로 시작하기에 앞서 OLS 복습을 하고 가겠습니다.
 다음의 모델을 생각합시다.
 
-$$ y = \mathbf{x}^\mathbf{T} \boldsymbol{\beta}+ \epsilon $$
+$$ y = \mathbf{x}^{T} \boldsymbol{\beta}+ \epsilon $$
 
 $\mathbf{x},\boldsymbol{\beta} \in \mathbb{R}^p$이고 나머지는 모두 실수 ($\mathbb{R}$)입니다.
 관찰된 값 $(y_1, \mathbf{x}_1), \ldots, (y_N, \mathbf{x}_N)$을 위 모델에 맞춰 나열하면
 
 $$
 \begin{align}
-y_1 &= \mathbf{x}_1^\mathbf{T} \boldsymbol{\beta}+ \epsilon_1 \\
-y_2 &= \mathbf{x}_2^\mathbf{T} \boldsymbol{\beta}+ \epsilon_2 \\
+y_1 &= \mathbf{x}_1^{T} \boldsymbol{\beta}+ \epsilon_1 \\
+y_2 &= \mathbf{x}_2^{T} \boldsymbol{\beta}+ \epsilon_2 \\
 & \quad \quad \vdots \\
-y_N &= \mathbf{x}_N^\mathbf{T} \boldsymbol{\beta}+ \epsilon_N \\
+y_N &= \mathbf{x}_N^{T} \boldsymbol{\beta}+ \epsilon_N \\
 \end{align}
 $$
 
@@ -142,10 +142,10 @@ x_{N}
 $$
 
 입니다.
-열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{\mathbf{T}}$를 얻고 
+열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{T}$를 얻고 
 
 $$\begin{align}
-\mathbf{x}^{\mathbf{T}} = \begin{bmatrix} x_1 & x_2 & \ldots & x_N \end{bmatrix}
+\mathbf{x}^T = \begin{bmatrix} x_1 & x_2 & \ldots & x_N \end{bmatrix}
 \end{align}$$
 
 가 됩니다.
