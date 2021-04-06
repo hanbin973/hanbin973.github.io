@@ -19,7 +19,7 @@ Irregularly updated.
 
 A small tip for multivariate calculus.
 Given a vector-valued function $F: \mathbb{R}^n \rightarrow \mathbb{R}^m$, the derivative $F'$ is a $m \times n$ matrix.
-Hence, the shape of the derivative as a matrix ($m \times n$) is ordered in an opposite direction of the dimension of the domain-range dimension of the function ($n \rightarrow m$).
+Hence, the shape of the derivative as a matrix ($m \times n$) is ordered in an opposite direction of the dimension of the domain-range of the function ($n \rightarrow m$).
 
 
 
