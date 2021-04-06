@@ -226,6 +226,7 @@ $$
 -\frac{1}{n_c-1} \sum_{c \neq d \in A_1} (\sum_{i \in B_c} \frac{1}{\pi_{ci|c}} y_{ci}) (\sum_{j \in B_d}  \frac{1}{\pi_{dj|d}} y_{dj})] \\
 
 =& \frac{1-n_c/C}{n_c^2/C^2} \frac{n_c}{n_c-1}
+\sum_{c \in A_1} ()^2
 
 \end{align}  
 $$
