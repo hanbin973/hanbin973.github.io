@@ -200,7 +200,7 @@ $$
 $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{y}$$
 
 가 됨을 알 수 있습니다.
-이 추정량은 $\mathbb{E}(\boldsymbol({\hat{\beta}})) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
+이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
 이제 $\boldsymbol{\hat{\beta}}$의 분산을 알아볼 차례입니다.
 다소 복잡해보이지만 이 값을 계산하기 위해 알아야할 것은 $\mathbf{y}$의 분산 뿐입니다.
 왜냐하면 $\mathbf{X}$는 이미 관찰되어 고정됐다고 보고 $\boldsymbol{\hat{\beta}}$을 계산하기 때문입니다.
@@ -224,7 +224,7 @@ $$
 우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.
 
 그럼 첫번째 단락에서 얻은 결과가 이 공식에서 똑같이 나오는지 확인하겠습니다.
-$\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{N \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix} \mathbb{R}^{1}$로 두면 위 모델은 상수항만 포함하는 모델로 환원됩니다.
+$\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{N \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix} \in \mathbb{R}^{1}$로 두면 위 모델은 상수항만 포함하는 모델로 환원됩니다.
 상단의 분산공식에 이 값을 대입하면
 
 $$
@@ -235,7 +235,7 @@ $$
 
 과
 
-
+\
 
 
 
