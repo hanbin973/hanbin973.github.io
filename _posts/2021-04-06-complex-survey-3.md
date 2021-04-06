@@ -27,46 +27,59 @@ categories: ["Statistics"]
 
 $$
 (1-\frac{n_c}{C})
-\frac{n_c}{n_c-1}
-\sum_{c \in A_1} [
-(\sum_{i \in B_c} w_{ci} y_{ci})
-	- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} y_{di})}
-		]^2
-$$
+	\frac{n_c}{n_c-1}
+	\sum_{c \in A_1} [
+		(\sum_{i \in B_c} w_{ci} y_{ci})
+		- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} y_{di})}
+				
+	]^2
+	$$
 
-특이하게도 국민건강영양조사는 이 식을 다음과 같이 씁니다.
+	특이하게도 국민건강영양조사는 이 식을 다음과 같이 씁니다.
 
-$$
-\begin{align}
-&(1-\frac{n_c}{C})
-\frac{n_c}{n_c-1}
-\sum_{c \in A_1} [
-(\sum_{i \in B_c} w_{ci} (y_{ci} - \hat{\overline{Y}}))
-	- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} (y_{di}- \hat{\overline{Y}}))}
-		]^2 \\
+	$$
+	\begin{align}
+	&(1-\frac{n_c}{C})
+	\frac{n_c}{n_c-1}
+	\sum_{c \in A_1} [
+		(\sum_{i \in B_c} w_{ci} (y_{ci} - \hat{\overline{Y}}))
+		- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} (y_{di}- \hat{\overline{Y}}))}
+				
+	]^2 \\
 
-=&
-(1-\frac{n_c}{C})
-\frac{n_c}{n_c-1}
-\sum_{c \in A_1} [
-(\sum_{i \in B_c} w_{ci} e_{ci})
-	- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} e_{di})}
-		]^2
-\end{align}
-$$
+	=&
+	(1-\frac{n_c}{C})
+	\frac{n_c}{n_c-1}
+	\sum_{c \in A_1} [
+		(\sum_{i \in B_c} w_{ci} e_{ci})
+		- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} e_{di})}
+				
+	]^2
+	\end{align}
+	$$
 
-$e_{ci} = y_{ci} - \hat{\overline{Y}}$으로 [원시자료 이용지침서](https://knhanes.cdc.go.kr/knhanes/sub03/sub03_02_05.do)에서는 잔차라는 표현을 씁니다.
-잔차라뇨?
-잔차는 흔히 회귀분석에서 결과변수에서 설명변수의 영향을 빼고 남은 나머지를 가리키는 말입니다.
-이 표현이 평균 혹은 총량의 추정이 선형회귀분석의 일종임을 암시하고 있는 것입니다.
+	$e_{ci} = y_{ci} - \hat{\overline{Y}}$으로 [원시자료 이용지침서](https://knhanes.cdc.go.kr/knhanes/sub03/sub03_02_05.do)에서는 잔차라는 표현을 씁니다.
+	잔차라뇨?
+	잔차는 흔히 회귀분석에서 결과변수에서 설명변수의 영향을 빼고 남은 나머지를 가리키는 말입니다.
+	이 표현이 평균 혹은 총량의 추정이 선형회귀분석의 일종임을 암시하고 있는 것입니다.
+	상수만 포함하는 다음의 선형모델은 평균의 추정과 정확하게 같은 값을 줍니다 (위에서 소개한 링크나 표를 참고하세요).
 
-상수만 포함하는 다음의 선형모델은 평균의 추정과 정확하게 같은 값을 줍니다 (위에서 소개한 링크나 표를 참고하세요).
+	$$
+	\begin{align}
+	y = \mu + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2)
+	\end{align}
+	$$
 
-$$
-\begin{align}
-y = \mu + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2)
-\end{align}
-$$
+	위 모델의 모수인 $\mu$의 Ordinary Least Squre (OLS) 추정량 $\hat{\mu}$은 표본평균과 완전히 같습니다.
+	나아가 OLS에 가중치를 반영한 Weighted Least Square (WLS)를 쓰면 국건영에서 쓰는 가중치 평균과 완전히 같은 식을 얻습니다.
+	WLS란 다음을 최적화하여 얻은 추정량을 말합니다.
+	
+	$$
+	\hat{\mu} = \mathrm{argmin}_{\mu \in \mathbb{R}} \sum_{i=1}^N w_i (y_i - \mu)^2
+	$$
+
+## 선형회귀분석
+
 
 
 
