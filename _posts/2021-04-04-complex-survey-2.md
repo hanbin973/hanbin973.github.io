@@ -74,7 +74,7 @@ $$
 더군더나 조사는 매번 거의 비슷한 숫자의 대상자를 뽑기 때문에 $\mathrm{Var}(\hat{N})$ 역시 매우 작은 숫자입니다.
 그래서 두번째 항을 무시하면 $\hat{N}$을 모수인 $N$으로 취급해도 큰 문제가 생기지 않음을 알 수 있습니다.
 
-## 분산 추정
+## 분산 추정 (1)
 [지난 시간](https://hanbin973.github.io/statistics/2021/04/03/complex-survey-1.html) 계산한 인구 총량의 Horvitz-Thomspon 추정량의 분산의 불편추정량은 다음과 같습니다.
 
 $$
@@ -252,14 +252,19 @@ $$
 \sum_{c \in A_1}   [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} y_{ci}^2] \\
 
 =&
-\frac{M_c}{m_c}
+-\frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c} 
 \frac{1-m_c/M_c}{n_c^2/C^2}
 \frac{m_c}{m_c-1}
 \sum_{c \in A_1} \sum_{i \in B_c}(y_{ci}- \bar{y}_c)^2
-
 \end{align}
 $$
+
+마찬가지로 친숙한 형태가 됩니다.
+
+# 분산 추정 (2)
+이제 쉬운 경우의 계산을 한 번 맛봤으니 일반적인 경우에 대해서도 계산을 해보면 좋습니다.
+
 
 
 
