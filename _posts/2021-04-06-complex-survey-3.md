@@ -186,6 +186,9 @@ $$
 \boldsymbol{\hat{\beta}} = \mathrm{argmin}_{\boldsymbol{\beta} \in \mathbb{R}^p} (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^T(\mathbf{y} - \mathbf{X}\boldsymbol{\beta})
 $$
 
+이제부터 벡터와 행렬의 미적분을 할 것인데 벡터의 표기법에 따라 전체적인 표기법이 크게 달리집니다.
+오해를 막기 위해 다시 한번 열벡터 표기법을 사용함을 밝히며 미적분 공식은 [별도의 글]()을 참고하십시오.
+
 
 
 
