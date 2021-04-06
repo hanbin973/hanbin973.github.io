@@ -10,8 +10,7 @@ categories: ["Math"]
 All notations are numerator layouts.
 Irregularly updated.
 
-| Function | Derivative |
-{: style="color:black; font-size: 120%; text-align: center;"}
+| <span style='font-size: 100%'> Function </span> | <span style='font-size: 100%'> Derivative </span> |
 | --------------- | --------------- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
