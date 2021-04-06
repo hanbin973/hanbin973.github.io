@@ -234,6 +234,20 @@ $$
 \end{align}  
 $$
 
+가 됩니다.
+이 식 역시 다소 친숙한 형태를 갖는데 분산추정량의 둘째항을 정리했을 때 표본분산의 형태를 가졌던 것처럼 이 경우에는 각 집락의 총량에 대한 표본분산의 형태를 가집니다.
+남은 뒤쪽을 정리하는 건 훨씬 쉽습니다.
+
+$$
+\begin{align}
+&\sum_{c \in A_1} \sum_{i \in B_c} \sum_{j \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} \\
+
+=&
+\frac{M_c}{m_c} \frac{m_c(M_c-1)-M_c(m_c-1)}{m_c(m_c-1)}
+\end{align}
+$$
+
+
 
 
 
