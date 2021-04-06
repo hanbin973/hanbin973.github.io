@@ -180,6 +180,12 @@ y_{N}
 
 입니다.
 
+OLS 추정이란 관찰된 $\mathbf{y}$와 $\mathbf{X}$에 대해 다음의 최적화 문제의 답을 찾는 것입니다.
+
+$$
+\boldsymbol{\hat{\beta}} = \mathrm{argmin}_{\boldsymbol{\beta} \in \mathbb{R}^p} (\mathbf{y} - \mathbf{X}\boldsymbol{\beta})^T(\mathbf{y} - \mathbf{X}\boldsymbol{\beta})
+$$
+
 
 
 
