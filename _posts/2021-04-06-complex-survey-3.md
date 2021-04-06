@@ -166,6 +166,7 @@ y_{N}
 \vdots \\
 \mathbf{x}^T_{N}
 \end{bmatrix} 
+\boldsymbol{\beta}
 
 +\begin{bmatrix}
 \epsilon_{1} \\
@@ -176,6 +177,8 @@ y_{N}
 
 =
 \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
+
+입니다.
 
 
 
