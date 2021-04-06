@@ -245,7 +245,7 @@ $$
 =&
 \frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c(m_c-1)}
-\sum_{c \in A_1}   \sum_{i \in B_c} \sum_{j \in B_c} y_{ci}y_{cj}
+\sum_{c \in A_1}   [\sum_{i \neq j \in B_c} y_{ci}y_{cj} + \sum_{i \in B_c} \frac{1}{1} y_{ci}^2]
 \end{align}
 $$
 
