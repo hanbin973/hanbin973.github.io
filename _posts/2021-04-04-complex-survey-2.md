@@ -208,6 +208,8 @@ $$
 
 =&
 \sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}} \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
+\end{align}
+$$
 
 
 
