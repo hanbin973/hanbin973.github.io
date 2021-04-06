@@ -11,6 +11,7 @@ All notations are numerator layouts.
 Irregularly updated.
 
 | Function | Derivative |
+{: style="color:black; font-size: 100%; text-align: center;"}
 
 | --------------- | --------------- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
