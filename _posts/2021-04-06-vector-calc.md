@@ -12,8 +12,6 @@ Irregularly updated.
 
 <span align='center'>
 | Function | Derivative |
-{: style="color:black; font-size: 100%; text-align: center;"}
-
 | --------------- | --------------- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
