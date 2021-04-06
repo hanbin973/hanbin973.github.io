@@ -122,6 +122,8 @@ $$
 $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
 가 됩니다.
+$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \in \mathbb{R}^{N \times p}$ 입니다.
+$ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
 
 처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
 표기법을 좀 더 명확하게 설명하겠습니다.
@@ -139,10 +141,18 @@ x_{N}
 \end{align}
 $$
 
+입니다.
+열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{\mathbf{T}}$를 얻고 
+
+$$\begin{align}
+\mathbf{x}^{\mathbf{T}} = \begin{bmatrix} x_1 & x_2 & \ldots & x_N \end{bmatrix}
+\end{align}$$
+
+가 됩니다.
+행렬을 이용한 단일 표현은 이 표기법을 바탕으로 식의 목록을 열방향 (수직한 방향)으로 쌓은 것입니다.
 
 
-$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \ in \mathbb{R}^{N \times p}$ 입니다.
-$ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
+
 
 
 
