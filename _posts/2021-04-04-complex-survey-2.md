@@ -248,7 +248,7 @@ $$
 =&
 \frac{M_c}{m_c}
 \frac{M_c-m_c}{m_c} 
-\frac{C^2}{n_c^2} (1-\frac{m_c}{M_c})
+\frac{1-m_c/M_c}{n_c^2/C^2}
 \sum_{c \in A_1}   [ \frac{1}{m_c-1} \sum_{i \neq j \in B_c} y_{ci}y_{cj} - \sum_{i \in B_c} y_{ci}^2] 
 \end{align}
 $$
