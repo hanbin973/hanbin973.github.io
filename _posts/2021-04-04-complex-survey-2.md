@@ -157,9 +157,8 @@ $$
 =& \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
 \frac{m_c}{m_c-1}
 \sum_{i \in B_c} (y_{ci}-\bar{y}_c)^2 \\
-=& \frac{C^2}{n_c^2} 
-\frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
-\frac{m_c}{m_c-1}
+=& \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \frac{m_c}{m_c-1}
+\sum_{c \in A_1}
 \sum_{i \in B_c} (y_{ci}-\bar{y}_c)^2
 \end{align}
 $$
