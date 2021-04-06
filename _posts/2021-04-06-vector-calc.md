@@ -17,5 +17,9 @@ Irregularly updated.
 | $$\frac{\partial \mathbf{x}^T \mathbf{A} \mathbf{x}}{\partial \mathbf{x}}$$ | $$2\mathbf{x}^T\mathbf{A}$$ |
 {: style="color:black; font-size: 150%; text-align: center;"}
 
+A small tip for multivariate calculus.
+Given a vector-valued function $F: \mathbb{R}^n \rightarrow \mathbb{R}^m$, the derivative $F'$ is a $m \times n$ matrix.
+So the shape of the derivative as a matrix is in the opposite order of the dimension of the domain-range dimension of the function.
+
 
 
