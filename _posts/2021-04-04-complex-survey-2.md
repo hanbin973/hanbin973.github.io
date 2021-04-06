@@ -361,7 +361,6 @@ y_{ci}y_{cj}
 \end{align}
 $$
 
-
 과
 
 $$
@@ -378,6 +377,21 @@ $$
 \frac{1}{\pi_{ci,cj|c}}
 \frac{\pi_{ci,cj|c} - \pi_{ci|c}\pi_{cj|c}}{\pi_{ci} \pi_{cj}} y_{ci}y_{cj}
 $$
+
+## 정리 및 결론 
+1단계 집락 추출이 단순표본설계인 2단계 집락표본설계의 집단총량의 분산추정량이
+
+$$
+(1-\frac{n_c}{C})
+\frac{n_c}{n_c-1}
+\sum_{c \in A_1} [
+(\sum_{i \in B_c} w_{ci} y_{ci})
+	- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} y_{di})}
+		]^2
+$$
+
+가 됨을 보였습니다.
+
 
 
 
