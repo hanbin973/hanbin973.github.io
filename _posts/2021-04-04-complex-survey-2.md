@@ -177,6 +177,21 @@ $$
 $$ 
 
 이 상당히 닮았습니다.
+문제는 자명하게 둘로 나뉘는 $y_{ci} y_{cj}$와 다르게 
+
+$$
+\sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
+$$
+는 $c$와 $d$의 첨자로만 구성된 두 개의 항으로 깔끔하게 나뉘지 않습니다.
+그래서 두 개로 나뉘도록 하기 위해 식을 조금 변형하겠습니다.
+
+$$
+\begin{align}
+\sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
+&= \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci|c} \pi_{dj|d}} y_{ci}y_{dj}
+&+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj}
+\end{align}
+$$
 
 
 
