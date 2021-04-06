@@ -43,7 +43,7 @@ $$
 \sum_{c \in A_1} [
 (\sum_{i \in B_c} w_{ci} (y_{ci} - \hat{\overline{Y}}))
 	- \frac{1}{n_c}{\sum_{d \in A_1}(\sum_{i \in B_d} w_{di} (y_{di}- \hat{\overline{Y}}))}
-		]^2
+		]^2 \\
 
 =&
 (1-\frac{n_c}{C})
@@ -64,7 +64,7 @@ $e_{ci} = y_{ci} - \hat{\overline{Y}}$으로 [원시자료 이용지침서](http
 
 $$
 \begin{align}
-y = \mu + e & e \sim \mathcal{N}(0, \sigma^2)
+y = \mu + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2)
 \end{align}
 $$
 
