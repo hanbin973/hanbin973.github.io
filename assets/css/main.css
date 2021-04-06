@@ -513,10 +513,10 @@
 /* =Table *//*************************************************************/
 
 table {
-		width: 70%;
+		width: 30%;
 			border-top: 1px solid #444444;
 				border-collapse: collapse;
-				text-align: center;
+				align: center;
 				  
 }
 th, td {
