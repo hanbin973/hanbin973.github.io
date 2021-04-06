@@ -207,13 +207,12 @@ $$
 \begin{align}
 \mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T \mathrm{Var}(\mathbf{y}|\mathbf{X}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]\\
 
-&= \mathbf{X}(\mathbf{X}^T \mathbf{X})^{-1} \mathrm{Var|\mathbf{X}}(\mathbf{y}) (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T
+&= \mathbf{X}(\mathbf{X}^T \mathbf{X})^{-1} \mathrm{Var}(\mathbf{y}|\mathbf{X}) (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T
 \end{align}
 $$
 
 그런데 $\mathrm{Var}(\mathbf{y}|\mathbf{X}) = \mathrm{Var}(\mathbf{\epsilon}|\mathbf{X})$ 이므로 ($\mathbf{X}\boldsymbol{\beta}$는 모두 상수) 이므로 잔차의 분산만 알면 다 알게 됩니다.
-우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.
-
+우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.  
 
 
 
