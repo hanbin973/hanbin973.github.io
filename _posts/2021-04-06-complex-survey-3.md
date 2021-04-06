@@ -237,7 +237,7 @@ $$
 그리고 
 
 $$
-\mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} =\sum_i \sum_j \mathbb{E}(\epsilon_i \epsilon_j)
+\mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} = \mathbb{E}(\sum_i \sum_j \epsilon_i \epsilon_j)
 $$
 
 로부터 
