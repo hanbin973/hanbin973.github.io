@@ -156,6 +156,10 @@ $$
 [\sum_{i \in B_c} y_{ci}^2 - \frac{1}{m_c-1}\sum_{i \neq j \in B_c} y_{ci}y_{cj} ] \\
 =& \frac{C^2}{n_c^2} \frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
 \frac{m_c}{m_c-1}
+\sum_{i \in B_c} (y_{ci}-\bar{y}_c)^2 \\
+=& \frac{C^2}{n_c^2} 
+\frac{1-m_c/M_c}{m_c^2/M_c^2} \sum_{c \in A_1}
+\frac{m_c}{m_c-1}
 \sum_{i \in B_c} (y_{ci}-\bar{y}_c)^2
 \end{align}
 $$
@@ -222,7 +226,7 @@ $$
 (\sum_{i \in B_c} \frac{1}{\pi_{ci|c}} y_{ci})^2
 -\frac{1}{n_c-1} \sum_{c \neq d \in A_1} (\sum_{i \in B_c} \frac{1}{\pi_{ci|c}} y_{ci}) (\sum_{j \in B_d}  \frac{1}{\pi_{dj|d}} y_{dj})] \\
 
-=& \frac{1-n_c/C}{n_c^2/C^2}
+=& \frac{1-n_c/C}{n_c^2/C^2} \frac{n_c}{n_c-1}
 
 \end{align}  
 $$
