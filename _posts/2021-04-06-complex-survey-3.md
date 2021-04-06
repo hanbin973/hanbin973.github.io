@@ -117,7 +117,7 @@ $$
 
 가 되고 행렬을 이용하면 
 
-$$ \mathbf{y} = \mathbf{X}\mathsymbol{\beta} + \mathsymbol{\epsilon} $$
+$$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
 
 
