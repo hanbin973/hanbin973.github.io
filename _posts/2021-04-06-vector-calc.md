@@ -14,5 +14,5 @@ Irregularly updated.
 | --------------- | --------------- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
-{: style="color:black; font-size: 120%; text-align: center;"}
+{: style="color:black; font-size: 120%; text-align: center; width: 80%;"}
 
