@@ -11,7 +11,7 @@ All notations are numerator layouts.
 Irregularly updated.
 
 | Function | Derivative |
-|---|:---:|
+| --- | --- |
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
 
