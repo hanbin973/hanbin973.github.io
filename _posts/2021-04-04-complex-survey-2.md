@@ -160,7 +160,7 @@ $$
 \end{align}
 $$
 
-이 됩니다. 
+이 됩니다 ($\bar{y}_c$는 집락의 표본평균입니다). 
 정리된 꼴은 표본분산공식과 비슷한 꼴을 가진 친숙한 느낌을 줍니다.
 다음은 분산추정공식의 첫항을 계산할 차례인데 이 부분 또한 두번째항과 비슷한 꼴임을 알 수 있습니다.
 
@@ -191,12 +191,24 @@ $$
 &+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj} \\
 
 &= (\sum_{i \in B_c} \frac{1}{\pi_{ci|c}} y_{ci}) (\sum_{j \in B_d}  \frac{1}{\pi_{dj|d}} y_{dj}) \\
-&+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj} 
+&+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj} \\
+
+&= (\sum_{i \in B_c} \frac{1}{\pi_{ci|c}} y_{ci}) (\sum_{j \in B_d}  \frac{1}{\pi_{dj|d}} y_{dj}) \\
+&+ \sum_{i \in B_c} [\frac{1}{\pi_{ci,cj|c}} - \frac{1}{\pi_{ci|c} \pi_{cj|c}}] y_{ci}y_{cj} 
 \end{align}
 $$ 
 
 앞쪽은 의도한 대로 분리가 됐고 뒷항도 $c=d$인 경우만 제외하면 괄호 안의 값이 0이 되어 사라집니다.
-잠시 뒷항을 무시한 채로 계산을 진행하면 
+이 식을 원래 식에 대입하여 정리하면 분산추정식의 첫 항은 두 개의 부분으로 분리됩니다.
+
+$$
+\begin{align}
+&\sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}}  \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
+\sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj} \\
+
+=&
+\sum_{c \in A_1} \sum_{d \in A_1} \frac{1}{\pi_{cd}} \frac{\pi_{cd} - \pi_c  \pi_d}{\pi_c \pi_d}
+
 
 
 
