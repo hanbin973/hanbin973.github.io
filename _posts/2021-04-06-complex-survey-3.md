@@ -112,7 +112,7 @@ $$
 \begin{align}
 y_1 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_1 + \epsilon_1 \\
 y_2 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_2 + \epsilon_2 \\
-&\vdots \\
+& \quad \vdots \\
 y_N &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_N + \epsilon_N \\
 \end{align}
 $$
