@@ -191,7 +191,7 @@ $$
 위 식의 도함수가 0이 되는 $\beta$를 찾으면 
 
 $$
-2 \cdot (\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T (-X) = -2 \mathbf{y}^T \mathbf{X} + \boldsymbol{\beta} \mathbf{X}^T \mathbf{X} =0
+0= 2 \cdot (\mathbf{y}-\mathbf{X}\boldsymbol{\beta})^T (-X) = -2 \mathbf{y}^T \mathbf{X} + 2\boldsymbol{\beta} \mathbf{X}^T \mathbf{X}
 $$
 
 으로부터 
