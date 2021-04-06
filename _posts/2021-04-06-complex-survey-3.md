@@ -103,17 +103,17 @@ $$
 본격적으로 시작하기에 앞서 OLS 복습을 하고 가겠습니다.
 다음의 모델을 생각합시다.
 
-$$ y = \boldsymbol{\beta}^\mathbf{T}\mathbf{x} + \epsilon $$
+$$ y = \mathbf{x}^\mathbf{T} \boldsymbol{\beta}+ \epsilon $$
 
 $\mathbf{x},\boldsymbol{\beta} \in \mathbb{R}^p$이고 나머지는 모두 실수 ($\mathbb{R}$)입니다.
 관찰된 값 $(y_1, \mathbf{x}_1), \ldots, (y_N, \mathbf{x}_N)$을 위 모델에 맞춰 나열하면
 
 $$
 \begin{align}
-y_1 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_1 + \epsilon_1 \\
-y_2 &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_2 + \epsilon_2 \\
+y_1 &= \mathbf{x}_1^\mathbf{T} \boldsymbol{\beta}+ \epsilon_1 \\
+y_2 &= \mathbf{x}_2^\mathbf{T} \boldsymbol{\beta}+ \epsilon_2 \\
 \vdots \\
-y_N &= \boldsymbol{\beta}^\mathbf{T}\mathbf{x}_N + \epsilon_N \\
+y_N &= \mathbf{x}_N^\mathbf{T} \boldsymbol{\beta}+ \epsilon_N \\
 \end{align}
 $$
 
