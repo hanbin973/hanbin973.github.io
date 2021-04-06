@@ -101,7 +101,7 @@ $$
 본격적으로 시작하기에 앞서 OLS 복습을 하고 가겠습니다.
 다음의 모델을 생각합시다.
 
-$$ y \sim \mathbf{\beta}^\mathbf{T}\mathbf{X} + \epsilon $$
+$$ y \sim \boldsymbol{\beta}^\mathbf{T}\mathbf{x} + \epsilon $$
 
 
 
