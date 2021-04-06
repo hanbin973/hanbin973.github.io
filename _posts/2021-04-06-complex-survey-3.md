@@ -204,7 +204,11 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 왜냐하면 $\mathbf{X}$는 이미 관찰되어 고정됐다고 보고 $\boldsymbol{\hat{\beta}}$을 계산하기 때문입니다.
 
 $$
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T \mathrm{Var}(\mathbf{y}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]
+\begin{align}
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T \mathrm{Var}(\mathbf{y}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]\\
+
+&= \mathbf{X}(\mathbf{X}^T \mathbf{X})^{-1} \mathrm{Var}(\mathbf{y}) (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T
+\end{align}
 $$
 
 
