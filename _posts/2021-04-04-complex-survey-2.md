@@ -188,10 +188,10 @@ $$
 $$
 \begin{align}
 \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci,dj|c,d}} y_{ci}y_{dj}
-&= \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci|c} \pi_{dj|d}} y_{ci}y_{dj}
+&= \sum_{i \in B_c} \sum_{j \in B_d} \frac{1}{\pi_{ci|c} \pi_{dj|d}} y_{ci}y_{dj} \\
 &+ \sum_{i \in B_c} \sum_{j \in B_d} [\frac{1}{\pi_{ci,dj|c,d}} - \frac{1}{\pi_{ci|c} \pi_{dj|d}}] y_{ci}y_{dj}
 \end{align}
-$$
+$$ 
 
 
 
