@@ -205,9 +205,9 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 
 $$
 \begin{align}
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T \mathrm{Var}(\mathbf{y}|\mathbf{X}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]\\
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T] \mathrm{Var}(\mathbf{y}|\mathbf{X}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T\\
 
-&= \mathbf{X}(\mathbf{X}^T \mathbf{X})^{-1} \mathrm{Var}(\mathbf{y}|\mathbf{X}) (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} \mathbf{X} (\mathbf{y}|\mathbf{X}) (\mathbf{X}^T \mathbf{X})^{-1} 
 \end{align}
 $$
 
