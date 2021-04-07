@@ -172,8 +172,8 @@ $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 가 됩니다.
 $ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^n$, $\mathbf{X} \in \mathbb{R}^{n \times p}$ 입니다.
 $ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
-여기에 더해 $\boldsymbol{\epsilon} \perp \mathbf{X}$, $\mathbb{E}(\boldsymbol{\epsilon}) =0$입니다.
-이전 글과 마찬가지로 $A = \{1, \ldots, n\}$은 뽑힌 표본의 집합입니다.
+여기에 더해 $\epsilon \perp \mathbf{x}$, $\mathbb{E}(\epsilon) =0$입니다.
+이전 글과 마찬가지로 $A = \\{1, \ldots, n\\}$은 뽑힌 표본의 집합입니다.
 
 처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
 표기법을 좀 더 명확하게 설명하겠습니다.
