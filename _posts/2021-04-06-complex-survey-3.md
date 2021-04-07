@@ -125,6 +125,7 @@ $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 $ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^n$, $\mathbf{X} \in \mathbb{R}^{n \times p}$ 입니다.
 $ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
 여기에 더해 $\boldsymbol{\epsilon} \perp \mathbf{X}$, $\mathbb{E}(\boldsymbol{\epsilon}) =0$입니다.
+이전 글과 마찬가지로 $A = \{1, \ldots, n\}$은 뽑힌 표본의 집합입니다.
 
 처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
 표기법을 좀 더 명확하게 설명하겠습니다.
@@ -237,13 +238,19 @@ $$
 그리고 
 
 $$
-\mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} = \mathbb{E}(\sum_i \sum_j \epsilon_i \epsilon_j)
+\mathbf{X}^T \mathbb{E} (\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} = \mathbb{E}(\sum_{i \in A} \sum_{i \in A} \epsilon_i \epsilon_j)
 $$
 
 로부터 
 
 $$
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \mathbb{E} (\frac{1}{n^2} \sum_i \sum_j  \epsilon_i \epsilon_j)
+\begin{align}
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= \mathbb{E} (\frac{1}{n^2} \sum_{i \in A} \sum_{j \in A} \epsilon_i \epsilon_j)\\
+
+&= \mathbb{E}(\frac{1}{n^2} \sum_{i \in U} \sum_{j \in U} I(i \in A)\epsilon_i I(j \in A) \epsilon_j) \\
+
+&= \frac{1}{n^2} \sum_{i \in U} \sum_{j \in U} \mathbb{E}(I(i \in A, j \in A)) y_i y_j
+\end{align}
 $$
 
 가 됨을 알 수 있습니다.
