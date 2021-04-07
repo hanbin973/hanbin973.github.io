@@ -249,7 +249,7 @@ $$
 
 &= \mathbb{E}(\frac{1}{n^2} \sum_{i \in U} \sum_{j \in U} I(i \in A)\epsilon_i I(j \in A) \epsilon_j) \\
 
-&= \sum_{i \in U} \sum_{j \in U} \frac{\mathbb{E}(I(i \in A, j \in A))}{n^2} y_i y_j
+&= \sum_{i \in U} \sum_{j \in U} \frac{\mathbb{E}(I(i \in A, j \in A))}{n^2} \epsilon_i \epsilon_j
 \end{align}
 $$
 
