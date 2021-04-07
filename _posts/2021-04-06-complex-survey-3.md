@@ -254,7 +254,7 @@ $$
 &= \sum_{i \in U} \sum_{j \in U} \frac{\pi_{ij}-\pi_i \pi_j}{n^2} \epsilon_i \epsilon_j +
 \sum_{i \in U} \sum_{j \in U} \frac{\pi_i \pi_j}{n^2} \epsilon_i \epsilon_j \\
  
-&= \sum_{i \in U} \frac{n(n-1)/N(N-1)}{n^2} \epsilon_i \epsilon_j 
+&= \sum_{i \in U} \frac{n/N - (n/N)^2}{n^2} \epsilon_i \epsilon_j 
 +\sum_{i \in U} \sum_{j \in U} \frac{1}{N^2} \epsilon_i \epsilon_j 
 
 \end{align} 
