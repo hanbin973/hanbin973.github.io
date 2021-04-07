@@ -252,13 +252,13 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
 이제 $\boldsymbol{\hat{\beta}}$의 분산을 알아볼 차례입니다.
 다소 복잡해보이지만 이 값을 계산하기 위해 알아야할 것은 $\mathbf{y}$의 분산 뿐입니다.
-왜냐하면 $\mathbf{X}$는 이미 관찰되어 고정됐다고 보고 $\boldsymbol{\hat{\beta}}$을 계산하기 때문입니다.
+왜냐하면 $\mathbf{X}$는 이미 관찰되어 고정됐다고 보고 $\boldsymbol{\hat{\beta}}$의 분산을 계산하기 때문입니다.
 
 $$
 \begin{align}
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T] \mathrm{Var}(\mathbf{y}|\mathbf{X}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T\\
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) &= [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T] \mathrm{Var}(\mathbf{y}|\mathbf{X}, \mathcal{F}) [(\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T]^T\\
 
-&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{y}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{y}|\mathbf{X}, \mathcal{F}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
 
 &= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
 
