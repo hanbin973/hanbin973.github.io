@@ -106,14 +106,14 @@ $$
 $$ y = \mathbf{x}^{T} \boldsymbol{\beta}+ \epsilon $$
 
 $\mathbf{x},\boldsymbol{\beta} \in \mathbb{R}^p$이고 나머지는 모두 실수 ($\mathbb{R}$)입니다.
-관찰된 값 $(y_1, \mathbf{x}_1), \ldots, (y_N, \mathbf{x}_N)$을 위 모델에 맞춰 나열하면
+관찰된 값 $(y_1, \mathbf{x}_1), \ldots, (y_n, \mathbf{x}_n)$을 위 모델에 맞춰 나열하면
 
 $$
 \begin{align}
 y_1 &= \mathbf{x}_1^{T} \boldsymbol{\beta}+ \epsilon_1 \\
 y_2 &= \mathbf{x}_2^{T} \boldsymbol{\beta}+ \epsilon_2 \\
 & \quad \quad \vdots \\
-y_N &= \mathbf{x}_N^{T} \boldsymbol{\beta}+ \epsilon_N \\
+y_n &= \mathbf{x}_n^{T} \boldsymbol{\beta}+ \epsilon_n \\
 \end{align}
 $$
 
@@ -122,7 +122,7 @@ $$
 $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
 가 됩니다.
-$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \in \mathbb{R}^{N \times p}$ 입니다.
+$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^n$, $\mathbf{X} \in \mathbb{R}^{n \times p}$ 입니다.
 $ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
 여기에 더해 $\boldsymbol{\epsilon} \perp \mathbf{X}$, $\mathbb{E}(\boldsymbol{\epsilon}) =0$입니다.
 
@@ -137,7 +137,7 @@ $$
 x_{1} \\
 x_{2} \\
 \vdots \\
-x_{N}
+x_{n}
 \end{bmatrix}
 \end{align}
 $$
@@ -146,7 +146,7 @@ $$
 열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{T}$를 얻고 
 
 $$\begin{align}
-\mathbf{x}^{T} = \begin{bmatrix} x_1 & x_2 & \cdots & x_N \end{bmatrix}
+\mathbf{x}^{T} = \begin{bmatrix} x_1 & x_2 & \cdots & x_n \end{bmatrix}
 \end{align}$$
 
 가 됩니다.
@@ -158,14 +158,14 @@ $$ \mathbf{y}
 y_{1} \\
 y_{2} \\
 \vdots \\
-y_{N}
+y_{n}
 \end{bmatrix}
 
 =\begin{bmatrix}
 \mathbf{x}^T_{1} \\
 \mathbf{x}^T_{2} \\
 \vdots \\
-\mathbf{x}^T_{N}
+\mathbf{x}^T_{n}
 \end{bmatrix} 
 \boldsymbol{\beta}
 
@@ -173,7 +173,7 @@ y_{N}
 \epsilon_{1} \\
 \epsilon_{2} \\
 \vdots \\
-\epsilon_{N}
+\epsilon_{n}
 \end{bmatrix}
 
 =
@@ -227,11 +227,11 @@ $$
 우리의 철학을 떠올리면 국건영 원시자료 이용지침서에 잔차를 써둔 부분이 이해가 되기 시작하는 대목입니다.
 
 그럼 첫번째 단락에서 얻은 결과가 이 공식에서 똑같이 나오는지 확인하겠습니다.
-$\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{N \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix} \in \mathbb{R}^{1}$로 두면 위 모델은 상수항만 포함하는 모델로 환원됩니다.
+$\mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T \in \mathbb{R}^{n \times 1}$, $\boldsymbol{\beta} = \begin{bmatrix} \mu \end{bmatrix} \in \mathbb{R}^{1}$로 두면 위 모델은 상수항만 포함하는 모델로 환원됩니다.
 상단의 분산공식에 이 값을 대입하면
 
 $$
-\mathbf{X}^T \mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T = N
+\mathbf{X}^T \mathbf{X} = \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix} \begin{bmatrix} 1 & 1 & \cdots & 1 \end{bmatrix}^T = n
 $$
 
 그리고 
@@ -243,7 +243,7 @@ $$
 로부터 
 
 $$
-\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \mathbb{E} (\frac{1}{N^2} \sum_i \sum_j  \epsilon_i \epsilon_j)
+\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \mathbb{E} (\frac{1}{n^2} \sum_i \sum_j  \epsilon_i \epsilon_j)
 $$
 
 가 됨을 알 수 있습니다.
