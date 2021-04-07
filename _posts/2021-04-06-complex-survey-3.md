@@ -260,7 +260,7 @@ $$
 
 &= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{y}|\mathbf{X}, \mathcal{F}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
 
-&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
+&= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}|\mathbf{X}, \mathcal{F}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}  \\
 
 &= (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathrm{Var} (\boldsymbol{\epsilon}|\mathbf{X}) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1} \\
 
