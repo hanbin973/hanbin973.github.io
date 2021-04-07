@@ -256,7 +256,7 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 $\mathcal{F}$에 대한 평균과 분산을 계산하기 위해 다음의 변형을 하겠습니다.
 
 $$
-\mathbf{X}^T \mathbf{X} = \sum_{i \in A} \mathbf{x}^T\mathbf{x} = \sum_{i \in U} I(i \in A) \mathbf{x}^T \mathbf{x}
+\mathbf{X}^T \mathbf{X} = \sum_{i \in A} \mathbf{x}\mathbf{x}^T = \sum_{i \in U} I(i \in A) \mathbf{x}\mathbf{x}^T
 $$
 
 
