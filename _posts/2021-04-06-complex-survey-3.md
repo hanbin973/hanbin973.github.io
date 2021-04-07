@@ -255,7 +255,7 @@ $$
 
 &= \sum_{i \neq j \in U} \frac{n-1}{N(N-1)n} \epsilon_i \epsilon_j + \sum_{i=j \in U} \frac{1}{Nn} \epsilon_i \epsilon_j \\
 
-&= \sum_{i,j \in U} \frac{1}{Nn} \frac{n-1}{N-1} \epsilon_i \epsilon_j + \frac{N-n}{n-1} \sum_{i=j \in U} \frac{1}{Nn} \epsilon_i \epsilon_j \\
+&= \sum_{i,j \in U} \frac{1}{Nn} \frac{n-1}{N-1} \epsilon_i \epsilon_j + \frac{N-n}{N-1} \sum_{i=j \in U} \frac{1}{Nn} \epsilon_i \epsilon_j \\
 
 \end{align} 
 $$
