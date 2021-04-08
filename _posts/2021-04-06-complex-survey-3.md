@@ -177,25 +177,7 @@ $$
 
 $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
-$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^n$, $\mathbf{X} \in \mathbb{R}^{n \times p}$ 입니다.
-
-
-관찰된 값 $(y_1, \mathbf{x}_1), \ldots, (y_n, \mathbf{x}_n)$을 위 모델에 맞춰 나열하면
-
-$$
-\begin{align}
-y_1 &= \mathbf{x}_1^{T} \boldsymbol{\beta}+ \epsilon_1 \\
-y_2 &= \mathbf{x}_2^{T} \boldsymbol{\beta}+ \epsilon_2 \\
-& \quad \quad \vdots \\
-y_n &= \mathbf{x}_n^{T} \boldsymbol{\beta}+ \epsilon_n \\
-\end{align}
-$$
-
-가 되고 행렬을 이용하면 
-
-$$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
-
-가 됩니다.
+$ \mathbf{y}, \boldsymbol{\epsilon} \in \mathbb{R}^N$, $\mathbf{X} \in \mathbb{R}^{N \times p}$ 입니다.
 처음보는 분들은 식의 목록에서 하나의 단일한 식으로 넘어갈 때 헷갈릴 거라 생각합니다.
 표기법을 좀 더 명확하게 설명하겠습니다.
 저는 벡터를 쓸 때 특별한 말이 없을 경우 열벡터를 씁니다. 
@@ -203,20 +185,20 @@ $$ \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon} $$
 
 $$
 \begin{align}
-\mathbf{x} &= \begin{bmatrix}
-x_{1} \\
-x_{2} \\
+\mathbf{z} &= \begin{bmatrix}
+z_{1} \\
+z_{2} \\
 \vdots \\
-x_{n}
+z_{n}
 \end{bmatrix}
 \end{align}
 $$
 
 입니다.
-열벡터 $\mathbf{x}$를 전치하면 행벡터 $\mathbf{x}^{T}$를 얻고 
+열벡터 $\mathbf{z}$를 전치하면 행벡터 $\mathbf{z}^{T}$를 얻고 
 
 $$\begin{align}
-\mathbf{x}^{T} = \begin{bmatrix} x_1 & x_2 & \cdots & x_n \end{bmatrix}
+\mathbf{z}^{T} = \begin{bmatrix} z_1 & z_2 & \cdots & z_n \end{bmatrix}
 \end{align}$$
 
 가 됩니다.
@@ -228,14 +210,14 @@ $$ \mathbf{y}
 y_{1} \\
 y_{2} \\
 \vdots \\
-y_{n}
+y_{N}
 \end{bmatrix}
 
 =\begin{bmatrix}
 \mathbf{x}^T_{1} \\
 \mathbf{x}^T_{2} \\
 \vdots \\
-\mathbf{x}^T_{n}
+\mathbf{x}^T_{N}
 \end{bmatrix} 
 \boldsymbol{\beta}
 
@@ -243,7 +225,7 @@ y_{n}
 \epsilon_{1} \\
 \epsilon_{2} \\
 \vdots \\
-\epsilon_{n}
+\epsilon_{N}
 \end{bmatrix}
 
 =
@@ -253,10 +235,6 @@ y_{n}
 
 
 
-
-$ \boldsymbol{\beta} $는 이전과 같은 크기의 벡터입니다.
-여기에 더해 $\epsilon \perp \mathbf{x}$, $\mathbb{E}(\epsilon) =0$입니다.
-이전 글과 마찬가지로 $A = \\{1, \ldots, n\\}$은 뽑힌 표본의 집합입니다.
 
 
 OLS 추정이란 관찰된 $\mathbf{y}$와 $\mathbf{X}$에 대해 다음의 최적화 문제의 답을 찾는 것입니다.
