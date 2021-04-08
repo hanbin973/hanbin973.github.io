@@ -15,6 +15,7 @@ Irregularly updated.
 | $$\frac{\partial \mathbf{Ax}}{\partial \mathbf{x}}$$ | $$\mathbf{A}$$ | 
 | $$\frac{\partial \mathbf{x}^T\mathbf{A}}{\partial \mathbf{x}}$$ | $$\mathbf{A}^T$$ |
 | $$\frac{\partial \mathbf{x}^T \mathbf{A} \mathbf{x}}{\partial \mathbf{x}}$$ | $$2\mathbf{x}^T\mathbf{A}$$ |
+| $$|fraC{\partial \mathbf{F}^{-1}}{\partial \mathbf{x}} | - \mathbf{F}^{-1} \frac{\partial \mathbf{F}}{\partial \mathbf{x}} \mathbf{F}^{-1} |
 {: style="color:black; font-size: 150%; text-align: center;"}
 
 A small tip for multivariate calculus.
