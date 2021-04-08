@@ -325,11 +325,16 @@ $$
 테일러 선형화는 이 사실에 착안하여 비선형함수를 포함한 추정량을 선형함수로 근사해 복잡한 추정량을 계산할 수 있게 해줍니다.
 
 $\mathbf{x}_i = \begin{bmatrix} x_i^1 & x_i^2 & \cdots & x_i^p \end{bmatrix}$로 쓰면 $\mathbf{x}^j = \begin{bmatrix} x_1^j & x_2^j & \cdots & x_n^j \end{bmatrix}$는 각 $\mathbf{x}_i$에서 $j$번째 값만 모은 벡터를 말합니다.
-이를 바탕으로 $\mathbf{F}: \mathbb{R}^{(p+1) \times n} \rightarrow \mathbb{R}^p$를 $\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}$에 대해 
+이를 바탕으로 $\mathbf{F}: \mathbb{R}^{n \times (p+1)} \rightarrow \mathbb{R}^p$를 $\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}$에 대해 
 
-$$F(\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}) = (\sum_{i \in A} \frac{1}{\pi_i} \mathbf{x}_i \mathbf{x}_i^T)^{-1} (\sum_{i \in A} \frac{1}{\pi _i} \mathbf{x}_i y_i) $$
+$$\boldsymbol{\tilde{\beta}} = \mathbf{F}(\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}) = (\sum_{i \in A} \frac{1}{\pi_i} \mathbf{x}_i \mathbf{x}_i^T)^{-1} (\sum_{i \in A} \frac{1}{\pi _i} \mathbf{x}_i y_i) $$
 
-로 정의하면
+로 정의하면 무슨 일이 생기는지 봅시다.
+
+1차 다변수 테일러 근사는 다변수 함수 $\mathbf{F}: \mathbb{R}^m \rightarrow \mathbb{R}^k$에 대해 다음이 성립함을 말합니다.
+$\mathbf{F}$
+
+
 
 
 
