@@ -275,7 +275,8 @@ $$
 $$
 
 가 되어 표본으로 모수 $\boldsymbol{\beta}$을 추정할 수 있습니다.
-분산 역시 총 분산의 법칙을 이용하면
+분산 역시 총 분산의 법칙을 이용하면 마찬가지로 계산할 수 있습니다.
+
 
 $$
 \begin{align}
@@ -289,8 +290,6 @@ $$
 \mathbb{E}(\mathrm{Var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X)
 \end{align}
 $$
-
-마찬가지로 계산할 수 있습니다.
 
 
 
