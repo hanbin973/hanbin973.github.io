@@ -299,7 +299,9 @@ $$
 
 ## 테일러 선형화 (Taylor linearization)
 
-현재 주어진 상황을 면밀히 살필 차례입니다.
+$ \mathbf{F}: \mathbb{R}^p \rightarrow \mathbb{R}^p $를 $\mathbf{z} \in \mathbb{R}^p$에 대해 $\mathbf{z} \mapsto \mathbf{X}^T\mathbf{X} \mathbf{z}$로 정의합시다.
+
+
 
 
 
