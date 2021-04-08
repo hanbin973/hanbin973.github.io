@@ -253,7 +253,9 @@ $$
 $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{y}$$
 
 가 됨을 알 수 있습니다.
-이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
+이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
+이 추정량의 분산도 쉽게 계산할 수 있고 $\mathrm{Var}{\boldsymbol{\hat{\beta}}} = (\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T \mathbb{E}(\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}$ 가 됩니다.
+증명은 위에서 언급한 Hansen Econometrics 3장을 참고하세요.
 
 
 
