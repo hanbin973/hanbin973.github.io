@@ -254,7 +254,7 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 
 가 됨을 알 수 있습니다.
 이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
-이 추정량의 분산도 쉽게 계산할 수 있고 $\mathrm{Var}{\boldsymbol{\hat{\beta}}} = (\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T \mathbb{E}(\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}$ 가 됩니다.
+이 추정량의 분산도 쉽게 계산할 수 있고 $\mathrm{Var}(\boldsymbol{\hat{\beta}}|\mathbf{X}) = (\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T \mathbb{E}(\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}$ 가 됩니다.
 증명은 위에서 언급한 Hansen Econometrics 3장을 참고하세요.
 
 ## 복합 설계에서의 선형회귀분석 (2) 
@@ -268,12 +268,23 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 그러면 
 
 $$
+\mathbb{E}(\boldsymbol{\tilde{\beta}}|X) =
 \mathbb{E}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) = 
 \mathbb{E}(\boldsymbol{\hat{\beta}}|X) =
 \boldsymbol{\beta}
 $$
 
 가 되어 표본으로 모수 $\boldsymbol{\beta}$을 추정할 수 있습니다.
+분산 역시 총 분산의 법칙을 이용하면
+
+$$
+\mathrm{Var}(\boldsymbol{\tilde{\beta}}|X) =
+\mathrm{Var}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) + 
+\mathbb{E}(\mathrm{Var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X))
+$$
+
+마찬가지로 계산할 수 있습니다.
+
 
 
 
