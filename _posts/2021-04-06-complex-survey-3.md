@@ -257,6 +257,14 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 이 추정량의 분산도 쉽게 계산할 수 있고 $\mathrm{Var}{\boldsymbol{\hat{\beta}}} = (\mathbf{X}^T \mathbf{X})^{-1}\mathbf{X}^T \mathbb{E}(\boldsymbol{\epsilon}\boldsymbol{\epsilon}^T) \mathbf{X} (\mathbf{X}^T \mathbf{X})^{-1}$ 가 됩니다.
 증명은 위에서 언급한 Hansen Econometrics 3장을 참고하세요.
 
+## 복합 설계에서의 선형회귀분석 (2) 
+
+모집단의 정보로 초모집단의 모수를 추정하는 방법을 알아봤고 이제는 표본의 정보로 모집단의 정보를 알아볼 차례입니다.
+표본추출과정이 초모집단에서 모집단을 추출하는 것처럼 취급할 수 있다면, 예를 들어 무작위복원추출이 가능하다면 위의 추정을 그대로 사용할 수 있겠으나 복합표본설계는 비복원 추출일뿐만 아니라 표본 추출의 확률 또한 표본마다 다르기 때문에 위의 추정을 그대로 사용할 수 없습니다.
+그대로 사용했을 때 어떻게 되는지는 이후에 따로 글을 쓰도록 하겠습니다.
+
+표본의 집합 $A = \\{i_1, \ldots, i_n \\}이라 정의하고 그 크기가 $n$ ($<N$)이라고 하겠습니다. 
+
 
 
 
