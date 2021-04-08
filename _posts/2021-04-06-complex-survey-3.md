@@ -233,10 +233,7 @@ y_{N}
 
 입니다.
 
-
-
-
-
+모집단 전체를 알고 있다면 간단하게 OLS 추정을 통해 초모집단의 모수 $\boldsymbol{\beta}$를 추정할 수 있습니다.
 OLS 추정이란 관찰된 $\mathbf{y}$와 $\mathbf{X}$에 대해 다음의 최적화 문제의 답을 찾는 것입니다.
 
 $$
@@ -257,10 +254,8 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 
 가 됨을 알 수 있습니다.
 이 추정량은 $\mathbb{E}(\boldsymbol{\hat{\beta}}) = \boldsymbol{\beta}$를 만족하는 불편추정량입니다.
-모집단을 생각하지 않고 표본이 초모집단에서 바로 추출됐다고 가정하면 분산은 근사 없이 쉽게 계산됩니다.
-[Hansen Econometrics](https://www.ssc.wisc.edu/~bhansen/econometrics/)의 3장을 참고하십시오.
 
-:
+
 
 
 
