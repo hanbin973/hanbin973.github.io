@@ -299,8 +299,7 @@ $$
 
 ## 테일러 선형화 (Taylor linearization)
 
-$ \mathbf{F}: \mathbb{R}^{(p+1) \times N} \rightarrow \mathbb{R}^p $를 $\mathbf{z}_i \in \mathbb{R}^p$ ($i = 1, \ldots, p+1$)에 대해 $F(z_1, z_2, \ldots, z_{p+1}) = $로 정의합시다.
-
+$ \mathbf{F}: \mathbb{R}^{(p+1) \times N} \rightarrow \mathbb{R}^p $
 
 
 
