@@ -273,7 +273,7 @@ $$
 \boldsymbol{\beta}
 $$
 
-가 되어 표본으로 모수 $\beta$을 추정할 수 있습니다.
+가 되어 표본으로 모수 $\boldsymbol{\beta}$을 추정할 수 있습니다.
 
 
 
