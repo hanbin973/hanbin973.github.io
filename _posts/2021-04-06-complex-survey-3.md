@@ -278,9 +278,15 @@ $$
 분산 역시 총 분산의 법칙을 이용하면
 
 $$
-\mathrm{Var}(\boldsymbol{\tilde{\beta}}|X) =
+\begin{align}
+\mathrm{Var}(\boldsymbol{\tilde{\beta}}|X) &=
+
 \mathrm{Var}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) + 
-\mathbb{E}(\mathrm{Var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X))
+\mathbb{e}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{f})|x) &=
+
+\mathrm{Var}(\boldsymbol{\hat{\beta}}) + 
+\mathbb{e}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{f})|x)
+\end{align}
 $$
 
 마찬가지로 계산할 수 있습니다.
