@@ -282,11 +282,11 @@ $$
 \mathrm{Var}(\boldsymbol{\tilde{\beta}}|X) &=
 
 \mathrm{Var}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) + 
-\mathbb{e}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{f})|x) &=
+\mathbb{e}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) &=
 \\
 
 \mathrm{Var}(\boldsymbol{\hat{\beta}}) + 
-\mathbb{E}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{f})|x)
+\mathbb{E}(\mathrm{Var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X)
 \end{align}
 $$
 
