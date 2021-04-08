@@ -264,8 +264,16 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 그대로 사용했을 때 어떻게 되는지는 이후에 따로 글을 쓰도록 하겠습니다.
 
 표본의 집합 $A = \\{i_1, \ldots, i_n \\}$을 정의하고 그 크기가 $n$ ($<N$)이라고 하겠습니다. 
+우리 일은 표본의 정보로 계산할 수 있는 $\boldsymbol{\hat{\beta}}$의 추정량 $\boldsymbol{\tilde{\beta}}$을 얻는 것입니다.
+그러면 
 
+$$
+\mathbb{E}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) = 
+\mathbb{E}(\boldsymbol{\hat{\beta}}|X) =
+\boldsymbol{\beta}
+$$
 
+가 되어 표본으로 모수 $\beta$을 추정할 수 있습니다.
 
 
 
