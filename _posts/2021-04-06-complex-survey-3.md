@@ -263,7 +263,7 @@ $$ \boldsymbol{\hat{\beta}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathb
 표본추출과정이 초모집단에서 모집단을 추출하는 것처럼 취급할 수 있다면, 예를 들어 무작위복원추출이 가능하다면 위의 추정을 그대로 사용할 수 있겠으나 복합표본설계는 비복원 추출일뿐만 아니라 표본 추출의 확률 또한 표본마다 다르기 때문에 위의 추정을 그대로 사용할 수 없습니다.
 그대로 사용했을 때 어떻게 되는지는 이후에 따로 글을 쓰도록 하겠습니다.
 
-표본의 집합 $A = \\{i_1, \ldots, i_n \\}$을 정의하고 그 크기가 $n$ ($<N$)이라고 하겠습니다. 
+표본의 집합 $A = \\{i_1, \ldots, i_n \\}$을 정의하고 그 크기가 $n$이라고 하겠습니다. 
 우리 일은 표본의 정보로 계산할 수 있는 $\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F}) =\boldsymbol{\hat{\beta}}$ 을 만족하는 $\boldsymbol{\hat{\beta}}$의 추정량 $\boldsymbol{\tilde{\beta}}$을 얻는 것입니다.
 그러면 
 
@@ -281,7 +281,6 @@ $$
 $$
 \begin{align}
 \mathrm{Var}(\boldsymbol{\tilde{\beta}}|X) &=
-
 \mathrm{Var}(\mathbb{E}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) + 
 \mathbb{E}(\mathrm{var}(\boldsymbol{\tilde{\beta}}|\mathcal{F})|X) 
 \\
@@ -299,7 +298,38 @@ $$
 
 ## 테일러 선형화 (Taylor linearization)
 
-$ \mathbf{F}: \mathbb{R}^{(p+1) \times N} \rightarrow \mathbb{R}^p $를 $\mathbf{z}_i \in \mathbb{R}^p$ ($i = 1, \ldots, p+1$)에 대해 
+$\boldsymbol{\hat{\beta}}$를 뜯어보겠습니다.
+
+$$ \mathbf{X}^T \mathbf{X} = \sum_{i=1}^N \mathbf{x}_i \mathbf{x}_i^T $$
+
+이고 
+
+$$ \mathbf{X}^T \mathbf{y} = \sum_{i=1}^N \mathbf{x}_i y_i $$
+
+입니다.
+따라서 각각을 추정하기 위해서는
+
+$$
+\sum_{i \in A} \frac{1}{\pi_i} \mathbf{x}_i \mathbf{x}_i^T
+$$
+
+및
+
+$$
+\sum_{i \in A} \frac{1}{\pi _i} \mathbf{x}_i y_i 
+$$
+
+를 이용하면 됩니다.
+문제는 $\mathbb{E}(\frac{X}{Y}) = \frac{\mathbb{E}(x)}{\mathbb{E}(y)}$ 가 일반적으로 성립하지 않아서 이런 방식으로는 불편추정량을 얻을 수 없습니다.
+하지만 기댓값은 곱을 보존하지는 않아도 합은 보존하기 때문에 전체 추정량을 작은 추정량의 선형결합으로 표현할 수 있다면 불편추정량을 얻을 수 있습니다.
+테일러 선형화는 이 사실에 착안하여 비선형함수를 포함한 추정량을 선형함수로 근사해 복잡한 추정량을 계산할 수 있게 해줍니다.
+
+$\mathbf{x}_i = \begin{bmatrix} x_i^1 & x_i^2 & \cdots & x_i^p \end{bmatrix}$로 쓰면 $\mathbf{x}^j = \begin{bmatrix} x_1^j & x_2^j & \cdots & x_n^j \end{bmatrix}$는 각 $\mathbf{x}_i$에서 $j$번째 값만 모은 벡터를 말합니다.
+이를 바탕으로 $\mathbf{F}: \mathbb{R}^{(p+1) \times n} \rightarrow \mathbb{R}^p$를 $\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}$에 대해 
+
+$$F(\mathbf{x}^1, \ldots, \mathbf{x}^p, \mathbf{y}) = (\sum_{i \in A} \frac{1}{\pi_i} \mathbf{x}_i \mathbf{x}_i^T)^{-1} (\sum_{i \in A} \frac{1}{\pi _i} \mathbf{x}_i y_i) $$
+
+로 정의하면
 
 
 
