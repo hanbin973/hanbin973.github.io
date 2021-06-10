@@ -1,6 +1,10 @@
 - name: Publications
   papers:
-    - name: 'Physical activity and health outcomes in female adolescents: Comparison of natural experiments'
+    - name: 'The effectiveness of school-zone regulation and media coverage: A robust Poisson fixed effects model applied to panel data with missingness'
+      journal: Under Preparation
+      year: 2021
+
+    - name: 'The impact of school closure in health-related outcomes in adolescents: A natural experiment in South Korea'
       journal: Under Preparation
       year: 2021
 
@@ -20,6 +24,7 @@
       author: Hanbin Lee*, Chanwoo Kim*, Juhee Jeong, Keehoon Jung, Buhm Han 
       year: 2020
       doi: 'https://doi.org/10.1101/2020.09.17.301911'
+
 
 - name: Posters
 
