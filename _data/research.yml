@@ -7,7 +7,7 @@
       year: 2022
       doi: https://doi.org/10.1093/nar/gkac216 
 
-    - name: 'A practical solution to correct for sex-differential participation bias: A theory- based analysis'
+    - name: 'A theory-based practical solution to correct for sex-differential participation bias'
       journal: Forthcoming, accepted at Genome Biology
       fauthor: Hanbin Lee
       author: and Buhm Han
@@ -15,7 +15,7 @@
 
 - name: Unpublished Work
   papers:
-    - name: 'Population-scale single-cell RNA sequencing data analysis within minutes'
+      - name: 'FastRNA: Single-cell analysis from clusters to a laptop'
       journal: Under Review
       fauthor: Hanbin Lee
       author: and Buhm Han
