@@ -33,6 +33,9 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 					<ul style='list-style: none; padding: 0px;'>
 						{% for paper in format.papers %}
 							<li>
+								<b>
+								{{ paper.fauthor }}, 
+								</b>
 								{{ paper.author }} 
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
