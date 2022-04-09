@@ -18,6 +18,6 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 # Education
 
 ## Seoul National University
-- M.D student in Department of Medicine (2016-)
-- B.S. Mathematics (2016-)
+- M.D in Department of Medicine (2016 - )
+- B.S. Mathematics in Department of Mathematical Sciences (2016 - )
 
