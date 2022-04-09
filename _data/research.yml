@@ -1,0 +1,31 @@
+- name: Publications
+  papers:
+    - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
+      journal: Forthcoming, accpeted at Nucleic Acids Research 
+      author: Chanwoo Kim*, Hanbin Lee*, Juhee Jeong, Keehoon Jung and Buhm Han
+      year: 2022
+      doi: https://doi.org/10.1093/nar/gkac216 
+
+    - name: 'A practical solution to correct for sex-differential participation bias: A theory- based analysis'
+      journal: Forthcoming, accepted at Genome Biology
+      author: Hanbin Lee* and Buhm Han
+      year: 2022
+
+- name: Unpublished Work
+  papers:
+    - name: 'Population-scale single-cell RNA sequencing data analysis within minutes'
+      journal: Under Review
+      author: Hanbin Lee* and Buhm Han
+      year: 2022
+
+    - name: 'Causal interpretation of genome-wide association study and linkage disequilibrium'
+      journal: In preparation
+      author: Hanbin Lee* and Buhm Han
+      year: 2022
+
+
+- name: Posters
+
+- name: Talks
+
+- name: ETC
