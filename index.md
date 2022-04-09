@@ -22,12 +22,12 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 - B.S. Mathematics at Department of Mathematical Sciences (2016 - )
 
 
-## Publications
+## Research
 
 <ul style='list-style: none; padding: 0px;'>
 	{% for format in site.data.research %}
 		<li>
-			<h2 class='pub-format'> {{ format.name }} </h2>
+			<h3 class='pub-format'> {{ format.name }} </h3>
 			<div class='pubbox-out'>
 				<div class='pubbox-in'>
 					<ul style='list-style: none; padding: 0px;'>
