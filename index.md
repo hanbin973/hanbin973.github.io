@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-contact: <hanbin973@snu.ac.kr>
+Contact: <hanbin973@snu.ac.kr>
 
 ## News 
 <p class="message">
