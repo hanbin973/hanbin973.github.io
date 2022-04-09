@@ -15,7 +15,7 @@
 
 - name: Unpublished Work
   papers:
-      - name: 'FastRNA: Single-cell analysis from clusters to a laptop'
+    - name: 'FastRNA: Single-cell analysis from clusters to a laptop'
       journal: Under Review
       fauthor: Hanbin Lee
       author: and Buhm Han
