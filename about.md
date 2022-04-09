@@ -5,9 +5,19 @@ sidebar_link: true
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
+  I'm applying for a PhD in 2024. Feel free to contact me if we share any research interests.
 </p>
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
+# Bio
+I'm an undergraduate student at Department of Medicine, Seoul National University College of Medicine.
+My research interest primarily lies in the intersection of causal inference and population genetics.
+Currently, I work in Prof. [Buhm Han](https://hanlab.snu.ac.kr) laboratory.
+
+At the mean time, I enjoy tennis and search for delicious dishes.
+
+# Education
+
+## Seoul National University
+- M.D student in Department of Medicine (2016-)
+- B.S. Mathematics (2016-)
+
