@@ -1,7 +1,8 @@
 ---
 layout: mainpage
-title: Hanbin Lee's Homepage
 ---
+
+contact: <hanbin973@snu.ac.kr>
 
 ## News 
 <p class="message">
