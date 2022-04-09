@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: mainpage
 title: Hanbin Lee's Homepage
 ---
 
