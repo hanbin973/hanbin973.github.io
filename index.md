@@ -13,6 +13,7 @@ Contact: <hanbin973@snu.ac.kr>
 I'm an undergraduate student at Department of Medicine, Seoul National University College of Medicine.
 My research interest primarily lies in the intersection of causal inference and population genetics.
 Currently, I work in Prof. [Buhm Han](https://hanlab.snu.ac.kr) laboratory.
+I'm largely interested in the philosophy of science and epistemology which makes me a strong proponent of the [feminist standpoint theory](https://www.jstor.org/stable/10.7591/j.ctt1hhfnmg).
 
 At the mean time, I enjoy tennis and search for delicious dishes.
 
@@ -23,7 +24,7 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 - B.S. Mathematics at Department of Mathematical Sciences (2016 - )
 
 
-## Research
+## Publications
 
 <ul style='list-style: none; padding: 0px;'>
 	{% for format in site.data.research %}
@@ -43,7 +44,7 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 								{{ paper.year }}
 							</li>
 						{% endfor %}
-						{% if format.name == 'Publications' %}
+						{% if format.name == 'Journals' %}
 						*: Equal contribution
 						{% endif %}
 					</ul>

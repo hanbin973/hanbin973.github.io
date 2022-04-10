@@ -1,4 +1,4 @@
-- name: Publications
+- name: Journals
   papers:
     - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
       journal: Forthcoming, accpeted at Nucleic Acids Research 
