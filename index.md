@@ -23,12 +23,13 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 - M.D. at Department of Medicine (2016 - *current*)
 - B.S. Mathematics at Department of Mathematical Sciences (2016 - *current*)
 
+---
 
 ## Reserach interests
-My current research goal is to promote identification as a central practice in scientific practice.
+My current research goal is to promote identification as a central practice in scientific inquiry.
 
 ### The role of casual inference
-The biggest contribution of the modern study on causality was establishing the [distinction](https://www.bradyneal.com/slides/2%20-%20Potential%20Outcomes.pdf, p.168) between *identification* and *estimation*.
+The biggest contribution of the modern study on causality was establishing the [distinction](https://www.bradyneal.com/slides/2%20-%20Potential%20Outcomes.pdf) between *identification* and *estimation*.
 In my opinion, recent biomedical research has focused largely on the later while missing the essential components of identification.
 Instead of focusing on identification, literature tend to accept post-hoc interpretation of estimation outputs without proper justification.
 As a result, the meanings of research findings became very unclear and vague.
