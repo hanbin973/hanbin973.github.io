@@ -20,8 +20,25 @@ At the mean time, I enjoy tennis and search for delicious dishes.
 ## Education
 
 ### Seoul National University
-- M.D at Department of Medicine (2016 - )
-- B.S. Mathematics at Department of Mathematical Sciences (2016 - )
+- M.D. at Department of Medicine (2016 - *current*)
+- B.S. Mathematics at Department of Mathematical Sciences (2016 - *current*)
+
+
+## Reserach interests
+My current research goal is to promote identification as a central practice in scientific practice.
+
+### The role of casual inference
+The biggest contribution of the modern study on causality was establishing the [distinction](https://www.bradyneal.com/slides/2%20-%20Potential%20Outcomes.pdf, p.168) between *identification* and *estimation*.
+In my opinion, recent biomedical research has focused largely on the later while missing the essential components of identification.
+Instead of focusing on identification, literature tend to accept post-hoc interpretation of estimation outputs without proper justification.
+As a result, the meanings of research findings became very unclear and vague.
+
+### Why population genetics?
+I believe that population genetics has a potential to overcome the current limitations in biomedical research.
+As one of the [first field](https://doi.org/10.1093/genetics/143.4.1499) to adopt graph-based causal reasoning, causality has been a central component of the field.
+While most identification research focuses endogeneity issues such as establishing conditional exchangeability, my primary focus is on consistency and covariate distributions.
+For example, when questioning the causal role of body-mass index on a health outcome, one must first precisely define [what really means to manipulate BMI](https://doi.org/10.1038/ijo.2008.82) which is a matter of consistency.
+Addressing such questions is possible only with the support of proper domain-specific knowledge and theory where population genetics is a very likely candidate.
 
 
 ## Publications
