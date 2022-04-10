@@ -30,7 +30,7 @@ My current research goal is to promote identification as a central practice in s
 
 ### The role of casual inference
 The biggest contribution of the modern study on causality was establishing the [distinction](https://www.bradyneal.com/slides/2%20-%20Potential%20Outcomes.pdf) between *identification* and *estimation*.
-In my opinion, recent biomedical research has focused largely on the later while missing the essential components of identification.
+In my opinion, recent biomedical research has focused largely on the latter while missing the essential components of identification.
 Instead of focusing on identification, literature tend to accept post-hoc interpretation of estimation outputs without proper justification.
 As a result, the meanings of research findings became very unclear and vague.
 
