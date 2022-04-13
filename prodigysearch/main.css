@@ -39,18 +39,11 @@ body {
 #botbanner {
 	color: black;
 	padding: 2px;
-	border-radius: 5px;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: black;
+
 }
-	#botbanner a:link {
-		color: black;
-		
-	}
-	#botbanner a:visited {
-		color: black;
-		
-	}
 	#botbanner a:{
-		color: black;
 		text-decoration: underline;
-		
 	}
