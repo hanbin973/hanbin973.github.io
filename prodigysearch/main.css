@@ -25,7 +25,7 @@ body {
 		color: white;
 		
 	}
-	#topbanner a:link{
+	#topbanner a:hover {
 		color: white;
 		text-decoration: underline;
 		
