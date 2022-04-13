@@ -39,9 +39,9 @@ body {
 #botbanner {
 	color: black;
 	padding: 2px;
-	border-top-width: 5px;
+	border-top-width: 2px;
 	border-top-style: solid;
-	border-top-color: black;
+	border-top-color: grey;
 
 }
 	#botbanner a:{
