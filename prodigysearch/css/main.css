@@ -10,6 +10,6 @@ body {
 	margin-bottom:60px;
 }
 
-.container {
-	max-width: 600px;
+#mainframe {
+	max-width: 500px;
 }
