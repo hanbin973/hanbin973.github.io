@@ -9,3 +9,7 @@ body {
 	margin-left: 8em;
 	margin-bottom:60px;
 }
+
+.container {
+	max-width: 800px;
+}
