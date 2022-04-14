@@ -45,11 +45,11 @@
 				<div class="p-3 mb-3 bg-light rounded-3">
 					<h3>고등학교를 선택하세요</h3>
 
-					<input type="radio" class="btn-check" name="high-school" id="minsa" autocomplete="off" value="minsa">
+					<input type="radio" class="btn-check" name="high_school" id="minsa" autocomplete="off" value="minsa">
 					<label class="btn btn-outline-success" for="minsa">민사고</label>
-					<input type="radio" class="btn-check" name="high-school" id="yongin" autocomplete="off" value="yongin">
+					<input type="radio" class="btn-check" name="high_school" id="yongin" autocomplete="off" value="yongin">
 					<label class="btn btn-outline-success" for="yongin">외대부고</label>
-					<input type="radio" class="btn-check" name="high-school" id="seoulsci" autocomplete="off" value="seoulsci">
+					<input type="radio" class="btn-check" name="high_school" id="seoulsci" autocomplete="off" value="seoulsci">
 					<label class="btn btn-outline-success" for="seoulsci">서울과고</label>
 
 					
@@ -69,6 +69,14 @@
 				</div>
 			</div>	
 		</div>
+
+		<!-- script -->
+		<script>
+			var highschool_val = $('input:radio[name=high_school]:checked').val();
+			var college_val = $('input:radio[name=college]:checked').val();
+			console.log(high_school_val);
+			
+		</script>
 		
 		<!-- footer -->
 		<div class="footer p-2 border-top">
