@@ -58,6 +58,20 @@ $$
 		= \beta + \log \frac{E[\exp(T) \vert X=x+1]}{E[\exp(T) \vert X=x]}
 $$
 
+Therefore,
+
+$$
+\beta' - \beta =  \log \frac{E[\exp(T) \vert X=x+1]}{E[\exp(T) \vert X=x]}
+$$
+
+which shows that the regress-out approach estimates $\beta'$ which is not $\beta$, an intended parameter to estimate.
+Equation (6) is zero if the covarite $X$ and $T$ is independent. 
+This may not be true, for example, in cases when $X$ is the batch covariate and one tries to merge data from two batches with different cell-type composition.
+This means that $T$ is correlated to $X$ so equation (6) should be non-zero.
+
+
+
+
 
 
 
