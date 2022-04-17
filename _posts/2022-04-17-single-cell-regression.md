@@ -29,7 +29,7 @@ $$
 \log E[Y \vert m, X] = \log m + \beta' X 
 $$
 
-Note that I added an apostrophe ' to explicitely state that \beta and \beta' are not the same.
+Note that I added an apostrophe ' to explicitely state that $\beta$ and $\beta'$ are not the same.
 The parameter $\beta$ is 
 
 $$
