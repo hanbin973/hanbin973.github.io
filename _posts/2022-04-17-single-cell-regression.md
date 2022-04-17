@@ -15,7 +15,7 @@ $$
 \log E[Y \vert m, T, X] = \log m + T + \beta X 
 $$
 
-where $m$ is the size factor, $T$ is some biological effect (cell-type, trajectory etc.) and $X$ be the covariate.
+where $m$ is the size factor, $T$ is some biological effect (cell-type, trajectory etc.) and $X$ be the covariate (this may include the intercept).
 Say someone wants to discard $X$ from the data using the `regress-out` approach.
 
 It's just a standard log-normal _conditional expectation function_ (CEF) that is assumed in most single-cell methods assuming count models.
@@ -30,6 +30,27 @@ $$
 $$
 
 Note that I added a ' to explicitely state that \beta and \beta' are not the same.
+The parameter $\beta$ is 
+
+$$
+\beta = \frac{E[Y \vert m, T, X=x+1]}{E[Y \vert m, T, X=x]}
+$$
+
+and $\beta'$ is 
+
+$$
+\beta' = \frac{E[Y \vert m, X=x+1]}{E[Y \vert m, X=x]}
+$$
+
+The difference between the two quantities can be analytically obtained using the law of iterated expectation.
+
+$$
+E[Y \vert m, X] = E[ E[Y \vert m, T, X] \vert m, X] 
+\\= E[ \exp(\log m + \beta X + T ) \vert  m, X]
+\\= \exp(\log m + \beta X ) \cdot E[ \exp(T) \vert m,X ]
+$$
+
+
 
 
 
