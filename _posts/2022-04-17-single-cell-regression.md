@@ -16,7 +16,7 @@ $$
 $$
 
 where $m$ is the size factor, $T$ is some biological effect (cell-type, trajectory etc.) and $X$ be the covariate (this may include the intercept).
-Say someone wants to discard $X$ from the data using the `regress-out` approach.
+Say someone wants to discard $X$ from the data using the _regress-out_ approach.
 
 It's just a standard log-normal _conditional expectation function_ (CEF) that is assumed in most single-cell methods assuming count models.
 One might question about over-dispersion in scRNA-seq data. 
@@ -29,17 +29,17 @@ $$
 \log E[Y \vert m, X] = \log m + \beta' X 
 $$
 
-Note that I added a ' to explicitely state that \beta and \beta' are not the same.
+Note that I added an apostrophe ' to explicitely state that \beta and \beta' are not the same.
 The parameter $\beta$ is 
 
 $$
-\beta = \frac{E[Y \vert m, T, X=x+1]}{E[Y \vert m, T, X=x]}
+\beta = \log \frac{E[Y \vert m, T, X=x+1]}{E[Y \vert m, T, X=x]}
 $$
 
 and $\beta'$ is 
 
 $$
-\beta' = \frac{E[Y \vert m, X=x+1]}{E[Y \vert m, X=x]}
+\beta' = \log \frac{E[Y \vert m, X=x+1]}{E[Y \vert m, X=x]}
 $$
 
 The difference between the two quantities can be analytically obtained using the law of iterated expectation.
@@ -49,6 +49,15 @@ E[Y \vert m, X] = E[ E[Y \vert m, T, X] \vert m, X]
 \\= E[ \exp(\log m + \beta X + T ) \vert  m, X]
 \\= \exp(\log m + \beta X ) \cdot E[ \exp(T) \vert m,X ]
 $$
+
+Substituting this to equation (4) gives
+
+$$
+\beta' = \log \frac{E[Y \vert m, X=x+1]}{E[Y \vert m, X=x]} \\
+		= \log \frac{\exp(\log m + \beta \cdot (x+1)) \cdot E[\exp(T) \vert m,X=x+1]}{\exp(\log m + \beta \cdot x) \cdot E[\exp(T) \vert m,X=x]} \\
+		= \beta + \log \frac{E[\exp(T) \vert X=x+1]}{E[\exp(T) \vert X=x]}
+$$
+
 
 
 
