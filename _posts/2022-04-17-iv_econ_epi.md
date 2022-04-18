@@ -108,7 +108,11 @@ E[Y_i - Y_i(0) \vert D_i,Z_i ] = E[\tau_i \cdot D_i \vert D_i, Z_i]
 \\ = E[\tau_i \vert Z_i] \cdot D_i
 $$
 
+So what was happening in the SMM was the specification of $E[\tau_i \vert Z_i]$ which is
 
+$$
+E[\tau_i \vert Z_i] = \psi_0 + \psi_1 Z
+$$
 
 
 
