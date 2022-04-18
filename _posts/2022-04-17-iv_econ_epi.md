@@ -56,15 +56,22 @@ Then
 $$
 E[\tau_i \cdot D_i \vert Z_i] 
 \\= E[ E[ \tau_i \cdot D_i \vert Z_i, C_i ] \vert Z_i]
-\\= \sum_c E[\tau_i \cdot D_i \vert Z_i, C_i=c] P(C_i =c \vert Z_i)
+\\= \sum_c E[\tau_i \cdot D_i \vert Z_i, C_i=c] \cdot P(C_i =c \vert Z_i)
 $$
 
 By exogeneity of the instrument, $P(C_i \vert Z_i) = P(C_i)$.
-This leads to
+For $Z=1$,
 
 $$
-= \sum_c E[\tau_i \cdot D_i \vert Z_i, C_i=c] P(C_i =c)
-\\= 
+= \sum_c E[\tau_i \cdot D_i \vert Z_i=1, C_i=c] \cdot P(C_i =c) \\
+= E[\tau_i \cdot 1 \vert Z_i, C_i=1] \cdot P(C_i =1) \\
++ E[\tau_i \cdot D_i \vert Z_i, C_i=0] \cdot P(C_i=0)
+$$
+
+and for $Z=0$,
+$$
+= E[\tau_i \cdot 0 \vert Z_i, C_i=1] \cdot P(C_i =1) \\
++ E[\tau_i \cdot D_i \vert Z_i, C_i=0] \cdot P(C_i=0)
 $$
 
 
