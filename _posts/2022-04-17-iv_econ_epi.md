@@ -16,5 +16,17 @@ In this post, I review the two approaches in instrumental variable.
 The first one is the _local average treatment effect_ (LATE) framework famous in econometrics (Imbens and Angrist, [1994](https://www.jstor.org/stable/2951620?seq=1)).
 The second ons is the _structural mean model_ (SMM) framework proposed by the Harvard CI group (Robins, [1994](https://www.tandfonline.com/doi/abs/10.1080/03610929408831393)). 
 
+We start from the switching formula.
+
+$$ Y_i = D_i \cdot Y_i(1) + (1-D_i) \cdot Y_i(0) $$
+
+which gives
+
+$$ Y_i = \tau_i \cdot D_i + Y_i(0) $$
+
+after reordering.
+$\tau_i$ is the individual treatment effect. 
+
+
 
 
