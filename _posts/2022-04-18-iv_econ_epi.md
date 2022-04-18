@@ -6,7 +6,7 @@ excerpt_separator:  <!--more-->
 
 _Mendelian randomization_ (MR) became very famous in the recent years.
 Even clinical journals that are quite conservative in using causal language outside randomized trials also embrace MR studies nowadays.
-In the methodological field, may new MR methods have been proposed.
+In the methodological field, many new MR methods have been proposed.
 However, I'm very skeptical about them as they impose extremely strict parametric assumptions.
 For example, with very few execptions (see Shi [2021](https://pubmed.ncbi.nlm.nih.gov/34847085/) and [2022](https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-021-01449-w)), they assume strict homogeneity (see Morrison [2020](https://pubmed.ncbi.nlm.nih.gov/32451458/)).
 Furthermore, the biggest problem in current literature is that we are not very transparent about which parameter we are estimating. 
