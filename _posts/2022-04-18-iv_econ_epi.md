@@ -25,7 +25,7 @@ which gives
 $$ Y_i = \tau_i \cdot D_i + Y_i(0) $$
 
 after reordering.
-$\tau_i$ is the individual treatment effect. 
+$\tau_i = Y_i(1) - Y_i(0)$ is the individual treatment effect. 
 
 Learning the importance of heterogeneous TE in IV was a very illuminating experience.
 At the same time, the plethora of many assumptions was very confusing.
