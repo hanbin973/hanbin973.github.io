@@ -43,8 +43,20 @@ $$ E[Y_i \vert Z_i] = E[\tau_i \cdot D_i \vert Z_i] + E[Y_i(0) \vert Z_i] $$
 
 The last term is just a constant $E[Y_i(0)]$ by the exclusion criteria $Y(d) \perp\kern-5pt\perp Z$.
 
-$$ E[Y_i \vert Z_i=1] - E[Y_i \vert Z_i=0] 
-//= E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=1]
+$$ E[Y_i \vert Z_i=1] - E[Y_i \vert Z_i=0] \\
+= E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=1]
+$$
+
+To simplify this equation, we have two choices.
+One is to impose some condition on $\tau_i$ and the other is to impose some condition on $D_i$.
+Monotonicity does the latter by assuming no defiers.
+Let $C_i = D_i(1) - D_i(0)$ be the compliance status.
+Then 
+
+$$
+E[\tau_i \cdot D_i \vert Z_i] 
+\\= E[ E[ \tau_i \cdot D_i \vert Z_i, C_i ] \vert Z_i]
+\\= \sum_c E[\tau_i \cdot D_i \vert Z_i, C_i=c] P(C_i \vert Z_i)
 $$
 
 
