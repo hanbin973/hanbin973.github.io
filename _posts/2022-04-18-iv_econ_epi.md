@@ -131,7 +131,7 @@ Examining the consequence of NEM on equation (11) directly shows that SMM-based 
 
 ## Concluding remark
 My impression of these result is that monotonicity and SMM-based assumptions are not necessarily stronger/weaker than the other.
-The choice between ultimately depends on which stage, $Z \rightarrow D$ or $D \rightarrow Y$, will be restricted through imposing additional assumptions.
+The choice ultimately depends on which stage, $Z \rightarrow D$ or $D \rightarrow Y$, will be restricted through imposing additional assumptions.
 May be some person can come up with an alternative identification strategy by imposing restrictions on both but each of them being weaker for each stage.
 
 
