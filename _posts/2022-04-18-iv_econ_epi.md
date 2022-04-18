@@ -4,7 +4,7 @@ title: Instrumental variables in econometrics and epidemiology
 excerpt_separator:  <!--more-->
 ---
 
-_Mendelian randomization_ (MR) became very famous in the recent year.
+_Mendelian randomization_ (MR) became very famous in the recent years.
 Even clinical journals that are quite restrictive in using causal languages outside randomized trials also embrace MR studies nowadays.
 In the methodological field, may new MR methods have been proposed.
 However, I'm very skeptical about them as they impose extremely strict parametric assumptions.
