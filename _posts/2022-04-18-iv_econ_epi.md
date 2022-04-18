@@ -111,11 +111,29 @@ $$
 So, what was happening in the SMM was the specification of $E[\tau_i \vert Z_i]$ which is
 
 $$
-E[\tau_i \vert Z_i] = \psi_0 + \psi_1 Z
+E[\tau_i \vert Z_i] = \psi_0 + \psi_1 Z_i
 $$
 
 NEM imposes $\psi_1 = 0$ so that $\psi_0$ eventually becomes the PATE.
-Embracing the soul of Wooldridge's idea that I [wrote](https://hanbin973.github.io/2022/04/17/TEH_reg.html), using $Z - \mu_Z$ instead of $Z$ would have given $\psi_0$ the same interpretation without the NEM although the problem of identification remains (the number of moment condition is smaller than the number of estimands).
+Embracing the soul of Wooldridge's idea that I [wrote](https://hanbin973.github.io/2022/04/17/TEH_reg.html), using $Z - \mu_Z$ instead of $Z$ would have given $\psi_0$ the same interpretation without the NEM although the problem of identification would have remained (the number of moment condition is smaller than the number of estimands).
+
+To obtain the Wald ratio, apply the law of iterated expectation on (assuming NEM),
+
+$$
+E[Y_i - Y_i(0) \vert Z] = \\
+E[ E[Y_i - Y_i(0) \vert D,Z] Z ] \\
+= E[ \psi_0 \cdot D \vert Z ] \\
+= \psi_0 E[ D \vert Z ]
+$$
+
+and substituting it into equation (4) gives the desired result.
+Examining the consequence of NEM on equation (11) directly shows that SMM-based approaches acheives identification by restricting the mode of $D \rightarrow Y$.
+
+## Concluding remark
+My impression of these result is that monotonicity and SMM-based assumptions are not necessarily stronger/weaker than the other.
+The choice between ultimately depends on which stage, $Z \rightarrow D$ or $D \rightarrow Y$, will be restricted through imposing additional assumptions.
+May be some person can come up with an alternative identification strategy by imposing restrictions on both but each of them being weaker for each stage.
+
 
 
 
