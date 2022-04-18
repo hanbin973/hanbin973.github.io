@@ -108,11 +108,14 @@ E[Y_i - Y_i(0) \vert D_i,Z_i ] = E[\tau_i \cdot D_i \vert D_i, Z_i]
 \\ = E[\tau_i \vert Z_i] \cdot D_i
 $$
 
-So what was happening in the SMM was the specification of $E[\tau_i \vert Z_i]$ which is
+So, what was happening in the SMM was the specification of $E[\tau_i \vert Z_i]$ which is
 
 $$
 E[\tau_i \vert Z_i] = \psi_0 + \psi_1 Z
 $$
+
+NEM imposes $\psi_1 = 0$ so that $\psi_0$ eventually becomes the PATE.
+Embracing the soul of Wooldridge's idea that I [wrote](https://hanbin973.github.io/2022/04/17/TEH_reg.html), using $Z - \mu_Z$ instead of $Z$ would have given $\psi_0$ the same interpretation without the NEM although the problem of identification remains (the number of moment condition is smaller than the number of estimands).
 
 
 
