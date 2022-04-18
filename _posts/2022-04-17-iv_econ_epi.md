@@ -64,14 +64,14 @@ For $Z=1$,
 
 $$
 = \sum_c E[\tau_i \cdot D_i \vert Z_i=1, C_i=c] \cdot P(C_i =c) \\
-= E[\tau_i \cdot 1 \vert Z_i, C_i=1] \cdot P(C_i =1) \\
-+ E[\tau_i \cdot D_i \vert Z_i, C_i=0] \cdot P(C_i=0)
+= E[\tau_i \cdot 1 \vert Z_i=1, C_i=1] \cdot P(C_i =1) \\
++ E[\tau_i \cdot D_i \vert Z_i=1, C_i=0] \cdot P(C_i=0)
 $$
 
 and for $Z=0$,
 $$
-= E[\tau_i \cdot 0 \vert Z_i, C_i=1] \cdot P(C_i =1) \\
-+ E[\tau_i \cdot D_i \vert Z_i, C_i=0] \cdot P(C_i=0)
+= E[\tau_i \cdot 0 \vert Z_i=0, C_i=1] \cdot P(C_i =1) \\
++ E[\tau_i \cdot D_i \vert Z_i=0, C_i=0] \cdot P(C_i=0)
 $$
 
 
