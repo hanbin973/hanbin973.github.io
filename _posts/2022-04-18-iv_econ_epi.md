@@ -121,7 +121,7 @@ To obtain the Wald ratio, apply the law of iterated expectation on (assuming NEM
 
 $$
 E[Y_i - Y_i(0) \vert Z] = \\
-E[ E[Y_i - Y_i(0) \vert D,Z] Z ] \\
+E[ E[Y_i - Y_i(0) \vert D,Z] \vert Z ] \\
 = E[ \psi_0 \cdot D \vert Z ] \\
 = \psi_0 \cdot E[ D \vert Z ]
 $$
