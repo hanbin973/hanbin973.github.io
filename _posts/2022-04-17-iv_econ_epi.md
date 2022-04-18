@@ -105,6 +105,7 @@ Applying $E[\cdot \vert D,Z]$ to equation (2) gives
 $$
 E[Y_i - Y_i(0) \vert D_i,Z_i ] = E[\tau_i \cdot D_i \vert D_i, Z_i]
 \\ = E[\tau_i \vert D_i, Z_i] \cdot D_i
+\\ = E[\tau_i \vert Z_i] \cdot D_i
 $$
 
 
