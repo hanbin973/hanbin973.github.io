@@ -93,7 +93,7 @@ The proof shows that there is no restriction on $\tau_i$ and only the assumption
 Additive SMM is 
 
 $$
-E[Y-Y(0) \vert X, Z] = \psi_0 X + \psi_1 XZ
+E[Y-Y(0) \vert X, Z] = (\psi_0 + \psi_1 Z) \cdot X
 $$
 
 
