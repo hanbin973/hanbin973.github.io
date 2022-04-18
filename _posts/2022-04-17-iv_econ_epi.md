@@ -27,7 +27,12 @@ $$ Y_i = \tau_i \cdot D_i + Y_i(0) $$
 after reordering.
 $\tau_i$ is the individual treatment effect. 
 
-In my experience, the distinction between all the IV frameworks comes from the level of heterogeneous treatment effect we allow in the model.
-This means it is really about how we model the $E[\tau_i \vert D_i, Z_i]$ where $Z_i$ is the instrument. 
-
+Learning the importance of heterogeneous TE in IV was a very illuminating experience.
+At the same time, the plethora of many assumptions was very confusing.
+How does these different assumptions relate to each other?
+I don't have a full-blown answer to this question.
+However, I think that the two approaches by econometricians and epidemiologists can be classified in terms of the stage in which the assumption is applied.
+The former, which is usually referred to _monotonicity_ is a matter of how the instrument $Z$ affects the instrument $D$.
+On the other hand, the latter (e.g. _no treatment effect modification_ (NEM) assumption) imposes restriction on the mode of treatment $D$ influencing the outcome $Y$.
+The following derivations will make this point clear.
 
