@@ -44,7 +44,7 @@ $$ E[Y_i \vert Z_i] = E[\tau_i \cdot D_i \vert Z_i] + E[Y_i(0) \vert Z_i] $$
 The last term is just a constant $E[Y_i(0)]$ by the exclusion criteria $Y(d) \perp\kern-5pt\perp Z$.
 
 $$ E[Y_i \vert Z_i=1] - E[Y_i \vert Z_i=0] \\
-= E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=1]
+= E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=0]
 $$
 
 To simplify this equation, we have two choices.
@@ -74,6 +74,8 @@ $$
 = E[\tau_i \cdot 0 \vert Z_i=0, C_i=1] \cdot P(C_i =1) \\
 + E[\tau_i \cdot D_i \vert Z_i=0, C_i=0] \cdot P(C_i=0)
 $$
+
+Finally, the exclusion criteria guarantee
 
 
 
