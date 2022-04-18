@@ -69,6 +69,7 @@ $$
 $$
 
 and for $Z=0$,
+
 $$
 = E[\tau_i \cdot 0 \vert Z_i=0, C_i=1] \cdot P(C_i =1) \\
 + E[\tau_i \cdot D_i \vert Z_i=0, C_i=0] \cdot P(C_i=0)
