@@ -36,3 +36,17 @@ The former, which is usually referred to _monotonicity_ is a matter of how the i
 On the other hand, the latter (e.g. _no treatment effect modification_ (NEM) assumption) imposes restriction on the mode of treatment $D$ influencing the outcome $Y$.
 The following derivations will make this point clear.
 
+## Monotonicity
+Apply $E[\cdot \vert Z]$ to equation (2).
+
+$$ E[Y_i \vert Z_i] = E[\tau_i \cdot D_i \vert Z_i] + E[Y_i(0) \vert Z_i] $$
+
+The last term is just a constant $E[Y_i(0)]$ by the exclusion criteria $Y(d) \perp\kern-5pt\perp Z$.
+
+$$ E[Y_i \vert Z_i=1] - E[Y_i \vert Z_i=0] 
+//= E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=1]
+$$
+
+
+
+
