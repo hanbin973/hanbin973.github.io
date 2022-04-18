@@ -37,6 +37,7 @@ On the other hand, the latter (e.g. _no treatment effect modification_ (NEM) ass
 The following derivations will make this point clear.
 
 ## Monotonicity
+The proof is essentially the same as in _Mostly Harmless Econometrics_ (Theorem 4.4.1, p.155).
 Apply $E[\cdot \vert Z]$ to equation (2).
 
 $$ E[Y_i \vert Z_i] = E[\tau_i \cdot D_i \vert Z_i] + E[Y_i(0) \vert Z_i] $$
@@ -75,7 +76,26 @@ $$
 + E[\tau_i \cdot D_i \vert Z_i=0, C_i=0] \cdot P(C_i=0)
 $$
 
-Finally, the exclusion criteria guarantee
+Finally, subsituting (6) and (7) into (4) and the exclusion criteria guarantees
+
+$$
+E[\tau_i \cdot D_i \vert Z_i=1] - E[\tau_i \cdot D_i \vert Z_i=0] \\
+= \E[\tau_i \cdot 1 \vert C_i =1] \cdot P(C_i=1)  \\
+= \E[\tau_i \vert C_i=1] \cdot E[D_i(1) - D_i(0)] \\
+= \E[\tau_i \vert C_i=1] \cdot (E[D_i \vert Z=1] - E[D_i \vert Z=0]) 
+$$
+
+where the last line came from exogeneity.
+The proof shows that there is no restriction on $\tau_i$ and only the mode of $D_i$ was used to derive the Wald ratio.
+
+## Structural Mean Model (SMM)
+
+Additive SMM is 
+
+$$
+E[Y-Y(0) \vert X, Z] = \psi_0 X + \psi_1 XZ
+$$
+
 
 
 
