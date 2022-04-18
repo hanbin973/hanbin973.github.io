@@ -123,7 +123,7 @@ $$
 E[Y_i - Y_i(0) \vert Z] = \\
 E[ E[Y_i - Y_i(0) \vert D,Z] Z ] \\
 = E[ \psi_0 \cdot D \vert Z ] \\
-= \psi_0 E[ D \vert Z ]
+= \psi_0 \cdot E[ D \vert Z ]
 $$
 
 and substituting it into equation (4) gives the desired result.
