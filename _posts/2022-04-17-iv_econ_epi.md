@@ -90,10 +90,21 @@ The proof shows that there is no restriction on $\tau_i$ and only the assumption
 
 ## Structural Mean Model (SMM)
 
-Additive SMM is 
+The additive SMM is 
 
 $$
-E[Y-Y(0) \vert X, Z] = (\psi_0 + \psi_1 Z) \cdot X
+E[Y-Y(0) \vert D, Z] = (\psi_0 + \psi_1 Z) \cdot D
+$$
+
+When I saw this for the first time, I was confused.
+Most importantly, the interpretation of $\psi_0$ and $\psi_1$ wasn't very transparent to me.
+Therefore, I thought it was better to start from equation (2) to make it more sensible.
+
+Applying $E[\cdot \vert D,Z]$ to equation (2) gives
+
+$$
+E[Y_i - Y_i(0) \vert D_i,Z_i ] = E[\tau_i \cdot D_i \vert D_i, Z_i]
+\\ = E[\tau_i \vert D_i, Z_i] \cdot D_i
 $$
 
 
