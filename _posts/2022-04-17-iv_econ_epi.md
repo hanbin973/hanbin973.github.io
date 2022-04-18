@@ -27,6 +27,7 @@ $$ Y_i = \tau_i \cdot D_i + Y_i(0) $$
 after reordering.
 $\tau_i$ is the individual treatment effect. 
 
-
+In my experience, the distinction between all the IV frameworks comes from the level of heterogeneous treatment effect we allow in the model.
+This means it is really how we model the $E[\tau_i \vert D_i, Z_i]$ where $Z_i$ is the instrument. 
 
 
