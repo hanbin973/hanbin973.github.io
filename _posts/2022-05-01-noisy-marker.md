@@ -84,6 +84,7 @@ $$
 	\mathbb{E}[r_K y_K]
 		= \mathbb{E}[r_K^m y_K] + \mathbb{E}[e_K y_K]\\
 		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K y_K]\\
+		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K v] \\
 		= \mathbb{E}[r_K^m r_K^m]\beta_K
 $$
 
