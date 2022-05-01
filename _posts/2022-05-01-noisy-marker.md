@@ -20,7 +20,21 @@ Read [Pritchard and Prezworski](https://pubmed.ncbi.nlm.nih.gov/11410837/) and [
 The consequence of measurement error has been documented in various fields and the work of Edge is based on that of psychometrics. 
 [Econometric analysis of cross-section and panel data](https://mitpress.mit.edu/books/econometric-analysis-cross-section-and-panel-data-second-edition) gives a more comprehensive treatment on the general issue which I describe in this post.
 
+Consider the following _structural_ equation.
+It means that the explanatory variables has a causal effect on the dependent variable: changing the explanatory variable changes the distribution of the dependent variable.
+
 $$
-y = \beta_0 + \beta_1 + \cdots + \beta_K x_K^* + v
+y = \beta_0 + \beta_1 x_1 + \cdots + \beta_K x_K^m + v
 $$
 
+where the superscript $m$ denotes the mismeasured variable that we don't have access to.
+The mismeasured value $x_K$ for $x_K^m$ is instead observed.
+Also, assume $\mathbb{E}[v \vert x_1 \ldots x_K^m] = 0$ for unconfoundedness and $E[v]=0$ since we included the intercept $\beta_0$.
+
+By noisy measurement, it means that $x_K^m$ is observed as $x_K$ with some errors $e_K$.
+
+$$
+x_K = x_K^m + e_K
+$$
+
+It's important to clarify whether equation (2) is structural or not.
