@@ -51,7 +51,7 @@ $$
 y = \beta_0 + \beta_1 x_1 + \cdots + \beta_K x_K + (v-\beta_K e_K)
 $$
 
-Applying _ordinary least square_ (OLS) to equation (4) will not give a consistent estimate of $\beta_K$ since x_K and $v-\beta_K e_K$ is generally correlated due to equation (3).
+Applying _ordinary least square_ (OLS) to equation (4) will not give a consistent estimate of $\beta_K$ since $x_K$ and $v-\beta_K e_K$ are generally correlated due to equation (3).
 
 
 
