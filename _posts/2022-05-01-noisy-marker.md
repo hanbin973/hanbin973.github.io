@@ -53,7 +53,9 @@ $$
 
 Applying _ordinary least square_ (OLS) to equation (4) will not give a consistent estimate of $\beta_K$ since $x_K$ and $v-\beta_K e_K$ are generally correlated due to equation (2) (or diagram (3)).
 To see this, use the Frisch-Waugh-Lovell (FWL) theorem.
-First define $r_K = x_K - \mathrm{L}(x_K \vert x_1 \cdots x_K)$ where $\mathrm{L}(\cdot \vert \cdot)$ is the linear projection.
+First define 
+	$r_K = x_K - \mathrm{L}(x_K \vert x_1 \cdots x_{K-1})$ 
+where $\mathrm{L}(\cdot \vert \cdot)$ is the linear projection.
 Then by FWL, we have
 
 $$
