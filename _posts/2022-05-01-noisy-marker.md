@@ -20,6 +20,8 @@ Read [Pritchard and Prezworski](https://pubmed.ncbi.nlm.nih.gov/11410837/) and [
 The consequence of measurement error has been documented in various fields and the work of Edge is based on that of psychometrics. 
 [Econometric analysis of cross-section and panel data](https://mitpress.mit.edu/books/econometric-analysis-cross-section-and-panel-data-second-edition) gives a more comprehensive treatment on the general issue which I describe in this post.
 
+## Exogeneous measurement error
+
 Consider the following _structural_ equation.
 It means that the explanatory variables has a causal effect on the dependent variable: changing the explanatory variable changes the distribution of the dependent variable.
 
@@ -99,3 +101,19 @@ $$
 $$
 
 which states that the OLS points to a value that is smaller than the true value.
+
+## Application to GWAS
+
+The core assumption that led to equation (9) is that the error $e_K$ is exogeneous respect to the variables appearing in the structural equation (1).
+Some mechanistic reasoning on the process of LD makes this assumption doubtful.
+This becomes clear when we focus on the DAG (3).
+When the genotype at the causal locus is $x_K^m$ and the marker genotype is $x_K$, the latter is not _caused_ by $x_K^m$.
+Instead, they become correlated through a evolutionary process (say, $E$) which is depicted in the following DAG.
+
+$$
+x_K \leftarrow E \rightarrow x_K^m
+$$
+
+This will eventually break the exogeneity of $e_K$.
+Furthermore, as the evolutionary process can potentially result in population structure, thinking $x_1, \ldots, x_{K-1}$ may be correlated to $e_K$ if we think them as covariates (e.g. PC).
+Therefore, the mismeasurement model for GWAS effect size will be valid under a restricted set of evolutionary process although such process might be pluasible in real human population.
