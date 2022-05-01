@@ -124,5 +124,5 @@ Therefore, the mismeasurement model for GWAS effect size will be valid under a r
 This scinario is partially addressed by Edge et al. where the measurement error $e_K$ is allowed to be correlated with $v$.
 When $e_K$ and $v$ is correlated, equation (7) retains $\mathbb{E}[e_K v]$ which makes equation (9) invalid.
 Furthermore, the estimand of OLS is not proportional to $\beta_K$ which makes the causal interpretation more difficult.
-If it were, non-zero effect size of the marker would be a direct evidence for the presence of a causal variant.
-However, $\mathbb{E}[e_K v]$ makes this claim invalid.
+If it were, non-zero effect size of the marker would have been a direct evidence for the presence of a causal variant.
+However, non-zero $\mathbb{E}[e_K v]$ makes this claim invalid.
