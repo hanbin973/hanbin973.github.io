@@ -74,13 +74,13 @@ $$
 where 
 	$r_K^m = x_K^m - \mathrm{L}(x_K^m \vert 1, x_1, \ldots, x_{K-1})$
 .
-The last equality comes from the fact that the measurement error $e_K$ is indpendent from all $x_1, \ldots, x_{K_1}$ and $\mathbb{E}[e_K] = 0$.
+The last equality comes from the fact that the measurement error $e_K$ is indpendent from all $x_1, \ldots, x_{K-1}$ and $\mathbb{E}[e_K] = 0$.
 
 Substituting this to the numerator of (5) gives
 
 $$
-	\mathbb{E}[r_K y_K] \\
-		= \mathbb{E}[r_K^m y_K] \\
+	\mathbb{E}[r_K y_K]
+		= \mathbb{E}[r_K^m y_K]
 		= \mathbb{E}[r_K^m r_K^m]\beta_K
 $$
 
@@ -88,7 +88,8 @@ and to the denominator gives
 
 $$ 
 	\mathbb{E}[r_K r_K] 
-		= \mathbb{E} [r_K^m r_K^m + 2 r_K^m e_K + e_K e_K]
+		= \mathbb{E} [r_K^m r_K^m + 2 r_K^m e_K + e_K e_K]  \\
+		  = \mathbb{E} [r_K^m r_K^m] + \mathbb{E}[e_K e_K] 
 $$
 
 
