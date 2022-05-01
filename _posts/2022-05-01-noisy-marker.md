@@ -31,7 +31,7 @@ where the superscript $m$ denotes the mismeasured variable that we don't have ac
 The mismeasured value $x_K$ for $x_K^m$ is instead observed.
 Also, assume $\mathbb{E}[v \vert x_1, \ldots, x_K^m] = 0$ for unconfoundedness and $E[v]=0$ since we've included the intercept $\beta_0$.
 
-By noisy measurement, it means that $x_K^m$ is observed as $x_K$ with some errors $e_K$.
+By noisy measurement, it means that $x_K^m$ is observed as $x_K$ with some errors $e_K$ such that $e_K$ is indpendent from all $x_1, \ldots, x_{K-1}$ and $\mathbb{E}[e_K] = 0$.
 
 $$
 x_K = x_K^m + e_K
@@ -92,4 +92,10 @@ $$
 		  = \mathbb{E} [r_K^m r_K^m] + \mathbb{E}[e_K e_K] 
 $$
 
+Hence, we finally arrive at the following result.
 
+$$
+	\mathrm{plim}{\hat{\beta}_K^{\mathrm{OLS}}} = \beta_K \cdot \frac{\mathrm{Var}(r_K^m)}{\mathrm{Var}(r_K^m)+ \mathrm{Var}(e_K)}
+$$
+
+which states that the OLS points to a value that is smaller than the true value.
