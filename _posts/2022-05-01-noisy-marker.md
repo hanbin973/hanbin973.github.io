@@ -29,7 +29,7 @@ $$
 
 where the superscript $m$ denotes the mismeasured variable that we don't have access to.
 The mismeasured value $x_K$ for $x_K^m$ is instead observed.
-Also, assume $\mathbb{E}[v \vert x_1 \ldots x_K^m] = 0$ for unconfoundedness and $E[v]=0$ since we included the intercept $\beta_0$.
+Also, assume $\mathbb{E}[v \vert x_1, \ldots, x_K^m] = 0$ for unconfoundedness and $E[v]=0$ since we've included the intercept $\beta_0$.
 
 By noisy measurement, it means that $x_K^m$ is observed as $x_K$ with some errors $e_K$.
 
@@ -38,3 +38,11 @@ x_K = x_K^m + e_K
 $$
 
 It's important to clarify whether equation (2) is structural or not.
+We assume it's structural for a moment and discuss this later.
+This can be described in terms of a DAG.
+
+$$
+y_k \leftarrow y_k^m \rightarrow y
+$$
+
+
