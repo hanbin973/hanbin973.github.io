@@ -69,6 +69,7 @@ $$
 		= x_K^m + e_K - \mathrm{L}(x_K^m + e_K \vert 1, x_1, \ldots, x_{K-1}) \\
 		= r_K^m + e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})
 $$
+
 where 
 	$r_K^m = x_K^m - \mathrm{L}(x_K^m \vert 1, x_1, \ldots, x_{K-1})$
 .
