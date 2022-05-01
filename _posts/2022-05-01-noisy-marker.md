@@ -118,7 +118,7 @@ $$
 
 This will eventually break the exogeneity of $e_K$.
 Hence, the structural interpretation of equation (2) is lost.
-Furthermore, as the evolutionary process can potentially result in population structure, thinking $x_1, \ldots, x_{K-1}$ may be correlated to $e_K$ if we think them as covariates (e.g. PC).
+Furthermore, as the evolutionary process can potentially result in population structure, $x_1, \ldots, x_{K-1}$ may be correlated to $e_K$ if we think them as covariates (e.g. PC).
 Therefore, the mismeasurement model for GWAS effect size will be valid under a restricted set of evolutionary processes although such processes might be pluasible in real human population.
 
 This scinario is partially addressed by Edge et al. where the measurement error $e_K$ is allowed to be correlated with $v$.
