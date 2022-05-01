@@ -57,7 +57,7 @@ First define $r_K = x_K - \mathrm{L}(x_K \vert x_1 \cdots x_K)$ where $\mathrm{L
 Then by FWL, we have
 
 $$
-	\mathrm{plim} \hat{\beta}_K^{\mathrm{OLS}}  = \frac{\mathbb{E}[r_Ky_K]}{\mathbb{E}}
+	\mathrm{plim} \hat{\beta}_K^{\mathrm{OLS}}  = \frac{\mathbb{E}[r_Ky_K]}{\mathbb{E}[r_K' r_K]}
 $$
 
 
