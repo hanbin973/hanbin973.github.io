@@ -42,7 +42,9 @@ We assume it's structural for a moment and discuss this later.
 This can be described in terms of a DAG.
 
 $$
-y_k \leftarrow y_k^m \rightarrow y
+x_K \leftarrow x_K^m \rightarrow y
 $$
+
+
 
 

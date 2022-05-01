@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regres-out in single-cell biology
+title: Regress-out in single-cell biology
 ---
 
 I first intended this content as a research paper but I'm currently not planning any additional single-cell projects so I write this as a blog post.
