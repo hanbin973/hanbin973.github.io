@@ -127,7 +127,7 @@ Furthermore, the estimand of OLS is not proportional to $\beta_K$ which makes th
 If it were, non-zero effect size of the marker would have been a direct evidence for the presence of a causal variant.
 However, non-zero $\mathbb{E}[e_K v]$ makes this claim invalid.
 
-The issue might be resolved by adding ancestry-associated covariates that can make $v$ independent from $e_K$. 
+The issue might be resolved by adding ancestry-associated covariates that could make $v$ independent from $e_K$. 
 Nevertheless, this leaves the problem of correlation between $e_K$ and $x_1, \ldots x_{K_1}$ which makes 
 	$\mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})$ non-zero.
 
