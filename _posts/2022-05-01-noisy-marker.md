@@ -54,12 +54,31 @@ $$
 Applying _ordinary least square_ (OLS) to equation (4) will not give a consistent estimate of $\beta_K$ since $x_K$ and $v-\beta_K e_K$ are generally correlated due to equation (2) (or diagram (3)).
 To see this, use the Frisch-Waugh-Lovell (FWL) theorem.
 First define 
-	$r_K = x_K - \mathrm{L}(x_K \vert x_1, \cdots, x_{K-1})$ 
+	$r_K = x_K - \mathrm{L}(x_K \vert 1, x_1, \ldots, x_{K-1})$ 
 where $\mathrm{L}(\cdot \vert \cdot)$ is the linear projection.
 Then by FWL, we have
 
 $$
 	\mathrm{plim} \hat{\beta}_K^{\mathrm{OLS}}  = \frac{\mathbb{E}[r_Ky_K]}{\mathbb{E}[r_K' r_K]}
+$$
+
+From the definition of $r_K$,
+
+$$
+	x_K - \mathrm{L}(x_K \vert 1, x_1, \ldots, x_{K-1}) \\
+		= x_K^m + e_K - \mathrm{L}(x_K^m + e_K \vert 1, x_1, \ldots, x_{K-1}) \\
+		= r_K^m + e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})
+$$
+where 
+	$r_K^m = x_K^m - \mathrm{L}(x_K^m \vert 1, x_1, \ldots, x_{K-1})$
+.
+
+Substituting this to the numerator of (5) gives
+
+$$
+	\mathbb{E}[r_K y_K] \\
+		= \mathbb{E}[r_K^m y_K] + \mathbb{E}[e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
+		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
 $$
 
 
