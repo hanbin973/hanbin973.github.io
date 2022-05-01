@@ -78,8 +78,8 @@ Substituting this to the numerator of (5) gives
 
 $$
 	\mathbb{E}[r_K y_K] \\
-		= \mathbb{E}[r_K^m y_K] + \mathbb{E}[e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
-		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K - \mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
+		= \mathbb{E}[r_K^m y_K] + \mathbb{E}[ye_K - y\mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
+		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[ye_K - y\mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})] \\
 $$
 
 
