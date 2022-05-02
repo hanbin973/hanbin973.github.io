@@ -138,7 +138,7 @@ As a concluding remark, it will be interesting to verify the consequence of the 
 The book I mentioned (Wooldrdige, 2010) doesn't consider 
 	$\mathrm{L}(e_K \vert x_{-K}) \neq 0$ where $x_{-K} = 1, x_1, \ldots, x_{K-1}$. 
 	For notational convenience, also define $x_{-1,-K} = x_1, \ldots, x_{K-1}$.
-I did some calcualtions on this quantitiy.
+I did some calculations on this quantitiy.
 	Let $\alpha_0$ and $\alpha = \alpha_1, \ldots, \alpha_{K-1}$ be the coefficients of $\mathrm{L}(e_K \vert x_{-K})$.
 
 $$
