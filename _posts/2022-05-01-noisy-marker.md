@@ -61,7 +61,7 @@ where $\mathrm{L}(\cdot \vert \cdot)$ is the linear projection.
 Then by FWL, we have
 
 $$
-	\mathrm{plim} \hat{\beta}_K^{\mathrm{OLS}}  = \frac{\mathbb{E}[r_Ky_K]}{\mathbb{E}[r_K' r_K]}
+	\mathrm{plim} \hat{\beta}_K^{\mathrm{OLS}}  = \frac{\mathbb{E}[r_Ky]}{\mathbb{E}[r_K' r_K]}
 $$
 
 From the definition of $r_K$,
@@ -81,9 +81,9 @@ The last equality comes from the fact that the measurement error $e_K$ is indpen
 Substituting this to the numerator of (5) gives
 
 $$
-	\mathbb{E}[r_K y_K]
-		= \mathbb{E}[r_K^m y_K] + \mathbb{E}[e_K y_K]\\
-		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K y_K]\\
+	\mathbb{E}[r_K y]
+		= \mathbb{E}[r_K^m y] + \mathbb{E}[e_K y]\\
+		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K y]\\
 		= \mathbb{E}[r_K^m r_K^m]\beta_K + \mathbb{E}[e_K v] \\
 		= \mathbb{E}[r_K^m r_K^m]\beta_K
 $$
