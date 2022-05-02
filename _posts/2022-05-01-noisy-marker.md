@@ -142,9 +142,14 @@ I did some calcualtions on this quantitiy.
 	Let $\alpha_0$ and $\alpha = \alpha_1, \ldots, \alpha_{K-1}$ be the coefficients of $\mathrm{L}(e_K \vert x_{-K})$.
 
 $$
-	\mathbb{E}[y \mathrm{L}(e_K \vert x_{-K})] = \\
+	\mathbb{E}[y \mathrm{L}(e_K \vert x_{-K})] = 
 		\mathbb{E}[y \alpha_0 + y x_{-1,-K} \alpha] = \\
 		\mathbb{E}[-y \mathbb{E}(x_{-1,-K})\alpha + yx_{-1,-K} \alpha] = \\
 		\mathbb{E}[y(x_{-1,-K}-\mathbb{E}(x_{-1,-K}))] \alpha = \\
 		\mathrm{Cov}(x_{-1,-K},y) \cdot \alpha
 $$
+
+This term also has nothing to do with $\beta_K$.
+
+
+
