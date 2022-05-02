@@ -121,8 +121,8 @@ Hence, the structural interpretation of equation (2) is lost.
 Furthermore, as the evolutionary process can potentially result in population structure, $x_1, \ldots, x_{K-1}$ may be correlated to $e_K$ if we think them as covariates (e.g. PC).
 Therefore, the mismeasurement model for GWAS effect size will be valid under a restricted set of evolutionary processes although such processes might be pluasible in real human population.
 
-This scinario is partially addressed by Edge et al. where the measurement error $e_K$ is allowed to be correlated with $v$.
-When $e_K$ and $v$ is correlated, equation (7) retains non-zero $\mathbb{E}[e_K v]$ which makes equation (9) invalid.
+This scenario is partially addressed by Edge et al. where the measurement error $e_K$ is allowed to be correlated with $v$.
+When $e_K$ and $v$ are correlated, equation (7) retains non-zero $\mathbb{E}[e_K v]$ which makes equation (9) invalid.
 Furthermore, the estimand of OLS is not proportional to $\beta_K$ which makes the causal interpretation more difficult.
 If it were, non-zero effect size of the marker would have been a direct evidence for the presence of a causal variant.
 However, non-zero $\mathbb{E}[e_K v]$ makes this claim invalid.
