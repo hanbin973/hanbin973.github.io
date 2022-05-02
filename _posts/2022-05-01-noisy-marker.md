@@ -128,7 +128,7 @@ If it were, non-zero effect size of the marker would have been a direct evidence
 However, non-zero $\mathbb{E}[e_K v]$ makes this claim invalid.
 
 The issue might be resolved by adding ancestry-associated covariates that could make $v$ independent from $e_K$. 
-Nevertheless, this leaves the problem of correlation between $e_K$ and $x_1, \ldots x_{K_1}$ which makes 
+Nevertheless, this leaves the problem of correlation between $e_K$ and $x_1, \ldots,x_{K_1}$ which makes 
 	$\mathrm{L}(e_K \vert 1, x_1, \ldots, x_{K-1})$ non-zero.
 
 As a concluding remark, it will be interesting to verify the consequence of the outlined phenomenons through simulations.
