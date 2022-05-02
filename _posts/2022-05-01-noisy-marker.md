@@ -146,5 +146,5 @@ $$
 		\mathbb{E}[y \alpha_0 + y x_{-1,-K} \alpha] = \\
 		\mathbb{E}[-y \mathbb{E}(x_{-1,-K})\alpha + yx_{-1,-K} \alpha] = \\
 		\mathbb{E}[y(x_{-1,-K}-\mathbb{E}(x_{-1,-K}))] \alpha = \\
-		\mathrm{Cov}(x_{-1,-K},y) \cdot alpha
+		\mathrm{Cov}(x_{-1,-K},y) \cdot \alpha
 $$
