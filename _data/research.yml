@@ -15,7 +15,7 @@
 
 - name: Unpublished Work
   papers:
-    - name: 'FastRNA: Single-cell analysis from clusters to a laptop'
+    - name: 'FastRNA: Single-cell analysis of atlas-scale on a laptop'
       journal: Under Review at the American Journal of Human Genetics
       fauthor: Hanbin Lee
       author: and Buhm Han
