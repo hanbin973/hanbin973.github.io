@@ -15,7 +15,7 @@
 
 - name: Unpublished Work
   papers:
-    - name: 'FastRNA: Single-cell analysis of atlas-scale on a laptop'
+    - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
       journal: Under Review at the American Journal of Human Genetics
       fauthor: Hanbin Lee
       author: and Buhm Han
