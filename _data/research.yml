@@ -1,7 +1,7 @@
 - name: Journals
   papers:
     - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
-      journal: Forthcoming, accpeted at Nucleic Acids Research 
+      journal: Nucleic Acids Research 
       fauthor: Chanwoo Kim*, Hanbin Lee*
       author: Juhee Jeong, Keehoon Jung and Buhm Han
       year: 2022
@@ -16,7 +16,7 @@
 - name: Unpublished Work
   papers:
     - name: 'FastRNA: Single-cell analysis from clusters to a laptop'
-      journal: Under Review
+      journal: Under Review at the American Journal of Human Genetics
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2022

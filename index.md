@@ -15,7 +15,7 @@ My research interest primarily lies in the intersection of causal inference and 
 Currently, I work in Prof. [Buhm Han](https://hanlab.snu.ac.kr) laboratory.
 I'm largely interested in the philosophy of science and epistemology which makes me a strong proponent of the [feminist standpoint theory](https://www.jstor.org/stable/10.7591/j.ctt1hhfnmg).
 
-At the mean time, I enjoy tennis and search for delicious dishes.
+At the mean time, I enjoy tennis and dining.
 
 ## Education
 
