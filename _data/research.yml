@@ -29,4 +29,4 @@
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2022
-      description: We propose a universal regression equation derived from potential outcome (PO) framework and population genetics. The theoretical derivation of the regression equation sheds light on the quantities that has been ffrequently estimated in conventional GWAS studies and show that the intuitive interpretation of regression coefficients are largely misleading. Next, we apply our regression equation to real data and show that the use of the correct equation can lead to improved interpretability and power of association signals.
+      description: We propose a universal regression equation derived from potential outcome (PO) framework and population genetics. The theoretical derivation of the regression equation sheds light on the quantities that has been frequently estimated in conventional GWAS studies and show that the intuitive interpretation of regression coefficients are largely misleading. Next, we apply our regression equation to real data and show that the use of the correct equation can lead to improved interpretability and power of association signals.
