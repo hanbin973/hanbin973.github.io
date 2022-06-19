@@ -64,6 +64,7 @@ Addressing such questions is possible only with the support of proper domain-spe
 								Description:
 								</b>
 								{{ paper.description }}
+								<br>
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
