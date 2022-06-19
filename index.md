@@ -59,7 +59,11 @@ Addressing such questions is possible only with the support of proper domain-spe
 								{{ paper.author }} 
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
-								{{ paper.year }}
+								{{ paper.year }}<br>
+								<b>
+								Description:
+								</b>
+								{{ paper.description }}
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
