@@ -20,8 +20,8 @@ At the mean time, I enjoy tennis and dining.
 ## Education
 
 ### Seoul National University
-- M.D. at Department of Medicine (2016 - *current*)
-- B.S. Mathematics at Department of Mathematical Sciences (2016 - *current*)
+- Doctor of Medicine, Department of Medicine (2016 - *current*)
+- Bachelor in Mathematics, Department of Mathematical Sciences (2016 - *current*)
 
 ---
 
