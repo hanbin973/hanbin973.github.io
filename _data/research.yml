@@ -31,3 +31,11 @@
       author: and Buhm Han
       year: 2022
       description: We propose a universal regression equation derived from potential outcome (PO) framework and population genetics. The theoretical derivation of the regression equation sheds light on the quantities that has been frequently estimated in conventional GWAS studies and show that the intuitive interpretation of regression coefficients are largely misleading. Next, we apply our regression equation to real data and show that the use of the correct equation can lead to improved interpretability and power of association signals.
+
+    - name: 'Powerful and robust differnetially expressed gene analysis in single-cell RNA sequencing'
+      journal: In preparation
+      fauthor: Hanbin Lee
+      author: and Buhm Han
+      year: 2022
+      description: We demonsrate the power and robustness of Poisson regression in differentially expressed gene analysis (DEG) for single-cell RNA sequencing (scRNA-seq). We show that Poisson regression is (1) robust to any over or underdispersion of data, (2) effectively controls type 1 error rate, (3) powerful than pseudobulk methods and (4) fast and efficient enough to run on affordable computing systems. 
+
