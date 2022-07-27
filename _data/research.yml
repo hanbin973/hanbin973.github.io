@@ -9,7 +9,7 @@
       description: MarcoPolo prioritizes potentially important genes in a single-cell RNA sequencing data through a unique ranking system. The method first fits a bimodal Poisson distribution and uses the fitted attributes to generate ranks of genes using four distinct metrics. The process does not require preceeding clustering of cells so it is robust to clustering results which are sensitive to program parameters.
 
     - name: 'A theory-based practical solution to correct for sex-differential participation bias'
-      journal: Forthcoming, accepted at Genome Biology
+      journal: Genome Biology
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2022
