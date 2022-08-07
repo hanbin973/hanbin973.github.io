@@ -25,10 +25,10 @@
       year: 2022
       description: FastRNA produces batch-corrected low-dimensional representation of single-cell RNA sequencing data. We combine (1) the theory of sufficient statistics and (2) eigendecomposition to derive a completely sparse algorithm to perform feature selection and principal component analysis (PCA). The memory consumption and runtime is two to four orders of magnitude faster than competing methods, enabling atlas-scale scRNA-seq data analysis within an ordinary personal computer.
 
-    - name: 'A universal regression framework for genome-wide association study'
+    - name: 'Population genetic and counterfactual interpretation of genome-wide association study in admixed populations'
       journal: In preparation
-      fauthor: Hanbin Lee
-      author: and Buhm Han
+      fauthor: Moo Hyuk Lee*, Chanwoo Kim*
+      author: Buhm Han and Hanbin Lee
       year: 2022
       description: We propose a universal regression equation derived from potential outcome (PO) framework and population genetics. The theoretical derivation of the regression equation sheds light on the quantities that has been frequently estimated in conventional GWAS studies and show that the intuitive interpretation of regression coefficients are largely misleading. Next, we apply our regression equation to real data and show that the use of the correct equation can lead to improved interpretability and power of association signals.
 
