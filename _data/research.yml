@@ -21,7 +21,7 @@
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2022
-      description: FastRNA produces batch-corrected low-dimensional representation of single-cell RNA sequencing data. We combine (1) the theory of sufficient statistics and (2) eigendecomposition to derive a completely sparse algorithm to perform feature selection and principal component analysis (PCA). The memory consumption and runtime is two to four orders of magnitude smaller than competing methods, enabling atlas-scale scRNA-seq data analysis within an ordinary personal computer.
+      description: FastRNA produces batch-corrected low-dimensional representation of single-cell RNA sequencing data. We combine (1) the theory of sufficient statistics and (2) eigendecomposition to derive a completely sparse algorithm to perform feature selection and principal component analysis (PCA). The memory consumption and runtime are two to four orders of magnitude smaller than competing methods, enabling atlas-scale scRNA-seq data analysis within an ordinary personal computer.
 
 
 - name: Unpublished Work
