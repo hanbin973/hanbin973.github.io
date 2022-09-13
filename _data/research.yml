@@ -16,7 +16,7 @@
       doi: https://doi.org/10.1186/s13059-022-02703-0 
       description: The paper shows that sex-differential participation bias is largely dependent to the overall participation rate of a genetic cohort under standard parameteric assumptions. The major findings are (1) selection bias is highly sensitive to the parametric choice of the participation model (2) bias due to discrete variables contributing to study participation can be mitigated through stratification under low participation rate. As a result, it raises concern on the use of commercial genetic cohorts in which the target population is poorly specified, in turn, making the overall participation rate unidentifiable. 
 
-      - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
+    - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
       journal: Forthcoming at American Journal of Human Genetics
       fauthor: Hanbin Lee
       author: and Buhm Han
@@ -26,7 +26,7 @@
 
 - name: Unpublished Work
   papers:
-        - name: 'Population genetic and counterfactual interpretation of genome-wide association study in admixed populations'
+    - name: 'Population genetic and counterfactual interpretation of genome-wide association study in admixed populations'
       journal: In preparation
       fauthor: Moo Hyuk Lee*, Chanwoo Kim*
       author: Buhm Han and Hanbin Lee
