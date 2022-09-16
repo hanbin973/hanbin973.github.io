@@ -31,7 +31,7 @@
       fauthor: Moo Hyuk Lee*, Chanwoo Kim*
       author: Buhm Han and Hanbin Lee
       year: 2022
-      description: We propose a universal regression equation derived from potential outcome (PO) framework and population genetics. The theoretical derivation of the regression equation sheds light on the quantities that has been frequently estimated in conventional GWAS studies and show that the intuitive interpretation of regression coefficients are largely misleading. Next, we apply our regression equation to real data and show that the use of the correct equation can lead to improved interpretability and power of association signals.
+      description: We propose a correct regression specification for association mapping in admixed populations through population genetics and causal inference. The theoretical properties of widely adopted estimators in admixed GWAS are discussed. We show that although the Armitage Trend Test (ATT) for quantitative traits is biased, the bias reduces as the strength of linkage disequilibrium (LD) increases and eventually vanishes under perfect linkage. This makes QATT the optimal test for discovering susceptibility loci. However, the bias can be severe when using genome-wide summary statistics produced by QATT to perform downstream analysis. We provide theoretically grounded guidelines for performing GWAS in admixed data and demonstrate it using the admixed samples in the UK Biobank.
 
     - name: 'Powerful and robust differnetially expressed gene analysis in single-cell RNA sequencing'
       journal: In preparation
@@ -40,3 +40,9 @@
       year: 2022
       description: We demonsrate the power and robustness of Poisson regression in differentially expressed gene analysis (DEG) for single-cell RNA sequencing (scRNA-seq). We show that Poisson regression is (1) robust to any over or underdispersion of data, (2) effectively controls type 1 error rate, (3) powerful than pseudobulk methods and (4) fast and efficient enough to run on affordable computing systems. 
 
+    - name: 'A general fine-mapping framework for genome-wide association study through frequentist semiparametric regression'
+      journal: In preparation
+      fauthor: Hanbin Lee
+      author: and Buhm Han
+      year: 2022
+      description: The widely adopted Bayesian fine-mapping methods provide posterior distirbution of the likelihood for a given SNP to be the causal variant. Instead of providing the posterior distribution, we propose a framework that jointly estimates the position and the effect size of the causal variant using semiparametric regression. The framework can be naturally extended to include multiple ancestry and further improve the precision when admixed samples are availble. 
