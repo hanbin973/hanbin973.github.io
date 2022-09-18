@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-Contact: <hanbin973@snu.ac.kr>
+Contact: <hanbin973@snu.ac.kr>; Here is my [CV](_data/CV_LeeH.pdf)
 
 ## News 
 <p class="message">
