@@ -1,12 +1,11 @@
 - name: Journals
   papers:
-    - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
-      journal: Nucleic Acids Research 
-      fauthor: Chanwoo Kim*, Hanbin Lee*
-      author: Juhee Jeong, Keehoon Jung and Buhm Han
+    - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
+      journal: American Journal of Human Genetics, in press
+      fauthor: Hanbin Lee
+      author: and Buhm Han
       year: 2022
-      doi: https://doi.org/10.1093/nar/gkac216 
-      description: MarcoPolo prioritizes potentially important genes in a single-cell RNA sequencing data through a unique ranking system. The method first fits a bimodal Poisson distribution and uses the fitted attributes to generate ranks of genes using four distinct metrics. The process does not require preceeding clustering of cells so it is robust to clustering results which are sensitive to program parameters.
+      description: FastRNA produces batch-corrected low-dimensional representation of single-cell RNA sequencing data. We combine (1) the theory of sufficient statistics and (2) eigendecomposition to derive a completely sparse algorithm to perform feature selection and principal component analysis (PCA). The memory consumption and runtime are two to four orders of magnitude smaller than competing methods, enabling atlas-scale scRNA-seq data analysis within an ordinary personal computer.
 
     - name: 'A theory-based practical solution to correct for sex-differential participation bias'
       journal: Genome Biology
@@ -15,13 +14,14 @@
       year: 2022
       doi: https://doi.org/10.1186/s13059-022-02703-0 
       description: The paper shows that sex-differential participation bias is largely dependent to the overall participation rate of a genetic cohort under standard parameteric assumptions. The major findings are (1) selection bias is highly sensitive to the parametric choice of the participation model (2) bias due to discrete variables contributing to study participation can be mitigated through stratification under low participation rate. As a result, it raises concern on the use of commercial genetic cohorts in which the target population is poorly specified, in turn, making the overall participation rate unidentifiable. 
-
-    - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
-      journal: Forthcoming at American Journal of Human Genetics
-      fauthor: Hanbin Lee
-      author: and Buhm Han
+  
+    - name: 'MarcoPolo: a clustering-free approach to the exploration of differentially expressed genes along with group information in single-cell RNA-seq data'
+      journal: Nucleic Acids Research 
+      fauthor: Chanwoo Kim*, Hanbin Lee*
+      author: Juhee Jeong, Keehoon Jung and Buhm Han
       year: 2022
-      description: FastRNA produces batch-corrected low-dimensional representation of single-cell RNA sequencing data. We combine (1) the theory of sufficient statistics and (2) eigendecomposition to derive a completely sparse algorithm to perform feature selection and principal component analysis (PCA). The memory consumption and runtime are two to four orders of magnitude smaller than competing methods, enabling atlas-scale scRNA-seq data analysis within an ordinary personal computer.
+      doi: https://doi.org/10.1093/nar/gkac216 
+      description: MarcoPolo prioritizes potentially important genes in a single-cell RNA sequencing data through a unique ranking system. The method first fits a bimodal Poisson distribution and uses the fitted attributes to generate ranks of genes using four distinct metrics. The process does not require preceeding clustering of cells so it is robust to clustering results which are sensitive to program parameters.
 
 
 - name: Unpublished Work
