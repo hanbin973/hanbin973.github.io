@@ -21,7 +21,7 @@ In the mean time, I enjoy tennis and dining.
 
 ### Seoul National University
 - Doctor of Medicine, Department of Medicine (2016 - *current*)
-- Bachelor in Mathematics, Department of Mathematical Sciences (2016 - *current*)
+- Bachelor of Mathematics, Department of Mathematical Sciences (2016 - *current*)
 
 ---
 
