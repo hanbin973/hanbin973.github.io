@@ -27,13 +27,13 @@
 
 - name: Unpublished Work
   papers:
-   - name: 'Disentangling linkage and population structure in association mapping'
+    - name: 'Disentangling linkage and population structure in association mapping'
       journal: In preparation
       fauthor: Hanbin Lee* and Moo Hyuk Lee*
       year: 2022
-      description:  Genome-wide association study (GWAS) tests single nucleotide polymorphism (SNP) markers across the genome to localize the underlying causal variant of a trait. Because causal variants are seldom observed directly, a surrogate model based on genotyped markers are widely considered. Although many methods estimating the parameters of the surrogate model have been proposed, the connection between the surrogate model and the true causal model is yet investigated. In this work, we establish the connection between the surrogate model and the true causal model. Our theory shows the importance of the underlying demographic model in understanding the signal in GWAS. 
+      description: Genome-wide association study (GWAS) tests single nucleotide polymorphism (SNP) markers across the genome to localize the underlying causal variant of a trait. Because causal variants are seldom observed directly, a surrogate model based on genotyped markers are widely considered. Although many methods estimating the parameters of the surrogate model have been proposed, the connection between the surrogate model and the true causal model is yet investigated. In this work, we establish the connection between the surrogate model and the true causal model. Our theory shows the importance of the underlying demographic model in understanding the signal in GWAS. 
 
-   - name: 'Powerful and robust differnetially expressed gene analysis in single-cell RNA sequencing'
+    - name: 'Powerful and robust differnetially expressed gene analysis in single-cell RNA sequencing'
       journal: In preparation
       fauthor: Hanbin Lee
       author: and Buhm Han
