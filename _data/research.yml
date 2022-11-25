@@ -27,7 +27,7 @@
 
 - name: Unpublished Work
   papers:
-    - name: 'Disentangling linkage and population structure in association mapping'
+   - name: 'Disentangling linkage and population structure in association mapping'
       journal: In preparation
       fauthor: Hanbin Lee* and Moo Hyuk Lee*
       year: 2022
