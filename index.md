@@ -24,6 +24,10 @@ At the same time, I develop sparsity-aware algorithms for single-cell data that 
 
 South Korean medical schools are <b>undergraduate-based</b> unlike US counterparts.
 
+## Professional service
+### Peer review
+_International Journal of Epidemiology_
+
 ---
 
 ## Publications
