@@ -10,7 +10,7 @@ Here is my [CV](CV_LeeH.pdf); Contact: <hanbin973@snu.ac.kr>
 </p>
 
 ## About 
-<img src="profile.png" width=30% height=30%>
+![](profile.jpg){: width="40%"}
 
 I hold a double major in medicine and pure mathematics.
 My work lies in the intersection of causal inference and population/statistical genetics.
