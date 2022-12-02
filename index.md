@@ -22,7 +22,7 @@ At the same time, I develop sparsity-aware algorithms for single-cell data that 
 - Doctor of Medicine, Department of Medicine (2016.2 - 2023.8)
 - Bachelor of Mathematics, Department of Mathematical Sciences (2016.2 - 2023.8)
 
-Note that South Korean medical schools are undergraduate-based unlike US counterparts.
+* South Korean medical schools are undergraduate-based unlike US counterparts.
 
 ---
 
@@ -53,7 +53,7 @@ Note that South Korean medical schools are undergraduate-based unlike US counter
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
-						*: Equal contribution
+						<b>*:</b> Equal contribution
 						{% endif %}
 					</ul>
 				</div>
