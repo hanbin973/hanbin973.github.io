@@ -20,7 +20,7 @@ At the same time, I develop sparsity-aware algorithms for single-cell data that 
 ## Education
 ### Seoul National University, Republic of Korea
 - Doctor of Medicine, Department of Medicine (2016.2 - 2023.8)
-- Bachelor of Mathematics, Department of Mathematical Sciences (2016.2 - 2023.8)
+- Bachelor of Mathematics, Department of Mathematical Sciences (2017.2 - 2023.8)
 
 South Korean medical schools are <b>undergraduate-based</b> unlike US counterparts.
 
