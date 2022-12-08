@@ -1,7 +1,7 @@
 - name: Journals
   papers:
     - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
-      journal: American Journal of Human Genetics, in press
+      journal: American Journal of Human Genetics
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2022
