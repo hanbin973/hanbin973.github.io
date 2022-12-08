@@ -38,10 +38,9 @@ _International Journal of Epidemiology_
 			<h3 class='pub-format'> {{ format.name }} </h3>
 			<div class='pubbox-out'>
 				<div class='pubbox-in'>
-					<ul style='list-style: none; padding: 0px;'>
+					<ul style='list-style: none; padding: 0px; font-size: small;'>
 						{% for paper in format.papers %}
 							<li>
-								<font size="small">
 								<b>
 								{{ paper.fauthor }}, 
 								</b>
@@ -55,7 +54,6 @@ _International Journal of Epidemiology_
 								{{ paper.description }}
 								<br>
 								<br>
-								</font>
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
