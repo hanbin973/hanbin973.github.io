@@ -27,16 +27,22 @@
 
 - name: Unpublished Work
   papers:
+    - name: 'Theoretical Interpretation of Genetic Association Studies in Admixed Populations'
+      journal: In preparation
+      fauthor: Hanbin Lee* and Moo Hyuk Lee*
+      year: 2022
+      description: Admixed populations are formed through complicated evolutionary processes resulting in heterogeneous linkage disequilibrium patterns. This hampered the interpretation of genetic association studies followed by the development of various methods tailored for the purpose without clear guidance. In this work, we propose a unifying theory built upon population genetics and causal inference that brings a straightforward interpretation of GWAS findings in admixed populations. Furthermore, the theory establishes the connection between distinct methods in admixed GWAS. Finally, we propose two novel tests motivated by our theory that combine association and admixture signals. 
+
     - name: 'Disentangling linkage and population structure in association mapping'
       journal: In preparation
       fauthor: Hanbin Lee* and Moo Hyuk Lee*
       year: 2022
       description: Genome-wide association study (GWAS) tests single nucleotide polymorphism (SNP) markers across the genome to localize the underlying causal variant of a trait. Because causal variants are seldom observed directly, a surrogate model based on genotyped markers are widely considered. Although many methods estimating the parameters of the surrogate model have been proposed, the connection between the surrogate model and the true causal model is yet investigated. In this work, we establish the connection between the surrogate model and the true causal model. Our theory shows the importance of the underlying demographic model in understanding the signal in GWAS. 
 
-    - name: 'Powerful and robust differnetially expressed gene analysis in single-cell RNA sequencing'
+
+    - name: 'Why do cell-level test methods for detecting differentially expressed genes fail in single-cell RNA-seq data?'
       journal: In preparation
       fauthor: Hanbin Lee
       author: and Buhm Han
-      year: 2022
-      description: We demonsrate the power and robustness of Poisson regression in differentially expressed gene analysis (DEG) for single-cell RNA sequencing (scRNA-seq). We show that Poisson regression is (1) robust to any over or underdispersion of data, (2) effectively controls type 1 error rate, (3) powerful than pseudobulk methods and (4) fast and efficient enough to run on affordable computing systems. 
-
+      year: 2023
+      description: Earlier studies have found that cell-level tests for detecting differentially expressed genes (DEGs) exhibit inflated type 1 error in multi-subject scRNA-seq data. Pseudoreplication – cells from a same subject are non-independent observations – is thought to be the major cause which motivates the use of the pseudobulk. In this work, we argue that distributional misspecification, rather than pseudoreplication, might be a major cause of the inflated type 1 error in scRNA-seq DEG. We propose a simple solution to existing cell-level test methods that makes them robust against distributional misspecification. Using real data, we show that the robust generalized linear models (GLMs) that are free of distribution constraints perform well, providing both controlled type 1 error and high statistical power. Since the solution is widely available in existing software, it can be immediately adapted to scRNA-seq analysis ecosystems. 
