@@ -23,6 +23,8 @@ At the same time, I develop sparsity-aware algorithms for single-cell data that 
 - Bachelor of Mathematics, Department of Mathematical Sciences (2017.2 - 2023.8)
 
 South Korean medical schools are <b>undergraduate-based</b> unlike the US counterparts.
+I passed the Korea Medical License Exam.
+The license will be in effect from August, 2023. 
 
 ## Professional service
 ### Peer review
