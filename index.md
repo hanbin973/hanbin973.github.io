@@ -28,7 +28,8 @@ The license will be in effect from August, 2023.
 
 ## Professional service
 ### Peer review
-_International Journal of Epidemiology_
+_International Journal of Epidemiology_,
+_Nature Communications_
 
 ---
 
