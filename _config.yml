@@ -35,7 +35,7 @@ sidebar_blog_link:  '/blog/'   # By default, your home page is your blog
                                 # to enable a separate blog link.
                                
 # Google analytics
-google_analytics: 'UA-144594777-1'
+# google_analytics: 'UA-144594777-1'
 
 # Disqus
 disqus:
