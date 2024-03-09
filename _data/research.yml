@@ -25,26 +25,4 @@
       description: MarcoPolo prioritizes potentially important genes in a single-cell RNA sequencing data through a unique ranking system. The method first fits a bimodal Poisson distribution and uses the fitted attributes to generate ranks of genes using four distinct metrics. The process does not require preceeding clustering of cells so it is robust to clustering results which are sensitive to program parameters.
 
 
-- name: Unpublished Work
-  papers:
-    - name: 'Theoretical Interpretation of Genetic Association Studies in Admixed Populations'
-      journal: In preparation
-      fauthor: Hanbin Lee* and Moo Hyuk Lee*
-      doi: https://github.com/hanbin973/hanbin973.github.io/raw/master/_data/LeeAndLee2023b.pdf
-      year: 2023
-      description: Admixed populations are formed through complicated evolutionary processes resulting in heterogeneous linkage disequilibrium patterns. This hampered the interpretation of genetic association studies followed by the development of various methods tailored for the purpose without clear guidance. In this work, we propose a unifying theory built upon population genetics and causal inference that brings a straightforward interpretation of GWAS findings in admixed populations. Furthermore, the theory establishes the connection between distinct methods in admixed GWAS. Finally, we propose two novel tests motivated by our theory that combine association and admixture signals. 
 
-    - name: 'Disentangling linkage and population structure in association mapping'
-      journal: In preparation
-      fauthor: Hanbin Lee* and Moo Hyuk Lee*
-      doi: https://doi.org/10.48550/arXiv.2303.00904  
-      year: 2023
-      description: Genome-wide association study (GWAS) tests single nucleotide polymorphism (SNP) markers across the genome to localize the underlying causal variant of a trait. Because causal variants are seldom observed directly, a surrogate model based on genotyped markers are widely considered. Although many methods estimating the parameters of the surrogate model have been proposed, the connection between the surrogate model and the true causal model is yet investigated. In this work, we establish the connection between the surrogate model and the true causal model. The connection shows that population structure is accounted in GWAS by modelling the variant of interest and not the trait. Such observation explains how environmental confounding can be partially corrected using genetic covariates and why the previously claimed connection between PC correction and linear mixed models is incorrect. 
-
-    - name: 'On the cause of inflated type 1 error in single cell DEG'
-      journal: In preparation
-      fauthor: Hanbin Lee
-      author: and Buhm Han
-      doi: https://doi.org/10.1101/2023.01.09.523212
-      year: 2023
-      description: Earlier studies have found that cell-level tests for detecting differentially expressed genes (DEGs) exhibit inflated type 1 error in multi-subject scRNA-seq data. Pseudoreplication – cells from a same subject are non-independent observations – is thought to be the major cause which motivates the use of the pseudobulk. In this work, we argue that distributional misspecification can be another, if not primary, cause of the inflated type 1 error in scRNA-seq DEG. We show that the robust sandwich estimator for distributionally misspecified maximum likelihood estimator (MLE) produces calibrated type 1 error rate. Using real data, we show that the robust method performs surprisingly well, providing both controlled type 1 error and high statistical power, and is superior to many other methods that explicitly account only for pseudoreplication. Since our suggested solution is already available in existing software, it can be immediately adapted to scRNA-seq analysis ecosystems. 
