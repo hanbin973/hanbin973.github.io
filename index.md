@@ -4,27 +4,17 @@ layout: mainpage
 
 Here is my [CV](CV_LeeH.pdf); Contact: <hanbin973@snu.ac.kr>
 
-## News 
-<p class="message">
-  I'm applying for a PhD in 2024. Feel free to contact me if we share any research interests.
-</p>
-
 ## About 
 ![](profile.jpg){: width="55%"}
 
-I hold a double major in medicine and pure mathematics.
-My work lies in the intersection of causal inference and population/statistical genetics.
-Recently, I'm working on identification of genetic associataion studies under various population genetic processes.
-At the same time, I develop sparsity-aware algorithms for single-cell data that scales easily up to millions of cells.
+I study how various stochastic forces in evolutionary processes shape statistical inference.
+More generally, I try to leverage mechanistic theories of biology to improve inference and computing.
+
 
 ## Education
 ### Seoul National University, Republic of Korea
-- Doctor of Medicine, Department of Medicine (2016.2 - 2023.8)
-- Bachelor of Mathematics, Department of Mathematical Sciences (2017.2 - 2023.8)
-
-South Korean medical schools are <b>undergraduate-based</b> unlike the US counterparts.
-I passed the Korea Medical License Exam.
-The license will be in effect from August, 2023. 
+- Doctor of Medicine, Department of Medicine (2016.3 - 2023.8)
+- Bachelor of Mathematics, Department of Mathematical Sciences (2017.3 - 2023.8)
 
 ## Professional service
 ### Peer review
