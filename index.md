@@ -32,6 +32,7 @@ _Nature Communications_
 			<div class='pubbox-out'>
 				<div class='pubbox-in'>
 					<ul style='list-style: none; padding: 0px; font-size: 0.8em;'>
+                        <b>*:</b> Equal contribution
 						{% for paper in format.papers %}
 							<li>
 								<b>
@@ -50,7 +51,6 @@ _Nature Communications_
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
-						<b>*:</b> Equal contribution
 						{% endif %}
 					</ul>
 				</div>
