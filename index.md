@@ -8,8 +8,7 @@ Here is my [CV](CV_LeeH.pdf); Contact: <hanbin973@snu.ac.kr>
 ![](profile.jpg){: width="55%"}
 
 I study how various stochastic forces in evolutionary processes shape statistical inference.
-More generally, I leverage mechanistic theories of biology to improve inference and computing to process high-throughput data more accurately and efficiently.
-
+More generally, I leverage mechanistic theories of biology to improve inference and computation.
 
 
 ## Education
