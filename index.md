@@ -27,13 +27,13 @@ _Nature Communications_
 ## Publications
 
 <ul style='list-style: none; padding: 0px;'>
+    <b>*:</b> Equal contribution
 	{% for format in site.data.research %}
 		<li>
 			<h3 class='pub-format'> {{ format.name }} </h3>
 			<div class='pubbox-out'>
 				<div class='pubbox-in'>
 					<ul style='list-style: none; padding: 0px; font-size: 0.8em;'>
-                        <b>*:</b> Equal contribution
 						{% for paper in format.papers %}
 							<li>
 								<b>
