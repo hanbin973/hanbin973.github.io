@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Hanbin Lee
 tagline:          'A Jekyll theme'
-description:      'Population genetics, Causal inference and Epidemiology'
+description:      'Statistics, Probability, and Evolution'
 url:              https://hanbin973.github.io
 baseurl:          '/'
                   # the optional subpath of your site, e.g. "/blog"
