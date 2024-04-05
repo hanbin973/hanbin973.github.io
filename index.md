@@ -12,7 +12,11 @@ More generally, I leverage mechanistic theories of biology to improve inference 
 
 
 ## Education
-### Seoul National University, Republic of Korea
+
+### University of Michigan, Ann Arbor
+- Doctor of Philosophy, Department of Statistics (2024.9 -)
+
+### Seoul National University
 - Doctor of Medicine, Department of Medicine (2016.3 - 2023.8)
 - Bachelor of Mathematics, Department of Mathematical Sciences (2017.3 - 2023.8)
 
