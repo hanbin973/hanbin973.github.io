@@ -3,11 +3,14 @@ layout: mainpage
 ---
 
 
-## About 
 ![](profile.jpg){: width="55%"}
 
 I study how various stochastic forces in evolutionary processes shape statistical inference.
 More generally, I leverage mechanistic theories of biology to improve inference and computation.
+
+I'm currently working on the following topics:
+- Graphical algorithms and tree sequences for scalable statistical genetics
+- Phylogenetic constraints of molecular languagle models
 
 Contact: <hblee@umich.edu>
 
