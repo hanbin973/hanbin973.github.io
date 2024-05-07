@@ -2,8 +2,10 @@
 layout: mainpage
 ---
 
-## About
 
+---
+
+## About
 ![](profile.jpg){: width="55%"}
 
 I study how various stochastic forces in evolutionary processes shape statistical inference.
