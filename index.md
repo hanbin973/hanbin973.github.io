@@ -14,7 +14,7 @@ More generally, I leverage mechanistic theories of biology to improve inference 
 
 I'm currently working on the following topics:
 - Graphical algorithms and tree sequences for scalable statistical genetics
-- Phylogenetic constraints of molecular languagle models
+- Phylogenetic constraints of molecular language models
 
 Contact: <hblee@umich.edu>
 
