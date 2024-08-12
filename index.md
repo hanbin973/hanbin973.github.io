@@ -9,8 +9,9 @@ ___
 ## About
 ![](profile.jpg){: width="55%"}
 
-I study how various stochastic forces in evolutionary processes shape statistical inference.
-More generally, I leverage mechanistic theories of biology to improve inference and computation.
+Any statistical and computational methods operate under the constraints imposed by the data generating process.
+To put it another way, no method can extract information from data beyond what is given by nature.
+Based on this insight, I study how evolutionary processes shape statistical inference. 
 
 I'm currently working on the following topics:
 - Graphical algorithms and tree sequences for scalable statistical genetics
