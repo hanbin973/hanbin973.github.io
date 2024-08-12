@@ -1,7 +1,7 @@
 - name: Journals
   papers:
     - name: 'Pseudobulk with proper offsets has the same statistical properties as generalized linear mixed models in single-cell case-control studies'
-      journal: American Journal of Human Genetics
+      journal: Bioinformatics
       fauthor: Hanbin Lee
       author: and Buhm Han
       year: 2024
