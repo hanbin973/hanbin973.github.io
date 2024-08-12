@@ -6,7 +6,7 @@
       author: and Buhm Han
       year: 2024
       doi: https://doi.org/10.1093/bioinformatics/btae498
-      description: By adjusting the offset of a pseudobulk method, one can produce results that are identical to generalized linear mixed models in single-cell case-control studies. Hence, the massive computational burden and convergence problems of mixed models can be avoided by using pseudobulk instead. 
+      description: By adjusting the offset of a pseudobulk method, one can produce results that are identical to generalized linear mixed models in single-cell case-control studies. Hence, the massive computational burden and convergence problems of mixed models can be avoided by using pseudobulk instead without affecting the result. 
 
     - name: 'FastRNA: an efficient exact solution for PCA of single-cell RNA sequencing data based on a batch-accounting count model'
       journal: American Journal of Human Genetics
