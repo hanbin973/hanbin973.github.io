@@ -247,19 +247,16 @@ Hanbin Lee
 <h2>Random effects are independent</h2>
 <div>
 <ul>
-<li class="fragment">Independent entries of random effects is a key assumption of linear mixed models</li>
-<li class="fragment">This can be <em>proved</em> in ARG-LMM, instead of assuming it</li>
-</ul>
-<p><span class="math display">\[
-    \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
-\]</span></p>
-<ul>
-<li class="fragment">The covariance between the indicators are higher-order terms of mutation rates, so we ignore <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
+<li class="fragment"><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
+<li class="fragment"><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
+  \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
+\]</span></p></li>
+<li class="fragment"><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
   \begin{aligned}
   \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-      -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+      &amp;= -l_eu_{ep}l_{e'}u_{e'p} \approx 0
   \end{aligned}
-\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</li>
+\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
 </ul>
 </div>
 </section>

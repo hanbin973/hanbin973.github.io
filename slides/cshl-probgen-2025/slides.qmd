@@ -111,16 +111,15 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 ::: {.incremental}
 - Independent entries of random effects is a key assumption of linear mixed models
 - This can be *proved* in ARG-LMM, instead of assuming it
-
 $$
 	\mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
 $$
 
-- The covariance between the indicators are higher-order terms of mutation rates, so we ignore [@Wakeley2008]
+- The covariance between the indicators are higher-order terms of mutation rates, so we ignore it [@Wakeley2008]
 $$
 	\begin{aligned}
 	\mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-		-l_eu_{ep}l_{e'}u_{e'p} \approx 0
+		&= -l_eu_{ep}l_{e'}u_{e'p} \approx 0
 	\end{aligned}
 $$
 where $l_e$ is the (time-)length of edge $e$.
