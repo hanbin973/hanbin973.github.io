@@ -139,27 +139,18 @@ Hanbin Lee
 
   <p class="date">Mar 7, 2025</p>
 </section>
-<section id="ancestral-recombination-graphs" class="slide level2">
-<h2>Ancestral recombination graphs</h2>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<div>
 <ul>
-<li>We condition on the ARG</li>
-<li>The full probabilistic distribution is ignored</li>
+<li class="fragment"><p>We condition on the sample’s ancestral recombination graph (ARG)</p></li>
+<li class="fragment"><p>The full feature of the ARG is superfluous, only the local trees matter <img data-src="imgs/local_trees.svg"></p></li>
+<li class="fragment"><p>What is the distribution of a trait given the ARG?</p></li>
 </ul>
-</section>
-<section id="local-trees" class="slide level2">
-<h2>Local trees</h2>
-<ul>
-<li>Instead, a collection of local trees is sufficient</li>
-<li>The succinct tree sequence provides a compact representation for this</li>
-</ul>
-</section>
-<section id="how-are-traits-distributed-on-trees" class="slide level2">
-<h2>How are traits distributed on trees?</h2>
-<ul>
-<li>It turns out to be a linear mixed model</li>
-<li>We call it the ancestral recombination graph linear mixed model, ARG-LMM</li>
-<li>ARG-LMM answers long standing questions in quantitative genetics!</li>
-</ul>
+</div>
+<div class="footer">
+<p>Figure from <a href="https://tskit.dev/tutorials/what_is.html">tskit docs</a></p>
+</div>
 </section>
 <section id="linear-model" class="slide level2">
 <h2>Linear model</h2>
