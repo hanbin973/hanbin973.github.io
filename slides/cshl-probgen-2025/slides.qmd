@@ -89,7 +89,7 @@ $$
 		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
 $$
 
-### References
+# References
 ::: {#refs}
 :::
 
