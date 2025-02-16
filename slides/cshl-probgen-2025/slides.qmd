@@ -64,7 +64,7 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 :::
 
 
-## How to gather edges
+## Collapsing variants to edges
 
 ::: {.incremental}
 - When does an individual posess a derived allele? (ancestral=$0$, derived=$1$)
@@ -74,7 +74,7 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 $$
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
-- Assumes that there is no parent-child mutation pairs, but allows recurrent mutations
+- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
 :::
 
 ## Exchange the summations
@@ -93,12 +93,12 @@ $$
 \end{aligned}
 $$
 
-- $\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_ep$!
+- $\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
 :::
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
-Split $\boldsymbol{\upsiilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
+Split $\boldsymbol{\upsilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
 
 $$
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}

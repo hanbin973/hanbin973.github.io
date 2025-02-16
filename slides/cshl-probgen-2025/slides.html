@@ -202,8 +202,8 @@ Hanbin Lee
 </ul>
 </div>
 </section>
-<section id="how-to-gather-edges" class="slide level2">
-<h2>How to gather edges</h2>
+<section id="collapsing-variants-to-edges" class="slide level2">
+<h2>Collapsing variants to edges</h2>
 <div>
 <ul>
 <li class="fragment">When does an individual posess a derived allele? (ancestral=<span class="math inline">\(0\)</span>, derived=<span class="math inline">\(1\)</span>)</li>
@@ -212,7 +212,7 @@ Hanbin Lee
 <li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span> <span class="math display">\[
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 \]</span></li>
-<li class="fragment">Assumes that there is no parent-child mutation pairs, but allows recurrent mutations</li>
+<li class="fragment">Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</li>
 </ul>
 </div>
 </section>
@@ -230,14 +230,14 @@ Hanbin Lee
       = \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
 \end{aligned}
 \]</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_ep\)</span>!</p></li>
+<li class="fragment"><p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p></li>
 </ul>
 </div>
 </section></section>
 <section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
-<p>Split <span class="math inline">\(\boldsymbol{\upsiilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span></p>
+<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span></p>
 <p><span class="math display">\[
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
 \]</span></p>
