@@ -58,8 +58,9 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 - Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
 - Henceforth, we assume that edges are splitted to have a unique subtopology
 $$
-\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherits $e$} 
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$} 
 $$
+The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 :::
 
 
@@ -73,6 +74,23 @@ $$
 $$
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
+:::
+
+## Exchange the summations
+
+Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
+
+$$
+\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} \\
+		= \color{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+		= \color{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+		= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\left(sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+		= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+$$
+
+### References
+::: {#refs}
 :::
 
 
