@@ -149,13 +149,13 @@ where $l_e$ is the (time-)length of edge $e$.
 ## More on $\mathrm{Var}(\mathbf{u}_e)$
 
 ::: {.incremental}
-	- The weight $\mathrm{Var}(\mathbf{u}_e)$ has two components
-	- The area $l_e s_e$ 
-	- Mutation rate-weighted squared average of effect sizes
+- The weight $\mathrm{Var}(\mathbf{u}_e)$ has two components
+- The area $l_e s_e$ 
+- Mutation rate-weighted squared average of effect sizes
 	$$
-	\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+		\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
 	$$
-	- Functional significance ($\tau_e^2$) is confounded by the area of edges
+- Functional significance ($\tau_e^2$) is confounded by the area of edges
 :::
 
 
