@@ -35,7 +35,7 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 :::
 
 
-# Linear model
+# Setup and derivation
 
 The trait is a linear function of $y$
 $$
@@ -74,12 +74,14 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 $$
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
+- Assumes that there is no parent-child mutation pairs, but allows recurrent mutations
 :::
 
 ## Exchange the summations
 
-Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 
+::: {.incremental}
+- Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 $$
 \begin{aligned}
 \mathbf{y} &= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} 
@@ -90,6 +92,29 @@ $$
 		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
 \end{aligned}
 $$
+
+- $\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_ep$!
+:::
+
+# Ancestral recombination graph linear mixed model (ARG-LMM)
+
+Split $\boldsymbol{\upsiilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
+
+$$
+\mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
+$$
+
+Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed effects)
+
+## Random effects are independent
+
+
+## The marginal distribution of $\mathbf{u}_e$?
+
+
+## Fixed effects are constant under neutrality
+
+
 
 ## References
 
