@@ -136,11 +136,32 @@ where $l_e$ is the (time-)length of edge $e$.
 		\mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} } 
 		\rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
 	$$
-- The convergence is unlikely to be fast enough given the small value of $\mathbf{E}[\mathbf{1}_{ep}]$.
+	where $s_e$ is the span (in base pairs) of edge $e$
+
+- The convergence is unlikely to be fast enough given the small value of $\mathbf{E}[\mathbf{1}_{ep}]$ (Berry-Esseen).
+
+- Fortunately, the variance is 
+	$$
+		\mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+	$$
+:::
+
+## More on $\mathrm{Var}(\mathbf{u}_e)$
+
+::: {.incremental}
+	- The weight $\mathrm{Var}(\mathbf{u}_e)$ has two components
+	- The area $l_e s_e$ 
+	- Mutation rate-weighted squared average of effect sizes
+	$$
+	\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+	$$
+	- Functional significance ($\tau_e^2$) is confounded by the area of edges
 :::
 
 
 ## Fixed effects are constant under neutrality
+
+
 
 
 

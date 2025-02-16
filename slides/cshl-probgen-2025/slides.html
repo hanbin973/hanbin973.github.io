@@ -264,13 +264,28 @@ Hanbin Lee
 <h2>The marginal distribution of <span class="math inline">\(\mathbf{u}_e\)</span>?</h2>
 <div>
 <ul>
-<li class="fragment">The Gaussian prior on random effects is a popular choice</li>
-<li class="fragment">One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
+<li class="fragment"><p>The Gaussian prior on random effects is a popular choice</p></li>
+<li class="fragment"><p>One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
       \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
       \rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
-  \]</span></li>
-<li class="fragment">The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span>.</li>
+  \]</span> where <span class="math inline">\(s_e\)</span> is the span (in base pairs) of edge <span class="math inline">\(e\)</span></p></li>
+<li class="fragment"><p>The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span> (Berry-Esseen).</p></li>
+<li class="fragment"><p>Fortunately, the variance is <span class="math display">\[
+      \mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+  \]</span></p></li>
 </ul>
+</div>
+</section>
+<section id="more-on-mathrmvarmathbfu_e" class="slide level2">
+<h2>More on <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span></h2>
+<div>
+<pre><code>- The weight $\mathrm{Var}(\mathbf{u}_e)$ has two components
+- The area $l_e s_e$ 
+- Mutation rate-weighted squared average of effect sizes
+$$
+\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+$$
+- Functional significance ($\tau_e^2$) is confounded by the area of edges</code></pre>
 </div>
 </section>
 <section id="fixed-effects-are-constant-under-neutrality" class="slide level2">
