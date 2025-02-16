@@ -245,9 +245,36 @@ Hanbin Lee
 </section>
 <section id="random-effects-are-independent" class="slide level2">
 <h2>Random effects are independent</h2>
+<div>
+<ul>
+<li class="fragment">Independent entries of random effects is a key assumption of linear mixed models</li>
+<li class="fragment">This can be <em>proved</em> in ARG-LMM, instead of assuming it</li>
+</ul>
+<p><span class="math display">\[
+    \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
+\]</span></p>
+<ul>
+<li class="fragment">The covariance between the indicators are higher-order terms of mutation rates, so we ignore <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
+  \begin{aligned}
+  \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
+      -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+  \end{aligned}
+\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="the-marginal-distribution-of-mathbfu_e" class="slide level2">
 <h2>The marginal distribution of <span class="math inline">\(\mathbf{u}_e\)</span>?</h2>
+<div>
+<ul>
+<li class="fragment">The Gaussian prior on random effects is a popular choice</li>
+<li class="fragment">One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
+      \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
+      \xrightarrow_{s_e \rightarrow \infty} N(0,1^2)
+  \]</span></li>
+<li class="fragment">The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span>.</li>
+</ul>
+</div>
 </section>
 <section id="fixed-effects-are-constant-under-neutrality" class="slide level2">
 <h2>Fixed effects are constant under neutrality</h2>
@@ -257,6 +284,9 @@ Hanbin Lee
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-SalehiNowbandegani2023" class="csl-entry" role="listitem">
 Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lander, Alex Bloemendal, Benjamin M. Neale, and Luke J. O’Connor. 2023. <span>“Extremely Sparse Models of Linkage Disequilibrium in Ancestrally Diverse Association Studies.”</span> <em>Nature Genetics</em> 55 (9): 1494–1502. <a href="https://doi.org/10.1038/s41588-023-01487-8">https://doi.org/10.1038/s41588-023-01487-8</a>.
+</div>
+<div id="ref-Wakeley2008" class="csl-entry" role="listitem">
+Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts &amp; Company.
 </div>
 </div>
 
