@@ -109,7 +109,7 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 ## Random effects are independent
 
 ::: {.incremental}
-- Independent entries of random effects is a key assumption of linear mixed models
+- Independent entries of random effects a key assumption of linear mixed models
 - This can be *proved* in ARG-LMM, instead of assuming it
 $$
 	\mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
@@ -119,7 +119,7 @@ $$
 $$
 	\begin{aligned}
 	\mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-		&= -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+		-l_eu_{ep}l_{e'}u_{e'p} \approx 0
 	\end{aligned}
 $$
 where $l_e$ is the (time-)length of edge $e$.
@@ -134,7 +134,7 @@ where $l_e$ is the (time-)length of edge $e$.
 - One might be tempted to invoke the central limit theorem to $\mathbf{u}_e$ (sum of indicators)
 	$$
 		\mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} } 
-		\xrightarrow_{s_e \rightarrow \infty} N(0,1^2)
+		\rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
 	$$
 - The convergence is unlikely to be fast enough given the small value of $\mathbf{E}[\mathbf{1}_{ep}]$.
 :::

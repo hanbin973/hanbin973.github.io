@@ -247,14 +247,14 @@ Hanbin Lee
 <h2>Random effects are independent</h2>
 <div>
 <ul>
-<li class="fragment"><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
+<li class="fragment"><p>Independent entries of random effects a key assumption of linear mixed models</p></li>
 <li class="fragment"><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
   \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
 \]</span></p></li>
 <li class="fragment"><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
   \begin{aligned}
   \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-      &amp;= -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+      -l_eu_{ep}l_{e'}u_{e'p} \approx 0
   \end{aligned}
 \]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
 </ul>
@@ -267,7 +267,7 @@ Hanbin Lee
 <li class="fragment">The Gaussian prior on random effects is a popular choice</li>
 <li class="fragment">One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
       \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
-      \xrightarrow_{s_e \rightarrow \infty} N(0,1^2)
+      \rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
   \]</span></li>
 <li class="fragment">The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span>.</li>
 </ul>
