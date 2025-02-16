@@ -81,16 +81,19 @@ $$
 Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 
 $$
-\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} \\
-		= \color{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
-		= \color{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
-		= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
-		= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
-		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\begin{aligned}
+\mathbf{y} &= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} \\
+		&= \color{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+		&= \color{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+		&= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+		&= \sum_{e=1}^E \mathbf{Z}_e \color{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+		&= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
 $$
 
 ## References
 This are the references
+
 ::: {#refs}
 :::
 
