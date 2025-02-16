@@ -159,14 +159,14 @@ Hanbin Lee
 
   <p class="date">Mar 7, 2025</p>
 </section>
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
+<section id="overview" class="title-slide slide level1 center">
+<h1>Overview</h1>
 <div>
 <ul>
 <li class="fragment"><p>We condition on the sample’s ancestral recombination graph (ARG)</p></li>
-<li class="fragment"><p>The full feature of the ARG is superfluous, only the local trees matter <img data-src="imgs/local_trees.svg"></p></li>
+<li class="fragment"><p>The full feature of the ARG is superfluous, only the local trees matter <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span> <img data-src="imgs/local_trees.svg"></p></li>
 <li class="fragment"><p>Drift and recombination are fixed, only mutation is left to vary <span class="math display">\[
-\mathbf{y} \mid \mathcal{T} \sim ?
+\mathbf{y} \mid \mathcal{T} \; \sim \; ?
 \]</span></p></li>
 </ul>
 </div>
@@ -174,11 +174,13 @@ Hanbin Lee
 <p>Figure from <a href="https://tskit.dev/tutorials/what_is.html">tskit docs</a></p>
 </div>
 </section>
-<section id="linear-model" class="slide level2">
-<h2>Linear model</h2>
-<p>The trait is a linear function of <span class="math inline">\(y\)</span>. <span class="math display">\[
+
+<section>
+<section id="linear-model" class="title-slide slide level1 center">
+<h1>Linear model</h1>
+<p>The trait is a linear function of <span class="math inline">\(y\)</span> <span class="math display">\[
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
-\]</span> <span class="math inline">\(\mathbf{y} \in \mathbb{R}^N\)</span>, <span class="math inline">\(\mathbf{G} \in \mathbb{R}^{N \times P}\)</span>, <span class="math inline">\(\boldsymbol{\beta} \in \mathbb{R}^P\)</span>, and <span class="math inline">\(\boldsymbol{\varepsilon} \in \mathbb{R}^N\)</span>.</p>
+\]</span> <span class="math inline">\(\mathbf{y} \in \mathbb{R}^N\)</span>, <span class="math inline">\(\mathbf{G} \in \mathbb{R}^{N \times P}\)</span>, <span class="math inline">\(\boldsymbol{\beta} \in \mathbb{R}^P\)</span>, and <span class="math inline">\(\boldsymbol{\varepsilon} \in \mathbb{R}^N\)</span></p>
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(N \ll P\)</span>, high-dimensional regression needs a fix</li>
@@ -194,22 +196,31 @@ Hanbin Lee
 <li class="fragment">Nodes and edges are reused across multiple trees in a tree sequence</li>
 <li class="fragment">Edges, in particular, may not have a unique set of samples along its span</li>
 <li class="fragment">Salehi Nowbandegani and colleagues <em>bricked</em> the edges to divide them <span class="citation" data-cites="SalehiNowbandegani2023">(<a href="#/how-to-gather-edges" role="doc-biblioref" onclick="">Salehi Nowbandegani et al. 2023</a>)</span></li>
-<li class="fragment">Henceforth, we assume that edges are splitted to have a unique subtopology</li>
+<li class="fragment">Henceforth, we assume that edges are splitted to have a unique subtopology <span class="math display">\[
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherits $e$}
+\]</span></li>
 </ul>
 </div>
 </section>
 <section id="how-to-gather-edges" class="slide level2 smaller scrollable">
 <h2>How to gather edges</h2>
-<p><span class="math display">\[
+<div>
+<ul>
+<li class="fragment">When does an individual posess a derived allele? (ancestral=<span class="math inline">\(0\)</span>, derived=<span class="math inline">\(1\)</span>)</li>
+<li class="fragment">An individual is should be a descendant of an edge</li>
+<li class="fragment">And that edge should have a mutation</li>
+<li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span> <span class="math display">\[
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
-\]</span></p>
+\]</span></li>
+</ul>
+</div>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-SalehiNowbandegani2023" class="csl-entry" role="listitem">
 Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lander, Alex Bloemendal, Benjamin M. Neale, and Luke J. O’Connor. 2023. <span>“Extremely Sparse Models of Linkage Disequilibrium in Ancestrally Diverse Association Studies.”</span> <em>Nature Genetics</em> 55 (9): 1494–1502. <a href="https://doi.org/10.1038/s41588-023-01487-8">https://doi.org/10.1038/s41588-023-01487-8</a>.
 </div>
 </div>
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
