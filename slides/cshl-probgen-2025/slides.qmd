@@ -6,6 +6,7 @@ email: "hblee@umich.edu"
 venue: "Probabilistic Modelling in Genomics 2025"
 date: "07 March 2025"
 date-format: "MMM D, YYYY"
+bibliography: ref.bib
 format: 
   revealjs:
     slide-number: c/t
@@ -23,7 +24,10 @@ format:
 - The full feature of the ARG is superfluous, only the local trees matter
 ![](imgs/local_trees.svg)
 
-- What is the distribution of a trait given the ARG?
+- Drift and recombination are fixed, only mutation is left to vary
+$$
+\mathbf{y} \mid \mathcal{T} \sim ?
+$$
 :::
 
 ::: footer
@@ -40,6 +44,26 @@ $$
 $\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$, 
 $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$.
 
+::: {.incremental}
 - $N \ll P$, high-dimensional regression needs a fix
 - Perfect collinearity of some columns in $\mathbf{G}$, or perfect LD
 - A population genetic solution: group variants into branches
+:::
+
+## Edge splitting
+
+::: {.incremental}
+- Nodes and edges are reused across multiple trees in a tree sequence
+- Edges, in particular, may not have a unique set of samples along its span
+- Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
+- Henceforth, we assume that edges are splitted to have a unique subtopology
+:::
+
+
+## How to gather edges
+
+$$
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+$$
+
+
