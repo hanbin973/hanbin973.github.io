@@ -389,6 +389,38 @@ Hanbin Lee
 <div class="fragment">
 <p>True trees are better, but inferred trees are not too behind!</p>
 </div>
+</section></section>
+<section>
+<section id="complex-traits-through-the-lens-of-arg-lmm" class="title-slide slide level1 center">
+<h1>Complex traits through the lens of ARG-LMM</h1>
+<p><span class="math display">\[
+\text{What does ARG-LMM tell us about complex trait analysis?}
+\]</span></p>
+</section>
+<section id="heritability-is-ill-defined" class="slide level2">
+<h2>Heritability is <em>ill</em>-defined</h2>
+<div>
+<ul>
+<li class="fragment"><p>All individuals have different amount of genetic variance (except haploids) <span class="math display">\[
+  \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}
+\]</span></p></li>
+<li class="fragment"><p><span class="math inline">\(\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}\)</span> is the shared amount of area between the two haplotypes of an individual</p></li>
+</ul>
+</div>
+<div class="fragment">
+<pre><code>![](imgs/pseudoreplication.svg){height="600")</code></pre>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>Some people are more genetically variable than others</p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Some people are more easy to predict genetically than others</p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Some populations are inherently harder to predict!</p>
+</div>
+</div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>

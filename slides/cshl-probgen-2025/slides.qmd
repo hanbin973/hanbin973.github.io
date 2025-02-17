@@ -276,6 +276,46 @@ True trees are better, but inferred trees are not too behind!
 :::
 
 
+# Complex traits through the lens of ARG-LMM
+
+$$
+\text{What does ARG-LMM tell us about complex trait analysis?}
+$$
+
+## Heritability is *ill*-defined
+
+::: {.incremental}
+- All individuals have different amount of genetic variance (except haploids)
+$$
+	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}
+$$
+
+- $\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}$ is the shared amount of area between the two haplotypes of an individual
+
+:::
+
+
+::: {.fragment}
+	![](imgs/pseudoreplication.svg){height="600")
+:::
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+Some people are more genetically variable than others
+:::
+
+::: {.fragment .fade-in-then-out}
+Some people are more easy to predict genetically than others
+:::
+
+::: {.fragment .fade-in-then-out}
+Some populations are inherently harder to predict!
+:::
+
+:::
+
+
 ## References
 
 ::: {#refs}
