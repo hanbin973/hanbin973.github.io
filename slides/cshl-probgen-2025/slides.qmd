@@ -365,10 +365,10 @@ Even in haploids, ARG-LMM variance component only reflects mutational variabilit
 ::: {.incremental}
 - Pedigree-based heritability captures Mendelian segregation
 - Various evolutionary processes are absent in ARG-LMM's generative model
-- Why compare quantities stemming from different phenomenan?
+- Why compare quantities stemming from different random forces?
 :::
 
-![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=200 fig-align="center"}
+![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=250 fig-align="center"}
 
 
 
