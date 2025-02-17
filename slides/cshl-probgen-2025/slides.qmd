@@ -37,7 +37,7 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 
 # Setup and derivation
 
-The trait is a linear function of $y$
+The trait $\mathbf{y}$ is a linear function of the genotype $\mathbf{G}$
 $$
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 $$
@@ -45,8 +45,8 @@ $\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$,
 $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$
 
 ::: {.incremental}
-- $N \ll P$, high-dimensional regression needs a fix
-- Perfect collinearity of some columns in $\mathbf{G}$, or perfect LD
+- $N \ll P$, it's impossible to fit a high-dimensional regression without additional assumptions
+- Perfect collinearity of some columns in $\mathbf{G}$, or perfect linkage disequilibrium (LD)
 - A population genetic solution: group variants into branches
 :::
 
@@ -67,7 +67,7 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 ## Collapsing variants to edges
 
 ::: {.incremental}
-- When does an individual posess a derived allele? (ancestral=$0$, derived=$1$)
+- When does an individual posess a derived allele? (ancestral$=0$, derived$=1$)
 - An individual is should be a descendant of an edge
 - And that edge should have a mutation
 - Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
@@ -119,7 +119,7 @@ $$
 $$
 	\begin{aligned}
 	\mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-		-l_eu_{ep}l_{e'}u_{e'p} \approx 0
+		&= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
 	\end{aligned}
 $$
 where $l_e$ is the (time-)length of edge $e$.
@@ -155,9 +155,8 @@ where $l_e$ is the (time-)length of edge $e$.
 	$$
 		\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
 	$$
-- Functional significance ($\tau_e^2$) is confounded by the area of edges
+- As a measure of Functional significance, variance components confounded by the area
 :::
-
 
 ## Fixed effects are constant under neutrality
 

@@ -178,13 +178,13 @@ Hanbin Lee
 <section>
 <section id="setup-and-derivation" class="title-slide slide level1 center">
 <h1>Setup and derivation</h1>
-<p>The trait is a linear function of <span class="math inline">\(y\)</span> <span class="math display">\[
+<p>The trait <span class="math inline">\(\mathbf{y}\)</span> is a linear function of the genotype <span class="math inline">\(\mathbf{G}\)</span> <span class="math display">\[
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 \]</span> <span class="math inline">\(\mathbf{y} \in \mathbb{R}^N\)</span>, <span class="math inline">\(\mathbf{G} \in \mathbb{R}^{N \times P}\)</span>, <span class="math inline">\(\boldsymbol{\beta} \in \mathbb{R}^P\)</span>, and <span class="math inline">\(\boldsymbol{\varepsilon} \in \mathbb{R}^N\)</span></p>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(N \ll P\)</span>, high-dimensional regression needs a fix</li>
-<li class="fragment">Perfect collinearity of some columns in <span class="math inline">\(\mathbf{G}\)</span>, or perfect LD</li>
+<li class="fragment"><span class="math inline">\(N \ll P\)</span>, it’s impossible to fit a high-dimensional regression without additional assumptions</li>
+<li class="fragment">Perfect collinearity of some columns in <span class="math inline">\(\mathbf{G}\)</span>, or perfect linkage disequilibrium (LD)</li>
 <li class="fragment">A population genetic solution: group variants into branches</li>
 </ul>
 </div>
@@ -206,7 +206,7 @@ Hanbin Lee
 <h2>Collapsing variants to edges</h2>
 <div>
 <ul>
-<li class="fragment">When does an individual posess a derived allele? (ancestral=<span class="math inline">\(0\)</span>, derived=<span class="math inline">\(1\)</span>)</li>
+<li class="fragment">When does an individual posess a derived allele? (ancestral<span class="math inline">\(=0\)</span>, derived<span class="math inline">\(=1\)</span>)</li>
 <li class="fragment">An individual is should be a descendant of an edge</li>
 <li class="fragment">And that edge should have a mutation</li>
 <li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span> <span class="math display">\[
@@ -254,7 +254,7 @@ Hanbin Lee
 <li class="fragment"><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
   \begin{aligned}
   \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-      -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+      &amp;= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
   \end{aligned}
 \]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
 </ul>
@@ -285,7 +285,7 @@ Hanbin Lee
 <li class="fragment">Mutation rate-weighted squared average of effect sizes <span class="math display">\[
       \tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
   \]</span></li>
-<li class="fragment">Functional significance (<span class="math inline">\(\tau_e^2\)</span>) is confounded by the area of edges</li>
+<li class="fragment">As a measure of Functional significance, variance components confounded by the area</li>
 </ul>
 </div>
 </section>
