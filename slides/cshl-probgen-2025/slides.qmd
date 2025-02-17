@@ -17,7 +17,7 @@ format:
     theme: white
     transition: slide
     navigation-mode: vertical
-	template-partials:
+    template-partials:
       - title-slide.html
 ---
 
