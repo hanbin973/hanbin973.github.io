@@ -200,22 +200,22 @@ for all edges $e \in \mathbf{E}$.
 
 ## Runtime
 
-<p style="text-align: center">
-<img src="imgs/runtime.svg">
+<p align="center">
+<img src="imgs/runtime.svg" />
 </p>
 
 ## Precision
-<p style="text-align: center">
-<img src="imgs/estimation_true.svg">
+<p align="center">
+<img src="imgs/estimation_true.svg" />
 </p>
-<p style="text-align: center">
-<img src="imgs/estimation_infer.svg">
+<p align="center">
+<img src="imgs/estimation_infer.svg" />
 </p>
 
 ## Best linear unbiased prediction (BLUP)
 
-<p style="text-align: center">
-<img src="imgs/prediction.svg">
+<p align="center">
+<img src="imgs/prediction.svg" />
 </p>
 
 ## References
