@@ -217,54 +217,16 @@ The runtime scales linearly with respect to the number of individuals
 
 :::{.r-stack}
 
-:::{.fragment .fade-in-then-out style="text-align: center"}
+:::{.fragment .fade-in-then-out}
 **Simulated trees**
 
-![](imgs/estimation_true.svg){height="550"}
+![](imgs/estimation_true.svg){height="600"}
 :::
 
-:::{.fragment .fade-in-then-out style="text-align: center"}
-**Inferred ($\mathsf{tsinfer+tsdate}$) trees**
+:::{.fragment .fade-in-then-out}
+**Inferred (tsinfer+tsdate) trees**
 
-![](imgs/estimation_infer.svg){height="550"}
-:::
-
-:::
-
-
-## Estimation
-
-:::{.r-stack}
-
-:::{.fragment .fade-in-then-out style="text-align: center"}
-**Image 1 title**
-
-![](imgs/estimation_true.svg){width="30%"}
-:::
-
-:::{.fragment .fade-in style="text-align: center"}
-**Image 2 title**
-
-![](imgs/estimation_infer.svg){width="50%"}
-:::
-
-:::
-
-
-## My slide
-
-:::{.r-stack}
-
-:::{.fragment .fade-in-then-out style="text-align: center"}
-**Image 1 title**
-
-![](https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg){width="30%"}
-:::
-
-:::{.fragment .fade-in style="text-align: center"}
-**Image 2 title**
-
-![](https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg){width="50%"}
+![](imgs/estimation_infer.svg){height="600"}
 :::
 
 :::
