@@ -225,12 +225,12 @@ Hanbin Lee
 <ul>
 <li class="fragment"><p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> <span class="math display">\[
 \begin{aligned}
-\mathbf{y} &amp;= \class{fragment}{\sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
-      = \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}} \\
-      &amp;= \class{fragment}\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
-      = \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon}} \\
-      &amp;= \class{fragment}{\sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
-      = \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}}
+\mathbf{y} &amp;= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
+      = \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+      &amp;= \textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+      = \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+      &amp;= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
+      = \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
 \end{aligned}
 \]</span></p></li>
 <li class="fragment"><p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p></li>
@@ -336,12 +336,12 @@ Hanbin Lee
 <div class="r-stack">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="imgs/estimation_true.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="imgs/estimation_true.svg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="imgs/estimation_infer.svg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+<p><img data-src="imgs/estimation_infer.svg" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
 </figure>
 </div>
 </div>

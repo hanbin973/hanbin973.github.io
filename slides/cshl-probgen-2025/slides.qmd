@@ -87,12 +87,12 @@ $$
 - Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 $$
 \begin{aligned}
-\mathbf{y} &= \class{fragment}{\sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} 
-		= \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}} \\
-		&= \class{fragment}\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
-		= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon}} \\
-		&= \class{fragment}{\sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
-		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}}
+\mathbf{y} &= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} 
+		= \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
+		&= \textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
+		= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+		&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
+		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
 \end{aligned}
 $$
 
@@ -208,9 +208,9 @@ for all edges $e \in \mathbf{E}$.
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){fig-align="center" width=80%}
+![](imgs/estimation_true.svg){fig-align="center" width=100%}
 
-![](imgs/estimation_infer.svg){fig-align="center" width=80%}
+![](imgs/estimation_infer.svg){fig-align="center" width=100%}
 :::
 
 
