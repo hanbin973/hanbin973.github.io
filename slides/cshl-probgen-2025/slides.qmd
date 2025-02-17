@@ -205,7 +205,7 @@ where $l_e$ is the (time-)length of edge $e$.
 
 ::: {.r-stack}
 
-::r {.fragment .fade-in-then-out}
+::: {.fragment .fade-in-then-out}
 :::
 $$
 \begin{aligned}
