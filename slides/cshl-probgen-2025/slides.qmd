@@ -334,8 +334,13 @@ Some populations are inherently harder to predict!
 - Parameter estimates (e.g. variance components) are correlated
 :::
 
-![](imgs/pseudoreplication.svg){.fragment height="400"}
+![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
 
+
+
+# Thank you for listening
+
+Collaborators: Nate Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
 
 
 ## References
