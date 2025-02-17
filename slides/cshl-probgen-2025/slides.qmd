@@ -179,7 +179,7 @@ $$
 
 - The assumption is standard in neutral settings
 $$
-\text{Selection \quad \Rightarrow \quad Fixed effects?}
+\textcolor{red}{Conjecture:} \text{Selection \quad \Rightarrow \quad Fixed effects?}
 $$
 :::
 
