@@ -206,7 +206,6 @@ where $l_e$ is the (time-)length of edge $e$.
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-:::
 $$
 \begin{aligned}
 	&\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
