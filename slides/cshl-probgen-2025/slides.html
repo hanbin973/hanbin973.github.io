@@ -187,9 +187,12 @@ Hanbin Lee
 <section>
 <section id="setup-and-derivation" class="title-slide slide level1 center">
 <h1>Setup and derivation</h1>
-<p>The trait <span class="math inline">\(\mathbf{y}\)</span> is a linear function of the genotype <span class="math inline">\(\mathbf{G}\)</span> <span class="math display">\[
+<p>The trait <span class="math inline">\(\mathbf{y}\)</span> is a linear function of the genotype <span class="math inline">\(\mathbf{G}\)</span></p>
+<div class="fragment">
+<p><span class="math display">\[
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 \]</span> <span class="math inline">\(\mathbf{y} \in \mathbb{R}^N\)</span>, <span class="math inline">\(\mathbf{G} \in \mathbb{R}^{N \times P}\)</span>, <span class="math inline">\(\boldsymbol{\beta} \in \mathbb{R}^P\)</span>, and <span class="math inline">\(\boldsymbol{\varepsilon} \in \mathbb{R}^N\)</span></p>
+</div>
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(N \ll P\)</span>, it’s impossible to fit a high-dimensional regression without additional assumptions</li>
@@ -203,7 +206,7 @@ Hanbin Lee
 <div>
 <ul>
 <li class="fragment">Nodes and edges are reused across multiple trees in a tree sequence</li>
-<li class="fragment">Edges, in particular, may not have a unique set of samples along its span</li>
+<li class="fragment">Edges, in particular, may not have a unique set of samples along their span</li>
 <li class="fragment">Salehi Nowbandegani and colleagues <em>bricked</em> the edges to divide them <span class="citation" data-cites="SalehiNowbandegani2023">(<a href="#/references" role="doc-biblioref" onclick="">Salehi Nowbandegani et al. 2023</a>)</span></li>
 <li class="fragment">Henceforth, we assume that edges are splitted to have a unique subtopology <span class="math display">\[
 \mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$}
@@ -213,16 +216,29 @@ Hanbin Lee
 </section>
 <section id="collapsing-variants-to-edges" class="slide level2">
 <h2>Collapsing variants to edges</h2>
-<div>
+<div class="fragment">
+<p>When does an individual possess a derived allele? (<span class="math inline">\(\text{ancestral}=0\)</span>, <span class="math inline">\(\text{derived}=1\)</span>)</p>
+</div>
+<div class="center">
+<div class="fragment">
+<p>An individual should be a descendant of an edge (<span class="math inline">\(\mathbf{Z}_{ne}=1\)</span>)</p>
+</div>
+<div class="framgent">
 <ul>
-<li class="fragment">When does an individual posess a derived allele? (ancestral<span class="math inline">\(=0\)</span>, derived<span class="math inline">\(=1\)</span>)</li>
-<li class="fragment">An individual is should be a descendant of an edge</li>
-<li class="fragment">And that edge should have a mutation</li>
-<li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span> <span class="math display">\[
-\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
-\]</span></li>
-<li class="fragment">Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</li>
+<li></li>
 </ul>
+</div>
+<div class="fragment">
+<p>That edge should have mutation (<span class="math inline">\(\mathbf{1}_{ep}=1\)</span>)</p>
+</div>
+</div>
+<div class="fragment">
+<p>Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span> <span class="math display">\[
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</p>
 </div>
 </section>
 <section id="exchange-the-summations" class="slide level2">

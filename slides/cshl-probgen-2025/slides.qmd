@@ -44,11 +44,14 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 # Setup and derivation
 
 The trait $\mathbf{y}$ is a linear function of the genotype $\mathbf{G}$
+
+::: {.fragment}
 $$
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 $$
 $\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$, 
 $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$
+:::
 
 ::: {.incremental}
 - $N \ll P$, it's impossible to fit a high-dimensional regression without additional assumptions
@@ -60,7 +63,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ::: {.incremental}
 - Nodes and edges are reused across multiple trees in a tree sequence
-- Edges, in particular, may not have a unique set of samples along its span
+- Edges, in particular, may not have a unique set of samples along their span
 - Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
 - Henceforth, we assume that edges are splitted to have a unique subtopology
 $$
@@ -72,16 +75,33 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 
 ## Collapsing variants to edges
 
-::: {.incremental}
-- When does an individual posess a derived allele? (ancestral$=0$, derived$=1$)
-- An individual is should be a descendant of an edge
-- And that edge should have a mutation
-- Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
+::: {.fragment}
+When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
+:::
+
+::: {.center}
+::: {.fragment}
+An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
+:::
+::: {.framgent}
++
+:::
+::: {.fragment}
+That edge should have mutation ($\mathbf{1}_{ep}=1$)
+:::
+
+
+:::
+::: {.fragment}
+Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
 $$
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
-- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
 :::
+::: {.fragment}
+Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
+:::
+
 
 ## Exchange the summations
 
