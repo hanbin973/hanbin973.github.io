@@ -313,7 +313,7 @@ Hanbin Lee
 <li class="fragment">Mutation rate-weighted squared average of effect sizes <span class="math display">\[
       \tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
   \]</span></li>
-<li class="fragment">As a measure of functional significance, variance components confounded by the area</li>
+<li class="fragment">As a measure of functional significance, variance components are confounded by the area</li>
 </ul>
 </div>
 </section>
@@ -323,13 +323,13 @@ Hanbin Lee
 <ul>
 <li class="fragment"><p>Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position <span class="math display">\[
 \begin{aligned}
-  \left[ \mathbf{Z} \mathbf{f} \right]_n &amp;= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+  &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
   \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
-      &amp;= \sum_{p=1}^P \boldsymbol{\beta}_p u_p
-      \left(
-              \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
-      \right) \\
-  &amp;= \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
+  &amp;= \sum_{p=1}^P \boldsymbol{\beta}_p u_p
+  \left(
+          \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
+  \right)
+  = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
 \end{aligned}
 \]</span> An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
 <li class="fragment"><p>The assumption is standard in neutral settings</p></li>
@@ -422,6 +422,9 @@ Hanbin Lee
 <p>Some populations are inherently harder to predict!</p>
 </div>
 </div>
+</section>
+<section id="becareful-of-pseudoreplication" class="slide level2">
+<h2>Becareful of pseudoreplication</h2>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
