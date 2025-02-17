@@ -181,11 +181,15 @@ $$
 - An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
 - The assumption is standard in neutral settings
+:::
+
+::: {.fragment}
 $$
 	\text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
 $$
-
 :::
+
+
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
@@ -220,6 +224,24 @@ The runtime scales linearly with respect to the number of individuals
 
 ::: {.fragment}
 ![](imgs/estimation_infer.svg){width=80%}
+:::
+
+:::
+
+## My slide
+
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out style="text-align: center"}
+**Image 1 title**
+
+![](https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg){width="30%"}
+:::
+
+:::{.fragment .fade-in style="text-align: center"}
+**Image 2 title**
+
+![](https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg){width="50%"}
 :::
 
 :::
