@@ -205,18 +205,23 @@ for all edges $e \in \mathbf{E}$.
 
 ![](imgs/runtime.svg){fig-align="center" width=80%}
 
+The runtime scales linearly with respect to the number of individuals
+
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){.fragment fig-align="center" width="200%"}
+![](imgs/estimation_true.svg){.fragment width="200%"}
 
-![](imgs/estimation_infer.svg){.fragment fig-align="center" width="200%"}
+![](imgs/estimation_infer.svg){.fragment width="200%"}
 :::
 
 
 ## Best linear unbiased prediction (BLUP)
 
 ![](imgs/prediction.svg){fig-align="center" width="70%"}
+
+True trees are better, but inferred trees are not lagging too much!
+
 
 ## References
 
