@@ -85,13 +85,10 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
 :::
 
-::: {.framgent}
+::: {.fragment}
 $$
 +
 $$
-:::
-
-::: {.fragment}
 That edge should have mutation ($\mathbf{1}_{ep}=1$)
 :::
 </center>
@@ -102,7 +99,7 @@ $$
 $$
 :::
 ::: {.incremental}
-Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
+-Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
 :::
 
 
