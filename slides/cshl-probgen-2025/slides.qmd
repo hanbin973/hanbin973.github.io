@@ -22,7 +22,9 @@ format:
 ::: {.incremental}
 - We condition on the sample's ancestral recombination graph (ARG) 
 - The full feature of the ARG is superfluous, only the local trees matter $\mathcal{T} = (\mathbf{V}, \mathbf{E})$
-![](imgs/local_trees.svg)
+<p align="center">
+	<img src="imgs/local_trees.svg" />
+</p>	
 
 - Drift and recombination are fixed, only mutation is left to vary
 $$
