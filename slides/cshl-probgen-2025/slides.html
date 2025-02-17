@@ -221,6 +221,32 @@ Hanbin Lee
 </section>
 <section id="exchange-the-summations" class="slide level2">
 <h2>Exchange the summations</h2>
+<div class="r-stack">
+<div class="fragment">
+<p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> and <span class="math inline">\(\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Substitute <span class="math inline">\(\mathbf{G}_p\)</span> <span class="math display">\[
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Exchange the inner and the outer summation <span class="math display">\[
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Pull out <span class="math inline">\(\mathbf{Z}_e\)</span> and group the positions nested in <span class="math inline">\(p: p \in e\)</span> <span class="math display">\[
+\sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
+</div>
+</section>
+<section id="exchange-the-summations-1" class="slide level2">
+<h2>Exchange the summations</h2>
 <div>
 <ul>
 <li class="fragment"><p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> <span class="math display">\[

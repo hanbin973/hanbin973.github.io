@@ -83,6 +83,45 @@ $$
 ## Exchange the summations
 
 
+:::{.r-stack}
+
+::: {.fragment}
+Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
+and $\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}$
+:::
+
+
+::: {.fragment .fade-in-then-out}
+Substitute $\mathbf{G}_p$
+$$
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+Exchange the inner and the outer summation
+$$
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+Pull out $\mathbf{Z}_e$ and group the positions nested in $p: p \in e$
+$$
+\sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+$$
+:::
+:::
+
+::: {.fragment}
+$\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
+:::
+
+
+
+## Exchange the summations
+
+
 ::: {.incremental}
 - Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 $$
