@@ -386,7 +386,7 @@ Even in haploids, ARG-LMM variance component only reflects mutational variabilit
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-This is also the very reason why BLUP works.
+This is also the very reason why BLUP works
 :::
 
 ::: {.fragment}
