@@ -214,7 +214,7 @@ $$
 $$
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment}
 $$
 \sum_{p=1}^P \boldsymbol{\beta}_p u_p 
 	\left(
@@ -328,8 +328,13 @@ Some populations are inherently harder to predict!
 
 ## Becareful of pseudoreplication
 
+::: {.incremental}
+- Non-overlapping samples are not independent
+- Everyone shares some amount of mutational history
+- Parameter estimates (e.g. variance components) are correlated
+:::
 
-
+![](imgs/pseudoreplication.svg){.fragment height="400"}
 
 
 
