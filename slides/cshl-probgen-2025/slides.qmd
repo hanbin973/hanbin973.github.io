@@ -131,7 +131,7 @@ $$
 :::
 
 ::: {.fragment}
-We call this generative process as the ancestral recombination graph linear mixed model (ARG-LMM)
+This the ancestral recombination graph linear mixed model (ARG-LMM)
 :::
 
 ::: {.incremental}
@@ -242,7 +242,7 @@ for all edges $e \in \mathbf{E}$.
 
 ## Runtime
 
-![](imgs/runtime.svg){.fragment fig-align="center" width=80%}
+![](imgs/runtime.svg){.fragment fig-align="center" height="700"}
 
 ::: {.fragment}
 The runtime scales linearly with respect to the number of individuals
@@ -255,13 +255,13 @@ The runtime scales linearly with respect to the number of individuals
 :::{.fragment .fade-in-then-out}
 **Simulated trees**
 
-![](imgs/estimation_true.svg){height="600"}
+![](imgs/estimation_true.svg){height="700"}
 :::
 
 :::{.fragment .fade-in-then-out}
 **Inferred (tsinfer+tsdate) trees**
 
-![](imgs/estimation_infer.svg){height="600"}
+![](imgs/estimation_infer.svg){height="700"}
 :::
 
 :::
@@ -269,7 +269,7 @@ The runtime scales linearly with respect to the number of individuals
 
 ## Best linear unbiased prediction (BLUP)
 
-![](imgs/prediction.svg){.fragment fig-align="center" width=70%}
+![](imgs/prediction.svg){.fragment fig-align="center" height="700"}
 
 ::: {.fragment}
 True trees are better, but inferred trees are not too behind!
