@@ -370,6 +370,10 @@ Even in haploids, ARG-LMM variance component only reflects mutational variabilit
 
 ![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=250 fig-align="center"}
 
+::: footer
+Figure from [Whalebone Magazine](https://whalebonemag.com/)
+:::
+
 
 
 
