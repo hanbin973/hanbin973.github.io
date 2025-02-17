@@ -321,17 +321,31 @@ Hanbin Lee
 <h2>Fixed effects are constant under neutrality</h2>
 <div>
 <ul>
-<li class="fragment"><p>Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position <span class="math display">\[
+<li class="fragment">Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position</li>
+</ul>
+</div>
+<div class="r-stack">
+<div class="fragment">
+<p><span class="math display">\[
 \begin{aligned}
-  &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
-  \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
-  &amp;= \sum_{p=1}^P \boldsymbol{\beta}_p u_p
-  \left(
-          \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
-  \right)
-  = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
-\end{aligned}
-\]</span> An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
+    &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+    \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
+    \end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\sum_{p=1}^P \boldsymbol{\beta}_p u_p
+    \left(
+            \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
+    \right)
+    = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
+\]</span></p>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment"><p>An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
 <li class="fragment"><p>The assumption is standard in neutral settings</p></li>
 </ul>
 </div>

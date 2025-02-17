@@ -201,18 +201,33 @@ where $l_e$ is the (time-)length of edge $e$.
 ::: {.incremental}
 
 - Suppose that $u_{ep}=u_p$, i.e., the mutation rate is constant across edges for a given position
+:::
+
+::: {.r-stack}
+
+::: {.fragment}
 $$
 \begin{aligned}
 	&\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
 	\left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
-	&= \sum_{p=1}^P \boldsymbol{\beta}_p u_p 
+	\end{aligned}
+$$
+:::
+
+::: {.fragment}
+$$
+\sum_{p=1}^P \boldsymbol{\beta}_p u_p 
 	\left(
 			\sum_{e: p \in e} \mathbf{Z}_{ne} l_e
 	\right)
 	= \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
-\end{aligned}
 $$
-An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
+:::
+
+:::
+
+::: {.incremental}
+- An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
 - The assumption is standard in neutral settings
 :::
