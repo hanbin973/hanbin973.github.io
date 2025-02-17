@@ -175,7 +175,7 @@ $$
 \end{aligned}
 $$
 
-- An intercept is enought to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
+- An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
 - The assumption is standard in neutral settings
 $$
@@ -197,6 +197,19 @@ for all edges $e \in \mathbf{E}$.
 
 
 :::
+
+## Runtime
+
+![](imgs/runtime.eps)
+
+## Precision
+
+![](imgs/estimation_true.eps)
+![](imgs/estimation_infer.eps)
+
+## Best linear unbiased prediction (BLUP)
+
+![](imgs/prediction.eps)	
 
 ## References
 
