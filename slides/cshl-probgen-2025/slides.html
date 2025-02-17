@@ -306,7 +306,9 @@ Hanbin Lee
 \]</span></p></li>
 <li class="fragment"><p>An intercept is enought to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
 <li class="fragment"><p>The assumption is standard in neutral settings <span class="math display">\[
-\textcolor{red}{Conjecture:} \text{Selection \quad \Rightarrow \quad Fixed effects?}
+\begin{algined}
+  \textcolor{red}{\text{Conjecture:}} \text{Selection \Rightarrow Fixed effects?}
+\begin{aligned}
 \]</span></p></li>
 </ul>
 </div>
@@ -316,11 +318,11 @@ Hanbin Lee
 <h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient genetic relatedness matrix - vector product to fit the REML objective</li>
+<li class="fragment"><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient genetic relatedness matrix - vector product to fit the restricted maximum likelihood (REML) objective</li>
 <li class="fragment">Assumes <span class="math display">\[
   \frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
 \]</span> for all edges <span class="math inline">\(e \in \mathbf{E}\)</span>.</li>
-<li class="fragment">Approximation likely to be better</li>
+<li class="fragment">Approximately true provided the edge is long enough</li>
 </ul>
 </div>
 </section>

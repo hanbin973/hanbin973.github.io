@@ -179,20 +179,23 @@ $$
 
 - The assumption is standard in neutral settings
 $$
-\textcolor{red}{Conjecture:} \text{Selection \quad \Rightarrow \quad Fixed effects?}
+\begin{algined}
+	\textcolor{red}{\text{Conjecture:}} \text{Selection \Rightarrow Fixed effects?}
+\begin{aligned}
 $$
+
 :::
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
 ::: {.incremental}
-- $\textsf{tslmm}$ utilizes an efficient genetic relatedness matrix - vector product to fit the REML objective
+- $\textsf{tslmm}$ utilizes an efficient genetic relatedness matrix - vector product to fit the restricted maximum likelihood (REML) objective
 - Assumes
 $$
 	\frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
 $$
 for all edges $e \in \mathbf{E}$.
-- Approximation likely to be better
+- Approximately true provided the edge is long enough
 
 
 :::
