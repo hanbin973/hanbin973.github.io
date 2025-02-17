@@ -295,7 +295,7 @@ Hanbin Lee
 <ul>
 <li class="fragment"><p>Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position <span class="math display">\[
 \begin{aligned}
-  [\mathbf{Z} \mathbf{f}]_n &amp;= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+  \[ \mathbf{Z} \mathbf{f} \]_n &amp;= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
   \left[ \sum_{p: p \in e} \boldsymbol{\beta}\mathbf{1}_{ep} \right] \\
       &amp;= \sum_{p=1}^P \boldsymbol{\beta}_p u_p
       \left(
@@ -304,8 +304,21 @@ Hanbin Lee
   &amp;= \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
 \end{aligned}
 \]</span></p></li>
-<li class="fragment"><p>An intercept is enought to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition.</p></li>
-<li class="fragment"><p>The assumption is standard in neutral settings.</p></li>
+<li class="fragment"><p>An intercept is enought to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
+<li class="fragment"><p>The assumption is standard in neutral settings</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
+<h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
+<div>
+<ul>
+<li class="fragment"><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient genetic relatedness matrix - vector product to fit the REML objective</li>
+<li class="fragment">Assumes <span class="math display">\[
+  \frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
+\]</span> for all edges <span class="math inline">\(e \in \mathbf{E}\)</span>.</li>
+<li class="fragment">Approximation likely to be better</li>
 </ul>
 </div>
 </section>

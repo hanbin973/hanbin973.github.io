@@ -165,7 +165,7 @@ where $l_e$ is the (time-)length of edge $e$.
 - Suppose that $u_{ep}=u_p$, i.e., the mutation rate is constant across edges for a given position
 $$
 \begin{aligned}
-	[\mathbf{Z} \mathbf{f}]_n &= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+	\[ \mathbf{Z} \mathbf{f} \]_n &= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
 	\left[ \sum_{p: p \in e} \boldsymbol{\beta}\mathbf{1}_{ep} \right] \\
 		&= \sum_{p=1}^P \boldsymbol{\beta}_p u_p 
 		\left(
@@ -175,12 +175,24 @@ $$
 \end{aligned}
 $$
 
-- An intercept is enought to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition.
+- An intercept is enought to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
-- The assumption is standard in neutral settings.
+- The assumption is standard in neutral settings
 :::
 
+# $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
+::: {.incremental}
+- $\textsf{tslmm}$ utilizes an efficient genetic relatedness matrix - vector product to fit the REML objective
+- Assumes
+$$
+	\frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
+$$
+for all edges $e \in \mathbf{E}$.
+- Approximation likely to be better
+
+
+:::
 
 ## References
 
