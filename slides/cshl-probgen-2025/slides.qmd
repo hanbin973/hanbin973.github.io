@@ -210,9 +210,9 @@ The runtime scales linearly with respect to the number of individuals
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){.fragment width="200%"}
+![](imgs/estimation_true.svg){.fragment width="400%"}
 
-![](imgs/estimation_infer.svg){.fragment width="200%"}
+![](imgs/estimation_infer.svg){.fragment width="400%"}
 :::
 
 
@@ -220,7 +220,7 @@ The runtime scales linearly with respect to the number of individuals
 
 ![](imgs/prediction.svg){fig-align="center" width="70%"}
 
-True trees are better, but inferred trees are not lagging too much!
+True trees are better, but inferred trees are not too behind!
 
 
 ## References
