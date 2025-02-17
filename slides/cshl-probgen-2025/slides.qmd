@@ -295,9 +295,7 @@ $$
 :::
 
 
-::: {.fragment}
-	![](imgs/pseudoreplication.svg){height="600"}
-:::
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height="600"}
 
 ::: {.r-stack}
 
