@@ -208,8 +208,8 @@ for all edges $e \in \mathbf{E}$.
 
 ## Precision
 <p align="center">
-<img src="imgs/estimation_true.svg" width="100%">
-<img src="imgs/estimation_infer.svg" width="100%">
+<img src="imgs/estimation_true.svg" width="50%">
+<img src="imgs/estimation_infer.svg" width="50%">
 </p>
 
 ## Best linear unbiased prediction (BLUP)
