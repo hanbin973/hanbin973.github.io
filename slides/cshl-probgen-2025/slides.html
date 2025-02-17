@@ -248,33 +248,28 @@ Hanbin Lee
 <div class="fragment">
 <p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
 </div>
-</section>
-<section id="exchange-the-summations-1" class="slide level2">
-<h2>Exchange the summations</h2>
-<div>
-<ul>
-<li class="fragment"><p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> <span class="math display">\[
-\begin{aligned}
-\mathbf{y} &amp;= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
-      = \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
-      &amp;= \textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
-      = \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
-      &amp;= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
-      = \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
-\end{aligned}
-\]</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p></li>
-</ul>
-</div>
 </section></section>
 <section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
-<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span></p>
-<p><span class="math display">\[
+<div class="fragment">
+<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span> <span class="math display">\[
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
 \]</span></p>
+</div>
+<div class="fragment">
+<p>We call this generative process as the ancestral recombination graph linear mixed model (ARG-LMM)</p>
+</div>
+<div>
+<ul>
+<li class="fragment">The random effects are tied to a physical process - Mutations!</li>
+<li class="fragment">Their properties can be deduced from the mutational process</li>
+<li class="fragment">We did not <em>assume</em> but <em>derived</em> the model</li>
+</ul>
+</div>
+<div class="fragment">
 <p>Let’s characterize <span class="math inline">\(\mathbf{u}\)</span> (the random effects) and <span class="math inline">\(\mathbf{f}\)</span> (the fixed effects)</p>
+</div>
 </section>
 <section id="random-effects-are-independent" class="slide level2">
 <h2>Random effects are independent</h2>

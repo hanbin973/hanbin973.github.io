@@ -121,35 +121,28 @@ $\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random v
 :::
 
 
-
-## Exchange the summations
-
-
-::: {.incremental}
-- Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
-$$
-\begin{aligned}
-\mathbf{y} &= \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon} 
-		= \textcolor{grey}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} \\
-		&= \textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
-		= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
-		&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon}
-		= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
-\end{aligned}
-$$
-
-- $\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
-:::
-
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
+::: {.fragment}
 Split $\boldsymbol{\upsilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
-
 $$
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
 $$
+:::
 
+::: {.fragment}
+We call this generative process as the ancestral recombination graph linear mixed model (ARG-LMM)
+:::
+
+::: {.incremental}
+- The random effects are tied to a physical process - Mutations!
+- Their properties can be deduced from the mutational process
+- We did not *assume* but *derived* the model
+:::
+
+::: {.fragment}
 Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed effects)
+:::
 
 ## Random effects are independent
 
