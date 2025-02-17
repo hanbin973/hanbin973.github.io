@@ -296,7 +296,7 @@ $$
 
 
 ::: {.fragment}
-	![](imgs/pseudoreplication.svg){height="600")
+	![](imgs/pseudoreplication.svg){height="600"}
 :::
 
 ::: {.r-stack}
