@@ -200,16 +200,16 @@ for all edges $e \in \mathbf{E}$.
 
 ## Runtime
 
-![](imgs/runtime.svg)
+![](imgs/runtime.svg#center)
 
 ## Precision
 
-![](imgs/estimation_true.svg)
-![](imgs/estimation_infer.svg)
+![](imgs/estimation_true.svg#center)
+![](imgs/estimation_infer.svg#center)
 
 ## Best linear unbiased prediction (BLUP)
 
-![](imgs/prediction.svg)	
+![](imgs/prediction.svg#center)	
 
 ## References
 
