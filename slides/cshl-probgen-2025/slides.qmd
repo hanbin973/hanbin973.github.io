@@ -209,11 +209,9 @@ The runtime scales linearly with respect to the number of individuals
 
 ## Precision
 
-::: {.r-stack}
 ![](imgs/estimation_true.svg){.fragment .r-stretch}
 
 ![](imgs/estimation_infer.svg){.fragment .r-stretch}
-:::
 
 
 ## Best linear unbiased prediction (BLUP)
