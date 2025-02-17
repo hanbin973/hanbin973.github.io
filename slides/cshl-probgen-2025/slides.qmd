@@ -203,7 +203,7 @@ for all edges $e \in \mathbf{E}$.
 ## Runtime
 
 <p align="center">
-<img src="imgs/runtime.svg" />
+<img src="imgs/runtime.svg" width="200%">
 </p>
 
 ## Precision
