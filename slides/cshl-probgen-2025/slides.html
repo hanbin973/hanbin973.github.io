@@ -288,7 +288,7 @@ Hanbin Lee
 <ul>
 <li class="fragment">The random effects are tied to a physical process - Mutations!</li>
 <li class="fragment">Their properties can be deduced from the mutational process</li>
-<li class="fragment">We did not <em>assume</em> but <em>derived</em> the model</li>
+<li class="fragment">We don’t <em>assume</em> but <em>derive</em> the model</li>
 </ul>
 </div>
 <div class="fragment">
@@ -299,7 +299,7 @@ Hanbin Lee
 <h2>Random effects are independent</h2>
 <div>
 <ul>
-<li class="fragment"><p>Independent entries of random effects a key assumption of linear mixed models</p></li>
+<li class="fragment"><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
 <li class="fragment"><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
   \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
 \]</span></p></li>
@@ -384,7 +384,7 @@ Hanbin Lee
 <h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient genetic relatedness matrix - vector product to fit the restricted maximum likelihood (REML) objective</li>
+<li class="fragment"><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient <em>genetic relatedness matrix - vector product</em> to fit the restricted maximum likelihood (REML) objective</li>
 <li class="fragment">Assumes <span class="math display">\[
   \frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
 \]</span> for all edges <span class="math inline">\(e \in \mathbf{E}\)</span>.</li>
@@ -439,7 +439,7 @@ Hanbin Lee
 <div>
 <ul>
 <li class="fragment"><p>All individuals have different amount of genetic variance (except haploids) <span class="math display">\[
-  \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}
+  \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
 \]</span></p></li>
 <li class="fragment"><p><span class="math inline">\(\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}\)</span> is the shared amount of area between the two haplotypes of an individual</p></li>
 </ul>
@@ -474,6 +474,14 @@ Hanbin Lee
 <figure>
 <p><img data-src="imgs/pseudoreplication.svg" class="fragment quarto-figure quarto-figure-center" height="400"></p>
 </figure>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>This is also the very reason why BLUP works.</p>
+</div>
+<div class="fragment">
+<p>We are all correlated!</p>
+</div>
 </div>
 </section></section>
 <section>

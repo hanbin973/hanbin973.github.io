@@ -160,7 +160,7 @@ This the ancestral recombination graph linear mixed model (ARG-LMM)
 ::: {.incremental}
 - The random effects are tied to a physical process - Mutations!
 - Their properties can be deduced from the mutational process
-- We did not *assume* but *derived* the model
+- We don't *assume* but *derive* the model
 :::
 
 ::: {.fragment}
@@ -170,7 +170,7 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 ## Random effects are independent
 
 ::: {.incremental}
-- Independent entries of random effects a key assumption of linear mixed models
+- Independent entries of random effects is a key assumption of linear mixed models
 - This can be *proved* in ARG-LMM, instead of assuming it
 $$
 	\mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
@@ -265,7 +265,7 @@ $$
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
 ::: {.incremental}
-- $\textsf{tslmm}$ utilizes an efficient genetic relatedness matrix - vector product to fit the restricted maximum likelihood (REML) objective
+- $\textsf{tslmm}$ utilizes an efficient *genetic relatedness matrix - vector product* to fit the restricted maximum likelihood (REML) objective
 - Assumes
 $$
 	\frac{1}{s_e} \sum_{p: p \in e} \boldsymbol{\beta}^2 u_{ep} = \tau_e^2 = \tau^2
@@ -323,7 +323,7 @@ $$
 ::: {.incremental}
 - All individuals have different amount of genetic variance (except haploids)
 $$
-	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}
+	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
 $$
 
 - $\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}$ is the shared amount of area between the two haplotypes of an individual
@@ -358,6 +358,18 @@ Some populations are inherently harder to predict!
 :::
 
 ![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+This is also the very reason why BLUP works.
+:::
+
+::: {.fragment}
+We are all correlated!
+:::
+
+:::
 
 
 
