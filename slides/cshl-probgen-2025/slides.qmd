@@ -1,8 +1,9 @@
 ---
 title: "Modelling complex traits with ancestral recombination graphs"
-author: "Hanbin Lee"
-affiliation: "University of Michigan, Ann Arbor"
-email: "hblee@umich.edu"
+author:
+  name: Hanbin Lee
+  affiliation: "University of Michigan, Ann Arbor"
+  email: "hblee@umich.edu"
 venue: "Probabilistic Modelling in Genomics 2025"
 date: "07 March 2025"
 date-format: "MMM D, YYYY"
@@ -16,6 +17,8 @@ format:
     theme: white
     transition: slide
     navigation-mode: vertical
+	template-partials:
+      - title-slide.html
 ---
 
 # Overview
@@ -340,7 +343,7 @@ Some populations are inherently harder to predict!
 
 # Thank you for listening
 
-Collaborators: Nate Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
+Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
 
 
 ## References
