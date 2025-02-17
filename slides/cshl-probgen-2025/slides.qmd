@@ -210,15 +210,15 @@ The runtime scales linearly with respect to the number of individuals
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){.fragment width="400%"}
+![](imgs/estimation_true.svg){.fragment width=400%}
 
-![](imgs/estimation_infer.svg){.fragment width="400%"}
+![](imgs/estimation_infer.svg){.fragment width=400%}
 :::
 
 
 ## Best linear unbiased prediction (BLUP)
 
-![](imgs/prediction.svg){fig-align="center" width="70%"}
+![](imgs/prediction.svg){fig-align="center" width=70%}
 
 True trees are better, but inferred trees are not too behind!
 
