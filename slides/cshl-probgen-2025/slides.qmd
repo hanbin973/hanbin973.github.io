@@ -208,9 +208,9 @@ for all edges $e \in \mathbf{E}$.
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){.fragment fig-align="center" width="100%"}
+![](imgs/estimation_true.svg){.fragment fig-align="center" width="200%"}
 
-![](imgs/estimation_infer.svg){.fragment fig-align="center" width="100%"}
+![](imgs/estimation_infer.svg){.fragment fig-align="center" width="200%"}
 :::
 
 
