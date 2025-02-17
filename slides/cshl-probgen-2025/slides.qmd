@@ -318,7 +318,7 @@ $$
 \text{What does ARG-LMM tell us about complex trait analysis?}
 $$
 
-## Heritability is *ill*-defined
+## Polygenic prediction
 
 ::: {.incremental}
 - All individuals have different amount of genetic variance (except haploids)
@@ -348,6 +348,30 @@ Some populations are inherently harder to predict!
 :::
 
 :::
+
+## *Missing* heritability?
+
+::: {.fragment}
+No single quantity can summarize the relative contribution of genetics to trait variance
+:::
+::: {.incremental}
+- The notion of heritability is ill-defined once you conditioned on the ARG
+- This applies to SNP-based LMM heritability if one think of ARG-LMM as the underlying model
+:::
+
+::: {.fragment}
+Even in haploids, ARG-LMM variance component only reflects mutational variability
+:::
+::: {.incremental}
+- Pedigree-based heritability captures Mendelian segregation
+- Various evolutionary processes are absent in ARG-LMM's generative model
+- Why compare quantities stemming from different phenomenan?
+:::
+
+![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=200 fig-align="center"}
+
+
+
 
 ## Becareful of pseudoreplication
 
