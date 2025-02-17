@@ -213,7 +213,7 @@ for all edges $e \in \mathbf{E}$.
 The runtime scales linearly with respect to the number of individuals
 :::
 
-## Precision
+## Estimation
 
 
 :::{.r-stack}
@@ -231,6 +231,26 @@ The runtime scales linearly with respect to the number of individuals
 :::
 
 :::
+
+
+## Estimation
+
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out style="text-align: center"}
+**Image 1 title**
+
+![](imgs/estimation_true.svg){width="30%"}
+:::
+
+:::{.fragment .fade-in style="text-align: center"}
+**Image 2 title**
+
+![](imgs/estimation_infer.svg){width="50%"}
+:::
+
+:::
+
 
 ## My slide
 
