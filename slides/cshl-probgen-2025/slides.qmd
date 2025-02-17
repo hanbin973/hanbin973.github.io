@@ -82,13 +82,12 @@ $$
 
 ## Exchange the summations
 
-
-:::{.r-stack}
-
 ::: {.fragment}
 Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
 and $\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}$
 :::
+
+:::{.r-stack}
 
 
 ::: {.fragment .fade-in-then-out}
@@ -105,10 +104,14 @@ $$
 $$
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment}
 Pull out $\mathbf{Z}_e$ and group the positions nested in $p: p \in e$
 $$
-\sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+\begin{aligned}
+	& \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+	&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+	&= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
 $$
 :::
 :::
