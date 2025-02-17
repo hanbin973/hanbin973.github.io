@@ -165,7 +165,7 @@ where $l_e$ is the (time-)length of edge $e$.
 - Suppose that $u_{ep}=u_p$, i.e., the mutation rate is constant across edges for a given position
 $$
 \begin{aligned}
-	\[ \mathbf{Z} \mathbf{f} \]_n &= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+	\left[ \mathbf{Z} \mathbf{f} \right]_n &= \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
 	\left[ \sum_{p: p \in e} \boldsymbol{\beta}\mathbf{1}_{ep} \right] \\
 		&= \sum_{p=1}^P \boldsymbol{\beta}_p u_p 
 		\left(
