@@ -95,11 +95,11 @@ That edge should have mutation ($\mathbf{1}_{ep}=1$)
 
 ::: {.fragment}
 $$
-\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
 :::
 ::: {.incremental}
--Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
+- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
 :::
 
 
