@@ -212,12 +212,10 @@ $$
 	&= \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
 \end{aligned}
 $$
-
-- An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
+An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
 - The assumption is standard in neutral settings
 :::
-
 ::: {.fragment}
 $$
 	\text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
@@ -295,7 +293,7 @@ $$
 :::
 
 
-![](imgs/geneticvariance.svg){.fragment fig-align="center" height="600"}
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height="400"}
 
 ::: {.r-stack}
 
