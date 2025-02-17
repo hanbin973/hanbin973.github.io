@@ -215,7 +215,7 @@ for all edges $e \in \mathbf{E}$.
 ## Best linear unbiased prediction (BLUP)
 
 <p align="center">
-<img src="imgs/prediction.svg" width="100%">
+<img src="imgs/prediction.svg" width="80%">
 </p>
 
 ## References
