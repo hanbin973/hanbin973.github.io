@@ -75,30 +75,33 @@ The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
 
 ## Collapsing variants to edges
 
-::: {.fragment}
-When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
+::: {.incremental}
+- When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
+- Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
 :::
 
-::: {.center}
+<center>
 ::: {.fragment}
 An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
 :::
+
 ::: {.framgent}
+$$
 +
+$$
 :::
+
 ::: {.fragment}
 That edge should have mutation ($\mathbf{1}_{ep}=1$)
 :::
+</center>
 
-
-:::
 ::: {.fragment}
-Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
 $$
 \mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{np} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
 $$
 :::
-::: {.fragment}
+::: {.incremental}
 Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
 :::
 
