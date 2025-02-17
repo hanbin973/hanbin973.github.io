@@ -210,9 +210,9 @@ The runtime scales linearly with respect to the number of individuals
 ## Precision
 
 ::: {.r-stack}
-![](imgs/estimation_true.svg){.fragment width=400%}
+![](imgs/estimation_true.svg){.fragment}
 
-![](imgs/estimation_infer.svg){.fragment width=400%}
+![](imgs/estimation_infer.svg){.fragment}
 :::
 
 
