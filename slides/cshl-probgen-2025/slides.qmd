@@ -178,6 +178,9 @@ $$
 - An intercept is enought to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
 
 - The assumption is standard in neutral settings
+$$
+\text{Selection \quad \Rightarrow \quad Fixed effects?}
+$$
 :::
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
