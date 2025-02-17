@@ -203,9 +203,11 @@ for all edges $e \in \mathbf{E}$.
 
 ## Runtime
 
-![](imgs/runtime.svg){fig-align="center" width=80%}
+![](imgs/runtime.svg){.fragment fig-align="center" width=80%}
 
+::: {.fragment}
 The runtime scales linearly with respect to the number of individuals
+:::
 
 ## Precision
 
@@ -225,9 +227,11 @@ The runtime scales linearly with respect to the number of individuals
 
 ## Best linear unbiased prediction (BLUP)
 
-![](imgs/prediction.svg){fig-align="center" width=70%}
+![](imgs/prediction.svg){.fragment fig-align="center" width=70%}
 
+::: {.fragment}
 True trees are better, but inferred trees are not too behind!
+:::
 
 
 ## References
