@@ -16,7 +16,7 @@ format:
     html-math-method: mathjax
     theme: white
     transition: slide
-    navigation-mode: vertical
+    navigation-mode: grid
     template-partials:
       - title-slide.html
 ---
