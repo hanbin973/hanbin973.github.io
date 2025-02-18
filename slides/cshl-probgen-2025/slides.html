@@ -200,7 +200,6 @@ Hanbin Lee
 </div>
 </section>
 
-<section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
 <div class="fragment">
@@ -222,90 +221,7 @@ Hanbin Lee
 <p>Let’s characterize <span class="math inline">\(\mathbf{u}\)</span> (the random effects) and <span class="math inline">\(\mathbf{f}\)</span> (the fixed effects)</p>
 </div>
 </section>
-<section id="random-effects-are-independent" class="slide level2">
-<h2>Random effects are independent</h2>
-<div>
-<ul>
-<li class="fragment"><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
-<li class="fragment"><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
-  \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
-\]</span></p></li>
-<li class="fragment"><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
-  \begin{aligned}
-  \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
-      &amp;= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
-  \end{aligned}
-\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
-</ul>
-</div>
-</section>
-<section id="the-marginal-distribution-of-mathbfu_e" class="slide level2">
-<h2>The marginal distribution of <span class="math inline">\(\mathbf{u}_e\)</span>?</h2>
-<div>
-<ul>
-<li class="fragment"><p>The Gaussian prior on random effects is a popular choice</p></li>
-<li class="fragment"><p>One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
-      \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
-      \rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
-  \]</span> where <span class="math inline">\(s_e\)</span> is the span (in base pairs) of edge <span class="math inline">\(e\)</span></p></li>
-<li class="fragment"><p>The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span> (Berry-Esseen).</p></li>
-<li class="fragment"><p>Fortunately, the variance is computable and is <span class="math display">\[
-      \mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
-  \]</span></p></li>
-</ul>
-</div>
-</section>
-<section id="more-on-mathrmvarmathbfu_e" class="slide level2">
-<h2>More on <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span></h2>
-<div>
-<ul>
-<li class="fragment">The weight <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span> has two components</li>
-<li class="fragment">The area <span class="math inline">\(l_e s_e\)</span></li>
-<li class="fragment">Mutation rate-weighted squared average of effect sizes <span class="math display">\[
-      \tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
-  \]</span></li>
-<li class="fragment">As a measure of functional significance, variance components are confounded by the area</li>
-</ul>
-</div>
-</section>
-<section id="fixed-effects-are-constant-under-neutrality" class="slide level2">
-<h2>Fixed effects are constant under neutrality</h2>
-<div>
-<ul>
-<li class="fragment">Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position</li>
-</ul>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
-<p><span class="math display">\[
-\begin{aligned}
-    &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
-    \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
-    \end{aligned}
-\]</span></p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-\sum_{p=1}^P \boldsymbol{\beta}_p u_p
-    \left(
-            \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
-    \right)
-    = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
-\]</span></p>
-</div>
-</div>
-<div>
-<ul>
-<li class="fragment"><p>An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
-<li class="fragment"><p>The assumption is standard in neutral settings</p></li>
-</ul>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-    \text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
-\]</span></p>
-</div>
-</section></section>
+
 <section>
 <section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
 <h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
@@ -532,6 +448,90 @@ Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts 
 </div>
 <div class="fragment">
 <p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
+</div>
+</section>
+<section id="random-effects-are-independent" class="slide level2">
+<h2>Random effects are independent</h2>
+<div>
+<ul>
+<li class="fragment"><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
+<li class="fragment"><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
+  \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
+\]</span></p></li>
+<li class="fragment"><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#/references" role="doc-biblioref" onclick="">Wakeley 2008</a>)</span> <span class="math display">\[
+  \begin{aligned}
+  \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
+      &amp;= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+  \end{aligned}
+\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="the-marginal-distribution-of-mathbfu_e" class="slide level2">
+<h2>The marginal distribution of <span class="math inline">\(\mathbf{u}_e\)</span>?</h2>
+<div>
+<ul>
+<li class="fragment"><p>The Gaussian prior on random effects is a popular choice</p></li>
+<li class="fragment"><p>One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
+      \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
+      \rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
+  \]</span> where <span class="math inline">\(s_e\)</span> is the span (in base pairs) of edge <span class="math inline">\(e\)</span></p></li>
+<li class="fragment"><p>The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span> (Berry-Esseen).</p></li>
+<li class="fragment"><p>Fortunately, the variance is computable and is <span class="math display">\[
+      \mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+  \]</span></p></li>
+</ul>
+</div>
+</section>
+<section id="more-on-mathrmvarmathbfu_e" class="slide level2">
+<h2>More on <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span></h2>
+<div>
+<ul>
+<li class="fragment">The weight <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span> has two components</li>
+<li class="fragment">The area <span class="math inline">\(l_e s_e\)</span></li>
+<li class="fragment">Mutation rate-weighted squared average of effect sizes <span class="math display">\[
+      \tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+  \]</span></li>
+<li class="fragment">As a measure of functional significance, variance components are confounded by the area</li>
+</ul>
+</div>
+</section>
+<section id="fixed-effects-are-constant-under-neutrality" class="slide level2">
+<h2>Fixed effects are constant under neutrality</h2>
+<div>
+<ul>
+<li class="fragment">Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position</li>
+</ul>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+    \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
+    \end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\sum_{p=1}^P \boldsymbol{\beta}_p u_p
+    \left(
+            \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
+    \right)
+    = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
+\]</span></p>
+</div>
+</div>
+<div>
+<ul>
+<li class="fragment"><p>An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
+<li class="fragment"><p>The assumption is standard in neutral settings</p></li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+    \text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
+\]</span></p>
 </div>
 
 </section></section>
