@@ -43,9 +43,9 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 
 # Setup and derivation
 
-The trait $\mathbf{y}$ is a linear function of the genotype $\mathbf{G}$
 
 ::: {.fragment}
+The trait $\mathbf{y}$ is a linear function of the genotype $\mathbf{G}$
 $$
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 $$
@@ -154,7 +154,7 @@ $$
 :::
 
 ::: {.fragment}
-This the ancestral recombination graph linear mixed model (ARG-LMM)
+This is the ancestral recombination graph linear mixed model (ARG-LMM)
 :::
 
 ::: {.incremental}
