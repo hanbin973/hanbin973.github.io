@@ -184,7 +184,6 @@ Hanbin Lee
 </div>
 </section>
 
-<section>
 <section id="setup-and-derivation" class="title-slide slide level1 center">
 <h1>Setup and derivation</h1>
 <div class="fragment">
@@ -200,78 +199,7 @@ Hanbin Lee
 </ul>
 </div>
 </section>
-<section id="edge-splitting" class="slide level2">
-<h2>Edge splitting</h2>
-<div>
-<ul>
-<li class="fragment">Nodes and edges are reused across multiple trees in a tree sequence</li>
-<li class="fragment">Edges, in particular, may not have a unique set of samples along their span</li>
-<li class="fragment">Salehi Nowbandegani and colleagues <em>bricked</em> the edges to divide them <span class="citation" data-cites="SalehiNowbandegani2023">(<a href="#/references" role="doc-biblioref" onclick="">Salehi Nowbandegani et al. 2023</a>)</span></li>
-<li class="fragment">Henceforth, we assume that edges are splitted to have a unique subtopology <span class="math display">\[
-\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$}
-\]</span> The overall matrix <span class="math inline">\(\mathbf{Z}\)</span> is an individual-edge design matrix.</li>
-</ul>
-</div>
-</section>
-<section id="collapsing-variants-to-edges" class="slide level2">
-<h2>Collapsing variants to edges</h2>
-<div>
-<ul>
-<li class="fragment">When does an individual possess a derived allele? (<span class="math inline">\(\text{ancestral}=0\)</span>, <span class="math inline">\(\text{derived}=1\)</span>)</li>
-<li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span></li>
-</ul>
-</div>
-<center>
-<div class="fragment">
-<p>An individual should be a descendant of an edge (<span class="math inline">\(\mathbf{Z}_{ne}=1\)</span>)</p>
-</div>
-<div class="fragment">
-<p><span class="math display">\[
-+
-\]</span> That edge should have mutation (<span class="math inline">\(\mathbf{1}_{ep}=1\)</span>)</p>
-</div>
-</center>
-<div class="fragment">
-<p><span class="math display">\[
-\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
-\]</span></p>
-</div>
-<div>
-<ul>
-<li class="fragment">Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</li>
-</ul>
-</div>
-</section>
-<section id="exchange-the-summations" class="slide level2">
-<h2>Exchange the summations</h2>
-<div class="fragment">
-<p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> and <span class="math inline">\(\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}\)</span></p>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
-<p>Substitute <span class="math inline">\(\mathbf{G}_p\)</span> <span class="math display">\[
-\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
-\]</span></p>
-</div>
-<div class="fragment fade-in-then-out">
-<p>Exchange the inner and the outer summation <span class="math display">\[
-\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
-\]</span></p>
-</div>
-<div class="fragment">
-<p>Pull out <span class="math inline">\(\mathbf{Z}_e\)</span> and group the positions nested in <span class="math inline">\(p: p \in e\)</span> <span class="math display">\[
-\begin{aligned}
-    &amp; \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
-    &amp;= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
-    &amp;= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
-\end{aligned}
-\]</span></p>
-</div>
-</div>
-<div class="fragment">
-<p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
-</div>
-</section></section>
+
 <section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
@@ -527,6 +455,83 @@ Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lan
 <div id="ref-Wakeley2008" class="csl-entry" role="listitem">
 Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts &amp; Company.
 </div>
+</div>
+</section></section>
+<section>
+<section id="technical-notes" class="title-slide slide level1 center">
+<h1>Technical Notes</h1>
+
+</section>
+<section id="edge-splitting" class="slide level2">
+<h2>Edge splitting</h2>
+<div>
+<ul>
+<li class="fragment">Nodes and edges are reused across multiple trees in a tree sequence</li>
+<li class="fragment">Edges, in particular, may not have a unique set of samples along their span</li>
+<li class="fragment">Salehi Nowbandegani and colleagues <em>bricked</em> the edges to divide them <span class="citation" data-cites="SalehiNowbandegani2023">(<a href="#/references" role="doc-biblioref" onclick="">Salehi Nowbandegani et al. 2023</a>)</span></li>
+<li class="fragment">Henceforth, we assume that edges are splitted to have a unique subtopology <span class="math display">\[
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$}
+\]</span> The overall matrix <span class="math inline">\(\mathbf{Z}\)</span> is an individual-edge design matrix.</li>
+</ul>
+</div>
+</section>
+<section id="collapsing-variants-to-edges" class="slide level2">
+<h2>Collapsing variants to edges</h2>
+<div>
+<ul>
+<li class="fragment">When does an individual possess a derived allele? (<span class="math inline">\(\text{ancestral}=0\)</span>, <span class="math inline">\(\text{derived}=1\)</span>)</li>
+<li class="fragment">Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span></li>
+</ul>
+</div>
+<center>
+<div class="fragment">
+<p>An individual should be a descendant of an edge (<span class="math inline">\(\mathbf{Z}_{ne}=1\)</span>)</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
++
+\]</span> That edge should have mutation (<span class="math inline">\(\mathbf{1}_{ep}=1\)</span>)</p>
+</div>
+</center>
+<div class="fragment">
+<p><span class="math display">\[
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+\]</span></p>
+</div>
+<div>
+<ul>
+<li class="fragment">Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</li>
+</ul>
+</div>
+</section>
+<section id="exchange-the-summations" class="slide level2">
+<h2>Exchange the summations</h2>
+<div class="fragment">
+<p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> and <span class="math inline">\(\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}\)</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>Substitute <span class="math inline">\(\mathbf{G}_p\)</span> <span class="math display">\[
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Exchange the inner and the outer summation <span class="math display">\[
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Pull out <span class="math inline">\(\mathbf{Z}_e\)</span> and group the positions nested in <span class="math inline">\(p: p \in e\)</span> <span class="math display">\[
+\begin{aligned}
+    &amp; \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+    &amp;= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+    &amp;= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
 </div>
 
 </section></section>

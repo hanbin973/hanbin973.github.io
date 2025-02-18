@@ -59,90 +59,6 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 - A population genetic solution: group variants into branches
 :::
 
-## Edge splitting
-
-::: {.incremental}
-- Nodes and edges are reused across multiple trees in a tree sequence
-- Edges, in particular, may not have a unique set of samples along their span
-- Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
-- Henceforth, we assume that edges are splitted to have a unique subtopology
-$$
-\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$} 
-$$
-The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
-:::
-
-
-## Collapsing variants to edges
-
-::: {.incremental}
-- When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
-- Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
-:::
-
-<center>
-::: {.fragment}
-An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
-:::
-
-::: {.fragment}
-$$
-+
-$$
-That edge should have mutation ($\mathbf{1}_{ep}=1$)
-:::
-</center>
-
-::: {.fragment}
-$$
-\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
-$$
-:::
-::: {.incremental}
-- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
-:::
-
-
-## Exchange the summations
-
-::: {.fragment}
-Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
-and $\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}$
-:::
-
-:::{.r-stack}
-
-
-::: {.fragment .fade-in-then-out}
-Substitute $\mathbf{G}_p$
-$$
-\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
-$$
-:::
-
-::: {.fragment .fade-in-then-out}
-Exchange the inner and the outer summation
-$$
-\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
-$$
-:::
-
-::: {.fragment}
-Pull out $\mathbf{Z}_e$ and group the positions nested in $p: p \in e$
-$$
-\begin{aligned}
-	& \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
-	&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
-	&= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
-\end{aligned}
-$$
-:::
-:::
-
-::: {.fragment}
-$\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
-:::
-
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
@@ -410,5 +326,93 @@ Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc
 
 ::: {#refs}
 :::
+
+# Technical Notes
+
+## Edge splitting
+
+::: {.incremental}
+- Nodes and edges are reused across multiple trees in a tree sequence
+- Edges, in particular, may not have a unique set of samples along their span
+- Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
+- Henceforth, we assume that edges are splitted to have a unique subtopology
+$$
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$} 
+$$
+The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
+:::
+
+
+## Collapsing variants to edges
+
+::: {.incremental}
+- When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
+- Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
+:::
+
+<center>
+::: {.fragment}
+An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
+:::
+
+::: {.fragment}
+$$
++
+$$
+That edge should have mutation ($\mathbf{1}_{ep}=1$)
+:::
+</center>
+
+::: {.fragment}
+$$
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+$$
+:::
+::: {.incremental}
+- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
+:::
+
+
+## Exchange the summations
+
+::: {.fragment}
+Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
+and $\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}$
+:::
+
+:::{.r-stack}
+
+
+::: {.fragment .fade-in-then-out}
+Substitute $\mathbf{G}_p$
+$$
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+Exchange the inner and the outer summation
+$$
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
+$$
+:::
+
+::: {.fragment}
+Pull out $\mathbf{Z}_e$ and group the positions nested in $p: p \in e$
+$$
+\begin{aligned}
+	& \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+	&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+	&= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
+$$
+:::
+:::
+
+::: {.fragment}
+$\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
+:::
+
+
 
 
