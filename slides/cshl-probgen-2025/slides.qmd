@@ -30,7 +30,7 @@ format:
 	<img src="imgs/local_trees.svg" width="100%">
 </p>	
 
-- Drift and recombination are fixed, only mutation is left to vary
+- Drift and recombination are fixed, so mutation is the sole driver of genetic variability
 $$
 \mathbf{y} \mid \mathcal{T} \; \sim \; ?
 $$
