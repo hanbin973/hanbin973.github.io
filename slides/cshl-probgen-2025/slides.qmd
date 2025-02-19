@@ -298,14 +298,16 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 ## How do we weigh branches of the ARG?
 
 ::: {.fragment}
-![](imgs/edge_weight.svg)
+![](imgs/edge_weight.svg){height=600 fig-align="center"}
 :::
 
 ::: {.fragment}
-$$$
-\mathrm{Var}(\mathbf{u}_e) \quad \approx \quad \text{Number of mutations} \quad \approx \quad l_es_e \quad = \quad \text{Area of edge $e$}
-$$$
+$$
+\mathrm{Var}(\mathbf{u}_e) \quad \approx \quad \text{Number of mutations} \quad \approx \quad \text{Area of edge $e$} l_es_e
+$$
 :::
+
+## How do we measure genetic covariance?
 
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
