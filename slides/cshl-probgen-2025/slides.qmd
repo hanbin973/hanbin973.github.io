@@ -90,31 +90,36 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ## How do we get traits?
 
-::: {.fragment}
 :::: {.columns}
 
 ::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
 $\mathbf{y}_2 = \boldsymbol{\beta}_2$, $\ldots$
 :::
 
-::: {.column width="50%"}
+::: {.fragment}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_4$, 
 $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
-::::
 :::
 
+
+::: {.column width="50%"}
 ::: {.incremental}
 - We can trait values by adding up effect sizes
 - Sites are different for different realizations
 :::
 
+:::
 
-
+::::
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
