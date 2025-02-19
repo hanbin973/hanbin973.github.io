@@ -236,10 +236,28 @@ Branch effect is a random variable!
 
 ::::
 
-## Get a branch, then a mutation
+## From mutations to branches
 
+::: {.fragment}
+$$
+\mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\quad
+\Rightarrow
+\quad
+\mathbf{y} = \mathbf{Z}\mathbf{u} + \boldsymbol{\varepsilon} 
+$$
+where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\mathbf{u}$ is the branch effects
+:::
 
+::: {.fragment}
+Recall that $\mathbf{u}_e$ of edge $e$ is the aggregate effect of potential mutations
+:::
 
+::: {.incremental}
+- $\mathbf{u}_e$ is random because mutations are random
+- $\mathbf{u}_e$'s distribution is determined according to the mutational process (e.g. Poisson)
+- We can *prove* that the entries of $\mathbf{u}$ are mutually independent
+:::
 
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
