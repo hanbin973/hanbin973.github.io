@@ -70,6 +70,24 @@ Figure from [@Ralph2020]
 :::
 
 
+## Linear mixed model
+
+::: {.fragment}
+Linear mixed models are popular in quantitative genetics
+$$
+\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+$$
+In particular, $\mathbf{u} \sim p(\cdot)$ is a *random* coefficient
+:::
+
+::: {.fragment}
+Some misteries ...
+::: {.incremental}
+- What's the source of $\mathbf{u}$'s randomness?
+- Why are entries of $\mathbf{u}$ independent?
+- How should we weigh the entries?
+:::
+:::
 
 # Setup and derivation
 
@@ -197,6 +215,11 @@ Branch's effect $=$ Sum of mutations' effect
 ::: {.fragment fragment-index=10}
 - Effect of $4-5 = \boldsymbol{\beta}_4$
 :::
+
+::: {.fragment fragment-index=11}
+Branch effect is a random variable!
+:::
+
 
 :::
 

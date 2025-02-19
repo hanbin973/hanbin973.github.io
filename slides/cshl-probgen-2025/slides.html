@@ -208,6 +208,18 @@ Hanbin Lee
 <div class="footer">
 <p>Figure from <span class="citation" data-cites="Ralph2020">(<a href="#/references" role="doc-biblioref" onclick="">Ralph, Thornton, and Kelleher 2020</a>)</span></p>
 </div>
+</section>
+<section id="linear-mixed-model" class="slide level2">
+<h2>Linear mixed model</h2>
+<div class="fragment">
+<p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
+\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+\]</span> In particular, <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is a <em>random</em> coefficient</p>
+</div>
+<div class="fragment">
+<p>Some misteries … ::: {.incremental} - What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness? - Why are entries of <span class="math inline">\(\mathbf{u}\)</span> independent? - How should we weigh the entries?</p>
+</div>
+<p>:::</p>
 </section></section>
 <section>
 <section id="setup-and-derivation" class="title-slide slide level1 center">
@@ -317,6 +329,9 @@ Hanbin Lee
 <ul>
 <li>Effect of <span class="math inline">\(4-5 = \boldsymbol{\beta}_4\)</span></li>
 </ul>
+</div>
+<div class="fragment" data-fragment-index="11">
+<p>Branch effect is a random variable!</p>
 </div>
 </div></div>
 </section>
