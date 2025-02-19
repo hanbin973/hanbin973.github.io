@@ -108,8 +108,6 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 ::::
 :::
 
-::: {.fragment}
-
 ::: {.incremental}
 - We can trait values by adding up effect sizes
 - Sites are different for different realizations
