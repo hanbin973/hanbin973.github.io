@@ -91,7 +91,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ## How do we get traits? 
 
-:::: {.columns style='display: flex !important; height: 90%;'}
+:::: {.columns}
 
 ::: {.column width="50%"}
 
@@ -114,23 +114,23 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%"}
+::: {.column width="50%" .v-center-container}
 
-::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
+::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
-::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
+::: {.fragment}
 Sites are different for different realizations
 
-::: {.incremental style='display: flex; justify-content: center; align-items: center;'}
+::: {.incremental}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 :::
 
 :::
 
-::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
+::: {.fragment}
 Can we do something similar with branches?
 :::
 
