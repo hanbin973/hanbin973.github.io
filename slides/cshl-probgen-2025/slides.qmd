@@ -89,6 +89,10 @@ Some misteries ...
 - How should we weigh the entries?
 :::
 
+::: {.fragment}
+We answer these questions from an evolutionary perspective
+:::
+
 :::
 
 # Setup and derivation
