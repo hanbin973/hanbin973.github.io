@@ -88,7 +88,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 - A population genetic solution: group variants into branches
 :::
 
-## How do we get traits? {.center}
+## How do we get traits? 
 
 :::: {.columns}
 
@@ -113,7 +113,7 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%"}
+::: {.column width="50%" .center}
 
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
@@ -137,6 +137,8 @@ Can we do something similar with branches?
 
 
 ::::
+
+## Branch-centric view of trait transmission
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
