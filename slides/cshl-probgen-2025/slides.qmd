@@ -406,7 +406,15 @@ $$
 
 ## Heritability is *ill*-defined
 
+::: {.fragment fragment-index=1}
+All individuals have different amount of genetic variance (except haploids)
+$$
+	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
+$$
+:::
+
 :::: {.columns}
+
 
 ::: {.column width="50%"}
 
@@ -440,17 +448,12 @@ $$
 
 ::::
 
+::: {.fragment fragment-index=3}
+$\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}$ is the shared amount of area between the two haplotypes of an individual
+:::
+
 ## Polygenic prediction
 
-::: {.incremental}
-- All individuals have different amount of genetic variance (except haploids)
-$$
-	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
-$$
-
-- $\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}$ is the shared amount of area between the two haplotypes of an individual
-
-:::
 
 
 ![](imgs/geneticvariance.svg){.fragment fig-align="center" height="400"}

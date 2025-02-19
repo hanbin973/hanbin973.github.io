@@ -510,6 +510,11 @@ Hanbin Lee
 </section>
 <section id="heritability-is-ill-defined" class="slide level2">
 <h2>Heritability is <em>ill</em>-defined</h2>
+<div class="fragment" data-fragment-index="1">
+<p>All individuals have different amount of genetic variance (except haploids) <span class="math display">\[
+    \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
+\]</span></p>
+</div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
@@ -546,17 +551,12 @@ Hanbin Lee
 </div>
 </div>
 </div></div>
+<div class="fragment" data-fragment-index="3">
+<p><span class="math inline">\(\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}\)</span> is the shared amount of area between the two haplotypes of an individual</p>
+</div>
 </section>
 <section id="polygenic-prediction" class="slide level2">
 <h2>Polygenic prediction</h2>
-<div>
-<ul>
-<li class="fragment"><p>All individuals have different amount of genetic variance (except haploids) <span class="math display">\[
-  \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + \textcolor{red}{2\mathrm{Cov}(h_{n1},h_{n2})}
-\]</span></p></li>
-<li class="fragment"><p><span class="math inline">\(\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}\)</span> is the shared amount of area between the two haplotypes of an individual</p></li>
-</ul>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/geneticvariance.svg" class="fragment quarto-figure quarto-figure-center" height="400"></p>
