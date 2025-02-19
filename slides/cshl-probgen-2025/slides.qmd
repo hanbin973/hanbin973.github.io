@@ -60,7 +60,7 @@ They *average* over all possible realizations including the observed one given $
 ::: {.fragment .center}
 ![](imgs/diversity.jpeg){fig-align="center" height=500}
 
-Can we adapt this *branch* thinking to complex traits?
+Can we adopt this *branch* thinking to complex traits?
 :::
 
 :::
