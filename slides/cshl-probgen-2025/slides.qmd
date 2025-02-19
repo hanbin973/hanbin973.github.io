@@ -114,7 +114,7 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%"}
+::: {.column width="50%" .center}
 
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
@@ -151,11 +151,11 @@ Can we do something similar with branches?
 ![](imgs/tree-branch.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index=4}
+::: {.fragment .fade-in-then-out fragment-index=5}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment fragment-index=5}
+::: {.fragment fragment-index=6}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 :::
 
@@ -170,10 +170,16 @@ Can we do something similar with branches?
 To inherit a mutation, one should inherit a branch first
 :::
 
-::: {.incremental fragment-index=3}
+::: {.fragment fragment-index=3}
+::: {.incremental}
 - Sample $1$ inherits $1-4$ and $4-5$ 
 - Sample $2$ inherits $2-4$ and $4-5$
 - Sample $3$ inherits $3-5$
+:::
+:::
+
+::: {.fragment fragment-index=4}
+Next, mutations should occur on the branches
 :::
 
 
