@@ -114,7 +114,7 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%" .v-center-container}
+::: {.column width="50%"}
 
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
@@ -147,16 +147,16 @@ Can we do something similar with branches?
 
 ::: {.r-stack}
 
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/tree-branch.svg){fig-align="center" height=600}
+:::
+
 ::: {.fragment .fade-in-then-out}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
-$\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
-$\mathbf{y}_2 = \boldsymbol{\beta}_2$, $\ldots$
 :::
 
 ::: {.fragment}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
-$\mathbf{y}_1=\boldsymbol{\beta}_4$, 
-$\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 :::
@@ -167,7 +167,14 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 ::: {.column width="50%"}
 
 ::: {.fragment fragment-index=1}
-We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
+To inherit a mutation, one should inherit a branch first
+
+::: {.incremental}
+- Sample $1$ inherits $1-4$ and $4-5$ 
+- Sample $2$ inherits $2-4$ and $4-5$
+- Sample $3# inherits $3-5$
+:::
+
 :::
 
 :::
