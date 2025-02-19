@@ -10,6 +10,7 @@ date-format: "MMM D, YYYY"
 bibliography: ref.bib
 format: 
   revealjs:
+    css: style.css
     slide-number: c/t
     width: 1600
     height: 900
@@ -90,7 +91,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ## How do we get traits? 
 
-:::: {.columns}
+:::: {.columns .v-center-container}
 
 ::: {.column width="50%"}
 
@@ -113,7 +114,7 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%" style='display: flex; justify-content: center; align-items: center;'}
+::: {.column width="50%"}
 
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
