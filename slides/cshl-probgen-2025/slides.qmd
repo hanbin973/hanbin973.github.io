@@ -82,11 +82,13 @@ In particular, $\mathbf{u} \sim p(\cdot)$ is a *random* coefficient
 
 ::: {.fragment}
 Some misteries ...
+
 ::: {.incremental}
 - What's the source of $\mathbf{u}$'s randomness?
 - Why are entries of $\mathbf{u}$ independent?
 - How should we weigh the entries?
 :::
+
 :::
 
 # Setup and derivation
