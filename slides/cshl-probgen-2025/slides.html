@@ -359,6 +359,9 @@ Hanbin Lee
 \]</span> where <span class="math inline">\(\mathbf{Z}\)</span> is the individual-edge (=branch) design matrix and <span class="math inline">\(\boldsymbol{\upsilon}\)</span> is the branch effects</p>
 </div>
 <div class="fragment">
+<p><span class="math inline">\(\mathbf{Z}\)</span> is a superset of columns of <span class="math inline">\(\mathbf{G}_{\mathrm{genotyped}}\)</span></p>
+</div>
+<div class="fragment">
 <p>Recall that <span class="math inline">\(\boldsymbol{\upsilon}_e\)</span> of edge <span class="math inline">\(e\)</span> is the aggregate effect of potential mutations</p>
 </div>
 <div>
@@ -372,10 +375,12 @@ Hanbin Lee
 <p>Mysteries solved!</p>
 </div>
 </section></section>
+<section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
 <div class="fragment">
-<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span> <span class="math display">\[
+<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span></p>
+<p><span class="math display">\[
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
 \]</span></p>
 </div>
@@ -393,7 +398,17 @@ Hanbin Lee
 <p>Let’s characterize <span class="math inline">\(\mathbf{u}\)</span> (the random effects) and <span class="math inline">\(\mathbf{f}\)</span> (the fixed effects)</p>
 </div>
 </section>
-
+<section id="how-do-we-weigh-branches-of-the-arg" class="slide level2">
+<h2>How do we weigh branches of the ARG?</h2>
+<div class="fragment">
+<p><img data-src="imgs/edge_weight.svg"></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[$
+\mathrm{Var}(\mathbf{u}_e) \quad \approx \quad \text{Number of mutations} \quad \approx \quad l_es_e \quad = \quad \text{Area of edge $e$}
+\]</span>$</p>
+</div>
+</section></section>
 <section>
 <section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
 <h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>

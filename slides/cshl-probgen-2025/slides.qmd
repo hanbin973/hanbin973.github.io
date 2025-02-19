@@ -251,6 +251,10 @@ where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\boldsymb
 :::
 
 ::: {.fragment}
+$\mathbf{Z}$ is a superset of columns of $\mathbf{G}_{\mathrm{genotyped}}$
+:::
+
+::: {.fragment}
 Recall that $\boldsymbol{\upsilon}_e$ of edge $e$ is the aggregate effect of potential mutations
 :::
 
@@ -268,10 +272,13 @@ Mysteries solved!
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
 ::: {.fragment}
+
 Split $\boldsymbol{\upsilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
+
 $$
 \mathbf{y} = \mathbf{Z} \mathbf{u} + \mathbf{Z} \mathbf{f} + \boldsymbol{\varepsilon}
 $$
+
 :::
 
 ::: {.fragment}
@@ -288,6 +295,17 @@ This is the ancestral recombination graph linear mixed model (ARG-LMM)
 Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed effects)
 :::
 
+## How do we weigh branches of the ARG?
+
+::: {.fragment}
+![](imgs/edge_weight.svg)
+:::
+
+::: {.fragment}
+$$$
+\mathrm{Var}(\mathbf{u}_e) \quad \approx \quad \text{Number of mutations} \quad \approx \quad l_es_e \quad = \quad \text{Area of edge $e$}
+$$$
+:::
 
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
