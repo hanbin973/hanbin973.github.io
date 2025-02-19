@@ -106,6 +106,8 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 ::::
+:::
+
 ::: {.fragment}
 
 ::: {.incremental}
