@@ -93,11 +93,11 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 :::: {.columns}
 
 ::: {.column width="50%"}
-![](imgs/tree-0.svg){fig-align="center" height="110%"}
+![](imgs/tree-0.svg){fig-align="center" height=800}
 :::
 
 ::: {.column width="50%"}
-![](imgs/tree-1.svg){fig-align="center" height="110%"}
+![](imgs/tree-1.svg){fig-align="center" height=800}
 :::
 
 ::::
