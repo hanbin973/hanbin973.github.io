@@ -141,7 +141,7 @@ Can we do something similar with branches?
 
 ## Branch-centric view of trait transmission
 
-:::: {.columns .v-center-container}
+:::: {.columns}
 
 ::: {.column width="50%"}
 
