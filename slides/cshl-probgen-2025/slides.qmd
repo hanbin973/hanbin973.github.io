@@ -491,8 +491,8 @@ No single quantity can summarize the relative contribution of genetics to trait 
 Even in haploids, ARG-LMM variance component only reflects mutational variability
 :::
 ::: {.incremental}
-- Pedigree-based heritability captures Mendelian segregation
-- Various evolutionary processes are absent in ARG-LMM's generative model
+- Pedigree-based heritability captures Mendelian segregation and mutation is ignored
+- ARG-LMM's generative model only has mutation and no segregation
 - Why compare quantities stemming from different random forces?
 :::
 
