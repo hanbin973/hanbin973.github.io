@@ -90,6 +90,9 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ## How do we get traits?
 
+
+::: {.r-stack}
+
 ::: {.fragment .fade-in-then-out}
 
 :::: {.columns}
@@ -131,6 +134,8 @@ $$
 $$
 :::
 ::::
+
+:::
 
 :::
 
