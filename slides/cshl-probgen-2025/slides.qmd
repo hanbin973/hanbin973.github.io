@@ -408,7 +408,7 @@ $$
 
 :::: {.columns}
 
-::: {.column width=50%}
+::: {.column width="50%"}
 
 ::: {.r-stack}
 
@@ -420,7 +420,7 @@ $$
 
 :::
 
-::: {.column width=50%}
+::: {.column width="50%"}
 
 ::: {.r-stack}
 
