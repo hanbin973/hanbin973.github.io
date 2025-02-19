@@ -44,19 +44,23 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment .fade-in-then-out text-align="center"}
 Evolutionary statistics are computed from observed mutations
 
 These are the *site* statistics based on *realized* mutations
 :::
 
-::: {.fragment .fade-in-then-out}
-Branch statistics treats the mutations as random 
+::: {.fragment .fade-in-then-out text-align="center"}
+Branch statistics treat mutations as random 
 
 They *average* over all possible realizations including the observed one given $\mathcal{T}$
 :::
 
-![](imgs/diversity.jpeg){.fragment height=500}
+::: {.fragment text-align="center"}
+![](imgs/diversity.jpeg){height=500}
+
+Can we adapt this *branch* thinking to complex traits?
+:::
 
 :::
 
