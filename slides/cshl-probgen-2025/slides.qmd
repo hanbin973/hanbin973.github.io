@@ -155,7 +155,7 @@ Can we do something similar with branches?
 ![](imgs/tree-branch.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index=7}
+::: {.fragment fragment-index=7}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 :::
 
