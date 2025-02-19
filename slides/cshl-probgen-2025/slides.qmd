@@ -45,17 +45,15 @@ Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-::: {.incremental}
-- Evolutionary statistics are computed from observed mutations
-- These are the *site* statistics based on *realized* mutations
-:::
+Evolutionary statistics are computed from observed mutations \\
+
+These are the *site* statistics based on *realized* mutations
 :::
 
 ::: {.fragment .fade-in-then-out}
-::: {.incremental}
-- Branch statistics treats the mutations as random
-- They *average* over all possible realizations including the observed one given $\mathcal{T}$
-:::
+Branch statistics treats the mutations as random \\
+
+They *average* over all possible realizations including the observed one given $\mathcal{T}$
 :::
 
 ![](imgs/diversity.jpeg){.fragment height=500}
