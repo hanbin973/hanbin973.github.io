@@ -118,13 +118,17 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
+
 ::: {.fragment}
 Sites are different for different realizations
+
 ::: {.incremental}
-- $\mathbf{y}_i = \mathbf{G}_1 \boldsymbol{\beta}_1 + \mathbf{G}_2 \boldsymbol{\beta}_2
-- $\mathbf{y}_i = \mathbf{G}_3 \boldsymbol{\beta}_3 + \mathbf{G}_4 \boldsymbol{\beta}_4
+- $\mathbf{y}_i = \mathbf{G}_1 \boldsymbol{\beta}_1 + \mathbf{G}_2 \boldsymbol{\beta}_2$
+- $\mathbf{y}_i = \mathbf{G}_3 \boldsymbol{\beta}_3 + \mathbf{G}_4 \boldsymbol{\beta}_4$
 :::
+
 :::
+
 :::
 
 
