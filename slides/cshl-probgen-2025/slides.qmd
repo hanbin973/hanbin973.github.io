@@ -77,7 +77,7 @@ Linear mixed models are popular in quantitative genetics
 $$
 \mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
 $$
-In particular, $\mathbf{u} \sim p(\cdot)$ is a *random* coefficient
+In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
 :::
 
 ::: {.fragment}
@@ -159,7 +159,11 @@ Sites are different for different realizations
 :::
 
 ::: {.fragment}
-Can we do something similar with branches?
+We get different subsets of $\mathbf{G}$ everytime mutations realize
+:::
+
+::: {.fragment}
+What happens if we consider branches first?
 :::
 
 :::
