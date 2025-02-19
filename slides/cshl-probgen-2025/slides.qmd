@@ -57,7 +57,7 @@ They *average* over all possible realizations including the observed one given $
 :::
 
 ::: {.fragment .center}
-![](imgs/diversity.jpeg){fig-align="center" height=500}
+![](imgs/diversity.jpeg){.r-stretch fig-align="center" height=500}
 
 Can we adapt this *branch* thinking to complex traits?
 :::
@@ -87,6 +87,24 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 - Perfect collinearity of some columns in $\mathbf{G}$, or perfect linkage disequilibrium (LD)
 - A population genetic solution: group variants into branches
 :::
+
+## How do we get traits?
+
+:::: {.columns}
+::: {.column width="45%"}
+![](imgs/tree-1.svg)
+:::
+
+::: {.column width="45%"}
+$$
+\begin{aligned}
+\mathbf{y}_1 = \boldsymbol{\beta}_1 \\
+\mathbf{y}_2 = \boldsymbol{\beta}_2 \\
+\end{aligned}
+$$
+:::
+::::
+
 
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
