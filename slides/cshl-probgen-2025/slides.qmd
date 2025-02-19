@@ -96,11 +96,11 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 ::: {.fragment .fade-in-then-out}
 
 :::: {.columns}
-::: {.column width="45%"}
-![](imgs/tree-0.svg){height=600}
+::: {.column width="60%"}
+![](imgs/tree-0.svg)
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 $$
 \begin{aligned}
 \mathbf{y}_1 = \boldsymbol{\beta}_1 +\boldsymbol{\beta}_1 \\
@@ -118,11 +118,11 @@ $$
 ::: {.fragment .fade-in-then-out}
 
 :::: {.columns}
-::: {.column width="45%"}
-![](imgs/tree-1.svg){height=600}
+::: {.column width="60%"}
+![](imgs/tree-1.svg)	
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 $$
 \begin{aligned}
 \mathbf{y}_1 = \boldsymbol{\beta}_4 \\
