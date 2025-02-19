@@ -231,10 +231,10 @@ Hanbin Lee
 <div class="column" style="width:50%;">
 <div class="r-stack">
 <div class="fragment fade-in-then-out">
-<p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_2 = \boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\ldots\)</span></p>
+<p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_2 = \boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_2\)</span></p>
 </div>
 <div class="fragment">
-<p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_2=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\ldots\)</span></p>
+<p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_2=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_3\)</span></p>
 </div>
 </div>
 </div><div class="column center" style="width:50%;">
@@ -243,10 +243,14 @@ Hanbin Lee
 </div>
 <div class="fragment">
 <p>Sites are different for different realizations</p>
-<div>
+<div class="fragment">
 <ul>
-<li class="fragment"><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2\)</span></li>
-<li class="fragment"><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4\)</span></li>
+<li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2\)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4\)</span></li>
 </ul>
 </div>
 </div>
@@ -274,7 +278,7 @@ Hanbin Lee
 </figure>
 </div>
 </div>
-<div class="fragment" data-fragment-index="8">
+<div class="fragment" data-fragment-index="9">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"></p>
@@ -302,14 +306,25 @@ Hanbin Lee
 </div>
 </div>
 <div class="fragment" data-fragment-index="6">
-<p>Next, mutations should occur on the branches</p>
+<p>Next, mutations should occur on those branches The effect of a branch is the sum over the effect of mutations on it</p>
 </div>
-</div></div>
-</section>
-<section id="get-a-branch-then-a-mutation" class="slide level2">
+<div class="fragment" data-fragment-index="8">
+<p><span class="math inline">\(\text{Effect of edge 4-5} = 0\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="10">
+<p><span class="math inline">\(\text{Effect of edge 4-5} = \boldsymbol{\beta}_4\)</span></p>
+</div>
+</div><section id="get-a-branch-then-a-mutation" class="slide level2">
 <h2>Get a branch, then a mutation</h2>
-</section></section>
-<section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
+<div class="fragment">
+<p>To summarize,</p>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+
+</div>
+</div>
+</section><section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">
 <h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
 <div class="fragment">
 <p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span> <span class="math display">\[
@@ -330,8 +345,6 @@ Hanbin Lee
 <p>Let’s characterize <span class="math inline">\(\mathbf{u}\)</span> (the random effects) and <span class="math inline">\(\mathbf{f}\)</span> (the fixed effects)</p>
 </div>
 </section>
-
-<section>
 <section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
 <h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
 <div>
@@ -378,8 +391,7 @@ Hanbin Lee
 <div class="fragment">
 <p>True trees are better, but inferred trees are not too behind!</p>
 </div>
-</section></section>
-<section>
+</section>
 <section id="complex-traits-through-the-lens-of-arg-lmm" class="title-slide slide level1 center">
 <h1>Complex traits through the lens of ARG-LMM</h1>
 <p><span class="math display">\[
@@ -465,8 +477,7 @@ Hanbin Lee
 <p>We are all correlated!</p>
 </div>
 </div>
-</section></section>
-<section>
+</section>
 <section id="thank-you-for-listening" class="title-slide slide level1 center">
 <h1>Thank you for listening</h1>
 <p>Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)</p>
@@ -484,8 +495,7 @@ Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lan
 Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts &amp; Company.
 </div>
 </div>
-</section></section>
-<section>
+</section>
 <section id="technical-notes" class="title-slide slide level1 center">
 <h1>Technical Notes</h1>
 
@@ -646,6 +656,9 @@ Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts 
 \]</span></p>
 </div>
 
+</section>
+
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

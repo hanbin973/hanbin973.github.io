@@ -100,13 +100,15 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 ::: {.fragment .fade-in-then-out}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
-$\mathbf{y}_2 = \boldsymbol{\beta}_2$, $\ldots$
+$\mathbf{y}_2 = \boldsymbol{\beta}_2$,
+$\mathbf{y}_3 = \boldsymbol{\beta}_2$
 :::
 
 ::: {.fragment}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_4$, 
-$\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
+$\mathbf{y}_2=\boldsymbol{\beta}_4$,
+$\mathbf{y}_3 = \boldsymbol{\beta}_3$
 :::
 
 :::
@@ -123,10 +125,12 @@ We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 ::: {.fragment}
 Sites are different for different realizations
 
-::: {.incremental}
+::: {.fragment}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
-- $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 :::
+::: {.fragment}
+- $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
+::: 
 
 :::
 
@@ -155,7 +159,7 @@ Can we do something similar with branches?
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment fragment-index=8}
+::: {.fragment fragment-index=9}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 :::
 
@@ -183,16 +187,35 @@ To inherit a mutation, one should inherit a branch first
 
 
 ::: {.fragment fragment-index=6}
-Next, mutations should occur on the branches
+Next, mutations should occur on those branches
+The effect of a branch is the sum over the effect of mutations on it
 :::
 
+::: {.fragment fragment-index=8}
+$\text{Effect of edge 4-5} = 0$
+:::
 
+::: {.fragment fragment-index=10}
+$\text{Effect of edge 4-5} = \boldsymbol{\beta}_4$
 :::
 
 
 ::::
 
 ## Get a branch, then a mutation
+
+::: {.fragment}
+To summarize,
+:::
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+
+:::
+
+:::
+
 
 
 
