@@ -94,13 +94,13 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 :::: {.columns}
 
 ::: {.column width="50%"}
-![](imgs/tree-0.svg){fig-align="center" height=800}
+![](imgs/tree-0.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
 $\mathbf{y}_2 = \boldsymbol{\beta}_2$, $\ldots$
 :::
 
 ::: {.column width="50%"}
-![](imgs/tree-1.svg){fig-align="center" height=800}
+![](imgs/tree-1.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_4$, 
 $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
