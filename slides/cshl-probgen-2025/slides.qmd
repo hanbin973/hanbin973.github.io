@@ -60,6 +60,11 @@ They *average* over all possible realizations including the observed one given $
 
 :::
 
+::: footer
+Figure from [@Ralph2020]
+:::
+
+
 
 # Setup and derivation
 
