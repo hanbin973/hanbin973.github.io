@@ -110,6 +110,8 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 
 :::
 
+:::
+
 
 ::: {.column width="50%"}
 ::: {.incremental}
