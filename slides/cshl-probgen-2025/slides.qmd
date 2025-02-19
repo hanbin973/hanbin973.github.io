@@ -171,7 +171,7 @@ Can we do something similar with branches?
 ::: {.column width="50%"}
 
 ::: {.fragment fragment-index=2}
-To inherit a mutation, one should inherit a branch first
+Inherit a branch first, then a mutation
 
 ::: {.fragment fragment-index=3}
 - Sample $1$ inherits edges $1-4$ and $4-5$ 
@@ -187,16 +187,15 @@ To inherit a mutation, one should inherit a branch first
 
 
 ::: {.fragment fragment-index=6}
-Next, mutations should occur on those branches
-The effect of a branch is the sum over the effect of mutations on it
+Branch's effect $=$ Sum of mutations' effect
 :::
 
 ::: {.fragment fragment-index=8}
-$\text{Effect of edge 4-5} = 0$
+- Effect of $4-5 = 0$
 :::
 
 ::: {.fragment fragment-index=10}
-$\text{Effect of edge 4-5} = \boldsymbol{\beta}_4$
+- Effect of $4-5 = \boldsymbol{\beta}_4$
 :::
 
 :::
