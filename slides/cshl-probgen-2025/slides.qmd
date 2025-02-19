@@ -147,7 +147,7 @@ Can we do something similar with branches?
 
 ::: {.r-stack}
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=1}
 ![](imgs/tree-branch.svg){fig-align="center" height=600}
 :::
 
@@ -166,13 +166,9 @@ Can we do something similar with branches?
 
 ::: {.column width="50%"}
 
-::: {.fragment fragment-index=1}
+::: {.fragment fragment-index=2}
 To inherit a mutation, one should inherit a branch first
-::: {.incremental}
-- Sample $1$ inherits $1-4$ and $4-5$ 
-- Sample $2$ inherits $2-4$ and $4-5$
-- Sample $3$ inherits $3-5$
-:::
+
 :::
 
 
