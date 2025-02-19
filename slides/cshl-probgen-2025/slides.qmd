@@ -103,11 +103,11 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 ::: {.column width="45%"}
 $$
 \begin{aligned}
-\mathbf{y}_1 = \boldsymbol{\beta}_4 \\
-\mathbf{y}_2 = \boldsymbol{\beta}_4 \\
-\mathbf{y}_3 = \boldsymbol{\beta}_3 \\
+\mathbf{y}_1 = \boldsymbol{\beta}_1 +\boldsymbol{\beta}_1 \\
+\mathbf{y}_2 = \boldsymbol{\beta}_2 \\
+\mathbf{y}_3 = \boldsymbol{\beta}_2 \\
 \mathbf{y}_4 = \boldsymbol{\beta}_4 \\
-\mathbf{y}_5 = 0
+\mathbf{y}_5 = \boldsymbol{\beta}_2 
 \end{aligned}
 $$
 :::
