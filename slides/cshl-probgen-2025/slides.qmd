@@ -88,7 +88,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 - A population genetic solution: group variants into branches
 :::
 
-## How do we get traits?
+## How do we get traits? {.center}
 
 :::: {.columns}
 
@@ -123,10 +123,14 @@ We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 Sites are different for different realizations
 
 ::: {.incremental}
-- $\mathbf{y}_i = \mathbf{G}_1 \boldsymbol{\beta}_1 + \mathbf{G}_2 \boldsymbol{\beta}_2$
-- $\mathbf{y}_i = \mathbf{G}_3 \boldsymbol{\beta}_3 + \mathbf{G}_4 \boldsymbol{\beta}_4$
+- $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
+- $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 :::
 
+:::
+
+::: {.fragment}
+Can we do something similar with branches?
 :::
 
 :::
