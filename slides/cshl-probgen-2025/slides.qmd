@@ -113,7 +113,7 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%" .center}
+::: {.column width="50%" style='display: flex; justify-content: center; align-items: center;'}
 
 ::: {.fragment}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
