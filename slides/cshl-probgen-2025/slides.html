@@ -221,7 +221,7 @@ Hanbin Lee
 <div>
 <ul>
 <li class="fragment">What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness?</li>
-<li class="fragment">Why are entries of <span class="math inline">\(\mathbf{u}\)</span> independent?</li>
+<li class="fragment">Why are <span class="math inline">\(\mathbf{u}\)</span>’s entries independent?</li>
 <li class="fragment">How should we weigh the entries?</li>
 </ul>
 </div>
@@ -347,26 +347,29 @@ Hanbin Lee
 </div>
 </div></div>
 </section>
-<section id="from-mutations-to-branches" class="slide level2">
-<h2>From mutations to branches</h2>
+<section id="from-variants-to-branches" class="slide level2">
+<h2>From variants to branches</h2>
 <div class="fragment">
 <p><span class="math display">\[
 \mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 \quad
 \Rightarrow
 \quad
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \boldsymbol{\varepsilon}
-\]</span> where <span class="math inline">\(\mathbf{Z}\)</span> is the individual-edge (=branch) design matrix and <span class="math inline">\(\mathbf{u}\)</span> is the branch effects</p>
+\mathbf{y} = \mathbf{Z}\boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\]</span> where <span class="math inline">\(\mathbf{Z}\)</span> is the individual-edge (=branch) design matrix and <span class="math inline">\(\boldsymbol{\upsilon}\)</span> is the branch effects</p>
 </div>
 <div class="fragment">
-<p>Recall that <span class="math inline">\(\mathbf{u}_e\)</span> of edge <span class="math inline">\(e\)</span> is the aggregate effect of potential mutations</p>
+<p>Recall that <span class="math inline">\(\boldsymbol{\upsilon}_e\)</span> of edge <span class="math inline">\(e\)</span> is the aggregate effect of potential mutations</p>
 </div>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(\mathbf{u}_e\)</span> is random because mutations are random</li>
-<li class="fragment"><span class="math inline">\(\mathbf{u}_e\)</span>’s distribution is determined according to the mutational process (e.g.&nbsp;Poisson)</li>
-<li class="fragment">We can <em>prove</em> that the entries of <span class="math inline">\(\mathbf{u}\)</span> are mutually independent</li>
+<li class="fragment"><span class="math inline">\(\boldsymbol{\upsilon}_e\)</span> is random because mutations are random</li>
+<li class="fragment"><span class="math inline">\(\boldsymbol{\upsilon}_e\)</span>’s distribution is determined according to the mutational process (e.g.&nbsp;Poisson)</li>
+<li class="fragment">We can <em>prove</em> that the entries of <span class="math inline">\(\boldsymbol{\upsilon}\)</span> are mutually independent</li>
 </ul>
+</div>
+<div class="fragment">
+<p>Mysteries solved!</p>
 </div>
 </section></section>
 <section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="title-slide slide level1 center">

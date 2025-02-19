@@ -85,9 +85,10 @@ Some misteries ...
 
 ::: {.incremental}
 - What's the source of $\mathbf{u}$'s randomness?
-- Why are entries of $\mathbf{u}$ independent?
+- Why are $\mathbf{u}$'s entries independent?
 - How should we weigh the entries?
 :::
+
 
 ::: {.fragment}
 We answer these questions from an evolutionary perspective
@@ -236,7 +237,7 @@ Branch effect is a random variable!
 
 ::::
 
-## From mutations to branches
+## From variants to branches
 
 ::: {.fragment}
 $$
@@ -244,19 +245,23 @@ $$
 \quad
 \Rightarrow
 \quad
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \boldsymbol{\varepsilon} 
+\mathbf{y} = \mathbf{Z}\boldsymbol{\upsilon} + \boldsymbol{\varepsilon} 
 $$
-where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\mathbf{u}$ is the branch effects
+where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\boldsymbol{\upsilon}$ is the branch effects
 :::
 
 ::: {.fragment}
-Recall that $\mathbf{u}_e$ of edge $e$ is the aggregate effect of potential mutations
+Recall that $\boldsymbol{\upsilon}_e$ of edge $e$ is the aggregate effect of potential mutations
 :::
 
 ::: {.incremental}
-- $\mathbf{u}_e$ is random because mutations are random
-- $\mathbf{u}_e$'s distribution is determined according to the mutational process (e.g. Poisson)
-- We can *prove* that the entries of $\mathbf{u}$ are mutually independent
+- $\boldsymbol{\upsilon}_e$ is random because mutations are random
+- $\boldsymbol{\upsilon}_e$'s distribution is determined according to the mutational process (e.g. Poisson)
+- We can *prove* that the entries of $\boldsymbol{\upsilon}$ are mutually independent
+:::
+
+::: {.fragment}
+Mysteries solved!
 :::
 
 
