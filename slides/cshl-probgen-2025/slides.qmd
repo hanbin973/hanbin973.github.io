@@ -411,22 +411,18 @@ $$
 ::: {.column width="50%"}
 
 ::: {.r-stack}
-
-![](imgs/covariance-short-0.svg){.fragment fig-align="center" .fade-in-then-out fragment-index=1 height=500}
+![](imgs/covariance-short-0.svg){.fragment .fade-in-then-out fig-align="center" fragment-index=1 height=500}
 ![](imgs/covariance-short-1.svg){.fragment fig-align="center" fragment-index=2 height=500}
+:::
 
 :::
 
-
-:::
 
 ::: {.column width="50%"}
 
 ::: {.r-stack}
-
-![](imgs/covariance-long-0.svg){.fragment fig-align="center" .fade-in-then-out fragment-index=1 height=500}
+![](imgs/covariance-long-0.svg){.fragment .fade-in-then-out fig-align="center" fragment-index=1 height=500}
 ![](imgs/covariance-long-1.svg){.fragment fig-align="center" fragment-index=2 height=500}
-
 :::
 
 :::
