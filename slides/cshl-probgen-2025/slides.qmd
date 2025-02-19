@@ -465,7 +465,7 @@ Some people are more genetically variable than others
 :::
 
 ::: {.fragment .fade-in-then-out}
-Some people are more easy to predict genetically than others
+Some people are easier to predict genetically than others
 :::
 
 ::: {.fragment .fade-in-then-out}
