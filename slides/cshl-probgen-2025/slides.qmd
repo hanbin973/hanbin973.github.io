@@ -324,7 +324,7 @@ $$
 ::: {.r-stack}
 
 ::: {.fragment fragment-index=2 .fade-in-then-out}
-$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34}$ and $\mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
+$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34}$ $\text{and}$ $\mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
 ::: 
 
 ::: {.fragment fragment-index=3 .fade-in-then-out}
@@ -339,8 +339,8 @@ $$
 ::: {.fragment fragment-index=4}
 $$
 \mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
-\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
-\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
+\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
 \mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
 $$
 :::
