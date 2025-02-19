@@ -114,23 +114,23 @@ $\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
 :::
 
 
-::: {.column width="50%" style='display: flex; justify-content: center; align-items: center;'}
+::: {.column width="50%"}
 
-::: {.fragment}
+::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
-::: {.fragment}
+::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
 Sites are different for different realizations
 
-::: {.incremental}
+::: {.incremental style='display: flex; justify-content: center; align-items: center;'}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 :::
 
 :::
 
-::: {.fragment}
+::: {.fragment style='display: flex; justify-content: center; align-items: center;'}
 Can we do something similar with branches?
 :::
 
