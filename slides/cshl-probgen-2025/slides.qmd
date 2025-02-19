@@ -141,6 +141,55 @@ Can we do something similar with branches?
 
 ## Branch-centric view of trait transmission
 
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+![](imgs/tree-0.svg){fig-align="center" height=600}
+$\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
+$\mathbf{y}_2 = \boldsymbol{\beta}_2$, $\ldots$
+:::
+
+::: {.fragment}
+![](imgs/tree-1.svg){fig-align="center" height=600}
+$\mathbf{y}_1=\boldsymbol{\beta}_4$, 
+$\mathbf{y}_2=\boldsymbol{\beta}_4$, $\ldots$
+:::
+
+:::
+
+:::
+
+
+::: {.column width="50%"}
+
+::: {.fragment}
+We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
+:::
+
+::: {.fragment}
+Sites are different for different realizations
+
+::: {.incremental}
+- $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
+- $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
+:::
+
+:::
+
+::: {.fragment}
+Can we do something similar with branches?
+:::
+
+:::
+
+
+::::
+
+
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
 ::: {.fragment}
