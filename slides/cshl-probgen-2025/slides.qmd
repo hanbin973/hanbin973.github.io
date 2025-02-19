@@ -188,7 +188,7 @@ What happens if we consider branches first?
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment fragment-index=9}
+::: {.fragment fragment-index=8}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 :::
 
@@ -219,15 +219,15 @@ Inherit a branch first, then a mutation
 Branch's effect $=$ Sum of mutations' effect
 :::
 
-::: {.fragment fragment-index=8}
+::: {.fragment fragment-index=7}
 - Effect of $4-5 = 0$
 :::
 
-::: {.fragment fragment-index=10}
+::: {.fragment fragment-index=8}
 - Effect of $4-5 = \boldsymbol{\beta}_4$
 :::
 
-::: {.fragment fragment-index=11}
+::: {.fragment fragment-index=9}
 Branch effect is a random variable!
 :::
 
