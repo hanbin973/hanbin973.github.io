@@ -303,7 +303,7 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 
 ::: {.fragment}
 $$
-\mathrm{Var}(\mathbf{u}_e) \quad \approx \quad \text{Number of mutations} \quad \approx \quad \text{Area of edge $e$} l_es_e
+\mathrm{Var}(\mathbf{u}_e) \quad \propto \quad \text{Number of mutations} \quad \approx \quad \text{Area of edge $e$: } l_es_e
 $$
 :::
 
