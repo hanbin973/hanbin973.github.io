@@ -168,7 +168,11 @@ Can we do something similar with branches?
 
 ::: {.fragment fragment-index=2}
 To inherit a mutation, one should inherit a branch first
-
+::: {.incremental}
+- Sample $1$ inherits $1-4$ and $4-5$ 
+- Sample $2$ inherits $2-4$ and $4-5$
+- Sample $3$ inherits $3-5$
+:::
 :::
 
 
