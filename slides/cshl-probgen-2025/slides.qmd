@@ -169,7 +169,7 @@ Can we do something similar with branches?
 ::: {.fragment fragment-index=2}
 To inherit a mutation, one should inherit a branch first
 
-::: {.incremental}
+::: {.incremental fragment-index=3}
 - Sample $1$ inherits edges $1-4$ and $4-5$ 
 - Sample $2$ inherits edges $2-4$ and $4-5$
 - Sample $3$ inherits edge $3-5$
