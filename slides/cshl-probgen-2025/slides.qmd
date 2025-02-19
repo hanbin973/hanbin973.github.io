@@ -456,7 +456,7 @@ $\textcolor{red}{\mathrm{Cov}(h_{n1},h_{n2})}$ is the shared amount of area betw
 
 
 
-![](imgs/geneticvariance.svg){.fragment fig-align="center" height="400"}
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height="600"}
 
 ::: {.r-stack}
 
