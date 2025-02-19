@@ -303,7 +303,7 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 
 ::: {.fragment}
 $$
-\mathrm{Var}(\mathbf{u}_e) \quad \propto \quad \text{Number of mutations} \quad \propto \quad \text{Area } l_es_e
+\mathrm{Var}(\mathbf{u}_e) \quad \propto \quad \text{Number of mutations} \quad \propto \quad \text{Area}=l_es_e
 $$
 :::
 
@@ -315,7 +315,7 @@ $$
 ![](imgs/covariance-0.svg){height=500 fig-align="center"}
 :::
 
-::: {.fragment fragment-index=3}
+::: {.fragment fragment-index=4}
 ![](imgs/covariance-1.svg){height=500 fig-align="center"}
 :::
 
@@ -323,11 +323,11 @@ $$
 
 ::: {.r-stack}
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=2 .fade-in-then-out}
 $\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34}$ and $\mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
 ::: 
 
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=3}
 $$
 \mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
 \mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}) =
