@@ -404,15 +404,41 @@ $$
 \text{What does ARG-LMM tell us about complex trait analysis?}
 $$
 
-
 ## Heritability is *ill*-defined
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
 ::: {.r-stack}
-![](imgs/covariance-long-0.svg){.fragment .fade-in-then-out height=600}
-![](imgs/covariance-long-1.svg){.fragment .fade-in-then-out height=600}
+::: {.fragment .fade-in-then-out fragment-index=1}
+![](imgs/covariance-short-0.svg){fig-align="center" height=500}
+:::
+::: {.fragment fragment-index=2}
+![](imgs/covariance-short-1.svg){fig-align="center"height=500}
+:::
+:::
+
 :::
 
 
+::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out  fragment-index=1}
+![](imgs/covariance-long-0.svg){fig-align="center" height=500}
+:::
+::: {.fragment fragment-index=2}
+![](imgs/covariance-long-1.svg){fig-align="center" height=500}
+:::
+
+:::
+
+:::
+
+
+::::
 
 ## Polygenic prediction
 
