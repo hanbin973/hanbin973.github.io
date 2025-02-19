@@ -97,7 +97,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 :::: {.columns}
 ::: {.column width="60%"}
-![](imgs/tree-0.svg)
+![](imgs/tree-0.svg){height="100%"}
 :::
 
 ::: {.column width="40%"}
@@ -119,7 +119,7 @@ $$
 
 :::: {.columns}
 ::: {.column width="60%"}
-![](imgs/tree-1.svg)	
+![](imgs/tree-1.svg){height="100%"}	
 :::
 
 ::: {.column width="40%"}
