@@ -168,16 +168,13 @@ Can we do something similar with branches?
 
 ::: {.fragment fragment-index=1}
 To inherit a mutation, one should inherit a branch first
-:::
-
-::: {.fragment fragment-index=3}
-	For example,
 ::: {.incremental}
 - Sample $1$ inherits $1-4$ and $4-5$ 
 - Sample $2$ inherits $2-4$ and $4-5$
 - Sample $3$ inherits $3-5$
 :::
 :::
+
 
 ::: {.fragment fragment-index=4}
 Next, mutations should occur on the branches
