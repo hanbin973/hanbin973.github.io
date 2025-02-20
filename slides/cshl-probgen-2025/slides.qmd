@@ -384,7 +384,7 @@ Figure by Nate Pope (UOregon)
 :::
 
 
-## Runtime
+## Runtime for variance component estimation
 
 ![](imgs/runtime.svg){.fragment fig-align="center" height="700"}
 
@@ -392,7 +392,7 @@ Figure by Nate Pope (UOregon)
 The runtime scales linearly with respect to the number of individuals
 :::
 
-## Estimation
+## Estimation quality of variance components
 
 :::{.r-stack}
 
@@ -411,7 +411,7 @@ The runtime scales linearly with respect to the number of individuals
 :::
 
 
-## Best linear unbiased prediction (BLUP)
+## Best linear unbiased prediction (BLUP) in non-overlapping samples
 
 ![](imgs/prediction.svg){.fragment fig-align="center" height="700"}
 
