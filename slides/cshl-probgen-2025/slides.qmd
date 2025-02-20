@@ -112,7 +112,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ::: {.incremental}
 - $N \ll P$, it's impossible to fit a high-dimensional regression without additional assumptions
-- Perfect collinearity of some columns in $\mathbf{G}$, or perfect linkage disequilibrium (LD)
+- Strong collinearity of some columns in $\mathbf{G}$, or tight linkage disequilibrium (LD)
 - A population genetic solution: group variants into branches
 :::
 
@@ -430,11 +430,21 @@ $$
 
 ## Heritability is *ill*-defined
 
-::: {.fragment fragment-index=1}
+::: {.r-stack}
+::: {.fragment .fade-in-then-out fragment-index=1}
+All individuals have a different amount of genetic variance (except haploids)
+$$
+	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\mathrm{Cov}(h_{n1},h_{n2})
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
 All individuals have a different amount of genetic variance (except haploids)
 $$
 	\mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
 $$
+:::
+
 :::
 
 :::: {.columns}

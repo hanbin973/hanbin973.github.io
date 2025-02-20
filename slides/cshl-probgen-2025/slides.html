@@ -241,7 +241,7 @@ Hanbin Lee
 <div>
 <ul>
 <li class="fragment"><span class="math inline">\(N \ll P\)</span>, it’s impossible to fit a high-dimensional regression without additional assumptions</li>
-<li class="fragment">Perfect collinearity of some columns in <span class="math inline">\(\mathbf{G}\)</span>, or perfect linkage disequilibrium (LD)</li>
+<li class="fragment">Strong collinearity of some columns in <span class="math inline">\(\mathbf{G}\)</span>, or tight linkage disequilibrium (LD)</li>
 <li class="fragment">A population genetic solution: group variants into branches</li>
 </ul>
 </div>
@@ -534,10 +534,17 @@ Hanbin Lee
 </section>
 <section id="heritability-is-ill-defined" class="slide level2">
 <h2>Heritability is <em>ill</em>-defined</h2>
-<div class="fragment" data-fragment-index="1">
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<p>All individuals have a different amount of genetic variance (except haploids) <span class="math display">\[
+    \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\mathrm{Cov}(h_{n1},h_{n2})
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
 <p>All individuals have a different amount of genetic variance (except haploids) <span class="math display">\[
     \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
 \]</span></p>
+</div>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
