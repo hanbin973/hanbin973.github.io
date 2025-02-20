@@ -263,7 +263,14 @@ where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\boldsymb
 :::
 
 ::: {.fragment}
-$\mathbf{Z}$ is a superset of columns of $\mathbf{G}_{\mathrm{genotyped}}$ $\Leftrightarrow$ $\text{LMMs} \; \subset \; \text{ARG-LMM}$
+
+$$
+\mathbf{G}_{\mathrm{genotyped}} \; \subset \; \mathbf{Z}
+\quad
+\Rightarrow
+\quad
+\text{LMMs} \; \subset \; \text{ARG-LMM}
+$$
 :::
 
 ::: {.fragment}
