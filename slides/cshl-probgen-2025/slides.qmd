@@ -553,7 +553,7 @@ ARG-LMM variance component only reflects mutational variability
 ::: {.incremental}
 - Pedigree-based heritability captures Mendelian segregation and mutation is ignored
 - ARG-LMM's generative model only has mutation and no segregation
-- Why compare quantities stemming from different random forces?
+- Why compare quantities stemming from different random forces? [@Zhang2023]
 :::
 
 ![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
