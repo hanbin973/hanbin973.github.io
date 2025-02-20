@@ -430,9 +430,7 @@ $$
 
 ## Heritability is *ill*-defined in ARG-LMM
 
-
-::: {.r-stack}
-::: {.fragment .fade-in-then-out fragment-index=1}
+::: {.fragment .fade-in-then-out fragment-index=1 .center}
 Heritability is 
 $$
 h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
@@ -440,25 +438,25 @@ $$
 This applies to all individual $n \in \{1,\ldots,N\}$
 :::
 
-::: {.fragment .fragment-index=2}
+## Heritability is *ill*-defined in ARG-LMM
+
 ::: {.r-stack}
 
-
-::: {.fragment .fade-in-then-out fragment-index=3}
+::: {.fragment .fade-in-then-out fragment-index=1}
 However, all individuals have a different amount of genetic variance (except haploids)
 $$
 	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\mathrm{Cov}(h_{n1},h_{n2})
 $$
 :::
 
-::: {.fragment .fade-in-then-out fragment-index=4}
+::: {.fragment .fade-in-then-out fragment-index=2}
 All individuals have a different amount of genetic variance (except haploids)
 $$
 	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
 $$
 :::
 
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=3}
 We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}$ for everyone
 :::
 
@@ -470,10 +468,10 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 ::: {.column width="50%"}
 
 ::: {.r-stack}
-::: {.fragment .fade-in-then-out fragment-index=3}
+::: {.fragment .fade-in-then-out fragment-index=1}
 ![](imgs/covariance-short-0.svg){fig-align="center" height=500}
 :::
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=2}
 ![](imgs/covariance-short-1.svg){fig-align="center"height=500}
 :::
 :::
@@ -485,21 +483,19 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out  fragment-index=3}
+::: {.fragment .fade-in-then-out  fragment-index=1}
 ![](imgs/covariance-long-0.svg){fig-align="center" height=500}
 :::
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=2}
 ![](imgs/covariance-long-1.svg){fig-align="center" height=500}
 :::
 
 :::
 
 :::
-:::
 
 
 ::::
-:::
 
 ## Polygenic prediction
 
