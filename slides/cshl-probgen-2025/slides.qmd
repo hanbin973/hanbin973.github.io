@@ -455,7 +455,7 @@ $$
 :::
 
 ::: {.fragment fragment-index=4}
-We can't define a single quantitity $h^2_g$ for everyone
+We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}$ for everyone
 :::
 
 :::
@@ -515,6 +515,10 @@ Some people are easier to predict genetically than others
 Some populations are inherently harder to predict!
 :::
 
+:::
+
+::: footer
+Demographic model from [@Browning2018]
 :::
 
 ## *Missing* heritability?
