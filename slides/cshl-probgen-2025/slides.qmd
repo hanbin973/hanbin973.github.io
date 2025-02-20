@@ -372,8 +372,42 @@ It can estimate variance components and compute polygenic scores by best linear 
 
 ## The matrix-vector product algorithm
 
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+![](imgs/two-trees-empty.svg){fig-align="center" height=600}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/two-trees-naive.svg){fig-align="center" height=600}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3}
+![](imgs/two-trees-efficient.svg){fig-align="center" height=600}
+:::
+
+::: 
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-indx=1}
+The algorithm needs to pass mutations to the correct samples
+:::
+
+::: {.fragment .fade-in-then-out fragment-indx=2}
+A naive approach is to push the mutations down to the leaves everytime
+:::
+
+::: {.fragment .fade-in-then-out fragment-indx=3}
+Only send the mutations down when edge's subtopology is altered
+:::
+
+:::
+
+
 ::: footer
-Figure by Nate Pope (UOregon)
+Modified figures by Nathaniel Pope (Oregon)
 :::
 
 

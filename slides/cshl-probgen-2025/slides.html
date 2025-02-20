@@ -482,8 +482,42 @@ Hanbin Lee
 </section>
 <section id="the-matrix-vector-product-algorithm" class="slide level2">
 <h2>The matrix-vector product algorithm</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-empty.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-naive.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-efficient.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-indx="1">
+<p>The algorithm needs to pass mutations to the correct samples</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-indx="2">
+<p>A naive approach is to push the mutations down to the leaves everytime</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-indx="3">
+<p>Only send the mutations down when edge’s subtopology is altered</p>
+</div>
+</div>
 <div class="footer">
-<p>Figure by Nate Pope (UOregon)</p>
+<p>Modified figures by Nathaniel Pope (Oregon)</p>
 </div>
 </section>
 <section id="runtime-for-variance-component-estimation" class="slide level2">
