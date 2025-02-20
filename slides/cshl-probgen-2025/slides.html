@@ -643,27 +643,16 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 <p>Figure from <a href="https://whalebonemag.com/">Whalebone Magazine</a></p>
 </div>
 </section>
-<section id="becareful-of-pseudoreplication" class="slide level2">
-<h2>Becareful of pseudoreplication</h2>
-<div>
-<ul>
-<li class="fragment">Non-overlapping samples are not independent</li>
-<li class="fragment">Everyone shares some amount of mutational history</li>
-<li class="fragment">Parameter estimates (e.g.&nbsp;variance components) are correlated</li>
-</ul>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/pseudoreplication.svg" class="fragment quarto-figure quarto-figure-center" height="400"></p>
-</figure>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
-<p>This is also the very reason why BLUP works</p>
+<section id="other-bits-and-future-directions" class="slide level2 center">
+<h2>Other bits and future directions</h2>
+<div class="fragment">
+<p>Pseudoreplication due to shared ancestry (preprint will be posted soon!)</p>
 </div>
 <div class="fragment">
-<p>We are all correlated!</p>
+<p>Predicting polygenic scores with <span class="math inline">\(\textsf{tslmm}\)</span> or nodes</p>
 </div>
+<div class="fragment">
+<p>Super interesting technical details and proofs</p>
 </div>
 </section></section>
 <section>
@@ -847,6 +836,29 @@ Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts 
 <p><span class="math display">\[
     \text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
 \]</span></p>
+</div>
+</section>
+<section id="becareful-of-pseudoreplication" class="slide level2">
+<h2>Becareful of pseudoreplication</h2>
+<div>
+<ul>
+<li class="fragment">Non-overlapping samples are not independent</li>
+<li class="fragment">Everyone shares some amount of mutational history</li>
+<li class="fragment">Parameter estimates (e.g.&nbsp;variance components) are correlated</li>
+</ul>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/pseudoreplication.svg" class="fragment quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>This is also the very reason why BLUP works</p>
+</div>
+<div class="fragment">
+<p>We are all correlated!</p>
+</div>
 </div>
 
 </section></section>

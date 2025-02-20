@@ -548,27 +548,19 @@ Figure from [Whalebone Magazine](https://whalebonemag.com/)
 
 
 
+## Other bits and future directions {.center}
 
-## Becareful of pseudoreplication
 
-::: {.incremental}
-- Non-overlapping samples are not independent
-- Everyone shares some amount of mutational history
-- Parameter estimates (e.g. variance components) are correlated
-:::
-
-![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out}
-This is also the very reason why BLUP works
+::: {.fragment}
+Pseudoreplication due to shared ancestry (preprint will be posted soon!)
 :::
 
 ::: {.fragment}
-We are all correlated!
+Predicting polygenic scores with $\textsf{tslmm}$ or nodes
 :::
 
+::: {.fragment}
+Super interesting technical details and proofs
 :::
 
 
@@ -760,6 +752,28 @@ $$
 $$
 	\text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
 $$
+:::
+
+## Becareful of pseudoreplication
+
+::: {.incremental}
+- Non-overlapping samples are not independent
+- Everyone shares some amount of mutational history
+- Parameter estimates (e.g. variance components) are correlated
+:::
+
+![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+This is also the very reason why BLUP works
+:::
+
+::: {.fragment}
+We are all correlated!
+:::
+
 :::
 
 
