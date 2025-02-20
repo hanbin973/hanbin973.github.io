@@ -437,7 +437,7 @@ Heritability is
 $$
 h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 $$
-This applies to all individual $n \in \{1,\ldots,N\}$
+This applies to all individuals $n \in \{1,\ldots,N\}$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
