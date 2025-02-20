@@ -250,7 +250,7 @@ $$
 
 ::: {.fragment}
 $$
-\boldsymbol{\upsilon}_e = \text{Branch$_e$ effect size} = \sum_p \text{Variants$_p$ on Branch$_e$}
+\boldsymbol{\upsilon}_e = \text{Branch$_e$ effect size} = \sum_p \text{Variant$_p$ on Branch$_e$}
 $$
 :::
 
