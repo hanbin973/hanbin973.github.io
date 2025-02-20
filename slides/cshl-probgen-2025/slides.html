@@ -534,40 +534,37 @@ Hanbin Lee
 </section>
 <section id="heritability-is-ill-defined-in-arg-lmm" class="slide level2">
 <h2>Heritability is <em>ill</em>-defined in ARG-LMM</h2>
-<div class="fragment fade-in-then-out center" data-fragment-index="1">
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
 <p>Heritability is <span class="math display">\[
 h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 \]</span> This applies to all individual <span class="math inline">\(n \in \{1,\ldots,N\}\)</span></p>
 </div>
-</section>
-<section id="heritability-is-ill-defined-in-arg-lmm-1" class="slide level2">
-<h2>Heritability is <em>ill</em>-defined in ARG-LMM</h2>
-<div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
 <p>However, all individuals have a different amount of genetic variance (except haploids) <span class="math display">\[
     \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\mathrm{Cov}(h_{n1},h_{n2})
 \]</span></p>
 </div>
-<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="fragment fade-in-then-out" data-fragment-index="3">
 <p>All individuals have a different amount of genetic variance (except haploids) <span class="math display">\[
     \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
 \]</span></p>
 </div>
-<div class="fragment" data-fragment-index="3">
+<div class="fragment" data-fragment-index="4">
 <p>We can’t define a single quantitity <span class="math inline">\(h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}\)</span> for everyone</p>
 </div>
 </div>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/covariance-short-0.svg" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 </div>
-<div class="fragment" data-fragment-index="2">
+<div class="fragment" data-fragment-index="3">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/covariance-short-1.svg" class="quarto-figure quarto-figure-center" height="500"></p>
@@ -577,14 +574,14 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 </div>
 </div><div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/covariance-long-0.svg" class="quarto-figure quarto-figure-center" height="500"></p>
 </figure>
 </div>
 </div>
-<div class="fragment" data-fragment-index="2">
+<div class="fragment" data-fragment-index="3">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/covariance-long-1.svg" class="quarto-figure quarto-figure-center" height="500"></p>
@@ -652,10 +649,13 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 <p>Pseudoreplication due to shared ancestry (preprint will be posted soon!)</p>
 </div>
 <div class="fragment">
-<p>Predicting polygenic scores with <span class="math inline">\(\textsf{tslmm}\)</span> or nodes</p>
+<p>A powerful trait simulator based on ARG-LMM</p>
 </div>
 <div class="fragment">
 <p>Super interesting technical details and proofs</p>
+</div>
+<div class="fragment">
+<p>Predicting polygenic scores with <span class="math inline">\(\textsf{tslmm}\)</span> or nodes</p>
 </div>
 </section></section>
 <section>
