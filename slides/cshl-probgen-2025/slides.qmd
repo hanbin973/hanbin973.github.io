@@ -139,14 +139,6 @@ $$
 $$
 :::
 
-::: {.fragment .fade-in-then-out fragment-index=4}
-![](imgs/tree-0.svg){fig-align="center" height=600}
-:::
-
-::: {.fragment fragment-index=5}
-![](imgs/tree-1.svg){fig-align="center" height=600}
-:::
-
 :::
 
 :::
@@ -158,10 +150,10 @@ $$
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
-::: {.fragment fragment-index=4}
+::: {.fragment fragment-index=2}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
 :::
-::: {.fragment fragment-index=5}
+::: {.fragment fragment-index=3}
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 ::: 
 
