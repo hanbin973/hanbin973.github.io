@@ -251,7 +251,7 @@ Hanbin Lee
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment" data-fragment-index="2">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
 <p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_2 = \boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_2\)</span></p>
 </div>
 <div class="fragment" data-fragment-index="3">
@@ -351,11 +351,20 @@ Hanbin Lee
 <h2>From variants to branches</h2>
 <div class="fragment">
 <p><span class="math display">\[
-\mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\text{Trait} = \sum_p \text{Variant effect size}
 \quad
 \Rightarrow
 \quad
-\mathbf{y} = \mathbf{Z}\boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\text{Trait} = \sum_e \text{Branch effect size}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\quad
+\Rightarrow
+\quad
+\mathbf{y} = \sum_e \mathbf{Z}_e\boldsymbol{\upsilon}_e + \boldsymbol{\varepsilon}
 \]</span> where <span class="math inline">\(\mathbf{Z}\)</span> is the individual-edge (=branch) design matrix and <span class="math inline">\(\boldsymbol{\upsilon}\)</span> is the branch effects</p>
 </div>
 <div class="fragment">
@@ -442,7 +451,7 @@ Hanbin Lee
 </div>
 <div class="r-stack">
 <div class="fragment fade-in-then-out" data-fragment-index="2">
-<p><span class="math inline">\(\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34}\)</span> <span class="math inline">\(\text{and}\)</span> <span class="math inline">\(\mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}\)</span></p>
+<p><span class="math inline">\(\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}\)</span></p>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="3">
 <p><span class="math display">\[

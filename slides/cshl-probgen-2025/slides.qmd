@@ -124,7 +124,7 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ::: {.r-stack}
 
-::: {.fragment fragment-index=2}
+::: {.fragment .fade-in-then-out fragment-index=2}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
 $\mathbf{y}_2 = \boldsymbol{\beta}_2$,
@@ -243,11 +243,21 @@ Branch effect is a random variable!
 
 ::: {.fragment}
 $$
-\mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\text{Trait} = \sum_p \text{Variant effect size} 
+\quad
+\Rightarrow 
+\quad
+\text{Trait} = \sum_e \text{Branch effect size}
+$$
+:::
+
+::: {.fragment}
+$$
+\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta} + \boldsymbol{\varepsilon}
 \quad
 \Rightarrow
 \quad
-\mathbf{y} = \mathbf{Z}\boldsymbol{\upsilon} + \boldsymbol{\varepsilon} 
+\mathbf{y} = \sum_e \mathbf{Z}_e\boldsymbol{\upsilon}_e + \boldsymbol{\varepsilon} 
 $$
 where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\boldsymbol{\upsilon}$ is the branch effects
 :::
@@ -331,7 +341,7 @@ $$
 ::: {.r-stack}
 
 ::: {.fragment fragment-index=2 .fade-in-then-out}
-$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34}$ $\text{and}$ $\mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
+$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
 ::: 
 
 ::: {.fragment fragment-index=3 .fade-in-then-out}
