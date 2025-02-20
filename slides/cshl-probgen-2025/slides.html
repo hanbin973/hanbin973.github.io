@@ -185,6 +185,27 @@ Hanbin Lee
 <p>Figure from <a href="https://tskit.dev/tutorials/what_is.html">tskit docs</a></p>
 </div>
 </section>
+<section id="linear-mixed-model" class="slide level2">
+<h2>Linear mixed model</h2>
+<div class="fragment">
+<p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
+\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+\]</span> In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
+</div>
+<div class="fragment">
+<p>Some questions …</p>
+<div>
+<ul>
+<li class="fragment">What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness?</li>
+<li class="fragment">Why are <span class="math inline">\(\mathbf{u}\)</span>’s entries independent?</li>
+<li class="fragment">How should we weigh the entries?</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p>We answer these questions from an evolutionary perspective</p>
+</div>
+</section>
 <section id="the-duality-between-sites-and-branches" class="slide level2">
 <h2>The duality between sites and branches</h2>
 <div class="r-stack">
@@ -208,27 +229,6 @@ Hanbin Lee
 <div class="footer">
 <p>Figure from <span class="citation" data-cites="Ralph2020">(<a href="#/references" role="doc-biblioref" onclick="">Ralph, Thornton, and Kelleher 2020</a>)</span></p>
 </div>
-</section>
-<section id="linear-mixed-model" class="slide level2">
-<h2>Linear mixed model</h2>
-<div class="fragment">
-<p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
-\]</span> In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
-</div>
-<div class="fragment">
-<p>Some misteries …</p>
-<div>
-<ul>
-<li class="fragment">What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness?</li>
-<li class="fragment">Why are <span class="math inline">\(\mathbf{u}\)</span>’s entries independent?</li>
-<li class="fragment">How should we weigh the entries?</li>
-</ul>
-</div>
-<div class="fragment">
-<p>We answer these questions from an evolutionary perspective</p>
-</div>
-</div>
 </section></section>
 <section>
 <section id="setup-and-derivation" class="title-slide slide level1 center">
@@ -251,19 +251,20 @@ Hanbin Lee
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment fade-in-then-out">
+<div class="fragment" data-fragment-index="2">
 <p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_2 = \boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_2\)</span></p>
 </div>
-<div class="fragment">
+<div class="fragment" data-fragment-index="3">
 <p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_2=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_3\)</span></p>
 </div>
 </div>
 </div><div class="column center" style="width:50%;">
-<div class="fragment">
+<div class="fragment" data-fragment-index="1">
 <p>We get trait values by adding up effect sizes (<span class="math inline">\(\boldsymbol{\beta}\)</span>)</p>
 </div>
 <div class="fragment">
 <p>Sites are different for different realizations</p>
+</div>
 <div class="fragment">
 <ul>
 <li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2\)</span></li>
@@ -273,7 +274,6 @@ Hanbin Lee
 <ul>
 <li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4\)</span></li>
 </ul>
-</div>
 </div>
 <div class="fragment">
 <p>We get different subsets of <span class="math inline">\(\mathbf{G}\)</span> everytime mutations realize</p>
@@ -288,7 +288,7 @@ Hanbin Lee
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="r-stack">
-<div class="fragment" data-fragment-index="1">
+<div class="fragment" data-fragment-index="2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="imgs/tree-branch.svg" class="quarto-figure quarto-figure-center" height="600"></p>
@@ -311,7 +311,7 @@ Hanbin Lee
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="fragment" data-fragment-index="2">
+<div class="fragment" data-fragment-index="1">
 <p>Inherit a branch first, then a mutation</p>
 <div class="fragment" data-fragment-index="3">
 <ul>
@@ -400,11 +400,20 @@ Hanbin Lee
 </section>
 <section id="how-do-we-weigh-branches-of-the-arg" class="slide level2">
 <h2>How do we weigh branches of the ARG?</h2>
+<div class="r-stack">
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="imgs/edge_weight.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+<p><img data-src="imgs/edge_weight-0.svg" class="quarto-figure quarto-figure-center" height="600"></p>
 </figure>
+</div>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/edge_weight-1.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="fragment">

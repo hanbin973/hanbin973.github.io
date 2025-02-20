@@ -41,6 +41,33 @@ $$
 Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 :::
 
+
+## Linear mixed model
+
+::: {.fragment}
+Linear mixed models are popular in quantitative genetics
+$$
+\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+$$
+In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
+:::
+
+::: {.fragment}
+Some questions ...
+
+::: {.incremental}
+- What's the source of $\mathbf{u}$'s randomness?
+- Why are $\mathbf{u}$'s entries independent?
+- How should we weigh the entries?
+:::
+
+:::
+
+::: {.fragment}
+We answer these questions from an evolutionary perspective
+:::
+
+
 ## The duality between sites and branches
 
 ::: {.r-stack}
@@ -70,31 +97,6 @@ Figure from [@Ralph2020]
 :::
 
 
-## Linear mixed model
-
-::: {.fragment}
-Linear mixed models are popular in quantitative genetics
-$$
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
-$$
-In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
-:::
-
-::: {.fragment}
-Some misteries ...
-
-::: {.incremental}
-- What's the source of $\mathbf{u}$'s randomness?
-- Why are $\mathbf{u}$'s entries independent?
-- How should we weigh the entries?
-:::
-
-
-::: {.fragment}
-We answer these questions from an evolutionary perspective
-:::
-
-:::
 
 # Setup and derivation
 
@@ -122,14 +124,14 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment fragment-index=2}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
 $\mathbf{y}_2 = \boldsymbol{\beta}_2$,
 $\mathbf{y}_3 = \boldsymbol{\beta}_2$
 :::
 
-::: {.fragment}
+::: {.fragment fragment-index=3}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_4$, 
 $\mathbf{y}_2=\boldsymbol{\beta}_4$,
@@ -143,12 +145,13 @@ $\mathbf{y}_3 = \boldsymbol{\beta}_3$
 
 ::: {.column width="50%" .center}
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
 ::: {.fragment}
 Sites are different for different realizations
+:::
 
 ::: {.fragment}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
@@ -157,7 +160,6 @@ Sites are different for different realizations
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 ::: 
 
-:::
 
 ::: {.fragment}
 We get different subsets of $\mathbf{G}$ everytime mutations realize
@@ -180,7 +182,7 @@ What happens if we consider branches first?
 
 ::: {.r-stack}
 
-::: {.fragment fragment-index=1}
+::: {.fragment fragment-index=2}
 ![](imgs/tree-branch.svg){fig-align="center" height=600}
 :::
 
@@ -199,7 +201,7 @@ What happens if we consider branches first?
 
 ::: {.column width="50%"}
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=1}
 Inherit a branch first, then a mutation
 
 ::: {.fragment fragment-index=3}
@@ -297,8 +299,13 @@ Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed
 
 ## How do we weigh branches of the ARG?
 
+::: {.r-stack}
 ::: {.fragment}
-![](imgs/edge_weight.svg){height=600 fig-align="center"}
+![](imgs/edge_weight-0.svg){height=600 fig-align="center"}
+:::
+::: {.fragment}
+![](imgs/edge_weight-1.svg){height=600 fig-align="center"}
+:::
 :::
 
 ::: {.fragment}
