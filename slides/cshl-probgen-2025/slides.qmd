@@ -411,7 +411,7 @@ The runtime scales linearly with respect to the number of individuals
 :::
 
 
-## Best linear unbiased prediction (BLUP) in non-overlapping samples
+## Best linear unbiased prediction (BLUP)
 
 ![](imgs/prediction.svg){.fragment fig-align="center" height="700"}
 
