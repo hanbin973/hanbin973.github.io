@@ -391,15 +391,15 @@ It can estimate variance components and compute polygenic scores by best linear 
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out fragment-indx=1}
+::: {.fragment .fade-in-then-out fragment-index=1}
 The algorithm needs to pass mutations to the correct samples
 :::
 
-::: {.fragment .fade-in-then-out fragment-indx=2}
+::: {.fragment .fade-in-then-out fragment-index=2}
 A naive approach is to push the mutations down to the leaves everytime
 :::
 
-::: {.fragment .fade-in-then-out fragment-indx=3}
+::: {.fragment .fade-in-then-out fragment-index=3}
 Only send the mutations down when edge's subtopology is altered
 :::
 
