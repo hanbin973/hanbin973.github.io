@@ -26,10 +26,11 @@ format:
 
 ::: {.incremental}
 - We condition on the sample's ancestral recombination graph (ARG) 
-- The full feature of the ARG is superfluous, only the local trees matter $\mathcal{T} = (\mathbf{V}, \mathbf{E})$
-<p align="center">
-	<img src="imgs/local_trees.svg" width="100%">
-</p>	
+
+- Many of the probabilistic features of the full ARG can be ignored
+
+- Then, the ARG is a collection of local trees $\mathcal{T} = (\mathbf{V}, \mathbf{E})$
+![](imgs/local_trees.svg){fig-align="center" height=300}
 
 - Drift and recombination are fixed, so mutation is the sole driver of genetic variability
 $$
@@ -120,16 +121,20 @@ $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
-$\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2$, 
-$\mathbf{y}_2 = \boldsymbol{\beta}_2$,
-$\mathbf{y}_3 = \boldsymbol{\beta}_2$
+$$
+\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
+\mathbf{y}_2 = \boldsymbol{\beta}_2, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_2
+$$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
-$\mathbf{y}_1=\boldsymbol{\beta}_4$, 
-$\mathbf{y}_2=\boldsymbol{\beta}_4$,
-$\mathbf{y}_3 = \boldsymbol{\beta}_3$
+$$
+\mathbf{y}_1=\boldsymbol{\beta}_4, \;
+\mathbf{y}_2=\boldsymbol{\beta}_4, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_3
+$$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=4}

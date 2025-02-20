@@ -171,14 +171,12 @@ Hanbin Lee
 <h1>Overview</h1>
 <div>
 <ul>
-<li class="fragment">We condition on the sample’s ancestral recombination graph (ARG)</li>
-<li class="fragment">The full feature of the ARG is superfluous, only the local trees matter <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span>
-<p align="center">
-<img src="imgs/local_trees.svg" width="100%">
-</p></li>
-<li class="fragment">Drift and recombination are fixed, so mutation is the sole driver of genetic variability <span class="math display">\[
+<li class="fragment"><p>We condition on the sample’s ancestral recombination graph (ARG)</p></li>
+<li class="fragment"><p>Many of the probabilistic features of the full ARG can be ignored</p></li>
+<li class="fragment"><p>Then, the ARG is a collection of local trees <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span> <img data-src="imgs/local_trees.svg" class="quarto-figure quarto-figure-center" height="300"></p></li>
+<li class="fragment"><p>Drift and recombination are fixed, so mutation is the sole driver of genetic variability <span class="math display">\[
 \mathbf{y} \mid \mathcal{T} \; \sim \; ?
-\]</span></li>
+\]</span></p></li>
 </ul>
 </div>
 <div class="footer">
@@ -245,10 +243,18 @@ Hanbin Lee
 <div class="column" style="width:50%;">
 <div class="r-stack">
 <div class="fragment fade-in-then-out" data-fragment-index="2">
-<p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_2 = \boldsymbol{\beta}_2\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_2\)</span></p>
+<p><img data-src="imgs/tree-0.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math display">\[
+\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
+\mathbf{y}_2 = \boldsymbol{\beta}_2, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_2
+\]</span></p>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="3">
-<p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math inline">\(\mathbf{y}_1=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_2=\boldsymbol{\beta}_4\)</span>, <span class="math inline">\(\mathbf{y}_3 = \boldsymbol{\beta}_3\)</span></p>
+<p><img data-src="imgs/tree-1.svg" class="quarto-figure quarto-figure-center" height="600"> <span class="math display">\[
+\mathbf{y}_1=\boldsymbol{\beta}_4, \;
+\mathbf{y}_2=\boldsymbol{\beta}_4, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_3
+\]</span></p>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="4">
 <div class="quarto-figure quarto-figure-center">
