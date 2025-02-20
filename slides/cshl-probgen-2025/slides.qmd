@@ -253,6 +253,12 @@ $$
 
 ::: {.fragment}
 $$
+\boldsymbol{\upsilon}_e = \text{Branch$_e$ effect size} = \sum_p \text{Variants$_p$ on Branch$_e$}
+$$
+:::
+
+::: {.fragment}
+$$
 \mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
 \quad
 \Rightarrow
@@ -273,15 +279,8 @@ $$
 $$
 :::
 
-::: {.fragment}
-Recall that $\boldsymbol{\upsilon}_e$ of edge $e$ is the aggregate effect of potential mutations
-:::
 
-::: {.incremental}
-- $\boldsymbol{\upsilon}_e$ is random because mutations are random
-- $\boldsymbol{\upsilon}_e$'s distribution is determined according to the mutational process (e.g. Poisson)
-- We can *prove* that the entries of $\boldsymbol{\upsilon}$ are mutually independent
-:::
+
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
