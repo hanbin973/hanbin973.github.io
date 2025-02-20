@@ -283,11 +283,6 @@ Recall that $\boldsymbol{\upsilon}_e$ of edge $e$ is the aggregate effect of pot
 - We can *prove* that the entries of $\boldsymbol{\upsilon}$ are mutually independent
 :::
 
-::: {.fragment}
-Mysteries solved!
-:::
-
-
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
 ::: {.fragment}
