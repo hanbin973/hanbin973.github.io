@@ -373,6 +373,10 @@ $$
 $\textsf{tslmm}$ utilizes an efficient *genetic relatedness matrix - vector product* to fit the restricted maximum likelihood (REML) objective
 :::
 
+::: {.fragment}
+It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)
+:::
+
 ## The matrix-vector product algorithm
 
 ::: footer
