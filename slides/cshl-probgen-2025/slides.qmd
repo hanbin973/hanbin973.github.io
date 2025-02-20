@@ -29,10 +29,10 @@ format:
 
 - Many of the probabilistic features of the full ARG can be ignored
 
-- Then, the ARG is a collection of local trees $\mathcal{T} = (\mathbf{V}, \mathbf{E})$
+- Then, the ARG is a collection of local trees $\mathcal{T} = (\mathbf{V}, \mathbf{E})$ [@Wong2024]
 ![](imgs/local_trees.svg){fig-align="center" height=300}
 
-- Drift and recombination are fixed, so mutation is the sole driver of genetic variability
+- Drift and recombination are fixed, so mutation is the sole driver of genetic variability [@Ralph2019]
 $$
 \mathbf{y} \mid \mathcal{T} \; \sim \; ?
 $$
@@ -50,6 +50,8 @@ Linear mixed models are popular in quantitative genetics
 $$
 \mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
 $$
+where $\mathbf{Z}$ is the genotype matrix and $\mathbf{X}$ are covariates
+
 In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
 :::
 

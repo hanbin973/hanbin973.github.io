@@ -173,8 +173,8 @@ Hanbin Lee
 <ul>
 <li class="fragment"><p>We condition on the sample’s ancestral recombination graph (ARG)</p></li>
 <li class="fragment"><p>Many of the probabilistic features of the full ARG can be ignored</p></li>
-<li class="fragment"><p>Then, the ARG is a collection of local trees <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span> <img data-src="imgs/local_trees.svg" class="quarto-figure quarto-figure-center" height="300"></p></li>
-<li class="fragment"><p>Drift and recombination are fixed, so mutation is the sole driver of genetic variability <span class="math display">\[
+<li class="fragment"><p>Then, the ARG is a collection of local trees <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span> <span class="citation" data-cites="Wong2024">(<a href="#/references" role="doc-biblioref" onclick="">Wong et al. 2024</a>)</span> <img data-src="imgs/local_trees.svg" class="quarto-figure quarto-figure-center" height="300"></p></li>
+<li class="fragment"><p>Drift and recombination are fixed, so mutation is the sole driver of genetic variability <span class="citation" data-cites="Ralph2019">(<a href="#/references" role="doc-biblioref" onclick="">P. L. Ralph 2019</a>)</span> <span class="math display">\[
 \mathbf{y} \mid \mathcal{T} \; \sim \; ?
 \]</span></p></li>
 </ul>
@@ -188,7 +188,8 @@ Hanbin Lee
 <div class="fragment">
 <p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
 \mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
-\]</span> In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
+\]</span> where <span class="math inline">\(\mathbf{Z}\)</span> is the genotype matrix and <span class="math inline">\(\mathbf{X}\)</span> are covariates</p>
+<p>In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
 </div>
 <div class="fragment">
 <p>Some questions …</p>
@@ -225,7 +226,7 @@ Hanbin Lee
 </div>
 </div>
 <div class="footer">
-<p>Figure from <span class="citation" data-cites="Ralph2020">(<a href="#/references" role="doc-biblioref" onclick="">Ralph, Thornton, and Kelleher 2020</a>)</span></p>
+<p>Figure from <span class="citation" data-cites="Ralph2020">(<a href="#/references" role="doc-biblioref" onclick="">P. Ralph, Thornton, and Kelleher 2020</a>)</span></p>
 </div>
 </section></section>
 <section>
@@ -705,6 +706,9 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 <div id="ref-Browning2018" class="csl-entry" role="listitem">
 Browning, Sharon R., Brian L. Browning, Martha L. Daviglus, Ramon A. Durazo-Arvizu, Neil Schneiderman, Robert C. Kaplan, and Cathy C. Laurie. 2018. <span>“Ancestry-Specific Recent Effective Population Size in the Americas.”</span> Edited by Kirk E. Lohmueller. <em>PLOS Genetics</em> 14 (5): e1007385. <a href="https://doi.org/10.1371/journal.pgen.1007385">https://doi.org/10.1371/journal.pgen.1007385</a>.
 </div>
+<div id="ref-Ralph2019" class="csl-entry" role="listitem">
+Ralph, Peter L. 2019. <span>“An Empirical Approach to Demographic Inference with Genomic Data.”</span> <em>Theoretical Population Biology</em> 127 (June): 91–101. <a href="https://doi.org/10.1016/j.tpb.2019.03.005">https://doi.org/10.1016/j.tpb.2019.03.005</a>.
+</div>
 <div id="ref-Ralph2020" class="csl-entry" role="listitem">
 Ralph, Peter, Kevin Thornton, and Jerome Kelleher. 2020. <span>“Efficiently Summarizing Relationships in Large Samples: A General Duality Between Statistics of Genealogies and Genomes.”</span> <em>Genetics</em> 215 (3): 779–97. <a href="https://doi.org/10.1534/genetics.120.303253">https://doi.org/10.1534/genetics.120.303253</a>.
 </div>
@@ -713,6 +717,9 @@ Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lan
 </div>
 <div id="ref-Wakeley2008" class="csl-entry" role="listitem">
 Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts &amp; Company.
+</div>
+<div id="ref-Wong2024" class="csl-entry" role="listitem">
+Wong, Yan, Anastasia Ignatieva, Jere Koskela, Gregor Gorjanc, Anthony W Wohns, and Jerome Kelleher. 2024. <span>“A General and Efficient Representation of Ancestral Recombination Graphs.”</span> Edited by G Coop. <em>GENETICS</em> 228 (1). <a href="https://doi.org/10.1093/genetics/iyae100">https://doi.org/10.1093/genetics/iyae100</a>.
 </div>
 </div>
 </section></section>
