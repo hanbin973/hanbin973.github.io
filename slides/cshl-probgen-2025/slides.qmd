@@ -243,17 +243,17 @@ Branch effect is a random variable!
 
 ::: {.fragment}
 $$
-\text{Trait} = \sum_p \text{Variant effect size} 
+\text{Trait} = \sum_p \text{Variant$_p$ effect size} 
 \quad
 \Rightarrow 
 \quad
-\text{Trait} = \sum_e \text{Branch effect size}
+\text{Trait} = \sum_e \text{Branch$_e$ effect size}
 $$
 :::
 
 ::: {.fragment}
 $$
-\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
 \quad
 \Rightarrow
 \quad
