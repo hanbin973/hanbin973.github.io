@@ -159,7 +159,7 @@ We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 
 
 ::: {.fragment}
-We get different subsets of $\mathbf{G}$ everytime mutations realize
+We get different subsets of $\mathbf{G}$ every time mutations realize
 :::
 
 ::: {.fragment}
@@ -395,7 +395,7 @@ The algorithm needs to pass mutations to the correct samples
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
-A naive approach is to push the mutations down to the leaves everytime
+A naive approach is to push the mutations down to the leaves every time
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
