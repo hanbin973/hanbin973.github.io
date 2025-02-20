@@ -298,8 +298,8 @@ This is the ancestral recombination graph linear mixed model (ARG-LMM)
 
 ::: {.incremental}
 - The random effects are tied to a physical process - Mutations!
-- Their properties can be deduced from the mutational process
 - We start from more lower-level evolutionary statements to recover mixed model assumptions
+- Independent random effects, random effect weights, normality, $\ldots$
 :::
 
 ## How do we weigh branches of the ARG?
