@@ -110,12 +110,6 @@ $\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$,
 $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$
 :::
 
-::: {.incremental}
-- $N \ll P$, it's impossible to fit a high-dimensional regression without additional assumptions
-- Strong collinearity of some columns in $\mathbf{G}$, or tight linkage disequilibrium (LD)
-- A population genetic solution: group variants into branches
-:::
-
 ## How do we get traits? 
 
 :::: {.columns}
@@ -131,11 +125,19 @@ $\mathbf{y}_2 = \boldsymbol{\beta}_2$,
 $\mathbf{y}_3 = \boldsymbol{\beta}_2$
 :::
 
-::: {.fragment fragment-index=3}
+::: {.fragment .fade-in-then-out fragment-index=3}
 ![](imgs/tree-1.svg){fig-align="center" height=600}
 $\mathbf{y}_1=\boldsymbol{\beta}_4$, 
 $\mathbf{y}_2=\boldsymbol{\beta}_4$,
 $\mathbf{y}_3 = \boldsymbol{\beta}_3$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=4}
+![](imgs/tree-0.svg){fig-align="center" height=600}
+:::
+
+::: {.fragment fragment-index=5}
+![](imgs/tree-1.svg){fig-align="center" height=600}
 :::
 
 :::
@@ -149,14 +151,10 @@ $\mathbf{y}_3 = \boldsymbol{\beta}_3$
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
-::: {.fragment}
-Sites are different for different realizations
-:::
-
-::: {.fragment}
+::: {.fragment fragment-index=4}
 - $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
 :::
-::: {.fragment}
+::: {.fragment fragment-index=5}
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 ::: 
 
