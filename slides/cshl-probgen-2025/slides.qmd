@@ -302,10 +302,6 @@ This is the ancestral recombination graph linear mixed model (ARG-LMM)
 - We don't *assume* but *derive* the model
 :::
 
-::: {.fragment}
-Let's characterize $\mathbf{u}$ (the random effects) and $\mathbf{f}$ (the fixed effects)
-:::
-
 ## How do we weigh branches of the ARG?
 
 ::: {.r-stack}
