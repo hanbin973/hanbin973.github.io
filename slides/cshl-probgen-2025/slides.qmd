@@ -481,10 +481,10 @@ We can't define a single quantitity $h^2_g$ for everyone
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out  fragment-index=1}
+::: {.fragment .fade-in-then-out  fragment-index=2}
 ![](imgs/covariance-long-0.svg){fig-align="center" height=500}
 :::
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index=3}
 ![](imgs/covariance-long-1.svg){fig-align="center" height=500}
 :::
 
