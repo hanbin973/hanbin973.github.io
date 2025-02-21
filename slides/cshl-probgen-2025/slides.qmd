@@ -582,7 +582,7 @@ Super interesting technical details and proofs
 :::
 
 ::: {.fragment}
-Predicting polygenic scores with $\textsf{tslmm}$ of internal nodes
+Predicting polygenic scores of internal nodes
 :::
 
 
