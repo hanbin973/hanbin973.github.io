@@ -443,7 +443,6 @@ $$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
-All individuals have a different amount of genetic variance (except haploids)
 $$
 	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
 $$
