@@ -70,37 +70,6 @@ Some questions ...
 We answer these questions from an evolutionary perspective
 :::
 
-
-## The duality between sites and branches
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out .center}
-Evolutionary statistics are computed from observed mutations
-
-These are the *site* statistics based on *realized* mutations
-:::
-
-::: {.fragment .fade-in-then-out .center}
-Branch statistics treat mutations as random 
-
-They *average* over all possible realizations including the observed one given $\mathcal{T}$
-:::
-
-::: {.fragment .center}
-![](imgs/diversity.jpeg){fig-align="center" height=500}
-
-Can we adopt this *branch* thinking to complex traits?
-:::
-
-:::
-
-::: footer
-Figure from [@Ralph2020]
-:::
-
-
-
 # Setup and derivation
 
 
