@@ -111,6 +111,8 @@ $$
 $$
 $\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$, 
 $\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$
+
+$\mathbf{G}$ contains *all* positions the genome including genotyped ones
 :::
 
 ## How do we get traits? 
