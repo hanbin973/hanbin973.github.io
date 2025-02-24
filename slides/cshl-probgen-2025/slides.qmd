@@ -529,30 +529,16 @@ Some populations are inherently harder to predict!
 Demographic model from [@Browning2018]
 :::
 
-## *Missing* heritability?
-
-::: {.fragment}
-ARG-LMM variance component only reflects mutational variability
-:::
-::: {.incremental}
-- Pedigree-based heritability captures Mendelian segregation and mutation is ignored
-- ARG-LMM's generative model only has mutation and no segregation
-- Why compare quantities stemming from different random forces? [@Zhang2023]
-:::
-
-![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
-
-::: footer
-Figure from [Whalebone Magazine](https://whalebonemag.com/)
-:::
-
-
 
 ## Other bits and future directions {.center}
 
 
 ::: {.fragment}
 Pseudoreplication due to shared ancestry (preprint will be posted soon!)
+:::
+
+::: {.fragment}
+Missing heritability, Mutations vs Mendelian segregation
 :::
 
 ::: {.fragment}
@@ -781,6 +767,24 @@ We are all correlated!
 :::
 
 :::
+
+## *Missing* heritability?
+
+::: {.fragment}
+ARG-LMM variance component only reflects mutational variability
+:::
+::: {.incremental}
+- Pedigree-based heritability captures Mendelian segregation and mutation is ignored
+- ARG-LMM's generative model only has mutation and no segregation
+- Why compare quantities stemming from different random forces? [@Zhang2023]
+:::
+
+![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
+
+::: footer
+Figure from [Whalebone Magazine](https://whalebonemag.com/)
+:::
+
 
 
 
