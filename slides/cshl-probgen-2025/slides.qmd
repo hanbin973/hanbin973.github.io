@@ -515,11 +515,11 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-Some people are more genetically variable than others
+Some people are less genetically variable than others
 :::
 
 ::: {.fragment .fade-in-then-out}
-Some people are easier to predict genetically than others
+Some people are harder to predict genetically than others
 :::
 
 ::: {.fragment .fade-in-then-out}
