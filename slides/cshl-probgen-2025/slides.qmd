@@ -24,22 +24,36 @@ format:
 
 # Overview
 
-::: {.incremental}
-- We condition on the sample's ancestral recombination graph (ARG) 
+::: {.r-stack}
 
-- Many of the probabilistic features of the full ARG can be ignored
+::: {.fragment .fade-in-then-out}
 
-- Then, the ARG is a collection of local trees $\mathcal{T} = (\mathbf{V}, \mathbf{E})$ [@Wong2024]
-![](imgs/local_trees.svg){fig-align="center" height=300}
+The ancestral recombination graph (ARG) describes the evolutionary relationship between
 
-- Drift and recombination are fixed, so mutation is the sole driver of genetic variability [@Ralph2019]
+genetic materials in the presence of recombination and drift backwards in time
+
+![[@Wong2024]](imgs/full_arg.jpg)
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+The full probabilistic process is complicated 
+
+In this work, we condition on the realized ARG, resulting a sequence of local trees
+
+![[tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=300}
+
+:::
+
+::: {.fragment}
+What is the conditional distribution of a trait given the trees?
+
 $$
-\mathbf{y} \mid \mathcal{T} \; \sim \; ?
+\mathrm{Trait} \mid mathrm{Local trees} \quad \sim \quad ?
 $$
 :::
 
-::: footer
-Figure from [tskit docs](https://tskit.dev/tutorials/what_is.html)
 :::
 
 
@@ -61,7 +75,7 @@ Some questions ...
 ::: {.incremental}
 - What's the source of $\mathbf{u}$'s randomness?
 - Why are $\mathbf{u}$'s entries independent?
-- How should we weigh the entries?
+- How should we weigh the entries? e.g. $\mathbf{u}_j \sim N\left(0,\frac{h^2}/M\right)
 :::
 
 :::

@@ -169,18 +169,33 @@ Hanbin Lee
 <section>
 <section id="overview" class="title-slide slide level1 center">
 <h1>Overview</h1>
-<div>
-<ul>
-<li class="fragment"><p>We condition on the sample’s ancestral recombination graph (ARG)</p></li>
-<li class="fragment"><p>Many of the probabilistic features of the full ARG can be ignored</p></li>
-<li class="fragment"><p>Then, the ARG is a collection of local trees <span class="math inline">\(\mathcal{T} = (\mathbf{V}, \mathbf{E})\)</span> <span class="citation" data-cites="Wong2024">(<a href="#/references" role="doc-biblioref" onclick="">Wong et al. 2024</a>)</span> <img data-src="imgs/local_trees.svg" class="quarto-figure quarto-figure-center" height="300"></p></li>
-<li class="fragment"><p>Drift and recombination are fixed, so mutation is the sole driver of genetic variability <span class="citation" data-cites="Ralph2019">(<a href="#/references" role="doc-biblioref" onclick="">Ralph 2019</a>)</span> <span class="math display">\[
-\mathbf{y} \mid \mathcal{T} \; \sim \; ?
-\]</span></p></li>
-</ul>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>The ancestral recombination graph (ARG) describes the evolutionary relationship between</p>
+<p>genetic materials in the presence of recombination and drift backwards in time</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/full_arg.jpg"></p>
+<figcaption><span class="citation" data-cites="Wong2024">(<a href="#/references" role="doc-biblioref" onclick="">Wong et al. 2024</a>)</span></figcaption>
+</figure>
 </div>
-<div class="footer">
-<p>Figure from <a href="https://tskit.dev/tutorials/what_is.html">tskit docs</a></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>The full probabilistic process is complicated</p>
+<p>In this work, we condition on the realized ARG, resulting a sequence of local trees</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/local_trees.svg" height="300"></p>
+<figcaption><a href="https://tskit.dev/tutorials/what_is.html">tskit docs</a></figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p>What is the conditional distribution of a trait given the trees?</p>
+<p><span class="math display">\[
+\mathrm{Trait} \mid mathrm{Local trees} \quad \sim \quad ?
+\]</span></p>
+</div>
 </div>
 </section>
 <section id="linear-mixed-model" class="slide level2">
@@ -197,7 +212,7 @@ Hanbin Lee
 <ul>
 <li class="fragment">What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness?</li>
 <li class="fragment">Why are <span class="math inline">\(\mathbf{u}\)</span>’s entries independent?</li>
-<li class="fragment">How should we weigh the entries?</li>
+<li class="fragment">How should we weigh the entries? e.g.&nbsp;$_j N(0,/M)</li>
 </ul>
 </div>
 </div>
@@ -659,9 +674,6 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Browning2018" class="csl-entry" role="listitem">
 Browning, Sharon R., Brian L. Browning, Martha L. Daviglus, Ramon A. Durazo-Arvizu, Neil Schneiderman, Robert C. Kaplan, and Cathy C. Laurie. 2018. <span>“Ancestry-Specific Recent Effective Population Size in the Americas.”</span> Edited by Kirk E. Lohmueller. <em>PLOS Genetics</em> 14 (5): e1007385. <a href="https://doi.org/10.1371/journal.pgen.1007385">https://doi.org/10.1371/journal.pgen.1007385</a>.
-</div>
-<div id="ref-Ralph2019" class="csl-entry" role="listitem">
-Ralph, Peter L. 2019. <span>“An Empirical Approach to Demographic Inference with Genomic Data.”</span> <em>Theoretical Population Biology</em> 127 (June): 91–101. <a href="https://doi.org/10.1016/j.tpb.2019.03.005">https://doi.org/10.1016/j.tpb.2019.03.005</a>.
 </div>
 <div id="ref-SalehiNowbandegani2023" class="csl-entry" role="listitem">
 Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lander, Alex Bloemendal, Benjamin M. Neale, and Luke J. O’Connor. 2023. <span>“Extremely Sparse Models of Linkage Disequilibrium in Ancestrally Diverse Association Studies.”</span> <em>Nature Genetics</em> 55 (9): 1494–1502. <a href="https://doi.org/10.1038/s41588-023-01487-8">https://doi.org/10.1038/s41588-023-01487-8</a>.
