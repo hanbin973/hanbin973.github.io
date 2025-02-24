@@ -257,7 +257,7 @@ $$
 \quad
 \Rightarrow
 \quad
-\text{LMMs} \; \subset \; \text{ARG-LMM}
+\text{LMMs} \; \subset \; \text{New model}
 $$
 :::
 
@@ -277,7 +277,7 @@ $$
 :::
 
 ::: {.fragment}
-This is the ancestral recombination graph linear mixed model (ARG-LMM)
+This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM)
 :::
 
 ::: {.incremental}
