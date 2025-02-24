@@ -32,7 +32,7 @@ The ancestral recombination graph (ARG) describes the evolutionary relationship 
 
 genetic materials in the presence of recombination and drift backwards in time
 
-![[@Wong2024]](imgs/full_arg.jpg)
+![From [@Wong2024]](imgs/full_arg.jpeg)
 
 :::
 
@@ -42,7 +42,7 @@ The full probabilistic process is complicated
 
 In this work, we condition on the realized ARG, resulting a sequence of local trees
 
-![[tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=300}
+![From [tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=300}
 
 :::
 
@@ -50,7 +50,7 @@ In this work, we condition on the realized ARG, resulting a sequence of local tr
 What is the conditional distribution of a trait given the trees?
 
 $$
-\mathrm{Trait} \mid mathrm{Local trees} \quad \sim \quad ?
+\text{Trait} \mid \text{Local trees} \quad \sim \quad ?
 $$
 :::
 
@@ -75,7 +75,7 @@ Some questions ...
 ::: {.incremental}
 - What's the source of $\mathbf{u}$'s randomness?
 - Why are $\mathbf{u}$'s entries independent?
-- How should we weigh the entries? e.g. $\mathbf{u}_j \sim N\left(0,\frac{h^2}/M\right)
+- How should we weigh the entries? e.g. $\mathbf{u}_j \sim N\left(0,\frac{h^2}{M}\right)$
 :::
 
 :::
