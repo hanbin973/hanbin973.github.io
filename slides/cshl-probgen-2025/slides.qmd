@@ -303,46 +303,6 @@ $$
 $$
 :::
 
-## Genetic value covariance
-
-::: {.r-stack}
-
-::: {.fragment fragment-index=1}
-![](imgs/covariance-0.svg){height=600 fig-align="center"}
-:::
-
-::: {.fragment fragment-index=4}
-![](imgs/covariance-1.svg){height=600 fig-align="center"}
-:::
-
-:::
-
-::: {.r-stack}
-
-::: {.fragment fragment-index=2 .fade-in-then-out}
-$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
-::: 
-
-::: {.fragment fragment-index=3 .fade-in-then-out}
-$$
-\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
-\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
-\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
-\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
-$$
-:::
-
-::: {.fragment fragment-index=4}
-$$
-\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
-\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
-\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
-\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
-$$
-:::
-
-:::
-
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
@@ -502,6 +462,48 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 
 
 ::::
+
+## Genetic value covariance
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=1}
+![](imgs/covariance-0.svg){height=600 fig-align="center"}
+:::
+
+::: {.fragment fragment-index=4}
+![](imgs/covariance-1.svg){height=600 fig-align="center"}
+:::
+
+:::
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=2 .fade-in-then-out}
+$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
+::: 
+
+::: {.fragment fragment-index=3 .fade-in-then-out}
+$$
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
+\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
+\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
+\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
+$$
+:::
+
+::: {.fragment fragment-index=4}
+$$
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
+\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
+$$
+:::
+
+:::
+
+
 
 ## Polygenic prediction
 
