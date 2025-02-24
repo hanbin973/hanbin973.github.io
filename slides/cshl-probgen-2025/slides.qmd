@@ -49,6 +49,8 @@ In this work, we condition on the realized ARG, resulting a sequence of local tr
 ::: {.fragment}
 What is the conditional distribution of a trait given the trees?
 
+Since the genealogy is fixed, the only randomness that remains is mutation
+
 $$
 \text{Trait} \mid \text{Local trees} \quad \sim \quad ?
 $$
@@ -64,7 +66,7 @@ Linear mixed models are popular in quantitative genetics
 $$
 \mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
 $$
-where $\mathbf{Z}$ is the genotype matrix and $\mathbf{X}$ are covariates
+where $\mathbf{Z}$ includes genotyped variants and $\mathbf{X}$ is the covariate matrix
 
 In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
 :::
@@ -452,13 +454,13 @@ This applies to all individuals $n \in \{1,\ldots,N\}$
 ::: {.fragment .fade-in-then-out fragment-index=2}
 However, all individuals have a different amount of genetic variance (except haploids)
 $$
-	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\mathrm{Cov}(h_{n1},h_{n2})
+	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
 $$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
 $$
-	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(h_{n1}+h_{n2}) = \mathrm{Var}(h_{n1}) + \mathrm{Var}(h_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(h_{n1},h_{n2})}_{\text{Self-relatedness}}}
+	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
 $$
 :::
 
