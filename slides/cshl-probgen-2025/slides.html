@@ -507,6 +507,46 @@ Hanbin Lee
 \text{What does ARG-LMM tell us about complex trait analysis?}
 \]</span></p>
 </section>
+<section id="genetic-value-covariance" class="slide level2">
+<h2>Genetic value covariance</h2>
+<div class="r-stack">
+<div class="fragment" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/covariance-0.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/covariance-1.svg" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><span class="math inline">\(\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p><span class="math display">\[
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
+\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
+\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
+\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="math display">\[
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
+\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
+\]</span></p>
+</div>
+</div>
+</section>
 <section id="heritability-is-ill-defined-in-arg-lmm" class="slide level2">
 <h2>Heritability is <em>ill</em>-defined in ARG-LMM</h2>
 <div class="r-stack">
@@ -565,46 +605,6 @@ h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 </div>
 </div>
 </div></div>
-</section>
-<section id="genetic-value-covariance" class="slide level2">
-<h2>Genetic value covariance</h2>
-<div class="r-stack">
-<div class="fragment" data-fragment-index="1">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/covariance-0.svg" class="quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-</div>
-<div class="fragment" data-fragment-index="4">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/covariance-1.svg" class="quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="2">
-<p><span class="math inline">\(\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}\)</span></p>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="3">
-<p><span class="math display">\[
-\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
-\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
-\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
-\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
-\]</span></p>
-</div>
-<div class="fragment" data-fragment-index="4">
-<p><span class="math display">\[
-\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
-\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
-\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
-\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
-\]</span></p>
-</div>
-</div>
 </section>
 <section id="polygenic-prediction" class="slide level2">
 <h2>Polygenic prediction</h2>
