@@ -30,7 +30,7 @@ format:
 
 The ancestral recombination graph (ARG) describes the evolutionary relationship between
 
-genetic materials in the presence of recombination and drift backwards in time
+genetic materials in the presence of recombination and drift
 
 ![From [@Wong2024]](imgs/full_arg.jpeg)
 
@@ -42,7 +42,7 @@ The full probabilistic process is complicated
 
 In this work, we condition on the realized ARG, resulting a sequence of local trees
 
-![From [tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=300}
+![From [tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=500}
 
 :::
 
