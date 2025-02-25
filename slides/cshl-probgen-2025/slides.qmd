@@ -64,7 +64,7 @@ $$
 ::: {.fragment}
 Linear mixed models are popular in quantitative genetics
 $$
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+\mathbf{y} = \underbrace{\mathbf{Z}\mathbf{u}}_{\text{random effects}} + \underbrace{\mathbf{X}\mathbf{b}}_{\text{fixed effects}} + \boldsymbol{\varepsilon}
 $$
 where $\mathbf{Z}$ includes genotyped variants and $\mathbf{X}$ is the covariate matrix
 

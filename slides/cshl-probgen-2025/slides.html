@@ -203,7 +203,7 @@ Hanbin Lee
 <h2>Linear mixed model</h2>
 <div class="fragment">
 <p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
-\mathbf{y} = \mathbf{Z}\mathbf{u} + \mathbf{X}\mathbf{b} + \boldsymbol{\varepsilon}
+\mathbf{y} = \underbrace{\mathbf{Z}\mathbf{u}}_{\text{random effects}} + \underbrace{\mathbf{X}\mathbf{b}}_{\text{fixed effects}} + \boldsymbol{\varepsilon}
 \]</span> where <span class="math inline">\(\mathbf{Z}\)</span> includes genotyped variants and <span class="math inline">\(\mathbf{X}\)</span> is the covariate matrix</p>
 <p>In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
 </div>
