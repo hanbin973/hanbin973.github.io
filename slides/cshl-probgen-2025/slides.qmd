@@ -249,7 +249,7 @@ $$
 \quad
 \mathbf{y} = \sum_e \mathbf{Z}_e\boldsymbol{\upsilon}_e + \boldsymbol{\varepsilon} 
 $$
-where $\mathbf{Z}$ is the individual-edge (=branch) design matrix and $\boldsymbol{\upsilon}$ is the branch effects
+where $\mathbf{Z}$ is the individual-edge (=branch) design matrix: $\mathbf{Z}_{ne}=$ the number of haplotypes of $n$ that inherit $e$
 :::
 
 ::: {.fragment}
