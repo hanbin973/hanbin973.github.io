@@ -109,6 +109,16 @@ $\mathbf{G}$ contains *all* positions the genome including genotyped ones
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/tree-branch.svg){fig-align="center" height=600}
+$$
+\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
+\mathbf{y}_2 = \boldsymbol{\beta}_2, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_2
+$$
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index=2}
 ![](imgs/tree-0.svg){fig-align="center" height=600}
 $$
 \mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
