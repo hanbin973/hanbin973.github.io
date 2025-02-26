@@ -354,6 +354,10 @@ A naive approach is to push the mutations down to the leaves every time
 Only send the mutations down when edge's subtopology is altered
 :::
 
+::: {.fragment fragment-index=4}
+Fitting REML $\mathcal{O}(n^3) \quad \rightarrow \quad \mathcal{O}(n)$
+:::
+
 :::
 
 
