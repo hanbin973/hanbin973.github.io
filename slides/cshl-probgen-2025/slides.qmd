@@ -441,7 +441,6 @@ $$
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
-Heritability is 
 $$
 \small h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 =\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
@@ -475,10 +474,10 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 
 ::: {.r-stack}
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![](imgs/covariance-short-0.svg){fig-align="center" height=600}
+![](imgs/covariance-short-0.svg){fig-align="center" height=550}
 :::
 ::: {.fragment fragment-index=3}
-![](imgs/covariance-short-1.svg){fig-align="center"height=600}
+![](imgs/covariance-short-1.svg){fig-align="center"height=550}
 :::
 :::
 
@@ -490,10 +489,10 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out  fragment-index=2}
-![](imgs/covariance-long-0.svg){fig-align="center" height=600}
+![](imgs/covariance-long-0.svg){fig-align="center" height=550}
 :::
 ::: {.fragment fragment-index=3}
-![](imgs/covariance-long-1.svg){fig-align="center" height=600}
+![](imgs/covariance-long-1.svg){fig-align="center" height=550}
 :::
 
 :::
