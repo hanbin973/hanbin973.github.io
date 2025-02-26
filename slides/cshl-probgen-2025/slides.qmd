@@ -568,6 +568,10 @@ Super interesting technical details and proofs
 Predicting polygenic scores of internal nodes
 :::
 
+::: {.fragment}
+All-in-one genome-wide association studies and fine-mapping
+:::
+
 
 
 
