@@ -442,7 +442,7 @@ $$
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
 $$
-\small h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+\small \text{Heritability: }h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 =\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
 $$
 This applies to all individuals $\small n \in \{1,\ldots,N\}$
