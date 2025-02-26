@@ -334,7 +334,7 @@ It can estimate variance components and compute polygenic scores by best linear 
 ![](imgs/two-trees-naive.svg){fig-align="center" height=600}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index=3}
+::: {.fragment fragment-index=3}
 ![](imgs/two-trees-efficient.svg){fig-align="center" height=600}
 :::
 
@@ -355,7 +355,7 @@ Only send the mutations down when edge's subtopology is altered
 :::
 
 ::: {.fragment fragment-index=4}
-Fitting REML $\mathcal{O}(n^3) \quad \rightarrow \quad \mathcal{O}(n)$
+Fitting REML $\mathcal{O}(n^3) \; \Fightarrow \; \mathcal{O}(n)$
 :::
 
 :::
