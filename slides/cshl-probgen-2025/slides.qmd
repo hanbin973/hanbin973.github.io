@@ -511,7 +511,7 @@ Some people are harder to predict genetically than others
 :::
 
 ::: {.fragment .fade-in-then-out}
-Some populations are inherently harder to predict!
+Some populations are <span style="color:red">inherently harder</span> to predict!
 :::
 
 :::
