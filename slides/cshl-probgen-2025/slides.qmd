@@ -355,7 +355,7 @@ Only send the mutations down when edge's subtopology is altered
 :::
 
 ::: {.fragment fragment-index=4}
-Fitting REML $\mathcal{O}(n^3) \; \Fightarrow \; \mathcal{O}(n)$
+Fitting REML $\mathcal{O}(n^3) \; \Rightarrow \; \mathcal{O}(n)$
 :::
 
 :::
