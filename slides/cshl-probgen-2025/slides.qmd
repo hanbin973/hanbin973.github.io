@@ -296,17 +296,17 @@ This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mat
 ## How do we weigh branches of the ARG?
 
 ::: {.r-stack}
-::: {.fragment}
-$
+::: {.fragment .fade-in-then-out}
+$$
 \small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
-$
-![](imgs/edge_weight-0.svg){height=600 fig-align="center"}
+$$
+![](imgs/edge_weight-0.svg){height=400 fig-align="center"}
 :::
 ::: {.fragment}
-$
+$$
 \small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
-$
-![](imgs/edge_weight-1.svg){height=600 fig-align="center"}
+$$
+![](imgs/edge_weight-1.svg){height=400 fig-align="center"}
 :::
 :::
 
