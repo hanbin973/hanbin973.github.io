@@ -374,7 +374,7 @@ Modified figures by Nathaniel Pope (Oregon)
 
 ## Runtime for variance component estimation
 
-![](imgs/runtime.svg){.fragment fig-align="center" height="600"}
+![](imgs/runtime.svg){.fragment fig-align="center" height=500}
 
 ::: {.fragment}
 The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
