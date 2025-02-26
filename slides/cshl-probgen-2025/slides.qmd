@@ -507,7 +507,7 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 
 
 
-![](imgs/geneticvariance.svg){.fragment fig-align="center" height="600"}
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
 
 ::: {.r-stack}
 
