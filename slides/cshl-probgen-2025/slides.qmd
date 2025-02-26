@@ -392,7 +392,7 @@ We measured the accuracy of polygenic scores computed from $\textsf{tslmm}$
 :::
 
 ::: {.fragment .fade-in-then-out}
-Polygenic scores were computed from variance component estimates obtained from a non-overlapping sample
+Training and testing on two non-overlapping groups embedded in the same tree sequence
 :::
 
 ::: {.fragment}
