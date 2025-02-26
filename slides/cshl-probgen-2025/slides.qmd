@@ -443,22 +443,22 @@ $$
 ::: {.fragment .fade-in-then-out fragment-index=1}
 Heritability is 
 $$
-h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+\small h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
 =\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
 $$
-This applies to all individuals $n \in \{1,\ldots,N\}$
+This applies to all individuals $\small n \in \{1,\ldots,N\}$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
 However, all individuals have a different amount of genetic variance (except haploids)
 $$
-	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
 $$
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
 $$
-	\mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
 $$
 :::
 
