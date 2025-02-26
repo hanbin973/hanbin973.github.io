@@ -364,34 +364,16 @@ Modified figures by Nathaniel Pope (Oregon)
 
 ## Runtime for variance component estimation
 
-![](imgs/runtime.svg){.fragment fig-align="center" height="700"}
+![](imgs/runtime.svg){.fragment fig-align="center" height="600"}
 
 ::: {.fragment}
-The runtime scales linearly with respect to the number of individuals
-:::
-
-## Estimation quality of variance components
-
-:::{.r-stack}
-
-:::{.fragment .fade-in-then-out}
-**Simulated trees**
-
-![](imgs/estimation_true.svg){height="700"}
-:::
-
-:::{.fragment}
-**Inferred (tsinfer+tsdate) trees**
-
-![](imgs/estimation_infer.svg){height="700"}
-:::
-
+The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
 :::
 
 
 ## Best linear unbiased prediction (BLUP)
 
-![](imgs/prediction.svg){.fragment fig-align="center" height="700"}
+![](imgs/prediction.svg){.fragment fig-align="center" height="600"}
 
 ::: {.fragment}
 True trees are better, but inferred trees are not too behind!
@@ -452,6 +434,7 @@ $$
 Heritability is 
 $$
 h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
 $$
 This applies to all individuals $n \in \{1,\ldots,N\}$
 :::
@@ -791,6 +774,24 @@ ARG-LMM variance component only reflects mutational variability
 
 ::: footer
 Figure from [Whalebone Magazine](https://whalebonemag.com/)
+:::
+
+## Estimation quality of variance components
+
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out}
+**Simulated trees**
+
+![](imgs/estimation_true.svg){height="700"}
+:::
+
+:::{.fragment}
+**Inferred (tsinfer+tsdate) trees**
+
+![](imgs/estimation_infer.svg){height="700"}
+:::
+
 :::
 
 

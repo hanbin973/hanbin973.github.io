@@ -477,31 +477,18 @@ Hanbin Lee
 <h2>Runtime for variance component estimation</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="imgs/runtime.svg" class="fragment quarto-figure quarto-figure-center" height="700"></p>
+<p><img data-src="imgs/runtime.svg" class="fragment quarto-figure quarto-figure-center" height="600"></p>
 </figure>
 </div>
 <div class="fragment">
-<p>The runtime scales linearly with respect to the number of individuals</p>
-</div>
-</section>
-<section id="estimation-quality-of-variance-components" class="slide level2">
-<h2>Estimation quality of variance components</h2>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
-<p><strong>Simulated trees</strong></p>
-<p><img data-src="imgs/estimation_true.svg" height="700"></p>
-</div>
-<div class="fragment">
-<p><strong>Inferred (tsinfer+tsdate) trees</strong></p>
-<p><img data-src="imgs/estimation_infer.svg" height="700"></p>
-</div>
+<p>The runtime scales linearly with respect to the number of individuals (genome length = <span class="math inline">\(10^8\)</span>)</p>
 </div>
 </section>
 <section id="best-linear-unbiased-prediction-blup" class="slide level2">
 <h2>Best linear unbiased prediction (BLUP)</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="imgs/prediction.svg" class="fragment quarto-figure quarto-figure-center" height="700"></p>
+<p><img data-src="imgs/prediction.svg" class="fragment quarto-figure quarto-figure-center" height="600"></p>
 </figure>
 </div>
 <div class="fragment">
@@ -561,6 +548,7 @@ Hanbin Lee
 <div class="fragment fade-in-then-out" data-fragment-index="1">
 <p>Heritability is <span class="math display">\[
 h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
 \]</span> This applies to all individuals <span class="math inline">\(n \in \{1,\ldots,N\}\)</span></p>
 </div>
 <div class="fragment fade-in-then-out" data-fragment-index="2">
@@ -882,6 +870,19 @@ Zhang, Brian C., Arjun Biddanda, Árni Freyr Gunnarsson, Fergus Cooper, and Pier
 </div>
 <div class="footer">
 <p>Figure from <a href="https://whalebonemag.com/">Whalebone Magazine</a></p>
+</div>
+</section>
+<section id="estimation-quality-of-variance-components" class="slide level2">
+<h2>Estimation quality of variance components</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p><strong>Simulated trees</strong></p>
+<p><img data-src="imgs/estimation_true.svg" height="700"></p>
+</div>
+<div class="fragment">
+<p><strong>Inferred (tsinfer+tsdate) trees</strong></p>
+<p><img data-src="imgs/estimation_infer.svg" height="700"></p>
+</div>
 </div>
 
 </section></section>
