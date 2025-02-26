@@ -475,10 +475,10 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 
 ::: {.r-stack}
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![](imgs/covariance-short-0.svg){fig-align="center" height=500}
+![](imgs/covariance-short-0.svg){fig-align="center" height=600}
 :::
 ::: {.fragment fragment-index=3}
-![](imgs/covariance-short-1.svg){fig-align="center"height=500}
+![](imgs/covariance-short-1.svg){fig-align="center"height=600}
 :::
 :::
 
@@ -490,10 +490,10 @@ We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\ma
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out  fragment-index=2}
-![](imgs/covariance-long-0.svg){fig-align="center" height=500}
+![](imgs/covariance-long-0.svg){fig-align="center" height=600}
 :::
 ::: {.fragment fragment-index=3}
-![](imgs/covariance-long-1.svg){fig-align="center" height=500}
+![](imgs/covariance-long-1.svg){fig-align="center" height=600}
 :::
 
 :::
