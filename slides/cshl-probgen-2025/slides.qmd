@@ -272,7 +272,7 @@ $$
 :::
 
 ::: {.fragment}
-This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) [@Fan2022, @Zhang2023]
+This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) ([@Fan2022],[@Zhang2023])
 :::
 
 ::: {.incremental}
