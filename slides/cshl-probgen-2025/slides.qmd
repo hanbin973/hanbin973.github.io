@@ -159,15 +159,6 @@ We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 - $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
 ::: 
 
-
-::: {.fragment}
-We get different subsets of $\mathbf{G}$ every time mutations realize
-:::
-
-::: {.fragment}
-What happens if we consider branches first?
-:::
-
 :::
 
 
