@@ -119,7 +119,7 @@ $\mathbf{G}$ contains *all* positions the genome including genotyped ones
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
-![](imgs/tree-branch.svg){.absolute top=200 left=0 height=600}
+![A local tree spanning over the genome](imgs/tree-branch.svg){.absolute top=200 left=0 height=600}
 :::
 
 
