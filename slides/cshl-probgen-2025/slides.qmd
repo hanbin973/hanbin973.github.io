@@ -32,7 +32,17 @@ The ancestral recombination graph (ARG) describes the evolutionary relationship 
 
 genetic materials in the presence of recombination and drift
 
-![From [@Wong2024]](imgs/full_arg.svg){height=600}
+![From [@Wong2024]](imgs/full_arg-0.svg){height=600}
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+The ancestral recombination graph (ARG) describes the evolutionary relationship between
+
+genetic materials in the presence of recombination and drift
+
+![From [@Wong2024]](imgs/full_arg-1.svg){height=600}
 
 :::
 
@@ -257,19 +267,6 @@ $$
 where $\mathbf{Z}_{ne}=$ the number of haplotypes of $n$ that inherit $e$
 :::
 
-::: {.fragment}
-
-$$
-\mathbf{G}_{\mathrm{genotyped}} \; \subset \; \mathbf{Z}
-\quad
-\Rightarrow
-\quad
-\text{LMMs} \; \subset \; \text{New model}
-$$
-:::
-
-
-
 
 # Ancestral recombination graph linear mixed model (ARG-LMM)
 
@@ -284,7 +281,7 @@ $$
 :::
 
 ::: {.fragment}
-This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM)
+This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) [@Fan2022, @Zhang2023]
 :::
 
 ::: {.incremental}
