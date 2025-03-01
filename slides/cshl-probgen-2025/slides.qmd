@@ -440,7 +440,7 @@ Some people are less genetically variable than others
 Some people are harder to predict genetically than others
 :::
 
-::: {.fragment .fade-in-then-out}
+::: {.fragment}
 Some populations are <span style="color:red">inherently harder</span> to predict!
 :::
 
