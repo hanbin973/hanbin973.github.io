@@ -93,7 +93,7 @@ Some questions ...
 :::
 
 ::: {.fragment}
-We answer these questions from an evolutionary perspective
+We answer these questions from a genealogical perspective
 :::
 
 # Setup and derivation
@@ -151,6 +151,8 @@ $$
 ::: {.column width="50%" .center}
 
 ::: {.fragment fragment-index=1}
+Consider a local tree that spans over a region
+
 We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 :::
 
