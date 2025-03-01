@@ -519,7 +519,7 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out}
-![](imgs/covariance-1.svg){.absolute top=50 right=20 height=600}
+![](imgs/covariance-1.svg){.absolute top=50 right=20 height=550}
 :::
 
 ::: {.fragment .fade-in-then-out}
