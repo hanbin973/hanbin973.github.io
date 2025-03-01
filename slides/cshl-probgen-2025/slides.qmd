@@ -514,11 +514,13 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 
 ## Polygenic prediction
 
-![](imgs/covariance-1.svg){.absolute top=0 right=0 height=200}
-
 ![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
 
 ::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+![](imgs/covariance-1.svg){.absolute top=50 right=20 height=600}
+:::
 
 ::: {.fragment .fade-in-then-out}
 Some people are less genetically variable than others
