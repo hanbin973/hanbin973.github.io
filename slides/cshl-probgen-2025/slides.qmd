@@ -309,96 +309,6 @@ $$
 :::
 
 
-# $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
-
-::: {.fragment}
-$\textsf{tslmm}$ utilizes an efficient *genetic relatedness matrix - vector product* to fit the restricted maximum likelihood (REML) objective
-:::
-
-::: {.fragment}
-It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)
-:::
-
-## The matrix-vector product algorithm
-
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out fragment-index=1}
-![](imgs/two-trees-empty.svg){fig-align="center" height=550}
-:::
-
-::: {.fragment .fade-in-then-out fragment-index=2}
-![](imgs/two-trees-naive.svg){fig-align="center" height=550}
-:::
-
-::: {.fragment fragment-index=3}
-![](imgs/two-trees-efficient.svg){fig-align="center" height=550}
-:::
-
-::: 
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out fragment-index=1}
-The algorithm needs to pass mutations to the correct samples
-:::
-
-::: {.fragment .fade-in-then-out fragment-index=2}
-A naive approach is to push the mutations down to the leaves every time
-:::
-
-::: {.fragment .fade-in-then-out fragment-index=3}
-Only send the mutations down when edge's subtopology is altered
-:::
-
-::: {.fragment fragment-index=4}
-Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)$
-
-$n_s$: number of samples, $n_t$: number of trees
-:::
-
-:::
-
-
-::: footer
-Modified figures by Nathaniel Pope (Oregon)
-:::
-
-
-## Runtime for variance component estimation
-
-![](imgs/runtime.svg){.fragment fig-align="center" height=500}
-
-::: {.fragment}
-The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
-:::
-
-
-## Best linear unbiased prediction (BLUP)
-
-![](imgs/prediction.svg){.fragment fig-align="center" height="600"}
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out}
-We measured the accuracy of polygenic scores computed from $\textsf{tslmm}$
-:::
-
-::: {.fragment .fade-in-then-out}
-Training and testing on two non-overlapping groups embedded in the same tree sequence
-:::
-
-::: {.fragment}
-True trees are better, but inferred trees are not too behind!
-:::
-
-:::
-
-
-
-
-
 # Complex traits through the lens of ARG-LMM
 
 $$
@@ -567,6 +477,96 @@ Predicting polygenic scores of internal nodes
 ::: {.fragment}
 All-in-one genome-wide association studies and fine-mapping
 :::
+
+
+# $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
+
+::: {.fragment}
+$\textsf{tslmm}$ utilizes an efficient *genetic relatedness matrix - vector product* to fit the restricted maximum likelihood (REML) objective
+:::
+
+::: {.fragment}
+It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)
+:::
+
+## The matrix-vector product algorithm
+
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+![](imgs/two-trees-empty.svg){fig-align="center" height=550}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/two-trees-naive.svg){fig-align="center" height=550}
+:::
+
+::: {.fragment fragment-index=3}
+![](imgs/two-trees-efficient.svg){fig-align="center" height=550}
+:::
+
+::: 
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+The algorithm needs to pass mutations to the correct samples
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+A naive approach is to push the mutations down to the leaves every time
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3}
+Only send the mutations down when edge's subtopology is altered
+:::
+
+::: {.fragment fragment-index=4}
+Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)$
+
+$n_s$: number of samples, $n_t$: number of trees
+:::
+
+:::
+
+
+::: footer
+Modified figures by Nathaniel Pope (Oregon)
+:::
+
+
+## Runtime for variance component estimation
+
+![](imgs/runtime.svg){.fragment fig-align="center" height=500}
+
+::: {.fragment}
+The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
+:::
+
+
+## Best linear unbiased prediction (BLUP)
+
+![](imgs/prediction.svg){.fragment fig-align="center" height="600"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+We measured the accuracy of polygenic scores computed from $\textsf{tslmm}$
+:::
+
+::: {.fragment .fade-in-then-out}
+Training and testing on two non-overlapping groups embedded in the same tree sequence
+:::
+
+::: {.fragment}
+True trees are better, but inferred trees are not too behind!
+:::
+
+:::
+
+
+
 
 
 

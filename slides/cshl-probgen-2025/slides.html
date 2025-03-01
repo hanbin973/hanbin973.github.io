@@ -413,90 +413,6 @@ Hanbin Lee
 </div>
 </section></section>
 <section>
-<section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
-<h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
-<div class="fragment">
-<p><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient <em>genetic relatedness matrix - vector product</em> to fit the restricted maximum likelihood (REML) objective</p>
-</div>
-<div class="fragment">
-<p>It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)</p>
-</div>
-</section>
-<section id="the-matrix-vector-product-algorithm" class="slide level2">
-<h2>The matrix-vector product algorithm</h2>
-<div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="1">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/two-trees-empty.svg" class="quarto-figure quarto-figure-center" height="550"></p>
-</figure>
-</div>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="2">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/two-trees-naive.svg" class="quarto-figure quarto-figure-center" height="550"></p>
-</figure>
-</div>
-</div>
-<div class="fragment" data-fragment-index="3">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/two-trees-efficient.svg" class="quarto-figure quarto-figure-center" height="550"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out" data-fragment-index="1">
-<p>The algorithm needs to pass mutations to the correct samples</p>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="2">
-<p>A naive approach is to push the mutations down to the leaves every time</p>
-</div>
-<div class="fragment fade-in-then-out" data-fragment-index="3">
-<p>Only send the mutations down when edge’s subtopology is altered</p>
-</div>
-<div class="fragment" data-fragment-index="4">
-<p>Fitting REML <span class="math inline">\(\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)\)</span></p>
-<p><span class="math inline">\(n_s\)</span>: number of samples, <span class="math inline">\(n_t\)</span>: number of trees</p>
-</div>
-</div>
-<div class="footer">
-<p>Modified figures by Nathaniel Pope (Oregon)</p>
-</div>
-</section>
-<section id="runtime-for-variance-component-estimation" class="slide level2">
-<h2>Runtime for variance component estimation</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/runtime.svg" class="fragment quarto-figure quarto-figure-center" height="500"></p>
-</figure>
-</div>
-<div class="fragment">
-<p>The runtime scales linearly with respect to the number of individuals (genome length = <span class="math inline">\(10^8\)</span>)</p>
-</div>
-</section>
-<section id="best-linear-unbiased-prediction-blup" class="slide level2">
-<h2>Best linear unbiased prediction (BLUP)</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="imgs/prediction.svg" class="fragment quarto-figure quarto-figure-center" height="600"></p>
-</figure>
-</div>
-<div class="r-stack">
-<div class="fragment fade-in-then-out">
-<p>We measured the accuracy of polygenic scores computed from <span class="math inline">\(\textsf{tslmm}\)</span></p>
-</div>
-<div class="fragment fade-in-then-out">
-<p>Training and testing on two non-overlapping groups embedded in the same tree sequence</p>
-</div>
-<div class="fragment">
-<p>True trees are better, but inferred trees are not too behind!</p>
-</div>
-</div>
-</section></section>
-<section>
 <section id="complex-traits-through-the-lens-of-arg-lmm" class="title-slide slide level1 center">
 <h1>Complex traits through the lens of ARG-LMM</h1>
 <p><span class="math display">\[
@@ -647,6 +563,90 @@ Hanbin Lee
 </div>
 <div class="fragment">
 <p>All-in-one genome-wide association studies and fine-mapping</p>
+</div>
+</section></section>
+<section>
+<section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="title-slide slide level1 center">
+<h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
+<div class="fragment">
+<p><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient <em>genetic relatedness matrix - vector product</em> to fit the restricted maximum likelihood (REML) objective</p>
+</div>
+<div class="fragment">
+<p>It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)</p>
+</div>
+</section>
+<section id="the-matrix-vector-product-algorithm" class="slide level2">
+<h2>The matrix-vector product algorithm</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-empty.svg" class="quarto-figure quarto-figure-center" height="550"></p>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-naive.svg" class="quarto-figure quarto-figure-center" height="550"></p>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/two-trees-efficient.svg" class="quarto-figure quarto-figure-center" height="550"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<p>The algorithm needs to pass mutations to the correct samples</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p>A naive approach is to push the mutations down to the leaves every time</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p>Only send the mutations down when edge’s subtopology is altered</p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p>Fitting REML <span class="math inline">\(\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)\)</span></p>
+<p><span class="math inline">\(n_s\)</span>: number of samples, <span class="math inline">\(n_t\)</span>: number of trees</p>
+</div>
+</div>
+<div class="footer">
+<p>Modified figures by Nathaniel Pope (Oregon)</p>
+</div>
+</section>
+<section id="runtime-for-variance-component-estimation" class="slide level2">
+<h2>Runtime for variance component estimation</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/runtime.svg" class="fragment quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+<div class="fragment">
+<p>The runtime scales linearly with respect to the number of individuals (genome length = <span class="math inline">\(10^8\)</span>)</p>
+</div>
+</section>
+<section id="best-linear-unbiased-prediction-blup" class="slide level2">
+<h2>Best linear unbiased prediction (BLUP)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="imgs/prediction.svg" class="fragment quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>We measured the accuracy of polygenic scores computed from <span class="math inline">\(\textsf{tslmm}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Training and testing on two non-overlapping groups embedded in the same tree sequence</p>
+</div>
+<div class="fragment">
+<p>True trees are better, but inferred trees are not too behind!</p>
+</div>
 </div>
 </section></section>
 <section>
