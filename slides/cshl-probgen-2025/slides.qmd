@@ -451,33 +451,6 @@ Demographic model from [@Browning2018]
 :::
 
 
-## Other bits and future directions {.center}
-
-
-::: {.fragment}
-Pseudoreplication due to shared ancestry (preprint will be posted soon!)
-:::
-
-::: {.fragment}
-Missing heritability, Mutations vs Mendelian segregation
-:::
-
-::: {.fragment}
-A powerful trait simulator based on ARG-LMM
-:::
-
-::: {.fragment}
-Super interesting technical details and proofs
-:::
-
-::: {.fragment}
-Predicting polygenic scores of internal nodes
-:::
-
-::: {.fragment}
-All-in-one genome-wide association studies and fine-mapping
-:::
-
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
@@ -566,7 +539,32 @@ True trees are better, but inferred trees are not too behind!
 :::
 
 
+## Other bits and future directions {.center}
 
+
+::: {.fragment}
+Pseudoreplication due to shared ancestry (preprint will be posted soon!)
+:::
+
+::: {.fragment}
+Missing heritability, Mutations vs Mendelian segregation
+:::
+
+::: {.fragment}
+A powerful trait simulator based on ARG-LMM
+:::
+
+::: {.fragment}
+Super interesting technical details and proofs
+:::
+
+::: {.fragment}
+Predicting polygenic scores of internal nodes
+:::
+
+::: {.fragment}
+All-in-one genome-wide association studies and fine-mapping
+:::
 
 
 
