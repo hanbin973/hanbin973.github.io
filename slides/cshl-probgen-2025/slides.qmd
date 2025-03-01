@@ -321,15 +321,15 @@ It can estimate variance components and compute polygenic scores by best linear 
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
-![](imgs/two-trees-empty.svg){fig-align="center" height=600}
+![](imgs/two-trees-empty.svg){fig-align="center" height=550}
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![](imgs/two-trees-naive.svg){fig-align="center" height=600}
+![](imgs/two-trees-naive.svg){fig-align="center" height=550}
 :::
 
 ::: {.fragment fragment-index=3}
-![](imgs/two-trees-efficient.svg){fig-align="center" height=600}
+![](imgs/two-trees-efficient.svg){fig-align="center" height=550}
 :::
 
 ::: 
@@ -349,7 +349,9 @@ Only send the mutations down when edge's subtopology is altered
 :::
 
 ::: {.fragment fragment-index=4}
-Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log^2 n_s)$
+Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)$
+
+$n_s$: number of samples, $n_t$: number of trees
 :::
 
 :::
