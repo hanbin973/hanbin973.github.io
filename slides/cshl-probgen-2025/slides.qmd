@@ -467,7 +467,7 @@ $$
 :::
 
 ::: {.fragment fragment-index=4}
-We can't define a single quantitity $h^2_g=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}$ for everyone
+We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)}}{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)} + \mathrm{Var}(\boldsymbol{\varepsilon}_n)}$ for everyone
 :::
 
 :::
