@@ -276,7 +276,7 @@ $$
 :::
 
 ::: {.fragment}
-This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) [@Fan2022], [@Zhang2023]
+This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) [@Fan2022;@Zhang2023]
 :::
 
 ::: {.incremental}
@@ -559,7 +559,7 @@ Super interesting technical details and proofs
 :::
 
 ::: {.fragment}
-Predicting polygenic scores of internal nodes [@Edge2018, @Peng2024]
+Predicting polygenic scores of internal nodes [@Edge2018;@Peng2024]
 :::
 
 ::: {.fragment}
