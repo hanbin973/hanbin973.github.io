@@ -423,12 +423,12 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 
 ## Polygenic prediction
 
-![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550 fragment-index=1}
 
 ::: {.r-stack}
 
-::: {.fragment .fade-in-then-out}
-![](imgs/covariance-1.svg){.absolute top=50 right=20 height=550}
+::: {.fragment .fade-out}
+![](imgs/covariance-1.svg){.absolute top=50 right=20 height=550 fragment-index=1}
 :::
 
 ::: {.fragment .fade-in-then-out}
