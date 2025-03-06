@@ -538,8 +538,9 @@ True trees are better, but inferred trees are not too behind!
 :::
 
 
-## Other bits and future directions {.center}
+## Summary & Future directions {.center}
 
+ARG-LMM lays an explicit connection between population and quantitative genetics
 
 ::: {.fragment}
 Pseudoreplication due to shared ancestry
