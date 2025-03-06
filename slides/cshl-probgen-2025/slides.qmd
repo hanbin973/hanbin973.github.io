@@ -429,7 +429,7 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 ![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
 
 ::: {.fragment .fade-out}
-![](imgs/covariance-1.svg){.absolute top=70 right=45 height=550 fragment-index=1}
+![](imgs/covariance-1.svg){.absolute top=70 right=50 height=550}
 :::
 
 :::
