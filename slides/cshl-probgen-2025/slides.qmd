@@ -543,7 +543,7 @@ True trees are better, but inferred trees are not too behind!
 
 
 ::: {.fragment}
-Pseudoreplication due to shared ancestry (preprint will be posted soon!)
+Pseudoreplication due to shared ancestry
 :::
 
 ::: {.fragment}
@@ -551,7 +551,7 @@ Missing heritability, Mutations vs Mendelian segregation
 :::
 
 ::: {.fragment}
-A powerful trait simulator based on ARG-LMM
+A powerful trait simulator based on ARG-LMM [@Cranmer2020]
 :::
 
 ::: {.fragment}
@@ -559,18 +559,21 @@ Super interesting technical details and proofs
 :::
 
 ::: {.fragment}
-Predicting polygenic scores of internal nodes
+Predicting polygenic scores of internal nodes [@Edge2018, @Peng2024]
 :::
 
 ::: {.fragment}
-All-in-one genome-wide association studies and fine-mapping
+Time conditioned analysis (random vs fixed effects) [@Fan2022]
 :::
-
 
 
 
 
 # Thank you for listening
+
+<p align="center">
+![[@Lehmann2025]](imgs/qr_code.svg){height=500}
+</p>
 
 Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
 
