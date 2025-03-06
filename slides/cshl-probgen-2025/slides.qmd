@@ -555,7 +555,7 @@ A powerful trait simulator based on ARG-LMM [@Cranmer2020]
 :::
 
 ::: {.fragment}
-Super interesting technical details and proofs
+Super interesting technical details and proofs (10+ backup slides prepared)
 :::
 
 ::: {.fragment}
