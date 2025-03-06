@@ -572,7 +572,8 @@ Time conditioned analysis (random vs fixed effects) [@Fan2022]
 # Thank you for listening
 
 <p align="center">
-![[@Lehmann2025]](imgs/qr_code.svg){height=500}
+![](imgs/qr_code.svg){height=400}
+Link to [@Lehmann2025], $\textsf{tslmm}$ preprint coming soon
 </p>
 
 Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
