@@ -86,8 +86,7 @@ Some questions ...
 
 ::: {.incremental}
 - What's the source of $\mathbf{u}$'s randomness?
-- Why are $\mathbf{u}$'s entries independent?
-- How should we weigh the entries? e.g. $\mathbf{u}_j \sim N\left(0,\frac{h^2}{M}\right)$
+- Why are $\mathbf{u}$'s (vector of random effects) entries independent?
 :::
 
 :::
