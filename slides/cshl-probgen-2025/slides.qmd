@@ -232,7 +232,7 @@ Branch effect is a random variable!
 
 ::::
 
-## From variants to branches
+## From variants to branches {.center}
 
 ::: {.fragment}
 $$
@@ -543,7 +543,7 @@ True trees are better, but inferred trees are not too behind!
 ARG-LMM lays an explicit connection between population and quantitative genetics
 
 ::: {.fragment}
-Pseudoreplication due to shared ancestry
+Pseudoreplication due to shared ancestry [@Rosenberg2009]
 :::
 
 ::: {.fragment}
