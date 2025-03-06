@@ -421,7 +421,7 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 ::::
 
 
-## Polygenic prediction
+## Polygenic prediction is constrained by demography
 
 ![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550 fragment-index=1}
 
