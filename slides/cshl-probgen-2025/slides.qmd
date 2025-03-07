@@ -497,7 +497,7 @@ A naive approach is to push the mutations down to the leaves every time
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=3}
-Only send the mutations down when edge's subtopology is altered
+Wait until the subtree's topology changes due to edge insertion/deletion
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=4}
