@@ -269,7 +269,7 @@ where $\mathbf{Z}_{ne}=$ the number of haplotypes of $n$ that inherit $e$
 Split $\boldsymbol{\upsilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
 
 $$
-\mathbf{y} = \underbrace{\mathbf{Z} \mathbf{u}}_{Random effects} + \underbrace{\mathbf{Z} \mathbf{f}}_{Fixed effects} + \boldsymbol{\varepsilon}
+\mathbf{y} = \underbrace{\mathbf{Z} \mathbf{u}}_{\text{Random effects}} + \underbrace{\mathbf{Z} \mathbf{f}}_{\text{Fixed effects}} + \boldsymbol{\varepsilon}
 $$
 
 :::
