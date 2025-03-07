@@ -827,6 +827,24 @@ Figure from [Whalebone Magazine](https://whalebonemag.com/)
 :::
 
 
+## There are many genetic variances
+
+::: {.incremental}
+- ARG-conditioned variance 
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{ARG})
+$$
+- Pedigree-conditioned variance
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Pedigree})
+$$
+- Demography conditioned variance
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Demography})
+$$
+:::
+
+
 
 
 
