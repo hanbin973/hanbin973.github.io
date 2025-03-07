@@ -847,6 +847,7 @@ $$
 $$
 \mathrm{Var}(\mathbf{y} \mid \mathrm{Demography})
 $$
+- Time conditioning (reference population)
 :::
 
 
