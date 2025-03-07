@@ -500,7 +500,11 @@ A naive approach is to push the mutations down to the leaves every time
 Only send the mutations down when edge's subtopology is altered
 :::
 
-::: {.fragment fragment-index=4}
+::: {.fragment .fade-in-then-out fragment-index=4}
+The wrong recipient will receive the mutations if we procrastinate further
+:::
+
+::: {.fragment fragment-index=5}
 Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)$
 
 $n_s$: number of samples, $n_t$: number of trees
