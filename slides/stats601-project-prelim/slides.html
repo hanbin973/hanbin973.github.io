@@ -158,11 +158,16 @@ Z \sim \mathrm{Binomial}(p_0) \; \Rightarrow \;
 \theta \mid Z \sim p_\theta(\theta;\eta_Z)
 \]</span></p>
 <p><span class="math display">\[
-\mathrm{KL}(q(\theta)q(Z) \mid p(\theta, Z \mid X))
-\]</span> assuming <span class="math inline">\(\theta \indep Z \mid X\)</span></p>
+\mathrm{minimize}_q \; \mathrm{KL}(q_\theta(\theta)q_Z(Z) \mid p(\theta, Z \mid X))
+\]</span> assuming <span class="math inline">\(\theta \vert Z \mid X\)</span></p>
 </section>
 <section id="description" class="slide level2">
 <h2>Description</h2>
+<p>This work instead attempts <span class="math display">\[
+\mathrm{minimize}_q \;
+\mathrm{KL}(q(\theta) \mid p(\theta \mid X))
+\]</span></p>
+<p>by showing that <span class="math inline">\(p(\theta \mid X)\)</span> and <span class="math inline">\(p(\theta)\)</span> both belongs to the same type of exponential family</p>
 
 </section>
     </div>
