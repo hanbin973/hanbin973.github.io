@@ -148,9 +148,18 @@ Hanbin Lee
 </section>
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
-<p><span class="math display">\[
-\theta ~ p_0 \delta_0 + (1-p_0) p(x;\eta)
+<p>Spike-and-slab prior is a popular choice for sparse parametric models <span class="math display">\[
+\theta \sim p_0 \delta_0 + (1-p_0) p_\theta(\theta;\eta_1) \quad
+\text{and} \quad
+X \sim p_X(X;\theta)
 \]</span></p>
+<p>We commonly approximate the posterior by <span class="math display">\[
+Z \sim \mathrm{Binomial}(p_0) \; \Rightarrow \;
+\theta \mid Z \sim p_\theta(\theta;\eta_Z)
+\]</span></p>
+<p><span class="math display">\[
+\mathrm{KL}(q(\theta)q(Z) \mid p(\theta, Z \mid X))
+\]</span> assuming <span class="math inline">\(\theta \indep Z \mid X\)</span></p>
 </section>
 <section id="description" class="slide level2">
 <h2>Description</h2>
