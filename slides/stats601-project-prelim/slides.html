@@ -163,11 +163,12 @@ Z \sim \mathrm{Binomial}(p_0) \; \Rightarrow \;
 </section>
 <section id="description" class="slide level2">
 <h2>Description</h2>
-<p>This work instead attempts <span class="math display">\[
+<p>This work shows that <span class="math inline">\(p(\theta \mid X)\)</span> and <span class="math inline">\(p(\theta)\)</span> both belongs to the same type of exponential family</p>
+<p>Then, solves the following optimization <span class="math display">\[
 \mathrm{minimize}_q \;
 \mathrm{KL}(q(\theta) \mid p(\theta \mid X))
-\]</span></p>
-<p>by showing that <span class="math inline">\(p(\theta \mid X)\)</span> and <span class="math inline">\(p(\theta)\)</span> both belongs to the same type of exponential family</p>
+\]</span> where <span class="math inline">\(q\)</span> belongs to that exponential family</p>
+<p>This avoids the over-restrictive assumption that <span class="math inline">\(\theta \perp Z\)</span></p>
 
 </section>
     </div>
