@@ -56,10 +56,12 @@ _Genetics (GSA)_
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
 								{{ paper.year }}<br>
-								<b>
-								Description:
-								</b>
-								{{ paper.description }}
+                                {% if formant.name == 'Preprints' %}
+                                    <b>
+                                    Description:
+                                    </b>
+                                    {{ paper.description }}
+                                {% endif %}
 								<br>
 								<br>
 							</li>
