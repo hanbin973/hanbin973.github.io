@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated on May 7th, 2024</span>
+<span style="color:grey">Updated on February, 2025</span>
 
 ___
 
@@ -32,7 +32,8 @@ Contact: <hblee@umich.edu>
 ## Professional service
 ### Peer review
 _International Journal of Epidemiology_,
-_Nature Communications_
+_Nature Communications_,
+_Genetics (GSA)_
 
 ---
 

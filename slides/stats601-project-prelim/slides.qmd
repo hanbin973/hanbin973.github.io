@@ -1,0 +1,33 @@
+---
+title: "Flexible mean field variational inference using mixtures of non-overlapping exponential families"
+author:
+  name: Hanbin Lee
+  affiliation: "University of Michigan, Ann Arbor"
+  email: "hblee@umich.edu"
+venue: "STATS601"
+date: "27 March 2025"
+date-format: "MMM D, YYYY"
+bibliography: ref.bib
+format: 
+  revealjs:
+    css: style.css
+    slide-number: c/t
+    width: 1024
+    height: 768
+    html-math-method: mathjax
+    theme: white
+    transition: slide
+    navigation-mode: vertical 
+    template-partials:
+      - title-slide.html
+---
+
+## Motivation 
+
+$$ 
+\theta ~ p_0 \delta_0 + (1-p_0) p(x;\eta)
+$$
+
+## Description
+
+

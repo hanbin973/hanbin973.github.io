@@ -1,0 +1,856 @@
+---
+title: "Modelling complex traits with ancestral recombination graphs"
+author:
+  name: Hanbin Lee
+  affiliation: "University of Michigan, Ann Arbor"
+  email: "hblee@umich.edu"
+venue: "Probabilistic Modelling in Genomics 2025"
+date: "07 March 2025"
+date-format: "MMM D, YYYY"
+bibliography: ref.bib
+format: 
+  revealjs:
+    css: style.css
+    slide-number: c/t
+    width: 1600
+    height: 900
+    html-math-method: mathjax
+    theme: white
+    transition: slide
+    navigation-mode: vertical 
+    template-partials:
+      - title-slide.html
+---
+
+# Overview
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+
+The ancestral recombination graph (ARG) describes the evolutionary relationship between
+
+genetic materials in the presence of recombination and drift
+
+![From [@Wong2024]](imgs/full_arg-0.svg){height=600}
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+The ancestral recombination graph (ARG) describes the evolutionary relationship between
+
+genetic materials in the presence of recombination and drift
+
+![From [@Wong2024]](imgs/full_arg-1.svg){height=600}
+
+:::
+
+::: {.fragment .fade-in-then-out}
+
+The full probabilistic process is complicated 
+
+In this work, we condition on the realized ARG, resulting a sequence of local trees
+
+![From [tskit docs](https://tskit.dev/tutorials/what_is.html)](imgs/local_trees.svg){fig-align="center" height=500}
+
+:::
+
+::: {.fragment}
+What is the conditional distribution of a trait given the trees?
+
+Since the genealogy is fixed, the only randomness that remains is mutation
+
+$$
+\text{Trait} \mid \text{Local trees} \quad \sim \quad ?
+$$
+:::
+
+:::
+
+
+## Linear mixed model
+
+::: {.fragment}
+Linear mixed models are popular in quantitative genetics
+$$
+\mathbf{y} = \underbrace{\mathbf{Z}\mathbf{u}}_{\text{random effects}} + \underbrace{\mathbf{X}\mathbf{b}}_{\text{fixed effects}} + \boldsymbol{\varepsilon}
+$$
+where $\mathbf{Z}$ includes genotyped variants and $\mathbf{X}$ is the covariate matrix
+
+In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
+:::
+
+::: {.fragment}
+Some questions ...
+
+::: {.incremental}
+- What's the source of $\mathbf{u}$'s randomness?
+- Why are $\mathbf{u}$'s (vector of random effects) entries independent?
+:::
+
+:::
+
+::: {.fragment}
+We answer these questions from a genealogical perspective
+:::
+
+# Setup and derivation
+
+
+::: {.fragment}
+The trait $\mathbf{y}$ is a linear function of the genotype $\mathbf{G}$
+$$
+\mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+$$
+$\mathbf{y} \in \mathbb{R}^N$, $\mathbf{G} \in \mathbb{R}^{N \times P}$, 
+$\boldsymbol{\beta} \in \mathbb{R}^P$, and $\boldsymbol{\varepsilon} \in \mathbb{R}^N$
+
+$\mathbf{G}$ contains *all* positions the genome including genotyped ones
+
+$N$: number of samples, $P$: length of the genome
+:::
+
+## How do we get traits? 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+![](imgs/tree-branch.svg){.absolute top=200 left=0 height=600}
+:::
+
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/tree-0.svg){.absolute top=200 left=0 height=600}
+$$
+\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
+\mathbf{y}_2 = \boldsymbol{\beta}_2, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_2
+$$
+:::
+
+::: {.fragment fragment-index=3}
+![](imgs/tree-1.svg){.absolute top=200 left=0 height=600}
+$$
+\mathbf{y}_1=\boldsymbol{\beta}_4, \;
+\mathbf{y}_2=\boldsymbol{\beta}_4, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_3
+$$
+:::
+
+:::
+
+:::
+
+
+::: {.column width="50%" .center}
+
+::: {.fragment fragment-index=1}
+Consider a local tree that spans over a region
+
+We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
+:::
+
+::: {.fragment fragment-index=2}
+- $\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2$
+:::
+::: {.fragment fragment-index=3}
+- $\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4$
+::: 
+
+:::
+
+
+::::
+
+## Branch-centric view of trait transmission
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=2}
+![](imgs/tree-branch.svg){fig-align="center" height=600}
+:::
+
+::: {.fragment fragment-index=7}
+![](imgs/tree-0.svg){fig-align="center" height=600}
+:::
+
+::: {.fragment fragment-index=8}
+![](imgs/tree-1.svg){fig-align="center" height=600}
+:::
+
+:::
+
+:::
+
+
+::: {.column width="50%"}
+
+::: {.fragment fragment-index=1}
+Inherit a branch first, then a mutation
+
+::: {.fragment fragment-index=3}
+- Sample $1$ inherits edges $1-4$ and $4-5$ 
+:::
+::: {.fragment fragment-index=4}
+- Sample $2$ inherits edges $2-4$ and $4-5$
+:::
+::: {.fragment fragment-index=5}
+- Sample $3$ inherits edge $3-5$
+:::
+
+:::
+
+
+::: {.fragment fragment-index=6}
+Branch's effect $=$ Sum of mutations' effect
+:::
+
+::: {.fragment fragment-index=7}
+- Effect of $4-5 = 0$ (1st realization)
+:::
+
+::: {.fragment fragment-index=8}
+- Effect of $4-5 = \boldsymbol{\beta}_4$ (2nd realization)
+:::
+
+::: {.fragment fragment-index=9}
+Branch effect is a random variable!
+:::
+
+
+:::
+
+
+::::
+
+## From variants to branches {.center}
+
+::: {.fragment}
+$$
+\text{Trait} = \sum_p \text{Variant$_p$ effect size} 
+\quad
+\Rightarrow 
+\quad
+\text{Trait} = \sum_e \text{Branch$_e$ effect size}
+$$
+:::
+
+::: {.fragment}
+$$
+\boldsymbol{\upsilon}_e = \text{Branch$_e$ effect size} = \sum_p \text{Variant$_p$ on Branch$_e$}
+$$
+:::
+
+::: {.fragment}
+$$
+\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
+\quad
+\Rightarrow
+\quad
+\mathbf{y} = \sum_e \mathbf{Z}_e\boldsymbol{\upsilon}_e + \boldsymbol{\varepsilon} 
+$$
+where $\mathbf{Z}_{ne}=$ the number of haplotypes of $n$ that inherit $e$
+:::
+
+
+# Ancestral recombination graph linear mixed model (ARG-LMM)
+
+::: {.fragment}
+
+Split $\boldsymbol{\upsilon}$ to $\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}$ and $\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}$
+
+$$
+\mathbf{y} = \underbrace{\mathbf{Z} \mathbf{u}}_{\text{Random effects}} + \underbrace{\mathbf{Z} \mathbf{f}}_{\text{Fixed effects}} + \boldsymbol{\varepsilon}
+$$
+
+:::
+
+::: {.fragment}
+This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T$ is the expected genetic relatedness matrix (eGRM) [@Fan2022;@Zhang2023]
+:::
+
+::: {.incremental}
+- The random effects are tied to a physical process - Mutations!
+- We start from more lower-level evolutionary statements to recover mixed model assumptions
+- Independent random effects, random effect weights, normality, $\ldots$
+:::
+
+## How do we weigh branches of the ARG?
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+$$
+\small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
+$$
+![](imgs/edge_weight-0.svg){height=500 fig-align="center"}
+:::
+::: {.fragment}
+$$
+\small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
+$$
+![](imgs/edge_weight-1.svg){height=500 fig-align="center"}
+:::
+:::
+
+::: {.fragment}
+$$
+\small \mathrm{Var}(\mathbf{u}_e) \quad \propto \quad \text{Number of mutations} \quad \propto \quad \text{Area}=l_es_e
+$$
+:::
+
+
+# Complex traits through the lens of ARG-LMM
+
+$$
+\text{What does ARG-LMM tell us about complex trait analysis?}
+$$
+
+## Genetic value covariance
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=1}
+![](imgs/covariance-0.svg){height=600 fig-align="center"}
+:::
+
+::: {.fragment fragment-index=4}
+![](imgs/covariance-1.svg){height=600 fig-align="center"}
+:::
+
+:::
+
+::: {.r-stack}
+
+::: {.fragment fragment-index=2 .fade-in-then-out}
+$\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}$
+::: 
+
+::: {.fragment fragment-index=3 .fade-in-then-out}
+$$
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
+\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
+\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
+\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
+$$
+:::
+
+::: {.fragment fragment-index=4}
+$$
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) = 
+\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
+$$
+:::
+
+:::
+
+## Heritability is *ill*-defined in ARG-LMM
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+$$
+\small \text{Heritability: }h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
+$$
+This applies to all individuals $\small n \in \{1,\ldots,N\}$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+However, all individuals have a different amount of genetic variance (except haploids)
+$$
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
+$$
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3}
+$$
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
+$$
+:::
+
+::: {.fragment fragment-index=4}
+We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)}}{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)} + \mathrm{Var}(\boldsymbol{\varepsilon}_n)}$ for everyone
+:::
+
+:::
+
+:::: {.columns}
+
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/covariance-short-0.svg){fig-align="center" height=550}
+:::
+::: {.fragment fragment-index=3}
+![](imgs/covariance-short-1.svg){fig-align="center"height=550}
+:::
+:::
+
+:::
+
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out  fragment-index=2}
+![](imgs/covariance-long-0.svg){fig-align="center" height=550}
+:::
+::: {.fragment fragment-index=3}
+![](imgs/covariance-long-1.svg){fig-align="center" height=550}
+:::
+
+:::
+
+:::
+
+
+::::
+
+
+## Polygenic prediction is constrained by demography
+
+
+::: {.r-stack}
+
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
+
+::: {.fragment .fade-out}
+![](imgs/covariance-1.svg){.absolute top=70 right=50 height=550}
+:::
+
+:::
+
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+Some people are less genetically variable than others
+:::
+
+::: {.fragment .fade-in-then-out}
+Some people are harder to predict genetically than others
+:::
+
+::: {.fragment}
+Some populations are <span style="color:red">inherently harder</span> to predict!
+:::
+
+:::
+
+::: footer
+Demographic model from [@Browning2018]
+:::
+
+
+
+# $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
+
+::: {.fragment}
+$\textsf{tslmm}$ utilizes an efficient *genetic relatedness matrix - vector product* to fit the restricted maximum likelihood (REML) objective
+:::
+
+::: {.fragment}
+It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)
+:::
+
+## The matrix-vector product algorithm
+
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+![](imgs/two-trees-empty.svg){fig-align="center" height=550}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+![](imgs/two-trees-naive.svg){fig-align="center" height=550}
+:::
+
+::: {.fragment fragment-index=3}
+![](imgs/two-trees-efficient.svg){fig-align="center" height=550}
+:::
+
+::: 
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out fragment-index=1}
+The algorithm needs to pass mutations to the correct samples
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2}
+A naive approach is to push the mutations down to the leaves every time
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3}
+Wait until the subtree's topology changes due to edge insertion/deletion
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=4}
+The wrong recipient will receive the mutations if we procrastinate further
+:::
+
+::: {.fragment fragment-index=5}
+Fitting REML $\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)$
+
+$n_s$: number of samples, $n_t$: number of trees
+:::
+
+:::
+
+
+::: footer
+Modified figures by Nathaniel Pope (Oregon)
+:::
+
+
+## Runtime for variance component estimation
+
+![](imgs/runtime.svg){.fragment fig-align="center" height=500}
+
+::: {.fragment}
+The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
+:::
+
+
+## Best linear unbiased prediction (BLUP)
+
+![](imgs/prediction.svg){.fragment fig-align="center" height="600"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+We measured the accuracy of polygenic scores computed from $\textsf{tslmm}$
+:::
+
+::: {.fragment .fade-in-then-out}
+Training and testing on two non-overlapping groups embedded in the same tree sequence
+:::
+
+::: {.fragment}
+True trees are better, but inferred trees are not too behind!
+:::
+
+:::
+
+
+## Summary & Future directions {.center}
+
+ARG-LMM lays an explicit connection between population and quantitative genetics
+
+::: {.fragment}
+Pseudoreplication due to shared ancestry [@Rosenberg2009]
+:::
+
+::: {.fragment}
+Missing heritability, Mutations vs Mendelian segregation
+:::
+
+::: {.fragment}
+A powerful trait simulator based on ARG-LMM [@Cranmer2020]
+:::
+
+::: {.fragment}
+Super interesting technical details and proofs (10+ backup slides prepared)
+:::
+
+::: {.fragment}
+Predicting polygenic scores of internal nodes [@Edge2018;@Peng2024]
+:::
+
+::: {.fragment}
+Time conditioned analysis (random vs fixed effects) [@Fan2022]
+:::
+
+
+
+
+# Thank you for listening
+
+<p align="center">
+![](imgs/qr_code.svg){height=400}
+</p>
+
+Link to [@Lehmann2025], $\textsf{tslmm}$ preprint coming soon
+
+Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
+
+
+## References
+
+::: {#refs}
+:::
+
+# Technical Notes
+
+## Edge splitting
+
+::: {.incremental}
+- Nodes and edges are reused across multiple trees in a tree sequence
+- Edges, in particular, may not have a unique set of samples along their span
+- Salehi Nowbandegani and colleagues *bricked* the edges to divide them [@SalehiNowbandegani2023]
+- Henceforth, we assume that edges are splitted to have a unique subtopology
+$$
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$} 
+$$
+The overall matrix $\mathbf{Z}$ is an individual-edge design matrix.
+:::
+
+
+## Collapsing variants to edges
+
+::: {.incremental}
+- When does an individual possess a derived allele? ($\text{ancestral}=0$, $\text{derived}=1$)
+- Let $\mathbf{1}_{ep}$ be the indicator *random* variable of a mutation at edge $e$ and position $p$
+:::
+
+<center>
+::: {.fragment}
+An individual should be a descendant of an edge ($\mathbf{Z}_{ne}=1$)
+:::
+
+::: {.fragment}
+$$
++
+$$
+That edge should have mutation ($\mathbf{1}_{ep}=1$)
+:::
+</center>
+
+::: {.fragment}
+$$
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+$$
+:::
+::: {.incremental}
+- Assumes that there are no parent-child mutation pairs, but allows *some* recurrent mutations
+:::
+
+
+## Exchange the summations
+
+::: {.fragment}
+Recall $\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}$
+and $\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}$
+:::
+
+:::{.r-stack}
+
+
+::: {.fragment .fade-in-then-out}
+Substitute $\mathbf{G}_p$
+$$
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+$$
+:::
+
+::: {.fragment .fade-in-then-out}
+Exchange the inner and the outer summation
+$$
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon} 
+$$
+:::
+
+::: {.fragment}
+Pull out $\mathbf{Z}_e$ and group the positions nested in $p: p \in e$
+$$
+\begin{aligned}
+	& \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+	&= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+	&= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
+$$
+:::
+:::
+
+::: {.fragment}
+$\boldsymbol{\upsilon}$ is a random variable made up of mutation-driven random variables $\mathbf{1}_{ep}$!
+:::
+
+## Random effects are independent
+
+::: {.incremental}
+- Independent entries of random effects is a key assumption of linear mixed models
+- This can be *proved* in ARG-LMM, instead of assuming it
+$$
+	\mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
+$$
+
+- The covariance between the indicators are higher-order terms of mutation rates, so we ignore it [@Wakeley2008]
+$$
+	\begin{aligned}
+	\mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
+		&= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+	\end{aligned}
+$$
+where $l_e$ is the (time-)length of edge $e$.
+
+:::
+
+
+## The marginal distribution of $\mathbf{u}_e$?
+
+::: {.incremental}
+- The Gaussian prior on random effects is a popular choice
+- One might be tempted to invoke the central limit theorem to $\mathbf{u}_e$ (sum of indicators)
+	$$
+		\mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} } 
+		\rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
+	$$
+	where $s_e$ is the span (in base pairs) of edge $e$
+
+- The convergence is unlikely to be fast enough given the small value of $\mathbf{E}[\mathbf{1}_{ep}]$ (Berry-Esseen).
+
+- Fortunately, the variance is computable and is 
+	$$
+		\mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+	$$
+:::
+
+## More on $\mathrm{Var}(\mathbf{u}_e)$
+
+::: {.incremental}
+- The weight $\mathrm{Var}(\mathbf{u}_e)$ has two components
+- The area $l_e s_e$ 
+- Mutation rate-weighted squared average of effect sizes
+	$$
+		\tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+	$$
+- As a measure of functional significance, variance components are confounded by the area
+:::
+
+## Fixed effects are constant under neutrality
+
+::: {.incremental}
+
+- Suppose that $u_{ep}=u_p$, i.e., the mutation rate is constant across edges for a given position
+:::
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+$$
+\begin{aligned}
+	&\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+	\left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
+	\end{aligned}
+$$
+:::
+
+::: {.fragment}
+$$
+\sum_{p=1}^P \boldsymbol{\beta}_p u_p 
+	\left(
+			\sum_{e: p \in e} \mathbf{Z}_{ne} l_e
+	\right)
+	= \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
+$$
+:::
+
+:::
+
+::: {.incremental}
+- An intercept is enough to account for the fixed effects $\mathbf{Z}\mathbf{f}$ under this condition
+
+- The assumption is standard in neutral settings
+:::
+::: {.fragment}
+$$
+	\text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
+$$
+:::
+
+## Becareful of pseudoreplication
+
+::: {.incremental}
+- Non-overlapping samples are not independent
+- Everyone shares some amount of mutational history
+- Parameter estimates (e.g. variance components) are correlated
+:::
+
+![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
+
+::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+This is also the very reason why BLUP works
+:::
+
+::: {.fragment}
+We are all correlated!
+:::
+
+:::
+
+## *Missing* heritability?
+
+::: {.fragment}
+ARG-LMM variance component only reflects mutational variability
+:::
+::: {.incremental}
+- Pedigree-based heritability captures Mendelian segregation and mutation is ignored
+- ARG-LMM's generative model only has mutation and no segregation
+- Why compare quantities stemming from different random forces? [@Zhang2023]
+:::
+
+![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
+
+::: footer
+Figure from [Whalebone Magazine](https://whalebonemag.com/)
+:::
+
+## Estimation quality of variance components
+
+:::{.r-stack}
+
+:::{.fragment .fade-in-then-out}
+**Simulated trees**
+
+![](imgs/estimation_true.svg){height="700"}
+:::
+
+:::{.fragment}
+**Inferred (tsinfer+tsdate) trees**
+
+![](imgs/estimation_infer.svg){height="700"}
+:::
+
+:::
+
+
+## There are many genetic variances
+
+::: {.incremental}
+- ARG-conditioned variance 
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{ARG})
+$$
+- Pedigree-conditioned variance
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Pedigree})
+$$
+- Demography-conditioned variance
+$$
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Demography})
+$$
+- Time conditioning (reference population)
+:::
+
+
+
+
+
