@@ -61,9 +61,9 @@ _Genetics (GSA)_
                                     Description:
                                     </b>
                                     {{ paper.description }}
+                                    <br>
                                 {% endif %}
-								<br>
-								<br>
+                                <br>
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
