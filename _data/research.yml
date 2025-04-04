@@ -1,3 +1,17 @@
+- name: Preprints
+  papers:
+    - name: 'randPedPCA: Rapid approximation of principal components from large pedigrees'
+      fauthor: Hanbin Lee 
+      author: Rosalind F. Craddock, Gregor Gorjanc, and Hannes Becher
+      year: 2025
+      doi: https://doi.org/10.1101/2025.03.17.643624
+
+    - name: 'On ARGs, pedigrees, and genetic relatedness matrices'
+      fauthor: Brieuc Lehmann
+      author: Hanbin Lee, Luke Anderson-Trocme, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
+      year: 2025
+      doi: https://doi.org/10.1101/2025.03.03.641310
+
 - name: Journals
   papers:
     - name: 'Pseudobulk with proper offsets has the same statistical properties as generalized linear mixed models in single-cell case-control studies'
