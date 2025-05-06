@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated on February, 2025</span>
+<span style="color:grey">Updated on May, 2025</span>
 
 ___
 
@@ -16,6 +16,8 @@ Based on this insight, I study how evolutionary processes shape statistical infe
 I'm currently working on the following topics:
 - Graphical algorithms and tree sequences for scalable statistical genetics
 - Phylogenetic constraints of molecular language models
+
+I try to convince people that all priors of Bayesian models applied to genetic data implicitly (or explicitly) represent the underlying evolutionary process.
 
 Contact: <hblee@umich.edu>
 
