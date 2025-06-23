@@ -16,6 +16,14 @@
 
 - name: Journals
   papers:
+    - name: 'Admixed and single-continental genome segments of the same ancestry have distinct linkage disequilibrium patterns'
+      journal: Genome Biology
+      fauthor: Hanbin Lee*, Moo Hyuk Lee*
+      author: Kangcheng Hou, Bogdan Pasaniuc, and Buhm Han
+      year: 2025
+      doi: in press
+      description: We analyze two popular GWAS methods, standard GWAS and Tractor, through a population genetic lens. Admixed genomes offer higher power compared to multi-ancestry single-continental genomes of the same size if analyzed by standard GWAS, but not with Tractor. We show that linkage disequilibrium is not limited within ancestry segments of admixed genomes, making ancestry-specific Tractor estimates different from their single-continental counterparts. 
+
     - name: 'Pseudobulk with proper offsets has the same statistical properties as generalized linear mixed models in single-cell case-control studies'
       journal: Bioinformatics
       fauthor: Hanbin Lee
