@@ -1,12 +1,5 @@
 - name: Preprints
   papers:
-    - name: 'randPedPCA: Rapid approximation of principal components from large pedigrees'
-      journal: bioRxiv
-      fauthor: Hanbin Lee 
-      author: Rosalind F. Craddock, Gregor Gorjanc, and Hannes Becher
-      year: 2025
-      doi: https://doi.org/10.1101/2025.03.17.643624
-
     - name: 'On ARGs, pedigrees, and genetic relatedness matrices'
       journal: bioRxiv
       fauthor: Brieuc Lehmann
@@ -23,6 +16,14 @@
 
 - name: Journals
   papers:
+    - name: 'randPedPCA: Rapid approximation of principal components from large pedigrees'
+      journal: Genetics Selection Evolution
+      fauthor: Hanbin Lee 
+      author: Rosalind F. Craddock, Gregor Gorjanc, and Hannes Becher
+      year: 2025
+      doi: https://doi.org/10.1101/2025.03.17.643624
+      description: randPedPCA can run principal component analysis of millions of individuals recorded in a pedigree. The R package is available in CRAN.
+
     - name: 'Admixed and single-continental genome segments of the same ancestry have distinct linkage disequilibrium patterns'
       journal: Genome Biology
       fauthor: Hanbin Lee*, Moo Hyuk Lee*
