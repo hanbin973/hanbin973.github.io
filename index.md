@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated on May, 2025</span>
+<span style="color:grey">Updated in July, 2025</span>
 
 ___
 
@@ -14,8 +14,9 @@ To put it another way, no method can extract information from data beyond what i
 Based on this insight, I study how evolutionary processes shape statistical inference. 
 
 I'm currently working on the following topics:
-- Graphical algorithms and tree sequences for scalable statistical genetics
+- Graphical algorithms in tree sequences for scalable statistical genetics
 - Phylogenetic constraints of molecular language models
+- Evolutionary basis of whole-genome regression
 
 I try to convince people that all priors of Bayesian models applied to genetic data implicitly (or explicitly) represent the underlying evolutionary process.
 
