@@ -22,7 +22,7 @@
       author: Rosalind F. Craddock, Gregor Gorjanc, and Hannes Becher
       year: 2025
       doi: https://doi.org/10.1186/s12711-025-00994-y 
-      description: randPedPCA can run principal component analysis of millions of individuals recorded in a pedigree. The R package is available in [CRAN](https://cran.r-project.org/web/packages/randPedPCA/index.html).
+      description: Pedigree contains rich information about the relationship between individuals. The rapidly growing size of pedigrees poses a computational challenge in effectively visualizing the information encoded in the pedigree. To this end, we developed randPedPCA that can run principal component analysis of millions of individuals recorded in a pedigree. 
 
     - name: 'Admixed and single-continental genome segments of the same ancestry have distinct linkage disequilibrium patterns'
       journal: Genome Biology
