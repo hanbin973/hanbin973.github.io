@@ -59,13 +59,6 @@ _Genetics (GSA)_
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
 								{{ paper.year }}<br>
-                                {% if format.name == 'Journals' %}
-                                    <b>
-                                    Description:
-                                    </b>
-                                    {{ paper.description }}
-                                    <br>
-                                {% endif %}
                                 <br>
 							</li>
 						{% endfor %}
