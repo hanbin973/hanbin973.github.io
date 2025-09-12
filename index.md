@@ -7,7 +7,7 @@ layout: mainpage
 ___
 
 ## About
-![](https://lsa.umich.edu/content/michigan-lsa/stats/en/people/phd-students/Lee/jcr:content/profileImage.transform/profile_portrait/image.jpg){: width="55%"}
+![](https://lsa.umich.edu/content/michigan-lsa/stats/en/people/phd-students/Lee/jcr:content/profileImage.transform/profile_portrait/image.jpg){: width="25%"}
 
 Any statistical and computational methods operate under the constraints imposed by the data generating process.
 To put it another way, no method can extract information from data beyond what is given by nature.
