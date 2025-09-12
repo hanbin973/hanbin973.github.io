@@ -36,7 +36,8 @@ Contact: <hblee@umich.edu>
 ### Peer review
 _International Journal of Epidemiology_,
 _Nature Communications_,
-_Genetics (GSA)_
+_Genetics (GSA)_,
+_HGG Advances_
 
 ---
 
