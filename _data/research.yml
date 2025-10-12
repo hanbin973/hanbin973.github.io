@@ -6,7 +6,7 @@
       author: Nathaniel S. Pope, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
       year: 2025
       doi: https://doi.org/10.1101/2025.07.14.664631
-
+        
 - name: Journals
   papers:
     - name: 'On ARGs, pedigrees, and genetic relatedness matrices'
@@ -14,7 +14,7 @@
       fauthor: Brieuc Lehmann
       author: Hanbin Lee, Luke Anderson-Trocme, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
       year: 2025
-      doi: https://doi.org/10.1101/2025.03.03.641310
+      doi: https://doi.org/10.1093/genetics/iyaf219
 
     - name: 'randPedPCA: Rapid approximation of principal components from large pedigrees'
       journal: Genetics Selection Evolution
