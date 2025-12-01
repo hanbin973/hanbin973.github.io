@@ -37,7 +37,8 @@ Contact: <hblee@umich.edu>
 _International Journal of Epidemiology_,
 _Nature Communications_,
 _Genetics (GSA)_,
-_HGG Advances_
+_HGG Advances_,
+_BMC Medical Research Methodology_
 
 ---
 
