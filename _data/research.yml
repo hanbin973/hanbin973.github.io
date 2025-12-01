@@ -1,6 +1,6 @@
 - name: Preprints
   papers:
-    - name: 'Modelling complex traits with ancestral recombination graphs'
+    - name: 'Genetic prediction with ARG-powered linear algebra'
       journal: bioRxiv
       fauthor: Hanbin Lee
       author: Nathaniel S. Pope, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
