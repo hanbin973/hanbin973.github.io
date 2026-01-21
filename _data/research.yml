@@ -9,7 +9,6 @@
       year: 2026
       doi: https://doi.org/10.1101/2025.07.14.664631
 
-  papers:
     - name: 'On ARGs, pedigrees, and genetic relatedness matrices'
       journal: Genetics
       fauthor: Brieuc Lehmann
