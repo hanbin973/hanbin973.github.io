@@ -1,19 +1,20 @@
 - name: Preprints
+          
+- name: Journals
   papers:
     - name: 'Genetic prediction with ARG-powered linear algebra'
-      journal: bioRxiv
+      journal: Genetics, in press
       fauthor: Hanbin Lee
       author: Nathaniel S. Pope, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
-      year: 2025
+      year: 2026
       doi: https://doi.org/10.1101/2025.07.14.664631
-        
-- name: Journals
+
   papers:
     - name: 'On ARGs, pedigrees, and genetic relatedness matrices'
       journal: Genetics
       fauthor: Brieuc Lehmann
       author: Hanbin Lee, Luke Anderson-Trocme, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
-      year: 2025
+      year: 2026
       doi: https://doi.org/10.1093/genetics/iyaf219
 
     - name: 'randPedPCA: Rapid approximation of principal components from large pedigrees'
