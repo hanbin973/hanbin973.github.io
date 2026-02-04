@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated in July, 2025</span>
+<span style="color:grey">Updated in January, 2026</span>
 
 ___
 
@@ -29,8 +29,8 @@ Contact: <hblee@umich.edu>
 - Doctor of Philosophy, Department of Statistics (2024.9 -)
 
 ### Seoul National University
-- Doctor of Medicine, Department of Medicine (2016.3 - 2023.8)
 - Bachelor of Mathematics, Department of Mathematical Sciences (2017.3 - 2023.8)
+- Doctor of Medicine, Department of Medicine (2016.3 - 2023.8)
 
 ## Professional service
 ### Peer review
