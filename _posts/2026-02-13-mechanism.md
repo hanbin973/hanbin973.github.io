@@ -14,7 +14,7 @@ excerpt_separator:  <!--more-->
 왜냐하면 시험가설이 영가설일 이유는 통계학적으로 존재하지 않기 때문입니다.
 모수가 0인 가설도, 10인 가설도, 혹은 1억인 가설도 모두 시험가설이 될 수 있습니다.
 
-![/assets/blog_img/2026-02-13-mechanism/card_krueger.png](Card and Krueger (1994))
+![Card and Krueger (1994)](/assets/blog_img/2026-02-13-mechanism/card_krueger.png)
 
 데이비드 카드와 앨런 크루거는 1994년최저임금에 대한 기념비적인 연구를 발표합니다. 
 안타깝게도 일찍이 고인이 된 크루거와 달리 카드는 이 업적으로 2021년 노벨경제학상을 수상합니다.
