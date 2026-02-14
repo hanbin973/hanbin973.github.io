@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hanbin Lee">
+
+<title>Genetic prediction with ARG-powered linear algebra</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="slides_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slides_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="slides_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="slides_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="slides_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="slides_files/libs/quarto-html/anchor.min.js"></script>
+<link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="slides_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="slides_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="slides_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Genetic prediction with ARG-powered linear algebra</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Hanbin Lee <a href="mailto:hblee@umich.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Michigan, Ann Arbor
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Mar 11, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>The ancestral recombination graph (ARG) describes the evolutionary relationship between</p>
+<p>genetic materials in the presence of recombination and drift</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/full_arg-0.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: full_arg-0</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p>The ancestral recombination graph (ARG) describes the evolutionary relationship between</p>
+<p>genetic materials in the presence of recombination and drift</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/full_arg-1.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: full_arg-1</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
+<p>The full probabilistic process is complicated</p>
+<p>In this work, we condition on the realized ARG, resulting a sequence of local trees</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/local_trees.svg" height="500" class="figure-img"></p>
+<figcaption>Placeholder: local_trees</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p>What is the conditional distribution of a trait given the trees?</p>
+<p>Since the genealogy is fixed, the only randomness that remains is mutation</p>
+<p><span class="math display">\[
+\text{Trait} \mid \text{Local trees} \quad \sim \quad ?
+\]</span></p>
+</div>
+</div>
+<section id="linear-mixed-model" class="level2">
+<h2 class="anchored" data-anchor-id="linear-mixed-model">Linear mixed model</h2>
+<div class="fragment">
+<p>Linear mixed models are popular in quantitative genetics <span class="math display">\[
+\mathbf{y} = \underbrace{\mathbf{Z}\mathbf{u}}_{\text{random effects}} + \underbrace{\mathbf{X}\mathbf{b}}_{\text{fixed effects}} + \boldsymbol{\varepsilon}
+\]</span> where <span class="math inline">\(\mathbf{Z}\)</span> includes genotyped variants and <span class="math inline">\(\mathbf{X}\)</span> is the covariate matrix</p>
+<p>In particular, the SNP effects <span class="math inline">\(\mathbf{u} \sim p(\cdot)\)</span> is <em>random</em></p>
+</div>
+<div class="fragment">
+<p>Some questions …</p>
+<div class="incremental">
+<ul class="incremental">
+<li>What’s the source of <span class="math inline">\(\mathbf{u}\)</span>’s randomness?</li>
+<li>Why are <span class="math inline">\(\mathbf{u}\)</span>’s (vector of random effects) entries independent?</li>
+</ul>
+</div>
+</div>
+<div class="fragment">
+<p>We answer these questions from a genealogical perspective</p>
+</div>
+</section>
+</section>
+<section id="setup-and-derivation" class="level1">
+<h1>Setup and derivation</h1>
+<div class="fragment">
+<p>The trait <span class="math inline">\(\mathbf{y}\)</span> is a linear function of the genotype <span class="math inline">\(\mathbf{G}\)</span> <span class="math display">\[
+\mathbf{y} = \mathbf{G}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\]</span> <span class="math inline">\(\mathbf{y} \in \mathbb{R}^N\)</span>, <span class="math inline">\(\mathbf{G} \in \mathbb{R}^{N \times P}\)</span>, <span class="math inline">\(\boldsymbol{\beta} \in \mathbb{R}^P\)</span>, and <span class="math inline">\(\boldsymbol{\varepsilon} \in \mathbb{R}^N\)</span></p>
+<p><span class="math inline">\(\mathbf{G}\)</span> contains <em>all</em> positions the genome including genotyped ones</p>
+<p><span class="math inline">\(N\)</span>: number of samples, <span class="math inline">\(P\)</span>: length of the genome</p>
+</div>
+<section id="how-do-we-get-traits" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-get-traits">How do we get traits?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/tree-branch.svg" class="absolute figure-img" data-top="200" data-left="0" height="600"></p>
+<figcaption>Placeholder: tree-branch</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><img src="imgs/tree-0.svg" class="absolute" data-top="200" data-left="0" height="600" alt="Placeholder: tree-0"> <span class="math display">\[
+\mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
+\mathbf{y}_2 = \boldsymbol{\beta}_2, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_2
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><img src="imgs/tree-1.svg" class="absolute" data-top="200" data-left="0" height="600" alt="Placeholder: tree-1"> <span class="math display">\[
+\mathbf{y}_1=\boldsymbol{\beta}_4, \;
+\mathbf{y}_2=\boldsymbol{\beta}_4, \;
+\mathbf{y}_3 = \boldsymbol{\beta}_3
+\]</span></p>
+</div>
+</div>
+</div><div class="column center" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p>Consider a local tree that spans over a region</p>
+<p>We get trait values by adding up effect sizes (<span class="math inline">\(\boldsymbol{\beta}\)</span>)</p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<ul>
+<li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n1} \boldsymbol{\beta}_1 + \mathbf{G}_{n2} \boldsymbol{\beta}_2\)</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="3">
+<ul>
+<li><span class="math inline">\(\mathbf{y}_n = \mathbf{G}_{n3} \boldsymbol{\beta}_3 + \mathbf{G}_{n4} \boldsymbol{\beta}_4\)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="branch-centric-view-of-trait-transmission" class="level2">
+<h2 class="anchored" data-anchor-id="branch-centric-view-of-trait-transmission">Branch-centric view of trait transmission</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="r-stack">
+<div class="fragment" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/tree-branch.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: tree-branch</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="7">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/tree-0.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: tree-0</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="8">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/tree-1.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: tree-1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment" data-fragment-index="1">
+<p>Inherit a branch first, then a mutation</p>
+<div class="fragment" data-fragment-index="3">
+<ul>
+<li>Sample <span class="math inline">\(1\)</span> inherits edges <span class="math inline">\(1-4\)</span> and <span class="math inline">\(4-5\)</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4">
+<ul>
+<li>Sample <span class="math inline">\(2\)</span> inherits edges <span class="math inline">\(2-4\)</span> and <span class="math inline">\(4-5\)</span></li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="5">
+<ul>
+<li>Sample <span class="math inline">\(3\)</span> inherits edge <span class="math inline">\(3-5\)</span></li>
+</ul>
+</div>
+</div>
+<div class="fragment" data-fragment-index="6">
+<p>Branch’s effect <span class="math inline">\(=\)</span> Sum of mutations’ effect</p>
+</div>
+<div class="fragment" data-fragment-index="7">
+<ul>
+<li>Effect of <span class="math inline">\(4-5 = 0\)</span> (1st realization)</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="8">
+<ul>
+<li>Effect of <span class="math inline">\(4-5 = \boldsymbol{\beta}_4\)</span> (2nd realization)</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="9">
+<p>Branch effect is a random variable!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="from-variants-to-branches" class="level2 center">
+<h2 class="center anchored" data-anchor-id="from-variants-to-branches">From variants to branches</h2>
+<div class="fragment">
+<p><span class="math display">\[
+\text{Trait} = \sum_p \text{Variant$_p$ effect size}
+\quad
+\Rightarrow
+\quad
+\text{Trait} = \sum_e \text{Branch$_e$ effect size}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\boldsymbol{\upsilon}_e = \text{Branch$_e$ effect size} = \sum_p \text{Variant$_p$ on Branch$_e$}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\mathbf{y} = \sum_p \mathbf{G}_p\boldsymbol{\beta}_p + \boldsymbol{\varepsilon}
+\quad
+\Rightarrow
+\quad
+\mathbf{y} = \sum_e \mathbf{Z}_e\boldsymbol{\upsilon}_e + \boldsymbol{\varepsilon}
+\]</span> where <span class="math inline">\(\mathbf{Z}_{ne}=\)</span> the number of haplotypes of <span class="math inline">\(n\)</span> that inherit <span class="math inline">\(e\)</span></p>
+</div>
+</section>
+</section>
+<section id="ancestral-recombination-graph-linear-mixed-model-arg-lmm" class="level1">
+<h1>Ancestral recombination graph linear mixed model (ARG-LMM)</h1>
+<div class="fragment">
+<p>Split <span class="math inline">\(\boldsymbol{\upsilon}\)</span> to <span class="math inline">\(\mathbf{u} = \boldsymbol{\upsilon} - \mathrm{E}\boldsymbol{\upsilon}\)</span> and <span class="math inline">\(\mathbf{f}= \mathrm{E}\boldsymbol{\upsilon}\)</span></p>
+<p><span class="math display">\[
+\mathbf{y} = \underbrace{\mathbf{Z} \mathbf{u}}_{\text{Random effects}} + \underbrace{\mathbf{Z} \mathbf{f}}_{\text{Fixed effects}} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>This is the ancestral recombination graph linear mixed model (ARG-LMM) and <span class="math inline">\(\mathbf{Z} \mathrm{Cov}(\mathbf{u}) \mathbf{Z}^T\)</span> is the expected genetic relatedness matrix (eGRM) <span class="citation" data-cites="Fan2022 Zhang2023">(<a href="#ref-Fan2022" role="doc-biblioref">Fan, Mancuso, and Chiang 2022</a>; <a href="#ref-Zhang2023" role="doc-biblioref">Zhang et al. 2023</a>)</span></p>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>The random effects are tied to a physical process - Mutations!</li>
+<li>We start from more lower-level evolutionary statements to recover mixed model assumptions</li>
+<li>Independent random effects, random effect weights, normality, <span class="math inline">\(\ldots\)</span></li>
+</ul>
+</div>
+<section id="how-do-we-weigh-branches-of-the-arg" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-weigh-branches-of-the-arg">How do we weigh branches of the ARG?</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[
+\small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
+\]</span> <img src="imgs/edge_weight-0.svg" class="quarto-figure quarto-figure-center" height="500" alt="Placeholder: edge_weight-0"></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
+\]</span> <img src="imgs/edge_weight-1.svg" class="quarto-figure quarto-figure-center" height="500" alt="Placeholder: edge_weight-1"></p>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\small \mathrm{Var}(\mathbf{u}_e) \quad \propto \quad \text{Number of mutations} \quad \propto \quad \text{Area}=l_es_e
+\]</span></p>
+</div>
+</section>
+</section>
+<section id="complex-traits-through-the-lens-of-arg-lmm" class="level1">
+<h1>Complex traits through the lens of ARG-LMM</h1>
+<p><span class="math display">\[
+\text{What does ARG-LMM tell us about complex trait analysis?}
+\]</span></p>
+<section id="genetic-value-covariance" class="level2">
+<h2 class="anchored" data-anchor-id="genetic-value-covariance">Genetic value covariance</h2>
+<div class="r-stack">
+<div class="fragment" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-0.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: covariance-0</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="4">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-1.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: covariance-1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p><span class="math inline">\(\mathbf{y}_1 = \mathbf{u}_{13} + \mathbf{u}_{34} \quad \text{and} \quad \mathbf{y}_2 = \mathbf{u}_{23} + \mathbf{u}_{34}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p><span class="math display">\[
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
+\mathrm{Cov}(\mathbf{u}_{13} + \mathbf{u}_{34}, \mathbf{u}_{23} + \mathbf{u}_{34}) =
+\mathrm{Cov}(\mathbf{u}_{34}, \mathbf{u}_{34}) =
+\mathrm{Var}(\mathbf{u}_{34}) \propto t_3 - t_2
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="math display">\[
+\mathrm{Cov}(\mathbf{y}_1, \mathbf{y}_2) =
+\mathrm{Cov}(\mathbf{u}_{13} + \textcolor{red}{\mathbf{u}_{34}}, \mathbf{u}_{23} + \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Cov}(\textcolor{red}{\mathbf{u}_{34}}, \textcolor{red}{\mathbf{u}_{34}}) =
+\mathrm{Var}(\textcolor{red}{\mathbf{u}_{34}}) \propto t_3 - t_2
+\]</span></p>
+</div>
+</div>
+</section>
+<section id="heritability-is-ill-defined-in-arg-lmm" class="level2">
+<h2 class="anchored" data-anchor-id="heritability-is-ill-defined-in-arg-lmm">Heritability is <em>ill</em>-defined in ARG-LMM</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<p><span class="math display">\[
+\small \text{Heritability: }h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
+=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
+\]</span> This applies to all individuals <span class="math inline">\(\small n \in \{1,\ldots,N\}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p>However, all individuals have a different amount of genetic variance (except haploids) <span class="math display">\[
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p><span class="math display">\[
+\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
+\]</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p>We can’t define a single quantitity <span class="math inline">\(h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)}}{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)} + \mathrm{Var}(\boldsymbol{\varepsilon}_n)}\)</span> for everyone</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-short-0.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: covariance-short-0</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-short-1.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: covariance-short-1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-long-0.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: covariance-long-0</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-long-1.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: covariance-long-1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="polygenic-prediction-is-constrained-by-demography" class="level2">
+<h2 class="anchored" data-anchor-id="polygenic-prediction-is-constrained-by-demography">Polygenic prediction is constrained by demography</h2>
+<div class="r-stack">
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/geneticvariance.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: geneticvariance</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-out">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/covariance-1.svg" class="absolute figure-img" data-top="70" data-right="50" height="550"></p>
+<figcaption>Placeholder: covariance-1</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>Some people are less genetically variable than others</p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Some people are harder to predict genetically than others</p>
+</div>
+<div class="fragment">
+<p>Some populations are <span style="color:red">inherently harder</span> to predict!</p>
+</div>
+</div>
+<div class="footer">
+<p>Demographic model from <span class="citation" data-cites="Browning2018">(<a href="#ref-Browning2018" role="doc-biblioref">Browning et al. 2018</a>)</span></p>
+</div>
+</section>
+</section>
+<section id="textsftslmm-fitting-arg-lmm-to-tree-sequences" class="level1">
+<h1><span class="math inline">\(\textsf{tslmm}\)</span>, fitting ARG-LMM to tree sequences</h1>
+<div class="fragment">
+<p><span class="math inline">\(\textsf{tslmm}\)</span> utilizes an efficient <em>genetic relatedness matrix - vector product</em> to fit the restricted maximum likelihood (REML) objective</p>
+</div>
+<div class="fragment">
+<p>It can estimate variance components and compute polygenic scores by best linear unbiased prediction (BLUP)</p>
+</div>
+<section id="the-matrix-vector-product-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="the-matrix-vector-product-algorithm">The matrix-vector product algorithm</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/two-trees-empty.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: two-trees-empty</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/two-trees-naive.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: two-trees-naive</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment" data-fragment-index="3">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/two-trees-efficient.svg" height="550" class="figure-img"></p>
+<figcaption>Placeholder: two-trees-efficient</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out" data-fragment-index="1">
+<p>The algorithm needs to pass mutations to the correct samples</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="2">
+<p>A naive approach is to push the mutations down to the leaves every time</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="3">
+<p>Wait until the subtree’s topology changes due to edge insertion/deletion</p>
+</div>
+<div class="fragment fade-in-then-out" data-fragment-index="4">
+<p>The wrong recipient will receive the mutations if we procrastinate further</p>
+</div>
+<div class="fragment" data-fragment-index="5">
+<p>Fitting REML <span class="math inline">\(\mathcal{O}(n_s^3) \; \Rightarrow \; \mathcal{O}(n_s+n_t\log n_s)\)</span></p>
+<p><span class="math inline">\(n_s\)</span>: number of samples, <span class="math inline">\(n_t\)</span>: number of trees</p>
+</div>
+</div>
+<div class="footer">
+<p>Modified figures by Nathaniel Pope (Oregon)</p>
+</div>
+</section>
+<section id="efficiency-of-matrix-vector-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="efficiency-of-matrix-vector-multiplication">Efficiency of Matrix-Vector Multiplication</h2>
+<div class="fragment">
+<p>How does <span class="math inline">\(\textsf{tslmm}\)</span> compare to other ARG-based methods?</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="imgs/matvec_compare.pdf" height="500"></p>
+<figcaption>Placeholder: matvec_compare</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<ul class="incremental">
+<li><span class="math inline">\(\textsf{tslmm}\)</span> uses an exact algorithm for GRM-vector products.</li>
+<li><code>arg-needle-lib</code> uses a Monte-Carlo approach.</li>
+<li><span class="math inline">\(\textsf{tslmm}\)</span> is <strong>10–100x faster</strong> than <code>arg-needle-lib</code> across varying mutation rates.</li>
+<li>No trade-off between accuracy and computational resources.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="runtime-for-variance-component-estimation" class="level2">
+<h2 class="anchored" data-anchor-id="runtime-for-variance-component-estimation">Runtime for variance component estimation</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/runtime.svg" height="500" class="figure-img"></p>
+<figcaption>Placeholder: runtime</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p>The runtime scales linearly with respect to the number of individuals (genome length = <span class="math inline">\(10^8\)</span>)</p>
+</div>
+</section>
+<section id="comparison-with-bolt-lmm" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-with-bolt-lmm">Comparison with BOLT-LMM</h2>
+<div class="fragment">
+<p>Scalability beyond conventional genotype-based methods.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="imgs/runtime_boltlmm.pdf" height="500"></p>
+<figcaption>Placeholder: runtime_boltlmm</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<ul class="incremental">
+<li><code>BOLT-LMM</code> runtime scales as <span class="math inline">\(\mathcal{O}(N^{1.5}M)\)</span>.</li>
+<li><span class="math inline">\(\textsf{tslmm}\)</span> scales as <span class="math inline">\(\mathcal{O}(N + E \log N)\)</span>.</li>
+<li><span class="math inline">\(\textsf{tslmm}\)</span> becomes faster for <span class="math inline">\(N &gt; 20,000\)</span>.</li>
+<li>The gap widens significantly as sample size increases.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="best-linear-unbiased-prediction-blup" class="level2">
+<h2 class="anchored" data-anchor-id="best-linear-unbiased-prediction-blup">Best linear unbiased prediction (BLUP)</h2>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/prediction.svg" height="600" class="figure-img"></p>
+<figcaption>Placeholder: prediction</figcaption>
+</figure>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>We measured the accuracy of polygenic scores computed from <span class="math inline">\(\textsf{tslmm}\)</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Training and testing on two non-overlapping groups embedded in the same tree sequence</p>
+</div>
+<div class="fragment">
+<p>True trees are better, but inferred trees are not too behind!</p>
+</div>
+</div>
+</section>
+<section id="performance-in-spatially-structured-populations" class="level2">
+<h2 class="anchored" data-anchor-id="performance-in-spatially-structured-populations">Performance in Spatially Structured Populations</h2>
+<div class="fragment">
+<p>Validation in realistic, non-panmictic settings.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="imgs/pedigree.pdf" height="600"></p>
+<figcaption>Placeholder: pedigree</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="incremental">
+<ul class="incremental">
+<li>Simulated spatially-restricted mating and dispersal.</li>
+<li>Significant isolation by distance (IBD).</li>
+<li><span class="math inline">\(\textsf{tslmm}\)</span> (even with inferred ARGs) performs as well as using the true ARG or pedigree.</li>
+<li>Outperforms standard SNP-based GRM.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-future-directions" class="level2 center">
+<h2 class="center anchored" data-anchor-id="summary-future-directions">Summary &amp; Future directions</h2>
+<p>ARG-LMM lays an explicit connection between population and quantitative genetics</p>
+<div class="fragment">
+<p>Pseudoreplication due to shared ancestry <span class="citation" data-cites="Rosenberg2009">(<a href="#ref-Rosenberg2009" role="doc-biblioref">Rosenberg and VanLiere 2009</a>)</span></p>
+</div>
+<div class="fragment">
+<p>Missing heritability, Mutations vs Mendelian segregation</p>
+</div>
+<div class="fragment">
+<p>A powerful trait simulator based on ARG-LMM <span class="citation" data-cites="Cranmer2020">(<a href="#ref-Cranmer2020" role="doc-biblioref">Cranmer, Brehmer, and Louppe 2020</a>)</span></p>
+</div>
+<div class="fragment">
+<p>Super interesting technical details and proofs (10+ backup slides prepared)</p>
+</div>
+<div class="fragment">
+<p>Predicting polygenic scores of internal nodes <span class="citation" data-cites="Edge2018 Peng2024">(<a href="#ref-Edge2018" role="doc-biblioref">Edge and Coop 2018</a>; <a href="#ref-Peng2024" role="doc-biblioref">Peng, Mulder, and Edge 2024</a>)</span></p>
+</div>
+<div class="fragment">
+<p>Time conditioned analysis (random vs fixed effects) <span class="citation" data-cites="Fan2022">(<a href="#ref-Fan2022" role="doc-biblioref">Fan, Mancuso, and Chiang 2022</a>)</span></p>
+</div>
+</section>
+</section>
+<section id="thank-you-for-listening" class="level1">
+<h1>Thank you for listening</h1>
+<p align="center">
+</p><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/qr_code.svg" height="400" class="figure-img"></p>
+<figcaption>Placeholder: qr_code</figcaption>
+</figure>
+</div>
+<p></p>
+<p>Link to <span class="citation" data-cites="Lehmann2025">(<a href="#ref-Lehmann2025" role="doc-biblioref">Lehmann et al. 2025</a>)</span>, <span class="math inline">\(\textsf{tslmm}\)</span> preprint coming soon</p>
+<p>Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)</p>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Browning2018" class="csl-entry" role="listitem">
+Browning, Sharon R., Brian L. Browning, Martha L. Daviglus, Ramon A. Durazo-Arvizu, Neil Schneiderman, Robert C. Kaplan, and Cathy C. Laurie. 2018. <span>“Ancestry-Specific Recent Effective Population Size in the Americas.”</span> Edited by Kirk E. Lohmueller. <em>PLOS Genetics</em> 14 (5): e1007385. <a href="https://doi.org/10.1371/journal.pgen.1007385">https://doi.org/10.1371/journal.pgen.1007385</a>.
+</div>
+<div id="ref-Cranmer2020" class="csl-entry" role="listitem">
+Cranmer, Kyle, Johann Brehmer, and Gilles Louppe. 2020. <span>“The Frontier of Simulation-Based Inference.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (48): 30055–62. <a href="https://doi.org/10.1073/pnas.1912789117">https://doi.org/10.1073/pnas.1912789117</a>.
+</div>
+<div id="ref-Edge2018" class="csl-entry" role="listitem">
+Edge, Michael D, and Graham Coop. 2018. <span>“Reconstructing the History of Polygenic Scores Using Coalescent Trees.”</span> <em>Genetics</em> 211 (1): 235–62. <a href="https://doi.org/10.1534/genetics.118.301687">https://doi.org/10.1534/genetics.118.301687</a>.
+</div>
+<div id="ref-Fan2022" class="csl-entry" role="listitem">
+Fan, Caoqi, Nicholas Mancuso, and Charleston W. K. Chiang. 2022. <span>“A Genealogical Estimate of Genetic Relationships.”</span> <em>The American Journal of Human Genetics</em> 109 (5): 812–24. <a href="https://doi.org/10.1016/j.ajhg.2022.03.016">https://doi.org/10.1016/j.ajhg.2022.03.016</a>.
+</div>
+<div id="ref-Lehmann2025" class="csl-entry" role="listitem">
+Lehmann, Brieuc, Hanbin Lee, Luke Anderson-Trocme, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph. 2025. <span>“On ARGs, Pedigrees, and Genetic Relatedness Matrices,”</span> March. <a href="https://doi.org/10.1101/2025.03.03.641310">https://doi.org/10.1101/2025.03.03.641310</a>.
+</div>
+<div id="ref-Peng2024" class="csl-entry" role="listitem">
+Peng, Dandan, Obadiah J. Mulder, and Michael D. Edge. 2024. <span>“Evaluating ARG-Estimation Methods in the Context of Estimating Population-Mean Polygenic Score Histories,”</span> May. <a href="https://doi.org/10.1101/2024.05.24.595829">https://doi.org/10.1101/2024.05.24.595829</a>.
+</div>
+<div id="ref-Rosenberg2009" class="csl-entry" role="listitem">
+Rosenberg, Noah A., and Jenna M. VanLiere. 2009. <span>“Replication of Genetic Associations as Pseudoreplication Due to Shared Genealogy.”</span> <em>Genetic Epidemiology</em> 33 (6): 479–87. <a href="https://doi.org/10.1002/gepi.20400">https://doi.org/10.1002/gepi.20400</a>.
+</div>
+<div id="ref-SalehiNowbandegani2023" class="csl-entry" role="listitem">
+Salehi Nowbandegani, Pouria, Anthony Wilder Wohns, Jenna L. Ballard, Eric S. Lander, Alex Bloemendal, Benjamin M. Neale, and Luke J. O’Connor. 2023. <span>“Extremely Sparse Models of Linkage Disequilibrium in Ancestrally Diverse Association Studies.”</span> <em>Nature Genetics</em> 55 (9): 1494–1502. <a href="https://doi.org/10.1038/s41588-023-01487-8">https://doi.org/10.1038/s41588-023-01487-8</a>.
+</div>
+<div id="ref-Wakeley2008" class="csl-entry" role="listitem">
+Wakeley, John. 2008. <em>Coalescent Theory</em>. Greenwood Village, CO: Roberts &amp; Company.
+</div>
+<div id="ref-Zhang2023" class="csl-entry" role="listitem">
+Zhang, Brian C., Arjun Biddanda, Árni Freyr Gunnarsson, Fergus Cooper, and Pier Francesco Palamara. 2023. <span>“Biobank-Scale Inference of Ancestral Recombination Graphs Enables Genealogical Analysis of Complex Traits.”</span> <em>Nature Genetics</em> 55 (5): 768–76. <a href="https://doi.org/10.1038/s41588-023-01379-x">https://doi.org/10.1038/s41588-023-01379-x</a>.
+</div>
+</div>
+</section>
+</section>
+<section id="technical-notes" class="level1">
+<h1>Technical Notes</h1>
+<section id="edge-splitting" class="level2">
+<h2 class="anchored" data-anchor-id="edge-splitting">Edge splitting</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Nodes and edges are reused across multiple trees in a tree sequence</li>
+<li>Edges, in particular, may not have a unique set of samples along their span</li>
+<li>Salehi Nowbandegani and colleagues <em>bricked</em> the edges to divide them <span class="citation" data-cites="SalehiNowbandegani2023">(<a href="#ref-SalehiNowbandegani2023" role="doc-biblioref">Salehi Nowbandegani et al. 2023</a>)</span></li>
+<li>Henceforth, we assume that edges are splitted to have a unique subtopology <span class="math display">\[
+\mathbf{Z}_{ne} = \text{The number of haplotypes of individual $n$ that inherit $e$}
+\]</span> The overall matrix <span class="math inline">\(\mathbf{Z}\)</span> is an individual-edge design matrix.</li>
+</ul>
+</div>
+</section>
+<section id="collapsing-variants-to-edges" class="level2">
+<h2 class="anchored" data-anchor-id="collapsing-variants-to-edges">Collapsing variants to edges</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>When does an individual possess a derived allele? (<span class="math inline">\(\text{ancestral}=0\)</span>, <span class="math inline">\(\text{derived}=1\)</span>)</li>
+<li>Let <span class="math inline">\(\mathbf{1}_{ep}\)</span> be the indicator <em>random</em> variable of a mutation at edge <span class="math inline">\(e\)</span> and position <span class="math inline">\(p\)</span></li>
+</ul>
+</div>
+<center>
+<div class="fragment">
+<p>An individual should be a descendant of an edge (<span class="math inline">\(\mathbf{Z}_{ne}=1\)</span>)</p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
++
+\]</span> That edge should have mutation (<span class="math inline">\(\mathbf{1}_{ep}=1\)</span>)</p>
+</div>
+</center>
+<div class="fragment">
+<p><span class="math display">\[
+\mathbf{G}_{np} = \sum_{e: p \in e} \mathbf{Z}_{ne} \mathbf{1}_{ep} \quad \Leftrightarrow \quad \mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}
+\]</span></p>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>Assumes that there are no parent-child mutation pairs, but allows <em>some</em> recurrent mutations</li>
+</ul>
+</div>
+</section>
+<section id="exchange-the-summations" class="level2">
+<h2 class="anchored" data-anchor-id="exchange-the-summations">Exchange the summations</h2>
+<div class="fragment">
+<p>Recall <span class="math inline">\(\mathbf{G}_p = \sum_{e:p \in e} \mathbf{Z}_{e} \mathbf{1}_{ep}\)</span> and <span class="math inline">\(\mathbf{y} = \sum_{p=1}^P \mathbf{G}_p \boldsymbol{\beta}_p + \boldsymbol{\varepsilon}\)</span></p>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>Substitute <span class="math inline">\(\mathbf{G}_p\)</span> <span class="math display">\[
+\textcolor{red}{\sum_{p=1}^P \sum_{e:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment fade-in-then-out">
+<p>Exchange the inner and the outer summation <span class="math display">\[
+\textcolor{red}{\sum_{e=1}^E \sum_{p:p \in e}} \mathbf{Z}_e \boldsymbol{\beta}_p \mathbf{1}_{ep} + \boldsymbol{\varepsilon}
+\]</span></p>
+</div>
+<div class="fragment">
+<p>Pull out <span class="math inline">\(\mathbf{Z}_e\)</span> and group the positions nested in <span class="math inline">\(p: p \in e\)</span> <span class="math display">\[
+\begin{aligned}
+    &amp; \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\left(\sum_{p:p\in e} \boldsymbol{\beta}_p \mathbf{1}_{ep} \right)} + \boldsymbol{\varepsilon} \\
+    &amp;= \sum_{e=1}^E \mathbf{Z}_e \textcolor{blue}{\boldsymbol{\upsilon}_e} + \boldsymbol{\varepsilon} \\
+    &amp;= \mathbf{Z} \boldsymbol{\upsilon} + \boldsymbol{\varepsilon}
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div class="fragment">
+<p><span class="math inline">\(\boldsymbol{\upsilon}\)</span> is a random variable made up of mutation-driven random variables <span class="math inline">\(\mathbf{1}_{ep}\)</span>!</p>
+</div>
+</section>
+<section id="random-effects-are-independent" class="level2">
+<h2 class="anchored" data-anchor-id="random-effects-are-independent">Random effects are independent</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>Independent entries of random effects is a key assumption of linear mixed models</p></li>
+<li><p>This can be <em>proved</em> in ARG-LMM, instead of assuming it <span class="math display">\[
+  \mathrm{Cov}( \mathbf{u}_e, \mathbf{u}_{e'} ) = \sum_{p \in e,e'} \boldsymbol{\beta}_p^2 \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p})
+\]</span></p></li>
+<li><p>The covariance between the indicators are higher-order terms of mutation rates, so we ignore it <span class="citation" data-cites="Wakeley2008">(<a href="#ref-Wakeley2008" role="doc-biblioref">Wakeley 2008</a>)</span> <span class="math display">\[
+  \begin{aligned}
+  \mathrm{Cov}(\mathbf{1}_{ep}, \mathbf{1}_{e'p}) &amp;= \mathrm{E}[\mathbf{1}_{ep}\mathbf{1}_{e'p}] - \mathrm{E}[\mathbf{1}_{e'p}]\mathrm{E}[\mathbf{1}_{ep}] \\
+      &amp;= 0 -l_eu_{ep}l_{e'}u_{e'p} \approx 0
+  \end{aligned}
+\]</span> where <span class="math inline">\(l_e\)</span> is the (time-)length of edge <span class="math inline">\(e\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="the-marginal-distribution-of-mathbfu_e" class="level2">
+<h2 class="anchored" data-anchor-id="the-marginal-distribution-of-mathbfu_e">The marginal distribution of <span class="math inline">\(\mathbf{u}_e\)</span>?</h2>
+<div class="incremental">
+<ul class="incremental">
+<li><p>The Gaussian prior on random effects is a popular choice</p></li>
+<li><p>One might be tempted to invoke the central limit theorem to <span class="math inline">\(\mathbf{u}_e\)</span> (sum of indicators) <span class="math display">\[
+      \mathbf{u}_e \bigg/ \sqrt{l_e s_e} \cdot \sqrt{ \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep} }
+      \rightarrow N(0,1^2) \text{ as } s_e \rightarrow \infty
+  \]</span> where <span class="math inline">\(s_e\)</span> is the span (in base pairs) of edge <span class="math inline">\(e\)</span></p></li>
+<li><p>The convergence is unlikely to be fast enough given the small value of <span class="math inline">\(\mathbf{E}[\mathbf{1}_{ep}]\)</span> (Berry-Esseen).</p></li>
+<li><p>Fortunately, the variance is computable and is <span class="math display">\[
+      \mathrm{Var}(\mathbf{u}_e) = l_e s_e \cdot \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+  \]</span></p></li>
+</ul>
+</div>
+</section>
+<section id="more-on-mathrmvarmathbfu_e" class="level2">
+<h2 class="anchored" data-anchor-id="more-on-mathrmvarmathbfu_e">More on <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span></h2>
+<div class="incremental">
+<ul class="incremental">
+<li>The weight <span class="math inline">\(\mathrm{Var}(\mathbf{u}_e)\)</span> has two components</li>
+<li>The area <span class="math inline">\(l_e s_e\)</span></li>
+<li>Mutation rate-weighted squared average of effect sizes <span class="math display">\[
+      \tau_e^2 = \frac{1}{s_e} \sum_{p:p \in e} \boldsymbol{\beta}_p^2 u_{ep}
+  \]</span></li>
+<li>As a measure of functional significance, variance components are confounded by the area</li>
+</ul>
+</div>
+</section>
+<section id="fixed-effects-are-constant-under-neutrality" class="level2">
+<h2 class="anchored" data-anchor-id="fixed-effects-are-constant-under-neutrality">Fixed effects are constant under neutrality</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Suppose that <span class="math inline">\(u_{ep}=u_p\)</span>, i.e., the mutation rate is constant across edges for a given position</li>
+</ul>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p><span class="math display">\[
+\begin{aligned}
+    &amp;\left[ \mathbf{Z} \mathbf{f} \right]_n = \sum_{e=1}^E \mathbf{Z}_{ne} \mathbf{E}
+    \left[ \sum_{p: p \in e} \boldsymbol{\beta}_p\mathbf{1}_{ep} \right] \\
+    \end{aligned}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+\sum_{p=1}^P \boldsymbol{\beta}_p u_p
+    \left(
+            \sum_{e: p \in e} \mathbf{Z}_{ne} l_e
+    \right)
+    = \sum_{p=1}^P \boldsymbol{\beta}u_p \cdot 2t_{\mathrm{root},p} = \text{const. resp. to $n$}
+\]</span></p>
+</div>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li><p>An intercept is enough to account for the fixed effects <span class="math inline">\(\mathbf{Z}\mathbf{f}\)</span> under this condition</p></li>
+<li><p>The assumption is standard in neutral settings</p></li>
+</ul>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+    \text{\textcolor{red}{Conjecture:} selection $\Rightarrow$ fixed effects?}
+\]</span></p>
+</div>
+</section>
+<section id="becareful-of-pseudoreplication" class="level2">
+<h2 class="anchored" data-anchor-id="becareful-of-pseudoreplication">Becareful of pseudoreplication</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>Non-overlapping samples are not independent</li>
+<li>Everyone shares some amount of mutational history</li>
+<li>Parameter estimates (e.g.&nbsp;variance components) are correlated</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/pseudoreplication.svg" height="400" class="figure-img"></p>
+<figcaption>Placeholder: pseudoreplication</figcaption>
+</figure>
+</div>
+</div>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p>This is also the very reason why BLUP works</p>
+</div>
+<div class="fragment">
+<p>We are all correlated!</p>
+</div>
+</div>
+</section>
+<section id="missing-heritability" class="level2">
+<h2 class="anchored" data-anchor-id="missing-heritability"><em>Missing</em> heritability?</h2>
+<div class="fragment">
+<p>ARG-LMM variance component only reflects mutational variability</p>
+</div>
+<div class="incremental">
+<ul class="incremental">
+<li>Pedigree-based heritability captures Mendelian segregation and mutation is ignored</li>
+<li>ARG-LMM’s generative model only has mutation and no segregation</li>
+<li>Why compare quantities stemming from different random forces? <span class="citation" data-cites="Zhang2023">(<a href="#ref-Zhang2023" role="doc-biblioref">Zhang et al. 2023</a>)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg" height="400" class="figure-img"></p>
+<figcaption>Placeholder: apples and oranges</figcaption>
+</figure>
+</div>
+</div>
+<div class="footer">
+<p>Figure from <a href="https://whalebonemag.com/">Whalebone Magazine</a></p>
+</div>
+</section>
+<section id="estimation-quality-of-variance-components" class="level2">
+<h2 class="anchored" data-anchor-id="estimation-quality-of-variance-components">Estimation quality of variance components</h2>
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
+<p><strong>Simulated trees</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/estimation_true.svg" height="700" class="figure-img"></p>
+<figcaption>Placeholder: estimation_true</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Inferred (tsinfer+tsdate) trees</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/estimation_infer.svg" height="700" class="figure-img"></p>
+<figcaption>Placeholder: estimation_infer</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="there-are-many-genetic-variances" class="level2">
+<h2 class="anchored" data-anchor-id="there-are-many-genetic-variances">There are many genetic variances</h2>
+<div class="incremental">
+<ul class="incremental">
+<li>ARG-conditioned variance <span class="math display">\[
+\mathrm{Var}(\mathbf{y} \mid \mathrm{ARG})
+\]</span></li>
+<li>Pedigree-conditioned variance <span class="math display">\[
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Pedigree})
+\]</span></li>
+<li>Demography-conditioned variance <span class="math display">\[
+\mathrm{Var}(\mathbf{y} \mid \mathrm{Demography})
+\]</span></li>
+<li>Time conditioning (reference population)</li>
+</ul>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
