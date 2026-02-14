@@ -1,11 +1,11 @@
 ---
-title: "Genetic prediction with ARG-powered linear algebra"
+title: "Modelling complex traits with ancestral recombination graphs"
 author:
   name: Hanbin Lee
   affiliation: "University of Michigan, Ann Arbor"
   email: "hblee@umich.edu"
-venue: "tskit meeting"
-date: "11 March 2026"
+venue: "Probabilistic Modelling in Genomics 2025"
+date: "07 March 2025"
 date-format: "MMM D, YYYY"
 bibliography: ref.bib
 format: 
@@ -20,6 +20,7 @@ format:
     navigation-mode: vertical 
     template-partials:
       - title-slide.html
+    embed-resources: true
 ---
 
 # Overview
@@ -120,12 +121,12 @@ $N$: number of samples, $P$: length of the genome
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
-![Placeholder: tree-branch](imgs/tree-branch.svg){.absolute top=200 left=0 height=600}
+![](imgs/tree-branch.svg){.absolute top=200 left=0 height=600}
 :::
 
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![Placeholder: tree-0](imgs/tree-0.svg){.absolute top=200 left=0 height=600}
+![](imgs/tree-0.svg){.absolute top=200 left=0 height=600}
 $$
 \mathbf{y}_1=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2, \;
 \mathbf{y}_2 = \boldsymbol{\beta}_2, \;
@@ -134,7 +135,7 @@ $$
 :::
 
 ::: {.fragment fragment-index=3}
-![Placeholder: tree-1](imgs/tree-1.svg){.absolute top=200 left=0 height=600}
+![](imgs/tree-1.svg){.absolute top=200 left=0 height=600}
 $$
 \mathbf{y}_1=\boldsymbol{\beta}_4, \;
 \mathbf{y}_2=\boldsymbol{\beta}_4, \;
@@ -176,15 +177,15 @@ We get trait values by adding up effect sizes ($\boldsymbol{\beta}$)
 ::: {.r-stack}
 
 ::: {.fragment fragment-index=2}
-![Placeholder: tree-branch](imgs/tree-branch.svg){fig-align="center" height=600}
+![](imgs/tree-branch.svg){fig-align="center" height=600}
 :::
 
 ::: {.fragment fragment-index=7}
-![Placeholder: tree-0](imgs/tree-0.svg){fig-align="center" height=600}
+![](imgs/tree-0.svg){fig-align="center" height=600}
 :::
 
 ::: {.fragment fragment-index=8}
-![Placeholder: tree-1](imgs/tree-1.svg){fig-align="center" height=600}
+![](imgs/tree-1.svg){fig-align="center" height=600}
 :::
 
 :::
@@ -291,13 +292,13 @@ This is the ancestral recombination graph linear mixed model (ARG-LMM) and $\mat
 $$
 \small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
 $$
-![Placeholder: edge_weight-0](imgs/edge_weight-0.svg){height=500 fig-align="center"}
+![](imgs/edge_weight-0.svg){height=500 fig-align="center"}
 :::
 ::: {.fragment}
 $$
 \small l_e:\text{ length in time} \quad s_e:\text{ span in base pairs}
 $$
-![Placeholder: edge_weight-1](imgs/edge_weight-1.svg){height=500 fig-align="center"}
+![](imgs/edge_weight-1.svg){height=500 fig-align="center"}
 :::
 :::
 
@@ -319,11 +320,11 @@ $$
 ::: {.r-stack}
 
 ::: {.fragment fragment-index=1}
-![Placeholder: covariance-0](imgs/covariance-0.svg){height=600 fig-align="center"}
+![](imgs/covariance-0.svg){height=600 fig-align="center"}
 :::
 
 ::: {.fragment fragment-index=4}
-![Placeholder: covariance-1](imgs/covariance-1.svg){height=600 fig-align="center"}
+![](imgs/covariance-1.svg){height=600 fig-align="center"}
 :::
 
 :::
@@ -392,10 +393,10 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 
 ::: {.r-stack}
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![Placeholder: covariance-short-0](imgs/covariance-short-0.svg){fig-align="center" height=550}
+![](imgs/covariance-short-0.svg){fig-align="center" height=550}
 :::
 ::: {.fragment fragment-index=3}
-![Placeholder: covariance-short-1](imgs/covariance-short-1.svg){fig-align="center"height=550}
+![](imgs/covariance-short-1.svg){fig-align="center"height=550}
 :::
 :::
 
@@ -407,10 +408,10 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out  fragment-index=2}
-![Placeholder: covariance-long-0](imgs/covariance-long-0.svg){fig-align="center" height=550}
+![](imgs/covariance-long-0.svg){fig-align="center" height=550}
 :::
 ::: {.fragment fragment-index=3}
-![Placeholder: covariance-long-1](imgs/covariance-long-1.svg){fig-align="center" height=550}
+![](imgs/covariance-long-1.svg){fig-align="center" height=550}
 :::
 
 :::
@@ -426,10 +427,10 @@ We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\m
 
 ::: {.r-stack}
 
-![Placeholder: geneticvariance](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
+![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
 
 ::: {.fragment .fade-out}
-![Placeholder: covariance-1](imgs/covariance-1.svg){.absolute top=70 right=50 height=550}
+![](imgs/covariance-1.svg){.absolute top=70 right=50 height=550}
 :::
 
 :::
@@ -473,15 +474,15 @@ It can estimate variance components and compute polygenic scores by best linear 
 ::: {.r-stack}
 
 ::: {.fragment .fade-in-then-out fragment-index=1}
-![Placeholder: two-trees-empty](imgs/two-trees-empty.svg){fig-align="center" height=550}
+![](imgs/two-trees-empty.svg){fig-align="center" height=550}
 :::
 
 ::: {.fragment .fade-in-then-out fragment-index=2}
-![Placeholder: two-trees-naive](imgs/two-trees-naive.svg){fig-align="center" height=550}
+![](imgs/two-trees-naive.svg){fig-align="center" height=550}
 :::
 
 ::: {.fragment fragment-index=3}
-![Placeholder: two-trees-efficient](imgs/two-trees-efficient.svg){fig-align="center" height=550}
+![](imgs/two-trees-efficient.svg){fig-align="center" height=550}
 :::
 
 ::: 
@@ -519,31 +520,35 @@ Modified figures by Nathaniel Pope (Oregon)
 
 ## Efficiency of Matrix-Vector Multiplication
 
+
+
+::: {.r-stack}
 ::: {.fragment}
-How does $\textsf{tslmm}$ compare to other ARG-based methods?
+![](imgs/matvec_compare.svg){fig-align="center" height=500}
+:::
 :::
 
-::: {.columns}
-
-::: {.column width="50%"}
-![Placeholder: matvec_compare](imgs/matvec_compare.pdf){fig-align="center" height=500}
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+$\textsf{tskit}$ uses an exact algorithm for GRM-vector products
 :::
 
-::: {.column width="50%"}
-::: {.incremental}
-- $\textsf{tslmm}$ uses an exact algorithm for GRM-vector products.
-- `arg-needle-lib` uses a Monte-Carlo approach.
-- $\textsf{tslmm}$ is **10--100x faster** than `arg-needle-lib` across varying mutation rates.
-- No trade-off between accuracy and computational resources.
+::: {.fragment .fade-in-then-out}
+$\textsf{arg-needle-lib}$ uses a Monte-Carlo approach
 :::
 
+::: {.fragment .fade-in-then-out}
+$\textsf{tskit}$ is **10--100x faster** than $\textsf{arg-needle-lib}$ across varying mutation rates
 :::
 
-::::
+::: {.fragment}
+No trade-off between accuracy and computational resources
+:::
+:::
 
 ## Runtime for variance component estimation
 
-![Placeholder: runtime](imgs/runtime.svg){.fragment fig-align="center" height=500}
+![](imgs/runtime.svg){.fragment fig-align="center" height=500}
 
 ::: {.fragment}
 The runtime scales linearly with respect to the number of individuals (genome length = $10^8$)
@@ -551,30 +556,35 @@ The runtime scales linearly with respect to the number of individuals (genome le
 
 ## Comparison with BOLT-LMM
 
+
+
+::: {.r-stack}
 ::: {.fragment}
-Scalability beyond conventional genotype-based methods.
-:::
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![Placeholder: runtime_boltlmm](imgs/runtime_boltlmm.pdf){fig-align="center" height=500}
-:::
-
-::: {.column width="50%"}
-::: {.incremental}
-- `BOLT-LMM` runtime scales as $\mathcal{O}(N^{1.5}M)$.
-- $\textsf{tslmm}$ scales as $\mathcal{O}(N + E \log N)$.
-- $\textsf{tslmm}$ becomes faster for $N > 20,000$.
-- The gap widens significantly as sample size increases.
+![](imgs/runtime_boltlmm.svg){fig-align="center" height=500}
 :::
 :::
 
-::::
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+$\textsf{BOLT-LMM}$ runtime scales as $\mathcal{O}(N^{1.5}M)$
+:::
+
+::: {.fragment .fade-in-then-out}
+$\textsf{tslmm}$ scales as $\mathcal{O}(N + E \log N)$
+:::
+
+::: {.fragment .fade-in-then-out}
+$\textsf{tslmm}$ becomes faster for $N > 20,000$
+:::
+
+::: {.fragment}
+The gap widens significantly as sample size increases
+:::
+:::
 
 ## Best linear unbiased prediction (BLUP)
 
-![Placeholder: prediction](imgs/prediction.svg){.fragment fig-align="center" height="600"}
+![](imgs/prediction.svg){.fragment fig-align="center" height="600"}
 
 ::: {.r-stack}
 
@@ -594,26 +604,31 @@ True trees are better, but inferred trees are not too behind!
 
 ## Performance in Spatially Structured Populations
 
+
+
+::: {.r-stack}
 ::: {.fragment}
-Validation in realistic, non-panmictic settings.
-:::
-
-:::: {.columns}
-
-::: {.column width="50%"}
-![Placeholder: pedigree](imgs/pedigree.pdf){fig-align="center" height=600}
-:::
-
-::: {.column width="50%"}
-::: {.incremental}
-- Simulated spatially-restricted mating and dispersal.
-- Significant isolation by distance (IBD).
-- $\textsf{tslmm}$ (even with inferred ARGs) performs as well as using the true ARG or pedigree.
-- Outperforms standard SNP-based GRM.
+![](imgs/pedigree.svg){fig-align="center" height=600}
 :::
 :::
 
-::::
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
+Simulated spatially-restricted mating and dispersal
+:::
+
+::: {.fragment .fade-in-then-out}
+Significant isolation-by-distance
+:::
+
+::: {.fragment .fade-in-then-out}
+$\textsf{tslmm}$ (even with inferred ARGs) performs as well as using the true ARG or pedigree
+:::
+
+::: {.fragment}
+Comparable to standard SNP-based GRM with all causal variants included
+:::
+:::
 
 ## Summary & Future directions {.center}
 
@@ -649,10 +664,8 @@ Time conditioned analysis (random vs fixed effects) [@Fan2022]
 # Thank you for listening
 
 <p align="center">
-![Placeholder: qr_code](imgs/qr_code.svg){height=400}
+![](imgs/qr_code.svg){height=400}
 </p>
-
-Link to [@Lehmann2025], $\textsf{tslmm}$ preprint coming soon
 
 Collaborators: Nathaniel Pope (Oregon), Jerome Kelleher (Oxford), Gregor Gorjanc (Edinburgh), and Peter Ralph (Oregon)
 
@@ -849,7 +862,7 @@ $$
 - Parameter estimates (e.g. variance components) are correlated
 :::
 
-![Placeholder: pseudoreplication](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
+![](imgs/pseudoreplication.svg){.fragment fig-align="center" height="400"}
 
 ::: {.r-stack}
 
@@ -874,7 +887,7 @@ ARG-LMM variance component only reflects mutational variability
 - Why compare quantities stemming from different random forces? [@Zhang2023]
 :::
 
-![Placeholder: apples and oranges](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
+![](https://whalebonemag.com/wp-content/uploads/2022/11/applesandoranges-lilguys-02.jpg){.fragment height=400 fig-align="center"}
 
 ::: footer
 Figure from [Whalebone Magazine](https://whalebonemag.com/)
@@ -887,13 +900,13 @@ Figure from [Whalebone Magazine](https://whalebonemag.com/)
 :::{.fragment .fade-in-then-out}
 **Simulated trees**
 
-![Placeholder: estimation_true](imgs/estimation_true.svg){height="700"}
+![](imgs/estimation_true.svg){height="700"}
 :::
 
 :::{.fragment}
 **Inferred (tsinfer+tsdate) trees**
 
-![Placeholder: estimation_infer](imgs/estimation_infer.svg){height="700"}
+![](imgs/estimation_infer.svg){height="700"}
 :::
 
 :::
