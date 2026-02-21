@@ -12,11 +12,13 @@ ___
 Any statistical and computational methods operate under the constraints imposed by the data generating process.
 To put it another way, no method can extract information from data beyond what is given by nature.
 Based on this insight, I study how evolutionary processes shape statistical inference. 
+If you're interested in mechanistic approaches to biology, please reach out!
 
 I'm currently working on the following topics:
 - Graphical algorithms in tree sequences for scalable statistical genetics
 - Phylogenetic constraints of molecular language models
 - Evolutionary basis of whole-genome regression
+- Random and multiscale dynamical systems 
 
 I try to convince people that all priors of Bayesian models applied to genetic data implicitly (or explicitly) represent the underlying evolutionary process.
 
