@@ -377,7 +377,6 @@ We show that the relationship is roughly
 $$
 \mathrm{E}[V_G] = \tau^2 \cdot \frac{\mathrm{tr}(\widetilde{\mathbf{B}})}{N}
 $$
-The deviation may vary depending on the demographic structure.
 :::
 
 
