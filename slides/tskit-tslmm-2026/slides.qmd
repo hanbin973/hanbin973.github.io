@@ -355,12 +355,12 @@ $$
 
 :::
 
-## Genetic variance and mutational variance
+## Additive and mutational variance
 
 ::: {.fragment}
 $\textsf{tslmm}$'s target parameter $\tau^2$ represents the contribution of *mutations*.
 $$
-\tau^2 = \frac{1}{\text{# variants}} \sum_p \beta_p^2 u_p
+\tau^2 = \frac{1}{P} \sum_p \beta_p^2 u_p
 $$
 where $\beta_p$ is the effect size and $u_p$ is the mutation rate.
 :::
