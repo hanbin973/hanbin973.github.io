@@ -1,11 +1,11 @@
 ---
-title: "Modelling complex traits with ancestral recombination graphs"
+title: "Genetic prediction with ARG-powered linear algebra"
 author:
   name: Hanbin Lee
   affiliation: "University of Michigan, Ann Arbor"
   email: "hblee@umich.edu"
-venue: "Probabilistic Modelling in Genomics 2025"
-date: "07 March 2025"
+venue: "tskit meeting"
+date: "11 March 2026"
 date-format: "MMM D, YYYY"
 bibliography: ref.bib
 format: 
@@ -79,7 +79,7 @@ $$
 $$
 where $\mathbf{Z}$ includes genotyped variants and $\mathbf{X}$ is the covariate matrix
 
-In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*  
+In particular, the SNP effects $\mathbf{u} \sim p(\cdot)$ is *random*
 :::
 
 ::: {.fragment}
@@ -354,109 +354,6 @@ $$
 :::
 
 :::
-
-## Heritability is *ill*-defined in ARG-LMM
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out fragment-index=1}
-$$
-\small \text{Heritability: }h_g^2 = \frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{y}_n)}
-=\frac{\mathrm{Var}(\mathbf{g}_n)}{\mathrm{Var}(\mathbf{g}_n)+\mathrm{Var}(\boldsymbol{\varepsilon}_n)}
-$$
-This applies to all individuals $\small n \in \{1,\ldots,N\}$
-:::
-
-::: {.fragment .fade-in-then-out fragment-index=2}
-However, all individuals have a different amount of genetic variance (except haploids)
-$$
-\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})
-$$
-:::
-
-::: {.fragment .fade-in-then-out fragment-index=3}
-$$
-\small \mathrm{Var}(\mathbf{g}_n) = \mathrm{Var}(\mathbf{h}_{n1}+\mathbf{h}_{n2}) = \mathrm{Var}(\mathbf{h}_{n1}) + \mathrm{Var}(\mathbf{h}_{n2}) + 2\textcolor{red}{\underbrace{\mathrm{Cov}(\mathbf{h}_{n1},\mathbf{h}_{n2})}_{\text{Self-relatedness}}}
-$$
-:::
-
-::: {.fragment fragment-index=4}
-We can't define a single quantitity $h^2_g=\frac{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)}}{\textcolor{red}{\mathrm{Var}(\mathbf{g}_n)} + \mathrm{Var}(\boldsymbol{\varepsilon}_n)}$ for everyone
-:::
-
-:::
-
-:::: {.columns}
-
-
-::: {.column width="50%"}
-
-::: {.r-stack}
-::: {.fragment .fade-in-then-out fragment-index=2}
-![](imgs/covariance-short-0.svg){fig-align="center" height=550}
-:::
-::: {.fragment fragment-index=3}
-![](imgs/covariance-short-1.svg){fig-align="center"height=550}
-:::
-:::
-
-:::
-
-
-::: {.column width="50%"}
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out  fragment-index=2}
-![](imgs/covariance-long-0.svg){fig-align="center" height=550}
-:::
-::: {.fragment fragment-index=3}
-![](imgs/covariance-long-1.svg){fig-align="center" height=550}
-:::
-
-:::
-
-:::
-
-
-::::
-
-
-## Polygenic prediction is constrained by demography
-
-
-::: {.r-stack}
-
-![](imgs/geneticvariance.svg){.fragment fig-align="center" height=550}
-
-::: {.fragment .fade-out}
-![](imgs/covariance-1.svg){.absolute top=70 right=50 height=550}
-:::
-
-:::
-
-
-::: {.r-stack}
-
-::: {.fragment .fade-in-then-out}
-Some people are less genetically variable than others
-:::
-
-::: {.fragment .fade-in-then-out}
-Some people are harder to predict genetically than others
-:::
-
-::: {.fragment}
-Some populations are <span style="color:red">inherently harder</span> to predict!
-:::
-
-:::
-
-::: footer
-Demographic model from [@Browning2018]
-:::
-
-
 
 # $\textsf{tslmm}$, fitting ARG-LMM to tree sequences
 
