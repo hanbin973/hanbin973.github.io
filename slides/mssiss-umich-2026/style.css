@@ -31,7 +31,7 @@
   display: grid;
   place-items: start center;
   min-height: 5.5em;
-  margin-top: 0.5em;
+  margin-top: 0.1em;
 }
 
 .reveal .result-notes-stack > * {
