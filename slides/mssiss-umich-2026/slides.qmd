@@ -4,13 +4,10 @@ author:
   - name: Hanbin Lee
     affiliation: "University of Michigan, Ann Arbor"
     email: "hblee@umich.edu"
-  - name: Jonathan Terhorst
-    affiliation: "University of Michigan, Ann Arbor"
-    email: "jonth@umich.edu"
-venue: "GENETICS special issue draft"
-date: "25 March 2026"
+venue: "MSSISS 2026"
+date: "27 March 2026"
 date-format: "MMMM D, YYYY"
-bibliography: ../../references.bib
+bibliography: references.bib
 format:
   revealjs:
     css: style.css
@@ -21,6 +18,7 @@ format:
     theme: white
     transition: slide
     navigation-mode: vertical
+    center: true
     template-partials:
       - title-slide.html
     embed-resources: true

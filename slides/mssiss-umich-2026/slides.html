@@ -442,8 +442,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Hanbin Lee">
-  <meta name="author" content="Jonathan Terhorst">
-  <meta name="dcterms.date" content="2026-03-25">
+  <meta name="dcterms.date" content="2026-03-27">
   <title>Parameterizing the Genetic Architecture Under Stabilizing Selection</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1029,20 +1028,9 @@ Hanbin Lee
             University of Michigan, Ann Arbor
           </p>
     </div>
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Jonathan Terhorst 
-</div>
-<div class="quarto-title-author-email">
-<a href="mailto:jonth@umich.edu">jonth@umich.edu</a>
-</div>
-        <p class="quarto-title-affiliation">
-            University of Michigan, Ann Arbor
-          </p>
-    </div>
 </div>
 
-  <p class="date">March 25, 2026</p>
+  <p class="date">March 27, 2026</p>
 </section>
 <section>
 <section id="motivation" class="title-slide slide level1 center">
@@ -1056,7 +1044,7 @@ Jonathan Terhorst
 <li class="fragment">Goal: derive a mixed model for frequency-dependent effect sizes from an explicit evolutionary model.</li>
 </ul>
 </section>
-<section id="main-idea" class="slide level2">
+<section id="main-idea" class="slide level2 center">
 <h2>Main idea</h2>
 <ul>
 <li class="fragment">Start from stabilizing selection under Fisher’s geometric model (FGM).</li>
@@ -1070,7 +1058,7 @@ Jonathan Terhorst
 <h1>Evolutionary setup</h1>
 
 </section>
-<section id="stabilizing-selection" class="slide level2">
+<section id="stabilizing-selection" class="slide level2 center">
 <h2>Stabilizing selection</h2>
 <ul>
 <li class="fragment">Fitness is modeled as <span class="math display">\[
@@ -1082,7 +1070,7 @@ s_{\mathrm{eff}}(x_j) = \left(x_j - \frac{1}{2}\right)\frac{\|\alpha_j\|^2}{V_S}
 <li class="fragment">This yields a stationary allele-frequency density that depends on <span class="math inline">\(\|\alpha_j\|^2/W_S\)</span>.</li>
 </ul>
 </section>
-<section id="from-fitness-effects-to-focal-trait-effects" class="slide level2">
+<section id="from-fitness-effects-to-focal-trait-effects" class="slide level2 center">
 <h2>From fitness effects to focal-trait effects</h2>
 <ul>
 <li class="fragment">We model the focal-trait variance conditional on the fitness effect by <span class="math display">\[
@@ -1104,7 +1092,7 @@ s_{\mathrm{eff}}(x_j) = \left(x_j - \frac{1}{2}\right)\frac{\|\alpha_j\|^2}{V_S}
 <h1>Approximate genetic architecture</h1>
 
 </section>
-<section id="key-derivation" class="slide level2">
+<section id="key-derivation" class="slide level2 center">
 <h2>Key derivation</h2>
 <ul>
 <li class="fragment">Using Bayes’ rule together with the stationary allele-frequency model, <span class="math display">\[
@@ -1132,7 +1120,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 \]</span></li>
 </ul>
 </section>
-<section id="interpretation" class="slide level2">
+<section id="interpretation" class="slide level2 center">
 <h2>Interpretation</h2>
 <ul>
 <li class="fragment">The model is frequency-dependent, but unlike the <span class="math inline">\(\alpha\)</span>-model it does not diverge as <span class="math inline">\(\hat p_j \to 0\)</span>.</li>
@@ -1147,7 +1135,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <h1>Simulation design</h1>
 
 </section>
-<section id="forward-simulations-in-slim" class="slide level2">
+<section id="forward-simulations-in-slim" class="slide level2 center">
 <h2>Forward simulations in SLiM</h2>
 <ul>
 <li class="fragment">Individual-based forward simulations under stabilizing selection.</li>
@@ -1167,7 +1155,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <h1>Results</h1>
 
 </section>
-<section id="recovering-the-selection-sensitive-component" class="slide level2">
+<section id="recovering-the-selection-sensitive-component" class="slide level2 center">
 <h2>Recovering the selection-sensitive component</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1180,7 +1168,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <li class="fragment">The fitted values are much closer to the Bulmer-corrected reference than to the uncorrected single-locus target.</li>
 </ul>
 </section>
-<section id="recovering-the-overall-variance-scale" class="slide level2">
+<section id="recovering-the-overall-variance-scale" class="slide level2 center">
 <h2>Recovering the overall variance scale</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1193,7 +1181,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <li class="fragment">This suggests a separation between a well-identified scale parameter and a more weakly identified shape parameter.</li>
 </ul>
 </section>
-<section id="prediction-accuracy" class="slide level2">
+<section id="prediction-accuracy" class="slide level2 center">
 <h2>Prediction accuracy</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1207,7 +1195,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <li class="fragment">Similar prediction does not necessarily imply recovery of the correct architecture.</li>
 </ul>
 </section>
-<section id="prediction-fit-variance-components" class="slide level2">
+<section id="prediction-fit-variance-components" class="slide level2 center">
 <h2>Prediction-fit variance components</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1225,7 +1213,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <h1>Take-home points</h1>
 
 </section>
-<section id="summary" class="slide level2">
+<section id="summary" class="slide level2 center">
 <h2>Summary</h2>
 <ul>
 <li class="fragment">We derive a frequency-dependent mixed model for effect sizes from stabilizing selection rather than imposing it heuristically.</li>
@@ -2288,7 +2276,7 @@ window.QuartoSupport = function () {
         disableLayout: false,
 
         // Vertical centering of slides
-        center: false,
+        center: true,
 
         // Enables touch navigation on devices with touch input
         touch: true,
