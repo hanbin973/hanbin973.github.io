@@ -26,6 +26,7 @@ format:
 
 # Motivation
 
+::: {.motivation-stack}
 ::: {.motivation-stage .fragment .current-visible}
 - In quantitative genetics, an empirical Bayesian linear model is used.
   $$
@@ -34,14 +35,15 @@ format:
 - How do we determine the prior on $\beta$?
 :::
 
-::: {.motivation-stage .fragment}
+::: {.motivation-stage .fragment .current-visible}
 - Across many complex traits, variants with larger effects tend to be rarer.[^height-paper]
+  ![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
+
 - A standard statistical description is the $\alpha$-model:
   $$
   \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
   $$
-
-![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
+:::
 :::
 
 [^height-paper]: Figure adapted from @Yengo_2022.
