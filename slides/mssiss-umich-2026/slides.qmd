@@ -28,7 +28,7 @@ format:
 
 ::: {.motivation-stack}
 ::: {.motivation-stage .fragment .current-visible}
-- In quantitative genetics, an empirical Bayesian linear model is used.
+- In quantitative genetics, a (empirical) Bayesian linear model is used.
   $$
   y = \sum_j G_j \beta_j + \varepsilon
   $$
@@ -41,8 +41,17 @@ format:
 
 - A standard statistical description is the $\alpha$-model:
   $$
-  \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
+  \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}
   $$
+:::
+
+::: {.motivation-stage .fragment .current-visible}
+
+- The phenomenon is attributed to negative selection
+
+- Variants with larger effect are removed by selection
+
+- Many proposals, all are merely _curve fitting_
 :::
 :::
 
@@ -51,10 +60,13 @@ format:
 ## Main idea
 
 ::: {.incremental}
-- Start from stabilizing selection under Fisher's geometric model (FGM).
-- Introduce a focal trait $y$ that is coupled to an unobserved selected trait.
+- We derive $\beta_j$'s from evolutionary theory.
+- Start from stabilizing selection under Fisher's geometric model (FGM) [@fisher1999thegeneticaltheoryof; @Tenaillon_2014]:
+  $$
+  \text{fitness} \propto \exp\left(-\frac{\|z\|^2}{2V_S}\right)
+  $$
+- Introduce a focal trait $y$ that is coupled to an unobserved selected trait $z$.
 - Derive the induced frequency dependence of $\beta_j$.
-- Fit the resulting variance components by REML and compare with $\alpha$-model baselines.
 :::
 
 # Evolutionary setup
