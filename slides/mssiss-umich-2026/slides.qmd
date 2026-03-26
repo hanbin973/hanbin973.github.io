@@ -76,11 +76,11 @@ format:
 ::: {.incremental}
 - Fitness is modeled as
   $$
-  \text{fitness} \propto \exp\left(-\frac{\|z\|^2}{2V_S}\right).
+  \text{fitness} \propto \exp\left(-\frac{\|z\|^2}{2V_S}\right)
   $$
 - For locus $j$ with effect vector $\alpha_j$, the marginal selection coefficient is
   $$
-  s_{\mathrm{eff}}(x_j) = \left(x_j - \frac{1}{2}\right)\frac{\|\alpha_j\|^2}{V_S}.
+  s_{\mathrm{eff}}(x_j) = \left(x_j - \frac{1}{2}\right)\frac{\|\alpha_j\|^2}{V_S}
   $$
 - This yields a stationary allele-frequency density that depends on $\|\alpha_j\|^2/W_S$.
 :::
@@ -93,7 +93,7 @@ format:
   \mathbb{E}[\beta_j^2 \mid \|\alpha_j\|]
   =
   \sigma_b^2 (1-\rho_{ab}^2)
-  + \rho_{ab}^2 \frac{\sigma_b^2}{\sigma_a^2}\|\alpha_j\|^2.
+  + \rho_{ab}^2 \frac{\sigma_b^2}{\sigma_a^2}\|\alpha_j\|^2
   $$
 - Here:
   - $\sigma_a^2$ controls mutational variance for the selected trait,
@@ -110,14 +110,14 @@ format:
   $$
   p(\|\alpha_j\|^2 \mid G_j)
   \propto
-  p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
+  p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2)
   $$
 - Under the low-mutation approximation,
   $$
   \mathbb{E}[\|\alpha_j\|^2 \mid G_j]
   =
   \frac{\sigma_a^2}{
-    1 + 2\frac{\sigma_a^2}{W_S}\hat p_j(1-\hat p_j)}.
+    1 + 2\frac{\sigma_a^2}{W_S}\hat p_j(1-\hat p_j)}
   $$
 - Substituting this into the pleiotropy model gives
   $$
@@ -130,7 +130,7 @@ format:
     \rho_{ab}^2
     \frac{2\frac{\sigma_a^2}{W_S}\hat p_j(1-\hat p_j)}
     {1 + 2\frac{\sigma_a^2}{W_S}\hat p_j(1-\hat p_j)}
-  \right).
+  \right)
   $$
 :::
 
@@ -141,7 +141,7 @@ format:
 - The parameters have direct evolutionary interpretations.
 - In practice, the most identifiable selection-sensitive quantity is the product
   $$
-  \rho_{ab}^2 \sigma_a^2 / W_S.
+  \rho_{ab}^2 \sigma_a^2 / W_S
   $$
 :::
 
@@ -227,7 +227,7 @@ format:
 :::
 :::
 
-## Prediction-fit variance components
+## Variance components
 
 ![](figs/blup_sigma2a_estimates.png){fig-align="center" height=585}
 
