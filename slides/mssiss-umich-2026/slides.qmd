@@ -37,8 +37,8 @@ format:
 
 ::: {.motivation-stage .fragment .current-visible}
 - Across many complex traits, variants with larger effects tend to be rarer.[^height-paper]
-  ![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
 
+  ![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
 - A standard statistical description is the $\alpha$-model:
   $$
   \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}

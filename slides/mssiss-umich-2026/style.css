@@ -8,10 +8,13 @@
 
 .reveal .motivation-stack {
   display: grid;
+  place-items: center;
 }
 
 .reveal .motivation-stack > * {
   grid-area: 1 / 1;
+  align-self: center;
+  justify-self: center;
 }
 
 .reveal .motivation-stage {
