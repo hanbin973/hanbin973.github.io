@@ -26,3 +26,25 @@
   display: inline-block;
   text-align: left;
 }
+
+.reveal .result-notes-stack {
+  display: grid;
+  place-items: start center;
+  min-height: 5.5em;
+  margin-top: 0.5em;
+}
+
+.reveal .result-notes-stack > * {
+  grid-area: 1 / 1;
+  width: 100%;
+}
+
+.reveal .result-note {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reveal .result-note ul {
+  display: inline-block;
+  text-align: left;
+}

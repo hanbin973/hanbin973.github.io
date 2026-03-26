@@ -180,41 +180,67 @@ format:
 
 ![](figs/blm_summary_sigma2_a_over_Ws.png){fig-align="center" height=650}
 
-::: {.incremental}
+::: {.result-notes-stack}
+::: {.result-note .fragment .current-visible}
 - REML broadly preserves the ordering of the true parameter settings.
+:::
+::: {.result-note .fragment .current-visible}
 - Estimates of $\sigma_a^2 / W_S$ are systematically below the naive target.
+:::
+::: {.result-note .fragment .current-visible}
 - The fitted values are much closer to the Bulmer-corrected reference than to the uncorrected single-locus target.
+:::
 :::
 
 ## Recovering the overall variance scale
 
 ![](figs/blm_summary_sigma2_a.png){fig-align="center" height=650}
 
-::: {.incremental}
+::: {.result-notes-stack}
+::: {.result-note .fragment .current-visible}
 - $\sigma_b^2$ is much easier to estimate than $\sigma_a^2/W_S$.
+:::
+::: {.result-note .fragment .current-visible}
 - The scale parameter stays close to the truth across the simulation grid.
+:::
+::: {.result-note .fragment .current-visible}
 - This suggests a separation between a well-identified scale parameter and a more weakly identified shape parameter.
+:::
 :::
 
 ## Prediction accuracy
 
 ![](figs/blup_summary_prediction.png){fig-align="center" height=650}
 
-::: {.incremental}
+::: {.result-notes-stack}
+::: {.result-note .fragment .current-visible}
 - The evolutionary model performs best overall.
+:::
+::: {.result-note .fragment .current-visible}
 - $\alpha=1$ performs worst throughout the grid.
+:::
+::: {.result-note .fragment .current-visible}
 - $\alpha=0$ is often close in predictive accuracy, especially when $\rho_{ab}^2=0$.
+:::
+::: {.result-note .fragment .current-visible}
 - Similar prediction does not necessarily imply recovery of the correct architecture.
+:::
 :::
 
 ## Prediction-fit variance components
 
 ![](figs/blup_sigma2a_estimates.png){fig-align="center" height=650}
 
-::: {.incremental}
+::: {.result-notes-stack}
+::: {.result-note .fragment .current-visible}
 - The evolutionary model remains close to the true $\sigma_b^2$.
+:::
+::: {.result-note .fragment .current-visible}
 - The $\alpha=0$ fit can predict reasonably well while still biasing $\sigma_b^2$ downward.
+:::
+::: {.result-note .fragment .current-visible}
 - The nonzero $\alpha$ baselines mischaracterize the variance components more substantially.
+:::
 :::
 
 # Take-home points
