@@ -1177,6 +1177,19 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <h1>Simulation design</h1>
 
 </section>
+<section id="how-these-models-are-usually-evaluated" class="slide level2 center">
+<h2>How these models are usually evaluated</h2>
+<ul>
+<li class="fragment">Most linear mixed model benchmarking studies condition on a fixed genotype matrix rather than simulating evolution explicitly.</li>
+<li class="fragment">They then generate phenotypes by varying only:
+<ul>
+<li class="fragment">the random effect sizes under a chosen prior, and</li>
+<li class="fragment">the residual noise in the regression model.</li>
+</ul></li>
+<li class="fragment">The fitted model is evaluated by variance-component recovery or prediction accuracy on those simulated phenotypes.</li>
+<li class="fragment">Our setup differs by first simulating the population under stabilizing selection and then fitting the mixed model to the resulting genotype data.</li>
+</ul>
+</section>
 <section id="forward-simulations-in-slim" class="slide level2 center">
 <h2>Forward simulations in SLiM</h2>
 <ul>

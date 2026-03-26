@@ -147,6 +147,17 @@ format:
 
 # Simulation design
 
+## How these models are usually evaluated
+
+::: {.incremental}
+- Most linear mixed model benchmarking studies condition on a fixed genotype matrix rather than simulating evolution explicitly.
+- They then generate phenotypes by varying only:
+  - the random effect sizes under a chosen prior, and
+  - the residual noise in the regression model.
+- The fitted model is evaluated by variance-component recovery or prediction accuracy on those simulated phenotypes.
+- Our setup differs by first simulating the population under stabilizing selection and then fitting the mixed model to the resulting genotype data.
+:::
+
 ## Forward simulations in SLiM
 
 ::: {.incremental}
