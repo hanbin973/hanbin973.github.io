@@ -30,16 +30,22 @@ format:
 - Across many complex traits, variants with larger effects tend to be rarer.
 - A standard statistical description is the $\alpha$-model:
   $$
-  \mathrm{Var}(\beta_j \mid G) \propto [p_j(1-p_j)]^{-\alpha}.
+  \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
   $$
 - The empirical pattern is clear, but the model is largely phenomenological.
-- Goal: derive a mixed model for frequency-dependent effect sizes from an explicit evolutionary model.
 :::
 
 ## Main idea
 
 ::: {.incremental}
 - Start from stabilizing selection under Fisher's geometric model (FGM).
+
+![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
+
+Empirical example of this pattern.[^height-paper]
+
+[^height-paper]: Figure adapted from @Yengo_2022.
+
 - Introduce a focal trait $y$ that is coupled to an unobserved selected trait.
 - Derive the induced frequency dependence of $\beta_j$.
 - Fit the resulting variance components by REML and compare with $\alpha$-model baselines.
