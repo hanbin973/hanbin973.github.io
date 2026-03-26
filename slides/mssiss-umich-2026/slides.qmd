@@ -26,23 +26,21 @@ format:
 
 # Motivation
 
-<ul>
-<li class="fragment fade-out">In quantitative genetics, an empirical Bayesian linear model is used.
-\[
-y = \sum_j G_j \beta_j + \varepsilon
-\]</li>
-<li class="fragment fade-out">How do we determine the prior on \(\beta\)?</li>
-</ul>
+::: {.motivation-stage .fragment .current-visible}
+- In quantitative genetics, an empirical Bayesian linear model is used.
+  $$
+  y = \sum_j G_j \beta_j + \varepsilon
+  $$
+- How do we determine the prior on $\beta$?
+:::
 
-<ul>
-<li class="fragment">Across many complex traits, variants with larger effects tend to be rarer.[^height-paper]</li>
-<li class="fragment">A standard statistical description is the \(\alpha\)-model:
-\[
-\mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
-\]</li>
-</ul>
+::: {.motivation-stage .fragment}
+- Across many complex traits, variants with larger effects tend to be rarer.[^height-paper]
+- A standard statistical description is the $\alpha$-model:
+  $$
+  \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
+  $$
 
-::: {.fragment}
 ![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
 :::
 
