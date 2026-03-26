@@ -178,7 +178,7 @@ format:
 
 ## Recovering the selection-sensitive component
 
-![](figs/blm_summary_sigma2_a_over_Ws.pdf){fig-align="center" height=650}
+![](figs/blm_summary_sigma2_a_over_Ws.png){fig-align="center" height=650}
 
 ::: {.incremental}
 - REML broadly preserves the ordering of the true parameter settings.
@@ -188,7 +188,7 @@ format:
 
 ## Recovering the overall variance scale
 
-![](figs/blm_summary_sigma2_a.pdf){fig-align="center" height=650}
+![](figs/blm_summary_sigma2_a.png){fig-align="center" height=650}
 
 ::: {.incremental}
 - $\sigma_b^2$ is much easier to estimate than $\sigma_a^2/W_S$.
@@ -198,7 +198,7 @@ format:
 
 ## Prediction accuracy
 
-![](figs/blup_summary_prediction.pdf){fig-align="center" height=650}
+![](figs/blup_summary_prediction.png){fig-align="center" height=650}
 
 ::: {.incremental}
 - The evolutionary model performs best overall.
@@ -209,7 +209,7 @@ format:
 
 ## Prediction-fit variance components
 
-![](figs/blup_sigma2a_estimates.pdf){fig-align="center" height=650}
+![](figs/blup_sigma2a_estimates.png){fig-align="center" height=650}
 
 ::: {.incremental}
 - The evolutionary model remains close to the true $\sigma_b^2$.
