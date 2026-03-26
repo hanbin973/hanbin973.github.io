@@ -243,15 +243,13 @@ format:
 :::
 :::
 
-# Take-home points
-
 ## Summary
 
 ::: {.incremental}
 - We derive a frequency-dependent mixed model for effect sizes from stabilizing selection rather than imposing it heuristically.
 - The framework connects fitness-landscape theory to REML estimation and BLUP prediction.
+- We can do statistical genetics like physics instead of random curve fitting.
 - In simulations, the model recovers the focal-trait variance well and generally outperforms conventional $\alpha$-model baselines in prediction.
-- The main empirical caveat is identifiability: the data primarily learn the combined quantity $\rho_{ab}^2 \sigma_a^2/W_S$.
 - Extending the framework to richer pleiotropy models and explicit linkage disequilibrium is a natural next step.
 :::
 
