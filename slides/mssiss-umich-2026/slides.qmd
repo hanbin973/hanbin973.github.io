@@ -178,7 +178,7 @@ format:
 
 ## Recovering the selection-sensitive component
 
-![](figs/blm_summary_sigma2_a_over_Ws.png){fig-align="center" height=650}
+![](figs/blm_summary_sigma2_a_over_Ws.png){fig-align="center" height=585}
 
 ::: {.result-notes-stack}
 ::: {.result-note .fragment .current-visible}
@@ -188,29 +188,29 @@ format:
 - Estimates of $\sigma_a^2 / W_S$ are systematically below the naive target.
 :::
 ::: {.result-note .fragment .current-visible}
-- The fitted values are much closer to the Bulmer-corrected reference than to the uncorrected single-locus target.
+- The discrepancy is strongest where selection-induced frequency dependence is strongest, but the estimates are much closer to the Bulmer-corrected reference than to the uncorrected target.
 :::
 :::
 
 ## Recovering the overall variance scale
 
-![](figs/blm_summary_sigma2_a.png){fig-align="center" height=650}
+![](figs/blm_summary_sigma2_a.png){fig-align="center" height=585}
 
 ::: {.result-notes-stack}
 ::: {.result-note .fragment .current-visible}
 - $\sigma_b^2$ is much easier to estimate than $\sigma_a^2/W_S$.
 :::
 ::: {.result-note .fragment .current-visible}
-- The scale parameter stays close to the truth across the simulation grid.
+- REML estimates of $\sigma_b^2$ remain centered near the true value across the full simulation grid.
 :::
 ::: {.result-note .fragment .current-visible}
-- This suggests a separation between a well-identified scale parameter and a more weakly identified shape parameter.
+- The focal-trait variance is well identified, while the selection-sensitive component is more sensitive to departures from the single-locus approximation.
 :::
 :::
 
 ## Prediction accuracy
 
-![](figs/blup_summary_prediction.png){fig-align="center" height=650}
+![](figs/blup_summary_prediction.png){fig-align="center" height=585}
 
 ::: {.result-notes-stack}
 ::: {.result-note .fragment .current-visible}
@@ -220,26 +220,26 @@ format:
 - $\alpha=1$ performs worst throughout the grid.
 :::
 ::: {.result-note .fragment .current-visible}
-- $\alpha=0$ is often close in predictive accuracy, especially when $\rho_{ab}^2=0$.
+- $\alpha=0.5$ is closer, but still remains below the evolutionary fit through most of the grid; $\alpha=0$ is often close, especially when $\rho_{ab}^2=0$.
 :::
 ::: {.result-note .fragment .current-visible}
-- Similar prediction does not necessarily imply recovery of the correct architecture.
+- Similar BLUP accuracy does not imply recovery of the same architecture.
 :::
 :::
 
 ## Prediction-fit variance components
 
-![](figs/blup_sigma2a_estimates.png){fig-align="center" height=650}
+![](figs/blup_sigma2a_estimates.png){fig-align="center" height=585}
 
 ::: {.result-notes-stack}
 ::: {.result-note .fragment .current-visible}
 - The evolutionary model remains close to the true $\sigma_b^2$.
 :::
 ::: {.result-note .fragment .current-visible}
-- The $\alpha=0$ fit can predict reasonably well while still biasing $\sigma_b^2$ downward.
+- The $\alpha=0$ model is approximately unbiased only when $\rho_{ab}^2=0$ and becomes downward biased once the focal trait inherits frequency dependence.
 :::
 ::: {.result-note .fragment .current-visible}
-- The nonzero $\alpha$ baselines mischaracterize the variance components more substantially.
+- The $\alpha=0.5$ and $\alpha=1$ fits underestimate $\sigma_b^2$ much more severely, showing that the $\alpha$-model misses the frequency-dependent architecture.
 :::
 :::
 
