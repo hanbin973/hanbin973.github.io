@@ -27,7 +27,18 @@ format:
 # Motivation
 
 ::: {.incremental}
+
+- In quantitative genetics, a (empirical) Bayesian linear model is used.
+  $$
+  y = \sum_j G_j \beta_j + \varepsilon
+  $$
+
 - Across many complex traits, variants with larger effects tend to be rarer.
+
+![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
+
+Empirical example of this pattern.[^height-paper]
+
 - A standard statistical description is the $\alpha$-model:
   $$
   \mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
@@ -35,17 +46,12 @@ format:
 - The empirical pattern is clear, but the model is largely phenomenological.
 :::
 
+[^height-paper]: Figure adapted from @Yengo_2022.
+
 ## Main idea
 
 ::: {.incremental}
 - Start from stabilizing selection under Fisher's geometric model (FGM).
-
-![](figs/frequency_effect_sizes.jpg){fig-align="center" height=320}
-
-Empirical example of this pattern.[^height-paper]
-
-[^height-paper]: Figure adapted from @Yengo_2022.
-
 - Introduce a focal trait $y$ that is coupled to an unobserved selected trait.
 - Derive the induced frequency dependence of $\beta_j$.
 - Fit the resulting variance components by REML and compare with $\alpha$-model baselines.

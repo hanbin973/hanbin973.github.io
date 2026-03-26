@@ -1037,17 +1037,10 @@ Hanbin Lee
 <section id="motivation" class="title-slide slide level1 center">
 <h1>Motivation</h1>
 <ul>
-<li class="fragment">Across many complex traits, variants with larger effects tend to be rarer.</li>
-<li class="fragment">A standard statistical description is the <span class="math inline">\(\alpha\)</span>-model: <span class="math display">\[
-\mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
-\]</span></li>
-<li class="fragment">The empirical pattern is clear, but the model is largely phenomenological.</li>
-</ul>
-</section>
-<section id="main-idea" class="slide level2 center">
-<h2>Main idea</h2>
-<ul>
-<li class="fragment">Start from stabilizing selection under Fisher’s geometric model (FGM).</li>
+<li class="fragment"><p>In quantitative genetics, a (empirical) Bayesian linear model is used. <span class="math display">\[
+y = \sum_j G_j \beta_j + \varepsilon
+\]</span></p></li>
+<li class="fragment"><p>Across many complex traits, variants with larger effects tend to be rarer.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1056,11 +1049,21 @@ Hanbin Lee
 </div>
 <p>Empirical example of this pattern.<sup>1</sup></p>
 <ul>
+<li class="fragment">A standard statistical description is the <span class="math inline">\(\alpha\)</span>-model: <span class="math display">\[
+\mathrm{Var}(\beta_j \mid p_j) \propto [p_j(1-p_j)]^{-\alpha}.
+\]</span></li>
+<li class="fragment">The empirical pattern is clear, but the model is largely phenomenological.</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Figure adapted from <span class="citation" data-cites="Yengo_2022">Yengo et al. (<a href="#/references" role="doc-biblioref" onclick>2022</a>)</span>.</p></li></ol></aside></section>
+<section id="main-idea" class="slide level2 center">
+<h2>Main idea</h2>
+<ul>
+<li class="fragment">Start from stabilizing selection under Fisher’s geometric model (FGM).</li>
 <li class="fragment">Introduce a focal trait <span class="math inline">\(y\)</span> that is coupled to an unobserved selected trait.</li>
 <li class="fragment">Derive the induced frequency dependence of <span class="math inline">\(\beta_j\)</span>.</li>
 <li class="fragment">Fit the resulting variance components by REML and compare with <span class="math inline">\(\alpha\)</span>-model baselines.</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Figure adapted from <span class="citation" data-cites="Yengo_2022">Research Team et al. (<a href="#/references" role="doc-biblioref" onclick>2022</a>)</span>.</p></li></ol></aside></section></section>
+</section></section>
 <section>
 <section id="evolutionary-setup" class="title-slide slide level1 center">
 <h1>Evolutionary setup</h1>
@@ -1235,7 +1238,7 @@ p(G_j \mid \|\alpha_j\|^2)p(\|\alpha_j\|^2).
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Yengo_2022" class="csl-entry" role="listitem">
-Research Team, 23andMe, Loic Yengo, Sailaja Vedantam, Eirini Marouli, Julia Sidorenko, Eric Bartell, Saori Sakaue, et al. 2022. <span>“A Saturated Map of Common Genetic Variants Associated with Human Height.”</span> <em>Nature</em> 610 (7933): 704–12. <a href="https://doi.org/10.1038/s41586-022-05275-y">https://doi.org/10.1038/s41586-022-05275-y</a>.
+Yengo, Loïc, Sailaja Vedantam, Eirini Marouli, Julia Sidorenko, Eric Bartell, Saori Sakaue, Marielisa Graff, et al. 2022. <span>“A Saturated Map of Common Genetic Variants Associated with Human Height.”</span> <em>Nature</em> 610 (7933): 704–12. <a href="https://doi.org/10.1038/s41586-022-05275-y">https://doi.org/10.1038/s41586-022-05275-y</a>.
 </div>
 </div>
 
