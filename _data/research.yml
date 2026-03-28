@@ -1,4 +1,11 @@
 - name: Preprints
+  papers:
+    - name: 'Parameterizing the genetic architecture under stabilizing selection'
+      journal: biorxiv 
+      fauthor: Hanbin Lee
+      author: Jonathan Terhorst
+      year: 2026
+      doi: https://doi.org/10.64898/2026.03.27.714826 
           
 - name: Journals
   papers:
