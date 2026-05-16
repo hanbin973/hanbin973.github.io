@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated in January, 2026</span>
+<span style="color:grey">Updated in May, 2026</span>
 
 ___
 
@@ -10,14 +10,11 @@ ___
 ![](https://lsa.umich.edu/content/michigan-lsa/stats/en/people/phd-students/Lee/jcr:content/profileImage.transform/profile_portrait/image.jpg){: width="25%"}
 
 Any statistical and computational methods operate under the constraints imposed by the data generating process.
-To put it another way, no method can extract information from data beyond what is given by nature.
-Based on this insight, I study how evolutionary processes shape statistical inference. 
+As such, I study how evolutionary processes shape statistical inference. 
 
 I'm currently working on the following topics:
 - Evolutionary basis of statistical genetics
-- Random dynamical systems on manifolds of negative curvature 
-
-I try to convince people that all priors of Bayesian models applied to genetic data implicitly (or explicitly) represent the underlying evolutionary process.
+- Random dynamical systems on manifolds
 
 Contact: <hblee@umich.edu>
 
@@ -37,7 +34,8 @@ _International Journal of Epidemiology_,
 _Nature Communications_,
 _Genetics (GSA)_,
 _HGG Advances_,
-_BMC Medical Research Methodology_
+_BMC Medical Research Methodology_,
+_NAR Genomics and Bioinformatics_
 
 ---
 
