@@ -10,9 +10,9 @@
 - name: Journals
   papers:
     - name: 'Genetic prediction with ARG-powered linear algebra'
-      journal: Genetics, in press
-      fauthor: Hanbin Lee
-      author: Nathaniel S. Pope, Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
+      journal: Genetics
+      fauthor: Hanbin Lee*, Nathaniel S. Pope*
+      author: Jerome Kelleher, Gregor Gorjanc, and Peter L. Ralph
       year: 2026
       doi: https://doi.org/10.1093/genetics/iyag074
 
