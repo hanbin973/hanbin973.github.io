@@ -35,7 +35,8 @@ _Nature Communications_,
 _Genetics (GSA)_,
 _HGG Advances_,
 _BMC Medical Research Methodology_,
-_NAR Genomics and Bioinformatics_
+_NAR Genomics and Bioinformatics_,
+_Bioinformatics Advances_
 
 ---
 
