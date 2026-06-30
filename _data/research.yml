@@ -1,14 +1,15 @@
 - name: Preprints
   papers:
+         
+- name: Journals
+  papers:
     - name: 'Parameterizing the genetic architecture under stabilizing selection'
-      journal: biorxiv 
+      journal: Genetics, in press 
       fauthor: Hanbin Lee
       author: and Jonathan Terhorst
       year: 2026
       doi: https://doi.org/10.64898/2026.03.27.714826 
-          
-- name: Journals
-  papers:
+
     - name: 'Genetic prediction with ARG-powered linear algebra'
       journal: Genetics
       fauthor: Hanbin Lee*, Nathaniel S. Pope*
