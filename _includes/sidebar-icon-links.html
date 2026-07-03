@@ -18,6 +18,14 @@
     {% include svg/feed.svg %}
   </a>
 
+  {% if site.cv_url %}
+    <a id="cv-link"
+       class="icon" title="CV" aria-label="CV"
+       href="{{ site.cv_url | relative_url }}">
+      {% include svg/cv.svg %}
+    </a>
+  {% endif %}
+
   {% if site.google_scholar_url %}
     <a id="google-scholar-link"
        class="icon" title="Google Scholar" aria-label="Google Scholar"

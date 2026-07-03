@@ -1,3 +1,6 @@
 .uv-cache/
 __pycache__/
 build/
+
+/.quarto/
+**/*.quarto_ipynb
