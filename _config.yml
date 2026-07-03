@@ -18,6 +18,8 @@ author:
   name:           'Hanbin Lee'
   url:            https://twitter.com/epigenci
 
+google_scholar_url: https://scholar.google.com/citations?user=SD8CbUkAAAAJ
+
 paginate:         5
 paginate_path:    '/blog/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
