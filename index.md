@@ -59,7 +59,6 @@ _Bioinformatics Advances_
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
 								{{ paper.year }}<br>
-                                <br>
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
