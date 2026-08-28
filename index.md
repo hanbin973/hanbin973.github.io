@@ -49,7 +49,7 @@ _Bioinformatics Advances_
 			<h3 class='pub-format'> {{ format.name }} </h3>
 			<div class='pubbox-out'>
 				<div class='pubbox-in'>
-					<ul style='list-style: none; padding: 0px; font-size: 0.8em;'>
+					<ul style='list-style: none; padding: 0 0 0 1.25em; font-size: 0.8em;'>
 						{% for paper in format.papers %}
 							<li>
 								<b>
