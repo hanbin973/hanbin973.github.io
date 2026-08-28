@@ -51,14 +51,14 @@ _Bioinformatics Advances_
 				<div class='pubbox-in'>
 					<ul style='list-style: none; padding: 0 0 0 1.25em; font-size: 0.8em;'>
 						{% for paper in format.papers %}
-							<li>
+							<li style='margin-bottom: 0.35em;'>
 								<b>
 								{{ paper.fauthor }}, 
 								</b>
 								{{ paper.author }} 
 								<a href='{{ paper.doi }}'>{{ paper.name }}</a>. 
 								<i>{{ paper.journal }}</i>,
-								{{ paper.year }}<br>
+								{{ paper.year }}
 							</li>
 						{% endfor %}
 						{% if format.name == 'Journals' %}
