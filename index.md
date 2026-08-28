@@ -30,6 +30,7 @@ Contact: <hblee@umich.edu>
 
 ## Professional service
 ### Peer review
+<div style="font-size: 0.8em;">
 _International Journal of Epidemiology_,
 _Nature Communications_,
 _Genetics (GSA)_,
@@ -37,13 +38,14 @@ _HGG Advances_,
 _BMC Medical Research Methodology_,
 _NAR Genomics and Bioinformatics_,
 _Bioinformatics Advances_
+</div>
 
 ---
 
 ## Publications
 
 <ul style='list-style: none; padding: 0px;'>
-    <b>*:</b> Equal contribution
+    <div style="font-size: 0.8em;"> <b>*:</b> Equal contribution</div>
 	{% for format in site.data.research %}
 		<li>
 			<h3 class='pub-format'> {{ format.name }} </h3>
