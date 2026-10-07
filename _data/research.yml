@@ -1,5 +1,11 @@
 - name: Preprints
   papers:
+    - name: 'Linkage disequilibrium moderates how evolving genetic background shapes variant-level architecture'
+      journal: bioRxiv
+      fauthor: Hanbin Lee
+      author: and Jonathan Terhorst
+      year: 2026
+      doi: https://doi.org/10.64898/2026.10.01.756092
          
 - name: Journals
   papers:
