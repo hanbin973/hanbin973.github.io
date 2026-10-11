@@ -9,11 +9,14 @@ ___
 ## About
 ![](https://lsa.umich.edu/content/michigan-lsa/stats/en/people/phd-students/Lee/jcr:content/profileImage.transform/profile_portrait/image.jpg){: width="25%"}
 
-Any statistical and computational methods operate under the constraints imposed by the data generating process.
-As such, I study how evolutionary processes shape statistical inference. 
+I'm a PhD student at the Department of Statistics at the University of Michigan, Ann Arbor.
+My main areas of interest are population genetics, phylogenetics, and dynamical systems.
+I strongly prefer mechanistic explanations over statistical descriptions.
+Ordinary and partial differential equations are my best friends.
 
-I'm currently working on the following topics:
-- Evolutionary basis of statistical genetics
+I'm currently working on the following problems:
+- Evolutionary foundation of statistical genetics
+- Augmenting phylogenetic models with neural networks
 - Random dynamical systems on manifolds
 
 Contact: <hblee@umich.edu>
