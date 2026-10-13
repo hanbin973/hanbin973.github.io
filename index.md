@@ -2,7 +2,7 @@
 layout: mainpage
 ---
 
-<span style="color:grey">Updated in May, 2026</span>
+<span style="color:grey">Updated in October, 2026</span>
 
 ___
 
