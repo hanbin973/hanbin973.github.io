@@ -39,7 +39,8 @@ Contact: <hblee@umich.edu>
 <em>HGG Advances</em>,
 <em>BMC Medical Research Methodology</em>,
 <em>NAR Genomics and Bioinformatics</em>,
-<em>Bioinformatics Advances</em></span>
+<em>Bioinformatics Advances</em></span>,
+<em>Bioinformatics</em></span>
 
 ---
 
