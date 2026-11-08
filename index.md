@@ -40,9 +40,9 @@ Contact: <hblee@umich.edu>
 <em>BMC Medical Research Methodology</em>,
 <em>NAR Genomics and Bioinformatics</em>,
 <em>Bioinformatics Advances</em>,
-<em>Bioinformatics</em>
+<em>Bioinformatics</em>,
+<em>Journal of Computational Biology</em>
 </span>
-
 ---
 
 ## Publications
