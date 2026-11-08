@@ -43,7 +43,6 @@ Contact: <hblee@umich.edu>
 <em>Bioinformatics</em>,
 <em>Journal of Computational Biology</em>
 </span>
----
 
 ## Publications
 
