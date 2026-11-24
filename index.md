@@ -41,7 +41,8 @@ Contact: <hblee@umich.edu>
 <em>NAR Genomics and Bioinformatics</em>,
 <em>Bioinformatics Advances</em>,
 <em>Bioinformatics</em>,
-<em>Journal of Computational Biology</em>
+<em>Journal of Computational Biology</em>,
+<em>American Journal of Human Genetics</em>
 </span>
 
 ## Publications
