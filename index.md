@@ -33,7 +33,8 @@ Contact: <hblee@umich.edu>
 
 ## Professional service
 ### Peer review
-<span style="font-size: 0.8em;"><em>International Journal of Epidemiology</em>,
+<span style="font-size: 0.8em;">
+<em>International Journal of Epidemiology</em>,
 <em>Nature Communications</em>,
 <em>Genetics (GSA)</em>,
 <em>HGG Advances</em>,
